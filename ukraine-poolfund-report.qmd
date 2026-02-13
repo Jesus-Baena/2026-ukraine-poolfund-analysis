@@ -1,0 +1,470 @@
+---
+title: "Ukraine Humanitarian Pooled Fund Analysis"
+subtitle: "Funding Allocation and Impact Assessment"
+author: "Ukraine Poolfund Analysis Team"
+date: "2026-02-13"
+format:
+  html:
+    theme: yeti
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    code-fold: true
+    code-summary: "Show code"
+    embed-resources: true
+    smooth-scroll: true
+    number-sections: true
+    css: custom-style.css
+editor: visual
+execute:
+  warning: false
+  message: false
+  echo: true
+  fig-align: center
+  fig-width: 8
+  fig-height: 5
+  fig-dpi: 150
+---
+
+# Executive Summary
+
+This report provides a comprehensive analysis of the Ukraine Humanitarian Pooled Fund, examining funding allocations, organizational performance, beneficiary demographics, and project implementation from 2019 to 2025.
+
+## Key Findings
+
+-   **Total Projects Analyzed**: Analysis spans multiple allocation years
+-   **Primary Focus**: 2025 funding distribution and organizational performance
+-   **Data Sources**: Official UHF allocation and project data
+
+# Data Overview
+
+```{r setup}
+#| label: setup
+#| include: false
+
+# Load required libraries
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(readr)
+library(lubridate)
+library(stringr)
+library(knitr)
+library(scales)
+
+# Set working directory
+setwd("/home/jbi-debian/Git/2026-analysis-ukraine-poolfund")
+
+# --- Consistent ggplot2 Theme ---
+theme_set(
+  theme_minimal(base_size = 14, base_family = "") +
+  theme(
+    plot.title = element_text(face = "bold", color = "#005f73", hjust = 0.5, size = 16),
+    plot.subtitle = element_text(color = "#343a40", hjust = 0.5, margin = margin(b=10)),
+    plot.caption = element_text(color = "grey50", face = "italic", size = 9),
+    axis.title = element_text(face = "bold", size = 12),
+    axis.text = element_text(color = "grey30", size = 10),
+    legend.position = "top",
+    legend.title = element_text(face = "bold", size = 11),
+    panel.grid.minor = element_blank()
+  )
+)
+
+# Color palette matching the theme
+theme_colors <- list(
+  primary = "#005f73",
+  secondary = "#2B638B",
+  accent = "#c7254e",
+  light_bg = "#eef7f7"
+)
+```
+
+```{r load-data}
+#| label: load-data
+#| echo: false
+
+# Load all data files
+allocation_flow <- read_csv("Raw-data/AllocationFlow__20260213_094810_UTC.csv", 
+                            show_col_types = FALSE)
+project_summary <- read_csv("Raw-data/ProjectSummary20260213095023733.csv", 
+                            show_col_types = FALSE)
+project_summary_location <- read_csv("Raw-data/ProjectSummaryWithLocation20260213095148892.csv", 
+                                     show_col_types = FALSE)
+project_summary_cluster <- read_csv("Raw-data/ProjectSummaryWithLocationAndCluster20260213095151165.csv", 
+                                    show_col_types = FALSE)
+pipeline_summary <- read_csv("Raw-data/PipelineProjectSummary20260213095153268.csv", 
+                             show_col_types = FALSE)
+pipeline_cluster <- read_csv("Raw-data/PipelineProjectCluster20260213095156107.csv", 
+                             show_col_types = FALSE)
+clusters <- read_csv("Raw-data/Cluster20260213095154538.csv", 
+                     show_col_types = FALSE)
+contributions <- read_csv("Raw-data/Contribution20260213095157629.csv", 
+                          show_col_types = FALSE)
+
+# Data preprocessing
+project_summary <- project_summary %>%
+  mutate(
+    ProjectStartDate = mdy_hms(ProjectStartDate),
+    ProjectEndDate = mdy_hms(ProjectEndDate)
+  )
+```
+
+## Dataset Summary
+
+```{r dataset-overview}
+#| label: dataset-overview
+#| echo: false
+
+data_summary <- tibble(
+  Dataset = c("Allocation Flow", "Project Summary", "Project Summary (Location)", 
+              "Project Summary (Cluster)", "Pipeline Summary", "Clusters", "Contributions"),
+  Rows = c(nrow(allocation_flow), nrow(project_summary), nrow(project_summary_location),
+           nrow(project_summary_cluster), nrow(pipeline_summary), nrow(clusters), 
+           nrow(contributions)),
+  Columns = c(ncol(allocation_flow), ncol(project_summary), ncol(project_summary_location),
+              ncol(project_summary_cluster), ncol(pipeline_summary), ncol(clusters), 
+              ncol(contributions))
+)
+
+kable(data_summary, 
+      format.args = list(big.mark = ","),
+      caption = "Overview of Available Datasets")
+```
+
+# Allocation Flow Analysis
+
+## Countries in Dataset
+
+```{r allocation-countries}
+#| label: allocation-countries
+#| echo: false
+
+countries <- unique(allocation_flow$Fund)
+ukraine_allocation <- allocation_flow %>% filter(Fund == "Ukraine")
+
+if(nrow(ukraine_allocation) > 0) {
+  ukraine_summary <- ukraine_allocation %>%
+    group_by(Year, `Partner type`) %>%
+    summarise(
+      `Direct Funding ($)` = sum(`Direct funding`, na.rm = TRUE),
+      `Net Funding ($)` = sum(`Net funding`, na.rm = TRUE),
+      .groups = 'drop'
+    ) %>%
+    arrange(Year, desc(`Net Funding ($)`))
+  
+  kable(ukraine_summary,
+        format.args = list(big.mark = ","),
+        caption = "Ukraine Allocation Summary by Year and Partner Type")
+}
+```
+
+# Project Analysis
+
+## Projects by Organization Type
+
+```{r org-type-analysis}
+#| label: org-type-analysis
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+
+org_type_summary <- project_summary %>%
+  count(OrganizationType, name = "Projects") %>%
+  arrange(desc(Projects))
+
+# Table
+kable(org_type_summary,
+      format.args = list(big.mark = ","),
+      caption = "Projects by Organization Type")
+
+# Visualization
+project_summary %>%
+  group_by(OrganizationType) %>%
+  summarise(Total_Budget = sum(Budget, na.rm = TRUE), .groups = 'drop') %>%
+  ggplot(aes(x = reorder(OrganizationType, Total_Budget), y = Total_Budget/1e6)) +
+  geom_col(fill = "#005f73") +
+  coord_flip() +
+  labs(
+    title = "Total Budget by Organization Type",
+    x = "Organization Type",
+    y = "Total Budget (Millions USD)"
+  )
+```
+
+## Projects Over Time
+
+```{r projects-over-time}
+#| label: projects-over-time
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+
+year_summary <- project_summary %>%
+  count(AllocationYear, name = "Projects") %>%
+  arrange(AllocationYear)
+
+# Table
+kable(year_summary,
+      format.args = list(big.mark = ","),
+      caption = "Projects by Allocation Year")
+
+# Trend visualization
+project_summary %>%
+  count(AllocationYear) %>%
+  ggplot(aes(x = AllocationYear, y = n)) +
+  geom_line(color = "#005f73", linewidth = 1.2) +
+  geom_point(color = "#005f73", size = 3) +
+  labs(
+    title = "Number of Projects by Allocation Year",
+    x = "Year",
+    y = "Number of Projects"
+  )
+```
+
+# Budget Analysis
+
+```{r budget-analysis}
+#| label: budget-analysis
+#| echo: false
+
+budget_stats <- project_summary %>%
+  summarise(
+    `Total Budget ($)` = sum(Budget, na.rm = TRUE),
+    `Mean Budget ($)` = mean(Budget, na.rm = TRUE),
+    `Median Budget ($)` = median(Budget, na.rm = TRUE),
+    `Min Budget ($)` = min(Budget, na.rm = TRUE),
+    `Max Budget ($)` = max(Budget, na.rm = TRUE)
+  )
+
+kable(budget_stats,
+      format.args = list(big.mark = ",", digits = 2),
+      caption = "Overall Budget Statistics")
+```
+
+# Beneficiary Analysis
+
+```{r beneficiary-analysis}
+#| label: beneficiary-analysis
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+
+beneficiary_totals <- project_summary %>%
+  summarise(
+    Men = sum(Men, na.rm = TRUE),
+    Women = sum(Women, na.rm = TRUE),
+    Boys = sum(Boys, na.rm = TRUE),
+    Girls = sum(Girls, na.rm = TRUE)
+  ) %>%
+  mutate(
+    Adults = Men + Women,
+    Children = Boys + Girls,
+    Total = Adults + Children,
+    `Female (%)` = round((Women + Girls) / Total * 100, 1),
+    `Male (%)` = round((Men + Boys) / Total * 100, 1)
+  )
+
+# Summary table
+beneficiary_summary <- tibble(
+  Category = c("Men", "Women", "Boys", "Girls", "Total Adults", "Total Children", "Grand Total"),
+  Count = c(
+    beneficiary_totals$Men,
+    beneficiary_totals$Women,
+    beneficiary_totals$Boys,
+    beneficiary_totals$Girls,
+    beneficiary_totals$Adults,
+    beneficiary_totals$Children,
+    beneficiary_totals$Total
+  )
+)
+
+kable(beneficiary_summary,
+      format.args = list(big.mark = ","),
+      caption = "Beneficiary Demographics")
+
+# Visualization
+beneficiary_totals %>%
+  select(Men, Women, Boys, Girls) %>%
+  pivot_longer(everything(), names_to = "Category", values_to = "Count") %>%
+  ggplot(aes(x = Category, y = Count, fill = Category)) +
+  geom_col() +
+  geom_text(aes(label = format(Count, big.mark = ",")), 
+            vjust = -0.5, size = 4) +
+  scale_fill_manual(values = c("#005f73", "#2B638B", "#94d2bd", "#ee9b00")) +
+  scale_y_continuous(labels = scales::comma, expand = expansion(mult = c(0, 0.1))) +
+  labs(
+    title = "Beneficiaries by Gender and Age Group",
+    x = "Category",
+    y = "Number of Beneficiaries"
+  ) +
+  theme(
+    legend.position = "none"
+  )
+```
+
+::: callout-note
+## Gender Balance
+
+The data shows **`r beneficiary_totals$'Female (%)'`%** female beneficiaries and **`r beneficiary_totals$'Male (%)'`%** male beneficiaries across all projects.
+:::
+
+# Project Status Overview
+
+```{r project-status}
+#| label: project-status
+#| echo: false
+
+status_summary <- project_summary %>%
+  count(ProjectStatus, name = "Count") %>%
+  arrange(desc(Count))
+
+kable(status_summary,
+      format.args = list(big.mark = ","),
+      caption = "Project Status Distribution")
+```
+
+# 2025 Funding Analysis {#sec-2025}
+
+## Top Organizations
+
+```{r funding-2025}
+#| label: funding-2025
+#| echo: false
+#| fig-width: 12
+#| fig-height: 8
+
+# Filter for 2025 projects and aggregate by organization
+funding_2025 <- project_summary %>%
+  filter(AllocationYear == 2025) %>%
+  group_by(OrganizationName, OrganizationType) %>%
+  summarise(
+    `Total Funding ($)` = sum(Budget, na.rm = TRUE),
+    `Number of Projects` = n(),
+    .groups = 'drop'
+  ) %>%
+  arrange(desc(`Total Funding ($)`))
+
+# Total 2025 funding
+total_2025 <- sum(funding_2025$`Total Funding ($)`)
+
+# Display top 20 organizations
+kable(head(funding_2025, 20),
+      format.args = list(big.mark = ","),
+      caption = "Top 20 Organizations by Funding in 2025")
+
+# Visualization: Top 15 Organizations
+funding_2025 %>%
+  head(15) %>%
+  ggplot(aes(x = reorder(OrganizationName, `Total Funding ($)`), 
+             y = `Total Funding ($)` / 1e6,
+             fill = OrganizationType)) +
+  geom_col() +
+  geom_text(aes(label = paste0("$", format(round(`Total Funding ($)` / 1e6, 1), nsmall = 1), "M")),
+            hjust = -0.1,
+            size = 3.5,
+            color = "black") +
+  coord_flip() +
+  scale_fill_manual(values = c("#005f73", "#2B638B", "#94d2bd", "#ee9b00")) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +
+  labs(
+    title = "Top 15 Organizations by Funding - 2025",
+    subtitle = paste("Total 2025 Funding: $", format(round(total_2025/1e6, 1), nsmall = 1), "M"),
+    x = "Organization",
+    y = "Funding (Millions USD)",
+    fill = "Organization Type"
+  ) +
+  theme(
+    legend.position = "bottom",
+    axis.text.y = element_text(size = 10)
+  )
+```
+
+## Funding by Organization Type (2025)
+
+```{r funding-type-2025}
+#| label: funding-type-2025
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+
+funding_by_type_2025 <- project_summary %>%
+  filter(AllocationYear == 2025) %>%
+  group_by(OrganizationType) %>%
+  summarise(
+    `Total Funding ($)` = sum(Budget, na.rm = TRUE),
+    `Number of Organizations` = n_distinct(OrganizationName),
+    `Number of Projects` = n(),
+    `Average Project Size ($)` = round(`Total Funding ($)` / `Number of Projects`, 0),
+    .groups = 'drop'
+  ) %>%
+  arrange(desc(`Total Funding ($)`))
+
+kable(funding_by_type_2025,
+      format.args = list(big.mark = ","),
+      caption = "2025 Funding by Organization Type")
+
+# Pie chart for organization type distribution
+funding_by_type_2025 %>%
+  ggplot(aes(x = "", y = `Total Funding ($)`, fill = OrganizationType)) +
+  geom_col(width = 1, color = "white") +
+  geom_text(aes(label = paste0(OrganizationType, "\n$", 
+                                format(round(`Total Funding ($)`/1e6, 1), nsmall = 1), "M")),
+            position = position_stack(vjust = 0.5),
+            size = 3.5) +
+  coord_polar("y", start = 0) +
+  scale_fill_manual(values = c("#005f73", "#2B638B", "#94d2bd", "#ee9b00")) +
+  labs(
+    title = "2025 Funding Distribution by Organization Type",
+    fill = "Organization Type"
+  ) +
+  theme_void() +
+  theme(
+    legend.position = "right",
+    plot.title = element_text(face = "bold", color = "#005f73", hjust = 0.5, size = 16)
+  )
+```
+
+# Conclusions
+
+## Summary Statistics
+
+```{r final-summary}
+#| label: final-summary
+#| echo: false
+
+summary_stats <- tibble(
+  Metric = c(
+    "Total Projects",
+    "Total Organizations",
+    "Total Budget (All Years)",
+    "Total Beneficiaries",
+    "2025 Funding",
+    "Average Project Budget"
+  ),
+  Value = c(
+    format(nrow(project_summary), big.mark = ","),
+    format(n_distinct(project_summary$OrganizationName), big.mark = ","),
+    paste0("$", format(round(sum(project_summary$Budget, na.rm = TRUE)/1e6, 1), nsmall = 1), "M"),
+    format(beneficiary_totals$Total, big.mark = ","),
+    paste0("$", format(round(total_2025/1e6, 1), nsmall = 1), "M"),
+    paste0("$", format(round(mean(project_summary$Budget, na.rm = TRUE)/1e3, 0), big.mark = ","), "K")
+  )
+)
+
+kable(summary_stats,
+      caption = "Key Metrics Summary")
+```
+
+## Key Insights
+
+1.  **Organizational Diversity**: The fund supports multiple types of organizations including UN agencies, international NGOs, and national NGOs, ensuring broad implementation capacity.
+
+2.  **Consistent Funding**: Projects show steady funding trends over the years with significant allocations in 2025.
+
+3.  **Beneficiary Reach**: The program has reached a substantial number of beneficiaries across different demographic groups.
+
+4.  **Gender Consideration**: The funding demonstrates attention to gender-balanced programming with relatively even distribution between male and female beneficiaries.
+
+------------------------------------------------------------------------
+
+*Report generated on `r Sys.Date()` using Quarto*

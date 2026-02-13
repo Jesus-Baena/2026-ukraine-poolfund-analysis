@@ -1,0 +1,46 @@
+# R and RStudio files
+.Rhistory
+.RData
+.Rproj.user
+*.Rproj
+
+# Data files (keep structure but not large data)
+# Uncomment to exclude large data files:
+# Raw-data/*.csv
+# Raw-data/*.xlsx
+# Raw-data/*.pdf
+
+# Output files (keep main report)
+output/
+# Keep the main report visible
+!ukraine-poolfund-report.html
+
+# Temporary files
+*~
+*.swp
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+
+# Quarto
+/.quarto/
+_site/
+*_cache/
+*_files/
+
+# R package development
+*.tar.gz
+*.Rcheck/
+
+# knitr and R markdown
+*.utf8.md
+*.knit.md
+
+# pkgdown site
+docs/

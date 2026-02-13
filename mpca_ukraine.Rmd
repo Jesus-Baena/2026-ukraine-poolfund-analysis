@@ -1,0 +1,1477 @@
+---
+title: "Exploring Multipurpose Cash Assistance (MPCA) to Understand Humanitarian Response in Ukraine"
+author: "Jesús Baena"
+date: "2024-01-11"
+output: 
+  html_document: 
+    theme: yeti
+    toc: true
+    toc_float:
+      collapsed: true 
+    number_sections: true
+    highlight: tango
+    code_folding: show
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+<style>
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Code+Pro&display=swap');
+
+/* --- Global Styles & Typography --- */
+body {
+    font-family: 'Lora', serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #343a40;
+    background-color: #fdfdfd;
+}
+
+/* --- Scoped Styles for Main Content Area --- */
+.main-container h1, .main-container h2, .main-container h3, .main-container h4, .main-container h5, .main-container h6 {
+    font-family: 'Lato', sans-serif;
+    color: #005f73;
+    font-weight: 700;
+}
+
+.main-container h1 {
+    margin-top: 2.5em;
+    margin-bottom: 1em;
+    padding-bottom: 0.3em;
+    border-bottom: 3px solid #005f73;
+}
+
+.main-container h2 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.main-container a {
+    color: #2B638B;
+    text-decoration: none;
+    border-bottom: 1px dotted #2B638B;
+    transition: all 0.2s ease-in-out;
+}
+
+.main-container a:hover {
+    color: #005f73;
+    border-bottom: 1px solid #005f73;
+}
+
+/* --- Global Unscoped Styles --- */
+pre, code {
+    font-family: 'Source Code Pro', monospace;
+}
+
+pre {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 1em;
+    margin-bottom: 1.5em;
+    overflow-x: auto;
+}
+
+code {
+    background-color: #e9ecef;
+    color: #c7254e;
+    padding: .2em .4em;
+    border-radius: 3px;
+    font-size: 85%;
+}
+pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #dee2e6;
+    margin: 3em 0;
+}
+
+.info-box {
+    padding: 1em 1.5em;
+    margin: 1.5em 0;
+    background-color: #eef7f7;
+    border-left: 5px solid #2B638B;
+    border-radius: 5px;
+}
+
+.info-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- FINAL TOC / SCROLLSPY HIGHLIGHTING FIX --- */
+/* This targets the correct HTML structure and will work. */
+
+/* Style for the active ToC list item's link */
+#toc .nav > .active > a,
+#toc .nav > .active > a:hover,
+#toc .nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #005f73; /* Your main header color */
+  border-left: 2px solid #005f73;
+}
+
+/* Style for regular ToC links on hover */
+#toc .nav > li > a:hover {
+    color: #005f73;
+    background-color: #f5f5f5;
+    border-left: 2px solid #005f73;
+}
+
+/* Style for regular, non-active ToC links */
+#toc .nav > li > a {
+  color: #333333; /* A standard dark gray for legibility */
+  border-left: 2px solid transparent; /* Keeps alignment perfect */
+}
+
+</style>
+
+```{r setup, include=FALSE}
+# --- Global Chunk Options ---
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  comment = NA,
+  fig.align = 'center',
+  fig.width = 8,
+  fig.height = 5,
+  fig.retina = 2
+)
+
+# --- Library Loading (Consolidated) ---
+library(tidyverse)
+library(dplyr)
+library(janitor)
+library(readr)
+library(readxl)
+library(kableExtra)
+library(tidyr)
+library(forcats)
+library(ggplot2)
+# library(tinytex) # Not needed for HTML output
+
+# --- Consistent ggplot2 Theme ---
+theme_set(
+  theme_minimal(base_size = 14, base_family = "Lato") +
+  theme(
+    plot.title = element_text(face = "bold", color = "#005f73", hjust = 0.5),
+    plot.subtitle = element_text(color = "#343a40", hjust = 0.5, margin = margin(b=10)),
+    plot.caption = element_text(color = "grey50", face = "italic"),
+    axis.title = element_text(face = "bold"),
+    axis.text = element_text(color = "grey30"),
+    legend.position = "top"
+  )
+)
+
+
+# --- Consistent kableExtra Styling Function ---
+style_table <- function(kable_input) {
+  kable_input %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed"),
+    full_width = FALSE,
+    position = "center"
+  )
+}
+```
+---
+
+
+
+# ASKING about the subject of MPCA.
+
+## Introduction and objectives.
+
+Multipurpose Cash Assistance (MPCA) has been a central method for
+delivering aid to populations affected by the ongoing Ukrainian
+conflict, particularly in the Donbas region, during the initial phases
+of humanitarian response. This assistance aims to meet diverse needs by
+providing flexible cash support to impacted households.
+
+The United Nations Office for the Coordination of Humanitarian Affairs
+(OCHA) compiles and regularly updates a dataset from field reports by
+humanitarian actors. **This dataset records details on MPCA
+interventions across Ukraine**, capturing information on funding
+allocation, regional coverage, and demographic reach.
+
+In this notebook, we're diving into an exploratory look at this list for
+[three main goals]{.underline}:
+
+1.  **Descriptive Overview:** To put together a summary of what the
+    dataset looks like - its structure, different types of information
+    it holds, and details about MCA interventions.
+
+2.  **Data Completeness and Quality**: Identifying any missing pieces of
+    data and thinking about how that might affect our analysis.
+
+3.  **Geographical Analysis:** Looking at differences in where MCA is
+    being offered and where there might be gaps, while also considering
+    how geographical factors play a role in deciding where help goes in
+    Ukraine.
+
+By focusing on these areas, the aim is to gather insights that can make
+MCA targeting better, making sure it gets to the places and people who
+need it most.
+
+## Methodology
+
+For this case study, I will be following the steps proposed by the
+Google Data Analytics Profesional Certificate: **ask, prepare, process,
+analyze, share and act.**
+
+The question I want to ask is: **what insights can we get from data
+collected in the field?** This data was collected as a way to track and
+coordinate the response during the first year of hostilities in the war
+of Ukraine. With the perspective gained one year after, i will try to
+present the data in a different way as it was originally conceived.
+
+This analysis is the product of data wrangling, analysis and my own
+subject expertise. During the first two years of the emergency, I lead
+operations for a humanitarian organization in the East of Ukraine. I
+also have a record of working in cash based interventions in other
+emergencies.
+
+## Limitations:
+
+The primary dataset under study is made up of secondary data voluntarily
+shared by humanitarian actors involved in this operation. **Voluntary
+self-reporting can unintentionally result in inaccuracies.**
+
+::: {.info-box}
+Initially during emergencies, when population movements were highly
+fluctuating, the absence of precise demographic data makes it
+challenging to present figures relative to the total population.
+Consequently, we'll only be able to display absolute numbers in certain
+instances.
+:::
+
+This analysis cannot replace necessary on-site assessments and should
+not be solely relied upon for making decisions. Instead, it serves as a
+complementary source of insights.
+
+# PREPARING
+
+## Source
+
+This dataset was retrieved on May 27th, 2023 and was originally posted
+by OCHA Ukraine (The United Nations Office for the Coordination of
+Humanitarian Affairs) on the platform [Humanitarian Data
+Exchange](https://data.humdata.org/group/ukr) (HDX) which is an open
+platform for sharing data across crises and organisations, and managed
+by OCHA's Centre for Humanitarian Data.
+
+## License:
+
+This dataset is licensed under **Creative Commons Attribution
+International**.
+
+Under the CC BY license, you are free to share (copy and redistribute
+the material in any medium or format) and or adapt (remix, transform,
+and build upon the material) for any purpose, even commercially. The
+licensor cannot revoke these freedoms as long as you follow the license
+terms. The license terms are that you must give appropriate credit,
+provide a link to the license, and indicate if changes were made. You
+may do so in any reasonable manner, but not in any way that suggests the
+licensor endorses you or your use. Additionally, you may not apply legal
+terms or technological measures that legally restrict others from doing
+anything the license permits.
+
+# PROCESSING.
+
+## Setting up our working environment
+
+We are going to need a number of libraries for data wrangling, including
+those that will format the document appropriately.
+
+```{r install, warning=FALSE}
+
+library(tidyverse)
+library(dplyr)
+library(janitor)
+library(readr)
+library(readxl)
+library(kableExtra)
+library(tidyr)
+library(forcats)
+library(ggplot2)
+library(tinytex)
+library(scales)
+library(tidytext)
+
+```
+
+## Acquiring the data.
+
+The dataset, which is a crucial part of this analysis, is an Excel file
+that has been uploaded to the Humanitarian Data Exchange. It has been
+maintained throughout the year 2022 by the Multipurpose Cash Assistance
+(MPCA) technical working group. **It has 42 variables and 46,866
+observations** (described below).
+
+```{r download, eval=FALSE, warning=FALSE, include=FALSE}
+
+# Install and load the httr package
+install.packages("httr")
+library(httr)
+
+# Define the URL of the file
+file_url <- "https://data.humdata.org/dataset/0d47e878-d8a4-4fcf-81a0-504725c3ba4e/resource/2bdc1d74-00a8-4c50-8c7a-b0ce31265219/download/mpc_ukr_hdx_2022_full.xlsx"
+
+# Define the local location where you want to save the file
+destfile <- "C:/Users/jesus/OneDrive/Documents/02 ACADEMICS/003 DATA SCIENCE/002 R/001 MPCA1/001 MPCA1/mpc_ukr_hdx_2022_full.xlsx"
+
+# Download the file using httr
+response <- GET(file_url)
+writeBin(content(response, "raw"), destfile)
+
+# Install and load the readxl package
+install.packages("readxl")
+library(readxl)
+
+# Read the Excel file but only sheet 2, where the juicy stuff is
+data <- read_excel(destfile, sheet = 2)
+```
+
+```{r load, eval=FALSE, warning=TRUE, include=FALSE}
+
+# Alternatively you can load it locally as retrieved on May 27th, 2023. 
+library(readxl)
+library(fs)
+
+data <- read_excel("Y:/003 DATA SCIENCE/002 R/001 MPCA1/mpc_ukr_hdx_2022_full.xlsx/mpc_ukr_hdx_2022_full.xlsx", sheet = 2)
+```
+
+The Excel sheet we're working with has seen quite a bit of action over
+time - various people have filled it out, some external connections no
+longer work, and so on. As a result, we've run into two main problems:
+1) The dates are causing numerous errors due to issues with POXit, and
+2) There's "phantom data," or entries that appear to be filled but the
+actual information is missing.
+
+To streamline our process and save time, **I'll convert this complex
+Excel file into a simpler CSV format**. This will give us the raw data
+to work with, allowing us to start the cleanup process from there.
+
+```{r message=FALSE, warning=FALSE}
+
+# Loading the raw data in CSV format.
+library(readr)
+mpca <- read_csv("data/mpc_ukr_hdx_2022_full - Copy.csv")
+```
+
+## Describing the data.
+
+Each record in this dataset represents a distinct action, which captures
+the delivery of aid or services to a specific group of beneficiaries in
+a particular location during a defined time period. Organizations are
+required to report all actions, provided they meet certain
+prerequisites, such as securing the necessary permissions and obtaining
+adequate funding. As a result, these records grow and accumulate over
+time, reflecting the evolving scope and scale of activities.
+
+It is important to understand that this data was collected for
+coordination purposes, not for research. As such, the data contains some
+inconsistencies that were "tolerated" because they were not a priority
+for this group of information managers.
+
+```{r eval=FALSE, include=FALSE}
+
+str(mpca)
+
+```
+
+![Print out of str(mpca)](schema.png){width="515"}
+
+## Standardizing and cleaning.
+
+Several issues become apparent that require attention to ensure accurate
+analysis:
+
+1.  **Variable Names**: The names given to our data variables are
+    excessively long, making them cumbersome to work with and less
+    intuitive.
+
+2.  **Date Formatting**: The date information is not presented in a
+    user-friendly format, causing difficulties in interpreting and
+    manipulating temporal data.
+
+3.  **Empty Variables**: Some of the variables within the dataset
+    contain no actual data, which could skew analysis results if
+    included.
+
+4.  **Missing Values**: There are instances where data is missing from
+    certain entries, necessitating strategies to address these gaps.
+
+5.  **Characterized Factors**: Certain variables that should be
+    categorical or factor types are instead recorded as character
+    strings, potentially complicating analyses that require specific
+    data formats.
+
+6.  **Unvalidated Factor Data**: Some of the categorical data within our
+    dataset lack the necessary validation, which could lead to
+    inconsistencies and errors in analysis.
+
+#### Fixing the variable's names.
+
+The dataset included in the first row, not only the name of the column,
+but also the translation to Ukranian language and instructions on how to
+report each variable. I am going to rename them in a more machine
+readable way.
+
+```{r new_names, echo=TRUE}
+
+# Let's address first the issue of the variables' names, they are too long and we will replace them for these: 
+
+new_names <- c(
+"TYPE", "ORGANIZATION", "IMPLEMENTING_PARTNER", "DONOR", "ACTIVITY",
+"FIN_SERVICES", "OBLAST", "ADMIN1_ID", "RAION", "ADMIN2_ID", "HROMADA",
+"ADMIN3_ID", "SETTLEMENT", "ADMIN4_ID", "RURAL_URBAN", "FINAL_RURAL_URBAN", "ADMIN_3_4", "MODALITY",
+"CONDITIONALITY", "TRANSFER_VALUE_PER_HOUSEHOLD", "FREQUENCY_OF_TRANSFER",
+"BENEFICIARY_TYPE", "DELIVERY_MECHANISMS", "STATUS", "DURATION_ONE_MONTH",
+"START_DATE_ESTIMATED", "END_DATE_ESTIMATED", "NUMBER_OF_BENEFICIARIES_INDV",
+"NUMBER_OF_BENEFICIARIES_HH", "GIRLS_0_17_YEARS", "BOYS_0_17_YEARS",
+"WOMEN_18_59_YEARS", "MEN_18_59_YEARS", "ELDERLY_60", "PEOPLE_WITH_DISABILITIES",
+"ACRONYM_REPORTING", "ORGANIZATION_TYEP_REPORTING", "ACRONYM_IMPLEMENTER",
+"ORGANISATION_TYPE_IMPLEMENTER", "TOTAL_AMOUNT_OF_CASH_DISBURSED", "CONTACT1", "CONTACT2"
+)
+
+# Renaming columns
+colnames(mpca) <- new_names
+
+```
+
+#### Fixing dates.
+
+The date information in our dataset is currently presented in a complex
+POSIXct format, which can be challenging to interpret directly. I am
+going to change, in this case to make it more human readable.
+
+```{r fixing_dates, echo=TRUE}
+
+# Convert START_DATE_ESTIMATED to Date format
+mpca$START_DATE_ESTIMATED <- as.Date(mpca$START_DATE_ESTIMATED, format = "%d/%m/%Y")
+
+# Convert END_DATE_ESTIMATED to Date format
+mpca$END_DATE_ESTIMATED <- as.Date(mpca$END_DATE_ESTIMATED, format = "%d/%m/%Y")
+
+```
+
+#### Removing empty variables and duplicated registries.
+
+I have identified a few variables that either do not contribute
+meaningful information or are no longer necessary:
+
+1.  **TYPE**: This variable does not provide us with any valuable
+    insights.
+
+2.  **FIN_SERVICES**: It appears that this field is entirely empty and
+    thus offers no data for analysis.
+
+3.  **RURAL_URBAN**: Although initially present, this variable has been
+    superseded by a more comprehensive final version,
+    `RURAL_URBAN_FINAL`.
+
+4.  **Admin Codes**: During the initial data entry process,
+    administrative codes were undoubtedly useful for organizing
+    information. However, given that our current analysis does not
+    require these granular identifiers, we will remove them from the
+    dataset to simplify our focus on more pertinent variables.
+
+5.  **CONTACT1 and CONTACT2**: These fields, which likely pertain to
+    contact information, are not relevant to the specific analytical
+    objectives of this study.
+
+    Additionally there is an important number of duplicated
+    observations, we will count how many of them we are removing from
+    our analysis.
+
+By removing these variables and observations, we have a lighter and
+leaner dataset.
+
+```{r message=FALSE, warning=FALSE}
+
+library(dplyr)
+
+# Dropping the specified columns
+mpca <- mpca %>%
+  select(-TYPE, -FIN_SERVICES, -RURAL_URBAN, -CONTACT1, -CONTACT2)
+
+
+```
+
+```{r remove_duplicates, echo=TRUE}
+
+original_rows <- nrow(mpca)
+
+# Removing duplicate rows
+mpca <- mpca[!duplicated(mpca), ]
+
+new_rows <- nrow(mpca)
+
+duplicates_removed <- original_rows - new_rows
+cat("Number of duplicated rows removed:", duplicates_removed, "\n")
+
+```
+
+#### Fixing the type of variables.
+
+As noted earlier, we have categorical variables currently formatted as
+character data. This prevents us from performing classifications or
+conducting basic descriptive analyses. Therefore, we will proceed to
+transform these variables, similar to how we handled the date variables.
+
+Additionally, we need to examine the unique values within these
+categorical variables. This step will help us identify and address any
+inconsistencies before proceeding with the dataset analysis.
+
+```{r as_factor, echo=TRUE}
+
+# Convert all character columns to factors
+mpca <- mpca %>%
+  mutate(across(where(is.character), as.factor))
+
+```
+
+```{r factor_check, echo=TRUE}
+
+# Specify the columns you want to check
+selected_columns <- c("ACTIVITY", "FINAL_RURAL_URBAN", "ADMIN_3_4", "MODALITY", "CONDITIONALITY",
+                      "FREQUENCY_OF_TRANSFER", "BENEFICIARY_TYPE", "DELIVERY_MECHANISMS",
+                      "STATUS", "DURATION_ONE_MONTH", "ACRONYM_REPORTING", 
+                      "ORGANIZATION_TYEP_REPORTING", "ACRONYM_IMPLEMENTER",
+                      "ORGANISATION_TYPE_IMPLEMENTER")
+
+# Filter to only the specified columns and check if they are factors
+factor_levels <- lapply(mpca[selected_columns], function(col) {
+  if (is.factor(col)) levels(col) else NULL
+})
+
+# Remove any NULL values for non-factor variables
+factor_levels <- factor_levels[!sapply(factor_levels, is.null)]
+
+# Display the unique values for each selected factor variable
+print(factor_levels)
+
+```
+
+As anticipated, some entries in the dataset contain misspellings:
+
+-   **Conditionality** is listed as [1] "Cash For Food" for covering
+    basic needs", [4] "Multipurpose" "No condition", and [7] "Nost
+    families" "Optional" [10] "Unconditiional" "Unconditional"
+    "Unconditional Cash Transfer" "vulnerability, IDP".
+
+-   **Duration of the transfers** is noted as [1] "1 Month", "1.5
+    months", "2 Months", "3 month", "3 months", "3 Months", and "4
+    Months".
+
+There seems to be a potential issue with the modality of transfer, where
+"Western Union" is incorrectly placed within the "Post Office" category.
+It could suggest a significant number of international transfers
+originating from Western Union.
+
+The category "International NGO/National NGO" in
+**"ORGANISATION_TYPE_IMPLEMENTER"** is unclear and inconsistent for
+comparison purposes with **"ORGANIZATION_TYEP_REPORTING"**. It seems to
+have been used to describe internationally operating NGOs. I will verify
+the names associated with this category and make a decision on how to
+address it.
+
+Although there are libraries like *stringdist* designed to handle such
+cases, given their rarity in our dataset, we can tackle them
+individually. We plan to utilize the *forcats* library for this purpose.
+
+```{r}
+
+
+# Clean and standardize the CONDITIONALITY column in cleaned_mpca
+mpca <- mpca %>%
+  mutate(CONDITIONALITY = tolower(CONDITIONALITY), # Convert to lowercase
+         CONDITIONALITY = case_when(
+           grepl("unconditional|no|none|optional", CONDITIONALITY) ~ "unconditional",
+           grepl("cash for food|basic needs", CONDITIONALITY) ~ "conditional",
+           grepl("mpc|mpca|multipurpose|other", CONDITIONALITY) ~ "ambiguous", # Combine other & multipurpose
+           TRUE ~ "ambiguous" # Default to ambiguous for undefined cases
+         ))
+
+# Verify the changes
+unique(mpca$CONDITIONALITY)
+
+```
+
+```{r}
+
+# Clean and standardize the DURATION_ONE_MONTH column in cleaned_mpca
+mpca <- mpca %>%
+  mutate(DURATION_ONE_MONTH = tolower(DURATION_ONE_MONTH), # Convert to lowercase
+         DURATION_ONE_MONTH = case_when(
+           grepl("1 month", DURATION_ONE_MONTH) ~ "1 month",
+           grepl("1.5", DURATION_ONE_MONTH) ~ "1.5 months",
+           grepl("^2 ", DURATION_ONE_MONTH) ~ "2 months",
+           grepl("^3 ", DURATION_ONE_MONTH) ~ "3 months",
+           grepl("^4 ", DURATION_ONE_MONTH) ~ "4 months",
+           grepl("^6 ", DURATION_ONE_MONTH) ~ "6 months",
+           grepl("2nd round of 3 months", DURATION_ONE_MONTH) ~ "3 months",
+           grepl("3 and 6 months", DURATION_ONE_MONTH) ~ "multiple durations",
+           TRUE ~ "other" # Catch-all for undefined cases
+         ))
+
+# Verify the changes
+unique(mpca$DURATION_ONE_MONTH)
+
+
+
+```
+
+Here we have another problematic variable, and the reason why a detailed
+financial analysis is not possible with this dataset (more information
+below). The variables detailing the amount of transfers were in some
+cases entered as text, we will change it for a numeric variable and see
+how much data we can recover. There is also a big number of outliers,
+which I will investigate below.
+
+```{r}
+
+# Clean and convert TRANSFER_VALUE_PER_HOUSEHOLD to numeric
+mpca <- mpca %>%
+  mutate(
+    TRANSFER_VALUE_PER_HOUSEHOLD = gsub("\\$", "", TRANSFER_VALUE_PER_HOUSEHOLD), # Remove dollar signs
+    TRANSFER_VALUE_PER_HOUSEHOLD = as.numeric(TRANSFER_VALUE_PER_HOUSEHOLD)      # Convert to numeric
+  )
+
+# Check for warnings or issues
+sum(is.na(mpca$TRANSFER_VALUE_PER_HOUSEHOLD)) # Count how many NAs remain
+
+# Calculate basic statistics
+transfer_stats <- mpca %>%
+  summarise(
+    Mean = mean(TRANSFER_VALUE_PER_HOUSEHOLD, na.rm = TRUE),
+    Median = median(TRANSFER_VALUE_PER_HOUSEHOLD, na.rm = TRUE),
+    Min = min(TRANSFER_VALUE_PER_HOUSEHOLD, na.rm = TRUE),
+    Max = max(TRANSFER_VALUE_PER_HOUSEHOLD, na.rm = TRUE),
+    SD = sd(TRANSFER_VALUE_PER_HOUSEHOLD, na.rm = TRUE),
+    Missing = sum(is.na(TRANSFER_VALUE_PER_HOUSEHOLD))
+  )
+
+# View the statistics
+transfer_stats
+
+
+```
+
+## Handling missing data.
+
+It is noted that several columns have significant gaps—with 20% or more
+entries missing. This issue is quite apparent in the administrative
+details like *'admin4_id\_\_\_automatic'*, 'rural', and *'settlement'*,
+as well as organization-related data such as *'org_contact_name'* and
+*'organisation_type'*.
+
+Let's consider **the implications for each variable**:
+
+-   **ADMIN4_ID and SETTLEMENT**: This is where the major gap is, we
+    will analyze this in depth.
+
+-   **ACRONYM_IMPLEMENTER** and **ORGANISATION_TYPE_IMPLEMENTER**: This
+    is ok, when the action is implemented by the same reporting
+    organization, this goes unfilled.
+
+-   **DELIVERY_MECHANISMS**: This is relevant, I will try to extrapolate
+    from the existing observations.
+
+-   **MEN_18_59_YEARS, WOMEN_18_59_YEARS, etc.:** In all of the
+    demographics, the missing values represents zero (there was no
+    people of these segments in that household). But, if all
+    demographics of an action are missing, it means that the data was
+    not collected. This is a tough one.
+
+-   **DONOR**: Probably funding coming from the organization itself
+    (private funding). No donor wants to go unmentioned :)
+
+In many cases, missing data shall be interpreted as **zero value** or
+**not applicable**. Best practice is not to leave empty observations.
+
+```{r}
+
+# Calculate the number and percentage of missing values
+missing_values <- data.frame(
+  Column = names(mpca), # Explicitly assign column names
+  Missing_Count = colSums(is.na(mpca)),
+  Missing_Percentage = sapply(mpca, function(x) mean(is.na(x)) * 100),
+  row.names = NULL # Remove row names to avoid duplication
+)
+
+# Display the table using kable
+missing_values %>%
+  arrange(desc(Missing_Percentage)) %>% # Sort by highest missing percentage
+  kable(
+    caption = "Missing Values by Column in the Dataset",
+    col.names = c("Column", "Missing Count", "Missing Percentage (%)"),
+    digits = 2,
+    format.args = list(big.mark = ",") # Add thousand separators for counts
+  ) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = FALSE,
+    position = "center"
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#D3D3D3") # Highlight header row
+
+
+```
+
+Here we are going to see another challenge. The demographic variables
+are inconsistently entered.
+
+```{r}
+
+# Specify the demographic columns
+demographic_columns <- c("PEOPLE_WITH_DISABILITIES", "BOYS_0_17_YEARS", 
+                         "GIRLS_0_17_YEARS", "MEN_18_59_YEARS", 
+                         "WOMEN_18_59_YEARS", "ELDERLY_60")
+
+# Convert all demographic columns to numeric, handling non-numeric values
+mpca <- mpca %>%
+  mutate(across(all_of(demographic_columns), ~ parse_number(as.character(.))))
+
+```
+
+```{r}
+# Step 2: Handle missing data
+mpca <- mpca %>%
+  mutate(
+    # Flag rows where all demographic columns are missing
+    all_missing = rowSums(is.na(select(., all_of(demographic_columns)))) == length(demographic_columns),
+    # Replace missing values conditionally
+    across(
+      all_of(demographic_columns),
+      ~ ifelse(all_missing, NA, ifelse(is.na(.), 0, .))
+    )
+  ) %>%
+  mutate(
+    # Replace completely missing rows with "Not Collected" as a separate indicator
+    across(
+      all_of(demographic_columns),
+      ~ ifelse(is.na(.), "Not Collected", as.character(.))
+    )
+  ) %>%
+  select(-all_missing) # Remove temporary helper column
+
+```
+
+```{r}
+
+library(dplyr)
+
+# List of columns where missing data should be replaced with "Not Applicable"
+columns_to_replace_na <- c("ACRONYM_IMPLEMENTER", "ORGANISATION_TYPE_IMPLEMENTER")
+
+# Add "Not Applicable" as a level and replace NAs
+mpca <- mpca %>%
+  mutate(across(all_of(columns_to_replace_na), 
+                ~ factor(.,
+                         levels = c(levels(.), "Not Applicable")))) %>%
+  mutate(across(all_of(columns_to_replace_na), 
+                ~ replace_na(., "Not Applicable")))
+
+
+```
+
+```{r}
+
+library(naniar)
+
+# Create a missing data plot
+gg_miss_var(mpca)
+
+```
+
+Investigating empty values in the geography
+
+```{r}
+
+
+# Calculate percentage of missing values for the specified columns grouped by ORGANIZATION_TYEP_REPORTING
+missing_percentage_by_type <- mpca %>%
+  group_by(ORGANIZATION_TYEP_REPORTING) %>%
+  summarise(
+    OBLAST_missing = mean(is.na(OBLAST)) * 100,
+    RAION_missing = mean(is.na(RAION)) * 100,
+    HROMADA_missing = mean(is.na(HROMADA)) * 100,
+    SETTLEMENT_missing = mean(is.na(SETTLEMENT)) * 100
+  ) %>%
+  arrange(desc(OBLAST_missing)) # Optional: Sort by highest missing percentage
+
+# Create and style the table
+missing_percentage_by_type %>%
+  kable(
+    caption = "Percentage of Missing Values by Organization Type Reporting",
+    col.names = c("Organization Type", "Oblast (%)", "Raion (%)", "Hromada (%)", "Settlement (%)"),
+    digits = 2
+  ) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"), # Adds visual effects
+    full_width = FALSE, # Keeps table width compact
+    position = "center" # Centers the table
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#D3D3D3") # Highlights the header row
+```
+
+This is one of the most significant findings. National NGOs excel in the
+granularity of reporting, effectively documenting activities at the most
+local level. While it is true that their efforts often focus on major
+cities (which are easier to report on), their deep local knowledge is
+clearly an asset that has been well utilized.
+
+On the other hand, UN agencies tend to report primarily at the Raion
+level (an administrative division comparable to a county). This lack of
+detailed reporting makes it challenging to identify which Hromadas
+(municipalities) have already been covered. This has been a frequent
+source of frustration for NGOs. I vividly recall team leaders expressing
+their frustration after long journeys to remote areas, only to discover
+that populations there had already been reached by UN agencies.
+
+While most NGOs relied on a face-to-face approach to register potential
+beneficiaries for cash transfers, UN agencies adopted a more practical,
+online registration method. However, this approach, combined with their
+limited reporting granularity, made it nearly impossible to identify
+coverage gaps effectively.
+
+```{r eval=FALSE, include=FALSE}
+write.csv(mpca, "data/cleaned_mpca.csv", row.names = FALSE)
+```
+
+# ANALIZING
+
+## Financial
+
+A financial analysis would be the most straightforward method to examine
+this data set. However, since our current exploration centers on
+coverage, we will only touch upon several key points:
+
+We must take into account the nature of self-reporting, where a field
+manager reports on their intended actions. There may be discrepancies
+between what is initially reported and the actual outcomes when the
+transfers are executed. To perform a more precise financial analysis, it
+would be more appropriate to consult more reliable sources, collected *a
+posteriori* such as Post Distribution Monitoring reports. These provide
+data that are derived directly from field observations and transfer
+records.
+
+In this analysis I will be focusing on coverage aspects, aiming to shed
+light on the operational intentions of these agencies without delving
+deeply into the complexities of their actual financial transactions or
+the variability in outcomes.
+
+To prove this, let's explore the surface of the finantial data in this
+dataset:
+
+```{r}
+
+# Summarize the total cash disbursed by ORGANIZATION_TYPE_REPORTING
+cash_summary <- mpca %>%
+  group_by(ORGANIZATION_TYEP_REPORTING) %>%
+  summarise(
+    Total_Cash_Disbursed = sum(TOTAL_AMOUNT_OF_CASH_DISBURSED, na.rm = TRUE) # Summing while ignoring NA values
+  ) %>%
+  arrange(desc(Total_Cash_Disbursed)) # Sort by total cash disbursed in descending order
+
+# Create and style the table
+cash_summary %>%
+  kable(
+    caption = "Total Cash Disbursed by Organization Type Reporting",
+    col.names = c("Organization Type", "Total Cash Disbursed ($)"),
+    digits = 2,
+    format.args = list(big.mark = ",") # Add thousand separators
+  ) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = FALSE,
+    position = "center"
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#D3D3D3") # Highlight header row
+
+
+```
+
+**What is happeing here?** Did we disboursed 1.2 Billion of dollars in
+cash transfers during 2022? Not really, although the amount of transfers
+for one emergency response was historical in terms of volume (some
+figures below), there is something else happening here.
+
+The high number of outliers (1,610 records) suggest that (mot likely)
+some reporting has been made in UHA and other in USD/EUR. This is not
+unheard of these kinf of responses, the primary objective in this
+dataset is field coordination, so **validation of right locations and
+covered beneficiaries** has a higher priority than cash disboursment.
+
+These are some of the publicly reported figures for the major UN
+agencies:
+
+**The World Food Programme** (WFP) distributed roughly \$375.6 million
+in cash-based transfers, benefiting approximately 2.3 million
+individuals. Source: WFP Executive Board.
+
+**The United Nations High Commissioner for Refugees** (UNHCR) provided
+\$202 million in both multi-purpose and protection-specific cash
+assistance to almost 500,000 refugees. Source: UNHCR Reporting.
+
+While specific figures for the International Organization for Migration
+(IOM)'s cash transfers in 2022 are not detailed in available sources,
+IOM has been actively engaged in delivering cash-based assistance to
+conflict-affected individuals across Ukraine.
+
+**The United Nations Children’s Fund** (UNICEF) initiated the 'Spilno'
+cash assistance program in March 2022, in partnership with Ukraine's
+Ministry of Social Policy. By August 2022, this initiative had
+distributed approximately \$125 million, supporting over 350,000
+children, including 35,000 with disabilities, across 120,000 households.
+Source: UNICEF.
+
+```{r}
+
+# Calculate basic statistics
+transfer_stats <- mpca %>%
+  summarise(
+    Mean = mean(TRANSFER_VALUE_PER_HOUSEHOLD, na.rm = TRUE),
+    Median = median(TRANSFER_VALUE_PER_HOUSEHOLD, na.rm = TRUE),
+    Min = min(TRANSFER_VALUE_PER_HOUSEHOLD, na.rm = TRUE),
+    Max = max(TRANSFER_VALUE_PER_HOUSEHOLD, na.rm = TRUE),
+    SD = sd(TRANSFER_VALUE_PER_HOUSEHOLD, na.rm = TRUE),
+    Missing = sum(is.na(TRANSFER_VALUE_PER_HOUSEHOLD))
+  )
+
+# View the statistics
+transfer_stats
+
+```
+
+We could probably identify these outliers and infer the most likely
+reporting intention. But again, it would be easier and more precise to
+use other sources for this kind of analysis.
+
+## Demographics
+
+One of the principles to identify gender imbalances dynamics is the
+collection of Sex and Age Disegregated Data (SADD). And although
+[methodologies](https://wrd.unwomen.org/practice/topics/data) can
+slightly differ, the main principle is that we differentiate population
+groups in a meaningful way to allow the targeting of specific
+vulnerabilities.
+
+In this case, data was disaggregated in an unusual way, and for the
+category of people beyond than 60 years old, there was no distinction
+between men and women. For this reason, I am presenting senior citizens
+and PwD separately.
+
+Additionally, since total population figures are hard to come by, due to
+the Internal Displacement and lack of recent census information, it has
+not been possible to relate these figures with the total population, and
+important limitation to take into account when reading these tables.
+
+```{r}
+
+# Define columns for Senior Citizens and PwD
+special_categories <- c("ELDERLY_60", "PEOPLE_WITH_DISABILITIES")
+
+# Convert these columns to numeric, handling "Not Collected"
+mpca[special_categories] <- lapply(mpca[special_categories], function(x) {
+  as.numeric(gsub("Not Collected", NA, x))
+})
+
+# Summarize totals (sum) for these categories
+special_totals <- colSums(mpca[special_categories], na.rm = TRUE)
+special_data <- data.frame(
+  Category = c("Senior Citizens (+60)", "PwD"),  # Custom labels
+  Total = special_totals
+)
+
+# Assign specific colors
+custom_colors <- c("Senior Citizens (+60)" = "#F8F2BB", "PwD" = "#FCD1CA")
+
+# Create the enhanced bar chart
+ggplot(special_data, aes(x = Category, y = Total, fill = Category)) +
+  geom_bar(stat = "identity", color = "black", width = 0.5, show.legend = FALSE) +
+  geom_text(aes(label = scales::comma(Total)), vjust = -0.5, size = 5, fontface = "bold") +  # Add bold totals
+  labs(
+    title = "Sum of Senior Citizens (+60) and PwD",
+    subtitle = "Representation of specific demographic groups",
+    x = "Category",
+    y = "Total Sum"
+  ) +
+  theme_light(base_size = 14) +  # Use a light theme for better aesthetics
+  scale_fill_manual(values = custom_colors) +
+  scale_y_continuous(labels = scales::comma, expand = expansion(mult = c(0, 0.1))) +  # Add space above bars
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0.5),
+    plot.subtitle = element_text(size = 12, hjust = 0.5),
+    plot.caption = element_text(size = 10, face = "italic", hjust = 1),
+    axis.text.x = element_text(size = 12, face = "bold"),
+    axis.text.y = element_text(size = 12)
+  )
+
+```
+
+```{r}
+
+# Define demographic columns
+demographic_columns <- c("BOYS_0_17_YEARS", "GIRLS_0_17_YEARS", 
+                         "WOMEN_18_59_YEARS", "MEN_18_59_YEARS")
+
+# Convert demographic columns to numeric, handling "Not Collected"
+mpca[demographic_columns] <- lapply(mpca[demographic_columns], function(x) {
+  as.numeric(gsub("Not Collected", NA, x))
+})
+
+# Summarize totals for each category
+demographic_totals <- colSums(mpca[demographic_columns], na.rm = TRUE)
+demographic_data <- data.frame(
+  Category = c("Boys (0-17)", "Girls (0-17)", "Women (18-59)", "Men (18-59)"),
+  Total = demographic_totals
+)
+
+# Create positive and negative values for pyramid
+demographic_data <- demographic_data %>%
+  mutate(Direction = case_when(
+    grepl("Girls|Women", Category) ~ "Female",
+    TRUE ~ "Male"
+  ),
+  Value = ifelse(Direction == "Female", Total, -Total))
+
+# Custom colors
+custom_colors <- c("Female" = "#8600fc", "Male" = "#00C4AC")
+
+# Create the pyramid plot
+ggplot(demographic_data, aes(x = Category, y = Value, fill = Direction)) +
+  geom_bar(stat = "identity", color = "black", width = 0.5) +
+  geom_text(aes(label = scales::comma(abs(Value))), vjust = 0.5, hjust = ifelse(demographic_data$Value > 0, -0.1, 1.1), 
+            size = 5, fontface = "bold") +  # Add labels within the bars
+  coord_flip() +
+  scale_y_continuous(labels = abs, expand = expansion(mult = c(0.1, 0.1))) +
+  scale_fill_manual(values = custom_colors) +
+  labs(
+    title = "Demographic Pyramid: Men, Women, Boys, and Girls",
+    subtitle = "Total representation of age and gender groups",
+    x = "Demographic Categories",
+    y = "Population (Sum)"
+  ) +
+  theme_light(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0.5),
+    plot.subtitle = element_text(size = 12, hjust = 0.5),
+    plot.caption = element_text(size = 10, face = "italic", hjust = 1),
+    axis.text.x = element_text(size = 12),
+    axis.text.y = element_text(size = 12, face = "bold"),
+    legend.position = "top",
+    legend.title = element_blank()
+  )
+
+
+```
+
+```{r}
+
+
+# Assign colors for gender
+row_colors <- c("#8600fc", "#00C4AC")  # Purple for Female, Green for Male
+
+# Create and style the table
+demographic_data %>%
+  kable("html", align = "c") %>%
+  kable_styling("striped", full_width = F, font_size = 16) %>%
+  row_spec(1, background = row_colors[1], color = "white") %>%  # Girls
+  row_spec(2, background = row_colors[2]) %>%  # Boys
+  row_spec(3, background = row_colors[1], color = "white") %>%  # Women
+  row_spec(4, background = row_colors[2])      # Men
+
+```
+
+Although we are still observing absolute figures, there is a clear
+reduction in the number of adult men. This is particularly striking,
+considering that [most of the refugee population consists of women and
+children](https://www.oecd.org/en/publications/2023/05/what-are-the-integration-challenges-of-ukrainian-refugee-women_fb465454.html).
+This trend might suggest voluntary underreporting by families who fear
+recruitment. Since the transfer amount is calculated based on the number
+of family members, this could mean that larger families are receiving
+less aid than initially intended. This would be an interesting line for
+further research.
+
+## Geographical analysis
+
+```{r}
+# Summarize total population by oblast
+oblast_summary <- mpca %>%
+  group_by(OBLAST) %>%  # Group by oblast
+  summarise(Total_Population = sum(across(all_of(demographic_columns)), na.rm = TRUE)) %>%
+  mutate(Percentage = (Total_Population / sum(Total_Population)) * 100) %>%  # Calculate percentage
+  arrange(desc(Total_Population))  # Arrange by total population in descending order
+
+# Create and style the table
+oblast_summary %>%
+  mutate(
+    Total_Population = scales::comma(Total_Population),  # Format totals with commas
+    Percentage = scales::percent(Percentage / 100, accuracy = 0.1)  # Format percentages
+  ) %>%
+  kable("html", col.names = c("Oblast", "Total Population", "Percentage"), align = "c") %>%
+  kable_styling("striped", full_width = F, font_size = 16)
+```
+
+```{r}
+
+# Define the desired oblast order (right-to-left)
+oblast_order <- c(
+  "Luhanska", "Donetska", "Kharkivska", "Zaporizka", "Dnipropetrovska", 
+  "Khersonska", "Mykolaivska", "Odeska", "Poltavska", "Kirovohradska", 
+  "Cherkaska", "Vinnytska", "Sumska", "Chernihivska", "Kyivska", 
+  "Zhytomyrska", "Rivnenska", "Volynska", "Khmelnytska", "Ternopilska", 
+  "Chernivetska", "Ivano-Frankivska", "Lvivska", "Zakarpatska"
+)
+
+# Summarize total population by oblast
+oblast_summary <- mpca %>%
+  group_by(OBLAST) %>%
+  summarise(Total_Population = sum(across(all_of(demographic_columns)), na.rm = TRUE)) %>%
+  filter(OBLAST %in% oblast_order) %>%  # Keep only oblasts in the order list
+  mutate(OBLAST = factor(OBLAST, levels = oblast_order))  # Set factor levels to match the order
+
+# Create the bar chart
+ggplot(oblast_summary, aes(x = OBLAST, y = Total_Population, fill = OBLAST)) +
+  geom_bar(stat = "identity", color = "black", show.legend = FALSE) +
+  labs(
+    title = "Population Distribution by Oblast",
+    x = "Oblast (Right to Left)",
+    y = "Total Population"
+  ) +
+  scale_y_continuous(labels = scales::comma) +
+  scale_x_discrete(limits = rev(oblast_order)) +  # Reverse order for right-to-left display
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0.5),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+
+
+```
+
+Now let's analyze the distribution of individual beneficiaries by
+Oblast, which is the highest administrative division under the State.
+The oblasts are arranged based on their geographical position in the
+country, from West to East, left to right, as they approach the
+frontline. The number of beneficiaries in oblasts farther from the
+frontline is comparable to those closer to it. Could this be because
+people relocated to the western border? While this might have been true
+at the beginning of the war, this data encompasses all of 2022. Another
+plausible (and somewhat problematic) explanation is that many
+humanitarian organizations established themselves in the West (notably
+in the city of Lviv), reaching more people there than the relatively few
+organizations that deployed to the East.
+
+```{r}
+# Summarize total population by oblast and organization type
+oblast_summary <- mpca %>%
+  group_by(OBLAST, ORGANIZATION_TYEP_REPORTING) %>%  # Include organization type in the grouping
+  summarise(Total_Population = sum(across(all_of(demographic_columns)), na.rm = TRUE)) %>%
+  filter(OBLAST %in% oblast_order) %>%  # Keep only oblasts in the order list
+  mutate(OBLAST = factor(OBLAST, levels = oblast_order))  # Set factor levels to match the order
+
+# Create the stacked bar chart
+ggplot(oblast_summary, aes(x = OBLAST, y = Total_Population, fill = ORGANIZATION_TYEP_REPORTING)) +
+  geom_bar(stat = "identity", color = "black") +
+  labs(
+    title = "Population Distribution by Oblast and Organization Type",
+    x = "Oblast (East to West)",
+    y = "Total Population",
+    fill = "Organization Type"
+  ) +
+  scale_y_continuous(labels = scales::comma) +
+  scale_x_discrete(limits = rev(oblast_order)) +  # Reverse order for right-to-left display
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0.5),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+```
+
+By type of organization, we can observe that a significant portion of
+those reached in the west were assisted by UN agencies. This could be
+attributed to the stricter security constraints faced by their staff
+compared to NGOs.
+
+```{r}
+# Load additional libraries for arrow annotation
+library(grid)
+
+# Create the stacked bar chart
+ggplot(oblast_summary, aes(x = OBLAST, y = Total_Population, fill = ORGANIZATION_TYEP_REPORTING)) +
+  geom_bar(stat = "identity", color = "black") +
+  labs(
+    title = "Population Distribution by Oblast and Organization Type",
+    subtitle = "Oblast shown in order of approximation to the frontline ",
+    x = "Oblast (from West to East)",
+    y = "Total Population",
+    fill = "Organization Type"
+  ) +
+  scale_y_continuous(labels = scales::comma) +
+  scale_x_discrete(limits = rev(oblast_order)) +  # Reverse order for right-to-left display
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0.5),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    plot.margin = margin(t = 40, r = 20, b = 20, l = 20)  # Adjust margin for extra space
+  ) +
+  # Add an arrow annotation
+  annotation_custom(
+    grob = grid::linesGrob(arrow = arrow(type = "closed", length = unit(0.25, "inches")), 
+                           gp = gpar(col = "black", lwd = 2)),
+    ymin = max(oblast_summary$Total_Population) * 1.05, ymax = max(oblast_summary$Total_Population) * 1.05,
+    xmin = 1, xmax = 24  # Control arrow position
+  ) +
+  # Add text for "Frontline"
+  annotate("text", x = 23, y = max(oblast_summary$Total_Population) * 1.1, label = "Frontline", 
+           size = 5, hjust = 0, fontface = "bold")
+
+```
+
+```{r}
+
+
+# Define the Oblasts of interest
+oblsts_of_interest <- c("Donetska", "Lvivska", "Zakarpatska", "Kharkivska") # Replace "Dnipropetrovska" with "Donetska"
+
+# Filter and analyze Raion coverage by Oblast
+raion_coverage_by_oblast <- mpca %>%
+  filter(OBLAST %in% oblsts_of_interest, !is.na(RAION)) %>% # Filter for selected Oblasts and valid Raions
+  group_by(OBLAST) %>%                                     # Group by Oblast
+  summarise(raions_covered = n_distinct(RAION))            # Count unique Raions per Oblast
+
+# Print the results
+print(raion_coverage_by_oblast)
+
+```
+
+```{r}
+
+# Visualization with proper Oblast order and sorting within each chart
+ggplot(data = mpca %>% 
+         filter(OBLAST %in% c("Lvivska", "Kharkivska", "Zakarpatska", "Odeska"), !is.na(RAION)) %>%
+         mutate(
+           OBLAST = factor(OBLAST, levels = c("Lvivska", "Kharkivska", "Zakarpatska", "Odeska")), # Correct Oblast order
+           RAION = reorder(RAION, -NUMBER_OF_BENEFICIARIES_INDV) # Sort Raions by number of beneficiaries
+         ),
+       aes(x = RAION, y = NUMBER_OF_BENEFICIARIES_INDV, fill = OBLAST)) +
+  geom_bar(stat = "identity", show.legend = FALSE) +        # Bar chart without labels
+  facet_wrap(~ OBLAST, scales = "free", ncol = 2) +         # Separate facets by Oblast
+  coord_flip() +                                            # Flip axes for better readability
+  scale_y_continuous(labels = scales::comma, expand = expansion(mult = c(0, 0.1))) +
+  labs(
+    title = "Number of Beneficiaries Reached per Raion",
+    subtitle = "Comparing coverage in Lvivska, Kharkivska, Zakarpatska, and Odeska Oblasts",
+    x = "Raion",
+    y = "Number of Beneficiaries"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    strip.text = element_text(face = "bold", size = 14),
+    axis.text.x = element_text(size = 12),
+    axis.text.y = element_text(size = 10),
+    plot.title = element_text(face = "bold", size = 16),
+    plot.subtitle = element_text(size = 12, face = "italic")
+  ) +
+  scale_fill_brewer(palette = "Set2")
+
+```
+
+On the left, we see two oblasts close to the frontline, while on the
+right, there are two oblasts farther away. Both show a similar
+distribution, with more beneficiaries reached in areas less affected by
+the hostilities.
+
+```{r echo=TRUE}
+
+# Rural/Urban Labels and Formatting
+rural_urban_summary <- mpca %>%
+  filter(!is.na(FINAL_RURAL_URBAN)) %>%
+  mutate(
+    FINAL_RURAL_URBAN = case_when(
+      FINAL_RURAL_URBAN == "rural/ сільський" ~ "Rural",
+      FINAL_RURAL_URBAN == "urban / міський" ~ "Urban",
+      TRUE ~ FINAL_RURAL_URBAN
+    )
+  ) %>%
+  group_by(FINAL_RURAL_URBAN) %>%
+  summarise(
+    `# of Individuals` = sum(NUMBER_OF_BENEFICIARIES_INDV, na.rm = TRUE),
+    `# of Actions` = n()
+  ) %>%
+  mutate(
+    `# of Individuals` = scales::comma(`# of Individuals`),
+    `# of Actions` = scales::comma(`# of Actions`)
+  )
+
+# Display the table with kable
+rural_urban_summary %>%
+  kbl(caption = "Summary of Beneficiaries by Rural/Urban Classification") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), 
+                full_width = FALSE, font_size = 12) %>%
+  column_spec(1, bold = TRUE) %>%  # Highlight the Rural/Urban column
+  add_header_above(c(" " = 1, "Beneficiaries Data" = 2))  # Add a header above the numeric columns
+
+```
+
+A significant number of actions in rural areas reflects a strong
+commitment to reaching the most vulnerable populations. These efforts
+are logistically more challenging and typically serve fewer people per
+action, making them more resource- and energy-intensive.
+
+```{r}
+
+
+# Calculate percentages for urban and rural beneficiaries and actions
+organization_rural_urban_summary <- mpca %>%
+  filter(!is.na(FINAL_RURAL_URBAN), !is.na(ORGANIZATION_TYEP_REPORTING)) %>%  # Exclude missing data
+  mutate(
+    FINAL_RURAL_URBAN = case_when(
+      FINAL_RURAL_URBAN == "rural/ сільський" ~ "Rural",
+      FINAL_RURAL_URBAN == "urban / міський" ~ "Urban",
+      TRUE ~ FINAL_RURAL_URBAN
+    )
+  ) %>%
+  group_by(ORGANIZATION_TYEP_REPORTING, FINAL_RURAL_URBAN) %>%
+  summarise(
+    Total_Beneficiaries = sum(NUMBER_OF_BENEFICIARIES_INDV, na.rm = TRUE),
+    Total_Actions = n()
+  ) %>%
+  group_by(ORGANIZATION_TYEP_REPORTING) %>%
+  mutate(
+    `% of Beneficiaries` = round(100 * Total_Beneficiaries / sum(Total_Beneficiaries), 2),
+    `% of Actions` = round(100 * Total_Actions / sum(Total_Actions), 2)
+  ) %>%
+  ungroup()
+
+# Prepare the table for display (only percentages)
+organization_rural_urban_summary %>%
+  select(
+    `Organization Type` = ORGANIZATION_TYEP_REPORTING,
+    `Rural/Urban` = FINAL_RURAL_URBAN,
+    `% of Beneficiaries`,
+    `% of Actions`
+  ) %>%
+  kbl(caption = "Percentage of Urban and Rural Beneficiaries and Actions per Organization Type") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), 
+                full_width = FALSE, font_size = 12) %>%
+  column_spec(1, bold = TRUE) %>%
+  add_header_above(c(" " = 2, "Percentages" = 2))
+
+```
+
+```{r}
+# Remove NA and summarize for pie chart
+rural_urban_total <- mpca %>%
+  filter(!is.na(FINAL_RURAL_URBAN)) %>%
+  group_by(FINAL_RURAL_URBAN) %>%
+  summarise(Total_Beneficiaries = sum(NUMBER_OF_BENEFICIARIES_INDV, na.rm = TRUE))
+
+# Pie chart with numbers displayed
+ggplot(rural_urban_total, aes(x = "", y = Total_Beneficiaries, fill = FINAL_RURAL_URBAN)) +
+  geom_bar(stat = "identity", width = 1, color = "white") +
+  coord_polar(theta = "y") +
+  scale_fill_brewer(palette = "Set2") +
+  labs(
+    title = "Overall Rural vs Urban Distribution",
+    x = NULL,
+    y = NULL,
+    fill = "Rural/Urban"
+  ) +
+  geom_text(aes(label = scales::comma(Total_Beneficiaries)), 
+            position = position_stack(vjust = 0.5), 
+            size = 5) +
+  theme_void() +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0.5),
+    legend.position = "top"
+  )
+
+```
+
+The depth of this analysis is intentionally made at the descriptive
+level. To use inferential statistics or predictive modeling (while an
+interesting rehearsal) would have been of very limited value, given the
+nature of this data collection, which was not conceived for research.
+Once again, let's acknowledge the great effort put on the collection and
+processing of the data made by the MPCA technical working group.
+
+# SHARE
+
+## Main findings.
+
+-   The **lack of geographical granularity** on the reporting is lead by
+    the UN agencies, mostly reporting at the oblast level. Following by
+    International NGOs and on the winning post are the national NGOs.
+    With a big caveas, national NGOs reported more activity at the urban
+    level, where is easier to pin point the names and codes of the
+    settlements.
+
+-   A **significant clustering of activities in regions distant from
+    conflict zones** indicates that on several occasions, ease of access
+    has taken precedence over need-based criteria.
+
+-   The higher number of actions occurring in rural areas demonstrates
+    **a strong commitment to reaching hard-to-access regions**, led by
+    both international and national NGOs.
+
+## Dissemination strategy.
+
+To ensure the widest reach and maximum impact of this report, we will
+distribute it across multiple platforms:
+
+1.  **Kaggle**: The complete report will be posted here to engage with
+    the data science community and provide access to the raw data and
+    analysis.
+
+2.  **My Own Website (jbaena.net)**: This platform will host the full
+    report for easy access and sharing among my professional network and
+    interested readers.
+
+3.  **LinkedIn Article**: A summarized version, focusing on key findings
+    and reflections, will be shared on LinkedIn to make the insights
+    more accessible to the broader humanitarian community and stimulate
+    discussion.
+
+4.  **YouTube Video Report** (conditional): Depending on time
+    availability, a video report will be produced to visually present
+    the findings in an engaging manner, suitable for sharing on YouTube.
+
+# ACTING
+
+The main takeaway from this analysis is acknowledging that
+**field-collected data has diverse applications** beyond just
+facilitating coordination. It’s essential to consider these data's
+limitations and the methods used for its collection and documentation
+when conducting deeper analyses.
+
+While this work in itself holds value and has inspired additional
+research directions, such as employing Bayesian models to predict risk
+perception—a project I am currently undertaking—it also presents
+opportunities for enhancement, specifically concerning the dataset used
+here.
+
+I praise the effort dedicated to updating this dataset; however, I will
+still suggest potential improvements that could facilitate more in-depth
+analysis in future tracking tools.
+
+The findings from this study, which rely on open data, will be
+incorporated into my professional portfolio.
