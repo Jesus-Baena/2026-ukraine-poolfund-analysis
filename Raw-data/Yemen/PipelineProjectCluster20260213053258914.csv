@@ -1,0 +1,148 @@
+PooledFundName,PooledFundId,AllocationTypeId,AllocationYear,AllocationSourceName,ChfProjectCode,Cluster,SubCluster,Percentage,ClusterBudget
+Yemen,64,0,2014,Reserve,YEM-14/X/3420/ER/S-NFI/UN/452,Emergency Shelter and NFI,,100,239679.99
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS/INGO/1362,Food Security,Gender Based Violence,100,962678
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS/INGO/1399,Food Security,Gender Based Violence,100,1012814.79
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS/INGO/1411,Food Security,Gender Based Violence,100,1955857.28
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS/UN/1316,Food Security,Gender Based Violence,100,125248945.34
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS/UN/1376,Food Security,Gender Based Violence,100,5825632.55
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS-NFI/INGO/1328,Emergency Shelter and NFI,Nutrition,0,0
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS-NFI/INGO/1328,Food Security,Gender Based Violence,100,825243
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS-NFI/NGO/1372,Emergency Shelter and NFI,Nutrition,100,264825
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS-NFI/NGO/1372,Food Security,Gender Based Violence,0,0
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS-P-L/UN/1379,Food Security,Gender Based Violence,68.85,1200195.27927
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS-P-L/UN/1379,Logistics,Mine Action,0,0
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS-P-L/UN/1379,Protection,Livelihood,31.15,543007.74073
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS-P-WASH-NFI/INGO/1395,Emergency Shelter and NFI,Nutrition,19,481900.097
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS-P-WASH-NFI/INGO/1395,Food Security,Gender Based Violence,42.86,1087065.16618
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS-P-WASH-NFI/INGO/1395,Protection,Livelihood,19,481900.097
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS-P-WASH-NFI/INGO/1395,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),19.14,485450.93982
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS-WASH-P/NGO/1345,Food Security,Gender Based Violence,50,482996.395
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS-WASH-P/NGO/1345,Protection,Livelihood,25,241498.1975
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/FS-WASH-P/NGO/1345,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),25,241498.1975
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/H-N-WASH/UN/1358,Health,Child protection,94,21283038.6982
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/H-N-WASH/UN/1358,Nutrition,Social Cohesion,3,679245.9159
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/H-N-WASH/UN/1358,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),3,679245.9159
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/H-N-WASH-P/UN/1354,Health,Child protection,34,9968540.3692
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/H-N-WASH-P/UN/1354,Nutrition,Social Cohesion,24,7036616.7312
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/H-N-WASH-P/UN/1354,Protection,Livelihood,7,2052346.5466
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/H-N-WASH-P/UN/1354,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),35,10261732.733
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/L-ETC/UN/1368,Emergency Telecommunications,,0,0
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/L-ETC/UN/1368,Logistics,Mine Action,100,16000009.6
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/N/NGO/1314,Nutrition,Social Cohesion,100,309375.05
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/N/UN/1412,Nutrition,Social Cohesion,100,1559992.59
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/NFI/INGO/1394,Emergency Shelter and NFI,Nutrition,100,927232.16
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/NFI-P/NGO/1311,Emergency Shelter and NFI,Nutrition,100,581684.1
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/NFI-P/NGO/1311,Protection,Livelihood,0,0
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/NFI-P-H-FS/UN/1323,Emergency Shelter and NFI,Nutrition,57,17377885.1118
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/NFI-P-H-FS/UN/1323,Food Security,Gender Based Violence,0,0
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/NFI-P-H-FS/UN/1323,Health,Child protection,6,1829251.0644
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/NFI-P-H-FS/UN/1323,Protection,Livelihood,37,11280381.5638
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/P/UN/1318,Protection,Livelihood,100,524936.65
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/P-H/UN/1342,Health,Child protection,19,473953.29
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/P-H/UN/1342,Protection,Livelihood,81,2020537.71
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/P-NFI-H-WASH/UN/1390,Emergency Shelter and NFI,Nutrition,29,4860110.2726
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/P-NFI-H-WASH/UN/1390,Health,Child protection,12,2011080.1128
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/P-NFI-H-WASH/UN/1390,Protection,Livelihood,55,9217450.517
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/P-NFI-H-WASH/UN/1390,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),4,670360.0376
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/P-WASH/INGO/1369,Protection,Livelihood,90,486174.519
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/P-WASH/INGO/1369,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),10,54019.391
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/WASH/INGO/1363,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),100,485434.44
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/WASH/INGO/1371,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),100,387625.22
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/WASH/INGO/1380,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),100,485002.3
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/WASH/INGO/1409,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),100,652495.39
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/WASH-NFI/INGO/1348,Emergency Shelter and NFI,Nutrition,44,280020.6904
+Yemen,64,24,2015,Reserve,YEM-15/3420/FA/WASH-NFI/INGO/1348,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),56,356389.9696
+Yemen,64,85,2016,Standard,YEM-16/3420/2SA 2016/Health-Nutrition-WASH/INGO/4239,Health,Child protection,35,262498.1555
+Yemen,64,85,2016,Standard,YEM-16/3420/2SA 2016/Health-Nutrition-WASH/INGO/4239,Nutrition,Social Cohesion,25,187498.6825
+Yemen,64,85,2016,Standard,YEM-16/3420/2SA 2016/Health-Nutrition-WASH/INGO/4239,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),40,299997.892
+Yemen,64,94,2017,Reserve,YEM-17/3420/RA1 2017/Health-WASH/INGO/4520,Health,Child protection,87.5,269113.03125
+Yemen,64,94,2017,Reserve,YEM-17/3420/RA1 2017/Health-WASH/INGO/4520,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),12.5,38444.71875
+Yemen,64,195,2019,Standard,YEM-19/3420/SA1/FSAC/NGO/11842,Food Security,Gender Based Violence,100,599548.29
+Yemen,64,195,2019,Standard,YEM-19/3420/SA1/Nutrition/NGO/11909,Nutrition,Social Cohesion,100,186726.58
+Yemen,64,195,2019,Standard,YEM-19/3420/SA1/SHNFICCM/O/11887,Emergency Shelter and NFI,Nutrition,100,541179.79
+Yemen,64,195,2019,Standard,YEM-19/3420/SA1/WASH/NGO/11814,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),100,270526.55
+Yemen,64,227,2019,Standard,YEM-19/3420/SA2/WASH/INGO/14705,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),100,419630.25
+Yemen,64,305,2020,Standard,YEM-20/3420/SA1/WASH/NGO/17912,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),100,380818.35
+Yemen,64,340,2021,Standard,YEM-21/3420/SA1/Protection/NGO/19668,Protection,Livelihood,100,237395.55
+Yemen,64,418,2022,Standard,YEM-22/3420/SA1/Education/NGO/22837,Education,Non-food Items,100,250047.23
+Yemen,64,418,2022,Standard,YEM-22/3420/SA1/FSAC-Health/INGO/22959,Food Security,Gender Based Violence,70,1132571.426
+Yemen,64,418,2022,Standard,YEM-22/3420/SA1/FSAC-Health/INGO/22959,Health,Child protection,30,485387.754
+Yemen,64,418,2022,Standard,YEM-22/3420/SA1/Health-WASH-FSAC/NGO/22832,Food Security,Gender Based Violence,42,603203.0424
+Yemen,64,418,2022,Standard,YEM-22/3420/SA1/Health-WASH-FSAC/NGO/22832,Health,Child protection,30,430859.316
+Yemen,64,418,2022,Standard,YEM-22/3420/SA1/Health-WASH-FSAC/NGO/22832,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),28,402135.3616
+Yemen,64,418,2022,Standard,YEM-22/3420/SA1/SHNFI/NGO/22838,Emergency Shelter and NFI,,100,361885.24
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-INGO-37709,Health,Child protection,58,287448
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-INGO-37709,Nutrition,Social Cohesion,42,208152
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-INGO-37760,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),100,149999.98
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-INGO-37764,Food Security,Gender Based Violence,40,143200
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-INGO-37764,Health,Child protection,35,125300
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-INGO-37764,Nutrition,Social Cohesion,25,89500
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-INGO-37765,Multi-purpose CASH,,100,1000000
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-INGO-37774,Multi-purpose CASH,,100,700000
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-INGO-37789,Food Security,Gender Based Violence,100,230000
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-INGO-37810,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),100,224964.05
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37721,Emergency Shelter and NFI,,35,349793.5245
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37721,Food Security,Gender Based Violence,35,349793.5245
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37721,Protection,Livelihood,30,299823.021
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37724,Camp Coordination / Management,Gender Based Violence (GBV),100,150000
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37732,Food Security,Gender Based Violence,70,700000
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37732,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),30,300000
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37734,Emergency Shelter and NFI,,71,122098.1391
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37734,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),29,49871.0709
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37738,Emergency Shelter and NFI,,45,419999.994
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37738,Multi-purpose CASH,,35,326666.662
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37738,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),20,186666.664
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37740,Food Security,Gender Based Violence,100,429510.01
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37741,Health,Child protection,79,220064.138
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37741,Nutrition,Social Cohesion,21,58498.062
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37744,Food Security,Gender Based Violence,45,355763.007
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37744,Health,Child protection,21,166022.7366
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37744,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),34,268798.7164
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37750,Protection,Livelihood,100,264446.49
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37753,Emergency Shelter and NFI,,41,399800.3685
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37753,Food Security,Gender Based Violence,25,243780.7125
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37753,Protection,Livelihood,34,331541.769
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37756,Health,Child protection,70,420000
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37756,Nutrition,Social Cohesion,30,180000
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37757,Emergency Shelter and NFI,,34,164605.0568
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37757,Multi-purpose CASH,,50,242066.26
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37757,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),16,77461.2032
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37767,Emergency Shelter and NFI,,30,163277.367
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37767,Food Security,Gender Based Violence,70,380980.523
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37790,Camp Coordination / Management,Gender Based Violence (GBV),21,31508.8389
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37790,Emergency Shelter and NFI,,31,46513.0479
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37790,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),48,72020.2032
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37808,Multi-purpose CASH,,40,154064.808
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37808,Protection,Livelihood,60,231097.212
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37812,Protection,Livelihood,100,246641.69
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37821,Protection,Livelihood,100,123463.68
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37859,Food Security,Gender Based Violence,38,240837.9466
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37859,Multi-purpose CASH,,35,221824.4245
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37859,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),27,171121.6989
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37863,Multi-purpose CASH,,60,90000.492
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37863,Protection,Livelihood,40,60000.328
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37864,Health,Child protection,60,501580.668
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37864,Nutrition,Social Cohesion,20,167193.556
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37864,Protection,Livelihood,20,167193.556
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37875,Food Security,Gender Based Violence,45,408475.4715
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37875,Protection,Livelihood,45,408475.4715
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37875,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),10,90772.327
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37879,Emergency Shelter and NFI,,20,55439.696
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37879,Food Security,Gender Based Violence,30,83159.544
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37879,Protection,Livelihood,50,138599.24
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37950,Food Security,Gender Based Violence,40,399939.464
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37950,Protection,Livelihood,60,599909.196
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37991,Emergency Shelter and NFI,,36,250809.498
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37991,Multi-purpose CASH,,43,299578.0115
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-37991,"Water, Sanitation and Hygiene",Gender-based Violence (GBV),21,146305.5405
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-38009,Emergency Shelter and NFI,,50,126138.585
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-38009,Multi-purpose CASH,,50,126138.585
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-NGO-38012,Protection,Livelihood,100,149901.65
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-O-37706,Health,Child protection,75,449820.2775
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-O-37706,Nutrition,Social Cohesion,25,149940.0925
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-O-37914,Emergency Shelter and NFI,,40,379651.532
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-O-37914,Protection,Livelihood,60,569477.298
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-O-37939,Health,Child protection,50,499562.625
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-O-37939,Multi-purpose CASH,,25,249781.3125
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-O-37939,Nutrition,Social Cohesion,25,249781.3125
+Yemen,64,1496,2025,Standard,CBPF-YEM-25-S-UN-37987,Food Security,Gender Based Violence,100,869556.45

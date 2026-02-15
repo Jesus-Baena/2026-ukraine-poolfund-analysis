@@ -1,0 +1,35 @@
+PooledFundName,PooledFundId,AllocationTypeId,AllocationYear,AllocationSourceName,ChfProjectCode,Cluster,SubCluster,Percentage,ClusterBudget
+Ukraine,81,217,2019,Standard,UKR-19/UKR_CBPF/SA1/P-H-N-FSL/NGO/13732,Food Security,,72.88,305731.585424
+Ukraine,81,217,2019,Standard,UKR-19/UKR_CBPF/SA1/P-H-N-FSL/NGO/13732,Health,,6.54,27435.298692
+Ukraine,81,217,2019,Standard,UKR-19/UKR_CBPF/SA1/P-H-N-FSL/NGO/13732,Protection,,20.58,86333.095884
+Ukraine,81,272,2020,Reserve,UKR-20/UKR_CBPF/SA1/WASH/NGO/17663,"Water, Sanitation and Hygiene",,100,325862.08
+Ukraine,81,294,2020,Standard,UKR-20/UKR_CBPF/SA1/FSL-WASH/INGO/17515,Food Security,,74,288718.4
+Ukraine,81,294,2020,Standard,UKR-20/UKR_CBPF/SA1/FSL-WASH/INGO/17515,"Water, Sanitation and Hygiene",,26,101441.6
+Ukraine,81,294,2020,Standard,UKR-20/UKR_CBPF/SA1/FSL-WASH/INGO/17535,Food Security,,65,324987.9295
+Ukraine,81,294,2020,Standard,UKR-20/UKR_CBPF/SA1/FSL-WASH/INGO/17535,"Water, Sanitation and Hygiene",,35,174993.5005
+Ukraine,81,433,2022,Standard,UKR-22/UKR_CBPF/SA1/P-WASH-E/NGO/23530,Education,,40,705467.236
+Ukraine,81,433,2022,Standard,UKR-22/UKR_CBPF/SA1/P-WASH-E/NGO/23530,Protection,,40,705467.236
+Ukraine,81,433,2022,Standard,UKR-22/UKR_CBPF/SA1/P-WASH-E/NGO/23530,"Water, Sanitation and Hygiene",,20,352733.618
+Ukraine,81,462,2023,Standard,CBPF-UKR-23-S-NGO-24758,Emergency Shelter and NFI,,42,178684.4514
+Ukraine,81,462,2023,Standard,CBPF-UKR-23-S-NGO-24758,Food Security,,34,144649.3178
+Ukraine,81,462,2023,Standard,CBPF-UKR-23-S-NGO-24758,"Water, Sanitation and Hygiene",,24,102105.4008
+Ukraine,81,521,2024,Standard,CBPF-UKR-24-S-NGO-27476,Protection,,12,94408.668
+Ukraine,81,521,2024,Standard,CBPF-UKR-24-S-NGO-27476,Protection,,88,692330.232
+Ukraine,81,1388,2025,Standard,CBPF-UKR-25-S-NGO-34709,Education,,40,987955.824
+Ukraine,81,1388,2025,Standard,CBPF-UKR-25-S-NGO-34709,Health,,15,370483.434
+Ukraine,81,1388,2025,Standard,CBPF-UKR-25-S-NGO-34709,Protection,,10,246988.956
+Ukraine,81,1388,2025,Standard,CBPF-UKR-25-S-NGO-34709,Protection,,15,370483.434
+Ukraine,81,1388,2025,Standard,CBPF-UKR-25-S-NGO-34709,Protection,,20,493977.912
+Ukraine,81,1470,2025,Reserve,CBPF-UKR-25-R-INGO-36883,Camp Coordination / Management,,2,100000
+Ukraine,81,1470,2025,Reserve,CBPF-UKR-25-R-INGO-36883,Emergency Shelter and NFI,,98,4900000
+Ukraine,81,1470,2025,Reserve,CBPF-UKR-25-R-INGO-36909,Emergency Shelter and NFI,,100,1479979.06
+Ukraine,81,1470,2025,Reserve,CBPF-UKR-25-R-INGO-36919,Emergency Shelter and NFI,,100,3293924.87
+Ukraine,81,1470,2025,Reserve,CBPF-UKR-25-R-INGO-36926,Emergency Shelter and NFI,,100,1663718.94
+Ukraine,81,1470,2025,Reserve,CBPF-UKR-25-R-INGO-36955,Emergency Shelter and NFI,,100,2790064.9
+Ukraine,81,1470,2025,Reserve,CBPF-UKR-25-R-INGO-36967,Emergency Shelter and NFI,,100,1370000.03
+Ukraine,81,1470,2025,Reserve,CBPF-UKR-25-R-INGO-36970,Emergency Shelter and NFI,,100,2441286.36
+Ukraine,81,1470,2025,Reserve,CBPF-UKR-25-R-INGO-37000,Emergency Shelter and NFI,,100,1466874.67
+Ukraine,81,1470,2025,Reserve,CBPF-UKR-25-R-INGO-37017,Emergency Shelter and NFI,,100,1500000
+Ukraine,81,1470,2025,Reserve,CBPF-UKR-25-R-INGO-37076,Camp Coordination / Management,,3,149999.9916
+Ukraine,81,1470,2025,Reserve,CBPF-UKR-25-R-INGO-37076,Emergency Shelter and NFI,,97,4849999.7284
+Ukraine,81,1470,2025,Reserve,CBPF-UKR-25-R-NGO-36957,Emergency Shelter and NFI,,100,920127.56

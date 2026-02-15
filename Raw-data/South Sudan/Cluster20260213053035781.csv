@@ -1,0 +1,1899 @@
+PooledFundName,PooledFundId,AllocationTypeId,AllocationYear,AllocationSourceName,ChfId,ChfProjectCode,Cluster,SubCluster,Percentage,ClusterBudget
+South Sudan,19,5,2015,Reserve,142,SSD-14/RA 3/WASH/UN/142,"Water, Sanitation and Hygiene",,100,286546
+South Sudan,19,9,2015,Reserve,492,SSD-15/HSS10/RA1/P/UN/492,Protection,,100,497193.5
+South Sudan,19,10,2015,Reserve,502,SSD-15/HSS10/RA2/L/UN/502,Logistics,,100,1335026.03
+South Sudan,19,5,2015,Reserve,659,SSD-15/HSS10/RA3/CCCM/INGO/659,Camp Coordination / Management,,100,891328.19
+South Sudan,19,5,2015,Reserve,655,SSD-15/HSS10/RA3/L/UN/655,Logistics,,100,322500.14
+South Sudan,19,5,2015,Reserve,656,SSD-15/HSS10/RA3/L/UN/656,Logistics,,100,1572382.12
+South Sudan,19,5,2015,Reserve,657,SSD-15/HSS10/RA3/L/UN/657,Logistics,,100,1105003.04
+South Sudan,19,12,2015,Reserve,668,SSD-15/HSS10/RA4/E/INGO/668,Education,,100,499966.83
+South Sudan,19,12,2015,Reserve,662,SSD-15/HSS10/RA4/H/INGO/662,Health,,100,200000
+South Sudan,19,12,2015,Reserve,666,SSD-15/HSS10/RA4/H/INGO/666,Health,,100,102525.47
+South Sudan,19,12,2015,Reserve,661,SSD-15/HSS10/RA4/H/NGO/661,Health,,100,75006.25
+South Sudan,19,12,2015,Reserve,664,SSD-15/HSS10/RA4/MA/INGO/664,Protection,,100,197884.48
+South Sudan,19,12,2015,Reserve,663,SSD-15/HSS10/RA4/N/NGO/663,Nutrition,,100,495042.3
+South Sudan,19,12,2015,Reserve,665,SSD-15/HSS10/RA4/P/INGO/665,Protection,,100,200000.09
+South Sudan,19,12,2015,Reserve,667,SSD-15/HSS10/RA4/WASH/INGO/667,"Water, Sanitation and Hygiene",,100,612670.06
+South Sudan,19,13,2015,Reserve,669,SSD-15/HSS10/RA5/CCCM/UN/669,Camp Coordination / Management,,100,790013.1
+South Sudan,19,7,2015,Standard,491,SSD-15/HSS10/SA1/CCCM/UN/491,Camp Coordination / Management,,100,400001.63
+South Sudan,19,11,2015,Standard,635,SSD-15/HSS10/SA2/CCCM/INGO/635,Camp Coordination / Management,,100,495049.46
+South Sudan,19,11,2015,Standard,518,SSD-15/HSS10/SA2/CCCM/UN/518,Camp Coordination / Management,,100,599978.96
+South Sudan,19,11,2015,Standard,618,SSD-15/HSS10/SA2/CCS/UN/618,Coordination and Support Services,,100,500000
+South Sudan,19,11,2015,Standard,509,SSD-15/HSS10/SA2/E/NGO/509,Education,,100,203214.4
+South Sudan,19,11,2015,Standard,539,SSD-15/HSS10/SA2/E/NGO/539,Education,,100,237623.46
+South Sudan,19,11,2015,Standard,543,SSD-15/HSS10/SA2/E/NGO/543,Education,,100,188135.8
+South Sudan,19,11,2015,Standard,593,SSD-15/HSS10/SA2/E/NGO/593,Education,,100,158415.64
+South Sudan,19,11,2015,Standard,603,SSD-15/HSS10/SA2/E/NGO/603,Education,,100,196685.26
+South Sudan,19,11,2015,Standard,510,SSD-15/HSS10/SA2/FSL/INGO/510,Food Security,,100,181955.27
+South Sudan,19,11,2015,Standard,597,SSD-15/HSS10/SA2/FSL/INGO/597,Food Security,,100,155567.3
+South Sudan,19,11,2015,Standard,638,SSD-15/HSS10/SA2/FSL/INGO/638,Food Security,,100,132735.64
+South Sudan,19,11,2015,Standard,511,SSD-15/HSS10/SA2/FSL/NGO/511,Food Security,,100,240495.34
+South Sudan,19,11,2015,Standard,527,SSD-15/HSS10/SA2/FSL/NGO/527,Food Security,,100,148514.84
+South Sudan,19,11,2015,Standard,616,SSD-15/HSS10/SA2/FSL/NGO/616,Food Security,,100,169330.28
+South Sudan,19,11,2015,Standard,640,SSD-15/HSS10/SA2/FSL/NGO/640,Food Security,,100,150849
+South Sudan,19,11,2015,Standard,536,SSD-15/HSS10/SA2/FSL/UN/536,Food Security,,100,811231.2
+South Sudan,19,11,2015,Standard,519,SSD-15/HSS10/SA2/H/INGO/519,Health,,100,198019.68
+South Sudan,19,11,2015,Standard,528,SSD-15/HSS10/SA2/H/INGO/528,Health,,100,222772.28
+South Sudan,19,11,2015,Standard,531,SSD-15/HSS10/SA2/H/INGO/531,Health,,100,198021.69
+South Sudan,19,11,2015,Standard,620,SSD-15/HSS10/SA2/H/INGO/620,Health,,100,199740.88
+South Sudan,19,11,2015,Standard,643,SSD-15/HSS10/SA2/H/INGO/643,Health,,100,217821.78
+South Sudan,19,11,2015,Standard,504,SSD-15/HSS10/SA2/H/NGO/504,Health,,100,247523.3
+South Sudan,19,11,2015,Standard,529,SSD-15/HSS10/SA2/H/NGO/529,Health,,100,118838.2
+South Sudan,19,11,2015,Standard,547,SSD-15/HSS10/SA2/H/NGO/547,Health,,100,99007.57
+South Sudan,19,11,2015,Standard,548,SSD-15/HSS10/SA2/H/NGO/548,Health,,100,198019.81
+South Sudan,19,11,2015,Standard,549,SSD-15/HSS10/SA2/H/NGO/549,Health,,100,247992.11
+South Sudan,19,11,2015,Standard,596,SSD-15/HSS10/SA2/H/NGO/596,Health,,100,247526.1
+South Sudan,19,11,2015,Standard,513,SSD-15/HSS10/SA2/H/UN/513,Health,,100,349991.65
+South Sudan,19,11,2015,Standard,523,SSD-15/HSS10/SA2/H/UN/523,Health,,100,350000.42
+South Sudan,19,11,2015,Standard,570,SSD-15/HSS10/SA2/H/UN/570,Health,,100,302432.83
+South Sudan,19,11,2015,Standard,651,SSD-15/HSS10/SA2/H/UN/651,Health,,100,280000
+South Sudan,19,11,2015,Standard,507,SSD-15/HSS10/SA2/L/UN/507,Logistics,,100,677310
+South Sudan,19,11,2015,Standard,512,SSD-15/HSS10/SA2/L/UN/512,Logistics,,100,322502.78
+South Sudan,19,11,2015,Standard,631,SSD-15/HSS10/SA2/L/UN/631,Logistics,,100,3000000.11
+South Sudan,19,11,2015,Standard,514,SSD-15/HSS10/SA2/N/INGO/514,Nutrition,,100,400990.1
+South Sudan,19,11,2015,Standard,517,SSD-15/HSS10/SA2/N/INGO/517,Nutrition,,100,198019.8
+South Sudan,19,11,2015,Standard,526,SSD-15/HSS10/SA2/N/INGO/526,Nutrition,,100,148514.86
+South Sudan,19,11,2015,Standard,530,SSD-15/HSS10/SA2/N/INGO/530,Nutrition,,100,297028.26
+South Sudan,19,11,2015,Standard,583,SSD-15/HSS10/SA2/N/INGO/583,Nutrition,,100,415854.64
+South Sudan,19,11,2015,Standard,607,SSD-15/HSS10/SA2/N/INGO/607,Nutrition,,100,247524.77
+South Sudan,19,11,2015,Standard,626,SSD-15/HSS10/SA2/N/INGO/626,Nutrition,,100,297029.69
+South Sudan,19,11,2015,Standard,630,SSD-15/HSS10/SA2/N/INGO/630,Nutrition,,100,288131.63
+South Sudan,19,11,2015,Standard,642,SSD-15/HSS10/SA2/N/INGO/642,Nutrition,,100,297029.86
+South Sudan,19,11,2015,Standard,654,SSD-15/HSS10/SA2/N/INGO/654,Nutrition,,100,495049.51
+South Sudan,19,11,2015,Standard,506,SSD-15/HSS10/SA2/N/NGO/506,Nutrition,,100,156434
+South Sudan,19,11,2015,Standard,545,SSD-15/HSS10/SA2/N/NGO/545,Nutrition,,100,247524.62
+South Sudan,19,11,2015,Standard,575,SSD-15/HSS10/SA2/N/NGO/575,Nutrition,,100,198255.43
+South Sudan,19,11,2015,Standard,586,SSD-15/HSS10/SA2/N/NGO/586,Nutrition,,100,172969.78
+South Sudan,19,11,2015,Standard,609,SSD-15/HSS10/SA2/NFI/INGO/609,Emergency Shelter and NFI,,100,179126.24
+South Sudan,19,11,2015,Standard,614,SSD-15/HSS10/SA2/NFI/INGO/614,Emergency Shelter and NFI,,100,344496.27
+South Sudan,19,11,2015,Standard,628,SSD-15/HSS10/SA2/NFI/INGO/628,Emergency Shelter and NFI,,100,222777.74
+South Sudan,19,11,2015,Standard,652,SSD-15/HSS10/SA2/NFI/INGO/652,Emergency Shelter and NFI,,100,355632.49
+South Sudan,19,11,2015,Standard,589,SSD-15/HSS10/SA2/NFI/NGO/589,Emergency Shelter and NFI,,100,49835.1
+South Sudan,19,11,2015,Standard,516,SSD-15/HSS10/SA2/NFI/UN/516,Emergency Shelter and NFI,,100,1838813.83
+South Sudan,19,11,2015,Standard,649,SSD-15/HSS10/SA2/P/INGO/649,Protection,Child Protection in Emergencies,100,190764.95
+South Sudan,19,11,2015,Standard,566,SSD-15/HSS10/SA2/P/NGO/566,Protection,Gender Based Violence as subsidiary clusters,100,113861.38
+South Sudan,19,11,2015,Standard,600,SSD-15/HSS10/SA2/P/NGO/600,Protection,Child Protection in Emergencies,100,76012.8
+South Sudan,19,11,2015,Standard,613,SSD-15/HSS10/SA2/P/NGO/613,Protection,Child Protection in Emergencies,100,99010
+South Sudan,19,11,2015,Standard,608,SSD-15/HSS10/SA2/P/UN/608,Protection,Gender Based Violence as subsidiary clusters,100,200090
+South Sudan,19,11,2015,Standard,619,SSD-15/HSS10/SA2/P/UN/619,Protection,Child Protection in Emergencies,100,299999.11
+South Sudan,19,11,2015,Standard,559,SSD-15/HSS10/SA2/WASH/INGO/559,"Water, Sanitation and Hygiene",,100,277227.72
+South Sudan,19,11,2015,Standard,579,SSD-15/HSS10/SA2/WASH/INGO/579,"Water, Sanitation and Hygiene",,100,495049.41
+South Sudan,19,11,2015,Standard,581,SSD-15/HSS10/SA2/WASH/INGO/581,"Water, Sanitation and Hygiene",,100,396084.92
+South Sudan,19,11,2015,Standard,582,SSD-15/HSS10/SA2/WASH/INGO/582,"Water, Sanitation and Hygiene",,100,197722.63
+South Sudan,19,11,2015,Standard,617,SSD-15/HSS10/SA2/WASH/INGO/617,"Water, Sanitation and Hygiene",,100,206931.05
+South Sudan,19,11,2015,Standard,621,SSD-15/HSS10/SA2/WASH/INGO/621,"Water, Sanitation and Hygiene",,100,396038.24
+South Sudan,19,11,2015,Standard,632,SSD-15/HSS10/SA2/WASH/INGO/632,"Water, Sanitation and Hygiene",,100,396039.6
+South Sudan,19,11,2015,Standard,515,SSD-15/HSS10/SA2/WASH/NGO/515,"Water, Sanitation and Hygiene",,100,79208.34
+South Sudan,19,11,2015,Standard,535,SSD-15/HSS10/SA2/WASH/NGO/535,"Water, Sanitation and Hygiene",,100,297029.7
+South Sudan,19,11,2015,Standard,550,SSD-15/HSS10/SA2/WASH/NGO/550,"Water, Sanitation and Hygiene",,100,295050.36
+South Sudan,19,11,2015,Standard,558,SSD-15/HSS10/SA2/WASH/NGO/558,"Water, Sanitation and Hygiene",,100,79208.1
+South Sudan,19,11,2015,Standard,605,SSD-15/HSS10/SA2/WASH/NGO/605,"Water, Sanitation and Hygiene",,100,50000
+South Sudan,19,11,2015,Standard,520,SSD-15/HSS10/SA2/WASH/UN/520,"Water, Sanitation and Hygiene",,100,399993.63
+South Sudan,19,11,2015,Standard,598,SSD-15/HSS10/SA2/WASH/UN/598,"Water, Sanitation and Hygiene",,100,400000.35
+South Sudan,19,7,2015,Standard,161,SSD-15/SA1/CCCM/INGO/161,Camp Coordination / Management,,100,296251.56
+South Sudan,19,7,2015,Standard,281,SSD-15/SA1/CCCM/INGO/281,Camp Coordination / Management,,100,136633.66
+South Sudan,19,7,2015,Standard,359,SSD-15/SA1/CCCM/INGO/359,Camp Coordination / Management,,100,584158.42
+South Sudan,19,7,2015,Standard,402,SSD-15/SA1/CCCM/INGO/402,Camp Coordination / Management,,100,495049.92
+South Sudan,19,7,2015,Standard,192,SSD-15/SA1/CCCM/NGO/192,Camp Coordination / Management,,100,71262
+South Sudan,19,7,2015,Standard,394,SSD-15/SA1/CCCM/UN/394,Camp Coordination / Management,,100,1999999.97
+South Sudan,19,7,2015,Standard,243,SSD-15/SA1/E/INGO/243,Education,,100,229978.11
+South Sudan,19,7,2015,Standard,265,SSD-15/SA1/E/INGO/265,Education,,100,263680.21
+South Sudan,19,7,2015,Standard,282,SSD-15/SA1/E/INGO/282,Education,,100,205097.6
+South Sudan,19,7,2015,Standard,307,SSD-15/SA1/E/INGO/307,Education,,100,285104.25
+South Sudan,19,7,2015,Standard,220,SSD-15/SA1/E/NGO/220,Education,,100,201100
+South Sudan,19,7,2015,Standard,267,SSD-15/SA1/E/NGO/267,Education,,100,202778.82
+South Sudan,19,7,2015,Standard,268,SSD-15/SA1/E/NGO/268,Education,,100,181926.24
+South Sudan,19,7,2015,Standard,339,SSD-15/SA1/E/NGO/339,Education,,100,215764.43
+South Sudan,19,7,2015,Standard,287,SSD-15/SA1/E/UN/287,Education,,100,1991742.59
+South Sudan,19,7,2015,Standard,293,SSD-15/SA1/E/UN/293,Education,,100,400000.24
+South Sudan,19,7,2015,Standard,251,SSD-15/SA1/ETC/UN/251,Emergency Telecommunications,,100,899880.7
+South Sudan,19,7,2015,Standard,233,SSD-15/SA1/FSL/INGO/233,Food Security,,100,296608.28
+South Sudan,19,7,2015,Standard,242,SSD-15/SA1/FSL/INGO/242,Food Security,,100,198019.89
+South Sudan,19,7,2015,Standard,275,SSD-15/SA1/FSL/INGO/275,Food Security,,100,396039.6
+South Sudan,19,7,2015,Standard,310,SSD-15/SA1/FSL/INGO/310,Food Security,,100,297029.99
+South Sudan,19,7,2015,Standard,396,SSD-15/SA1/FSL/INGO/396,Food Security,,100,247524.8
+South Sudan,19,7,2015,Standard,210,SSD-15/SA1/FSL/NGO/210,Food Security,,100,272277.34
+South Sudan,19,7,2015,Standard,423,SSD-15/SA1/FSL/NGO/423,Food Security,,100,272277.23
+South Sudan,19,7,2015,Standard,147,SSD-15/SA1/FSL/UN/147,Food Security,,100,5599999.53
+South Sudan,19,7,2015,Standard,244,SSD-15/SA1/FSL/UN/244,Food Security,,100,1441599.78
+South Sudan,19,7,2015,Standard,166,SSD-15/SA1/H/INGO/166,Health,,100,97762.26
+South Sudan,19,7,2015,Standard,216,SSD-15/SA1/H/INGO/216,Health,,100,198019.87
+South Sudan,19,7,2015,Standard,314,SSD-15/SA1/H/INGO/314,Health,,100,346534.7
+South Sudan,19,7,2015,Standard,322,SSD-15/SA1/H/INGO/322,Health,,100,297028.85
+South Sudan,19,7,2015,Standard,369,SSD-15/SA1/H/INGO/369,Health,,100,396040.04
+South Sudan,19,7,2015,Standard,390,SSD-15/SA1/H/INGO/390,Health,,100,198020.62
+South Sudan,19,7,2015,Standard,391,SSD-15/SA1/H/INGO/391,Health,,100,267326.73
+South Sudan,19,7,2015,Standard,411,SSD-15/SA1/H/INGO/411,Health,,100,247491.93
+South Sudan,19,7,2015,Standard,167,SSD-15/SA1/H/NGO/167,Health,,100,148514.86
+South Sudan,19,7,2015,Standard,223,SSD-15/SA1/H/NGO/223,Health,,100,197340.1
+South Sudan,19,7,2015,Standard,234,SSD-15/SA1/H/NGO/234,Health,,100,148514.89
+South Sudan,19,7,2015,Standard,245,SSD-15/SA1/H/NGO/245,Health,,100,247524.52
+South Sudan,19,7,2015,Standard,341,SSD-15/SA1/H/NGO/341,Health,,100,198020.16
+South Sudan,19,7,2015,Standard,346,SSD-15/SA1/H/NGO/346,Health,,100,297030.65
+South Sudan,19,7,2015,Standard,195,SSD-15/SA1/H/UN/195,Health,,100,1480039.99
+South Sudan,19,7,2015,Standard,255,SSD-15/SA1/H/UN/255,Health,,100,800095.71
+South Sudan,19,7,2015,Standard,356,SSD-15/SA1/H/UN/356,Health,,100,300007.24
+South Sudan,19,7,2015,Standard,387,SSD-15/SA1/H/UN/387,Health,,100,449453.71
+South Sudan,19,7,2015,Standard,426,SSD-15/SA1/H/UN/426,Health,,100,649992.9
+South Sudan,19,7,2015,Standard,291,SSD-15/SA1/L/UN/291,Logistics,,100,1500000
+South Sudan,19,7,2015,Standard,320,SSD-15/SA1/L/UN/320,Logistics,,100,2500001.5
+South Sudan,19,7,2015,Standard,338,SSD-15/SA1/N/INGO/338,Nutrition,,100,198019.76
+South Sudan,19,7,2015,Standard,345,SSD-15/SA1/N/INGO/345,Nutrition,,100,397420.79
+South Sudan,19,7,2015,Standard,362,SSD-15/SA1/N/INGO/362,Nutrition,,100,230719.82
+South Sudan,19,7,2015,Standard,365,SSD-15/SA1/N/INGO/365,Nutrition,,100,198019.81
+South Sudan,19,7,2015,Standard,368,SSD-15/SA1/N/INGO/368,Nutrition,,100,296892.15
+South Sudan,19,7,2015,Standard,379,SSD-15/SA1/N/INGO/379,Nutrition,,100,221203.96
+South Sudan,19,7,2015,Standard,392,SSD-15/SA1/N/INGO/392,Nutrition,,100,198019.79
+South Sudan,19,7,2015,Standard,250,SSD-15/SA1/N/NGO/250,Nutrition,,100,206945.2
+South Sudan,19,7,2015,Standard,342,SSD-15/SA1/N/NGO/342,Nutrition,,100,475247.91
+South Sudan,19,7,2015,Standard,214,SSD-15/SA1/N/UN/214,Nutrition,,100,1800000.65
+South Sudan,19,7,2015,Standard,256,SSD-15/SA1/N/UN/256,Nutrition,,100,1996161.43
+South Sudan,19,7,2015,Standard,303,SSD-15/SA1/N/UN/303,Nutrition,,100,666666.57
+South Sudan,19,7,2015,Standard,374,SSD-15/SA1/N/UN/374,Nutrition,,100,882362.02
+South Sudan,19,7,2015,Standard,222,SSD-15/SA1/NFI/INGO/222,Emergency Shelter and NFI,,100,350991.16
+South Sudan,19,7,2015,Standard,294,SSD-15/SA1/NFI/INGO/294,Emergency Shelter and NFI,,100,301521.75
+South Sudan,19,7,2015,Standard,308,SSD-15/SA1/NFI/INGO/308,Emergency Shelter and NFI,,100,2474425.4
+South Sudan,19,7,2015,Standard,321,SSD-15/SA1/NFI/INGO/321,Emergency Shelter and NFI,,100,396039.59
+South Sudan,19,7,2015,Standard,300,SSD-15/SA1/NFI/NGO/300,Emergency Shelter and NFI,,100,59405.95
+South Sudan,19,7,2015,Standard,326,SSD-15/SA1/NFI/UN/326,Emergency Shelter and NFI,,100,4369058.03
+South Sudan,19,7,2015,Standard,336,SSD-15/SA1/NFI/UN/336,Emergency Shelter and NFI,,100,1010138.05
+South Sudan,19,7,2015,Standard,157,SSD-15/SA1/P/INGO/157,Protection,,100,429605
+South Sudan,19,7,2015,Standard,316,SSD-15/SA1/P/INGO/316,Protection,,100,526732.6
+South Sudan,19,7,2015,Standard,324,SSD-15/SA1/P/INGO/324,Protection,Child Protection in Emergencies,100,263366.34
+South Sudan,19,7,2015,Standard,385,SSD-15/SA1/P/INGO/385,Protection,,100,289622.14
+South Sudan,19,7,2015,Standard,400,SSD-15/SA1/P/INGO/400,Protection,,100,352971.6
+South Sudan,19,7,2015,Standard,419,SSD-15/SA1/P/INGO/419,Protection,Child Protection in Emergencies,100,210693.19
+South Sudan,19,7,2015,Standard,191,SSD-15/SA1/P/NGO/191,Protection,,100,123029.9
+South Sudan,19,7,2015,Standard,235,SSD-15/SA1/P/NGO/235,Protection,Gender Based Violence as subsidiary clusters,100,120577.26
+South Sudan,19,7,2015,Standard,262,SSD-15/SA1/P/NGO/262,Protection,Child Protection in Emergencies,100,309447.23
+South Sudan,19,7,2015,Standard,272,SSD-15/SA1/P/NGO/272,Protection,Child Protection in Emergencies,100,347754.28
+South Sudan,19,7,2015,Standard,292,SSD-15/SA1/P/NGO/292,Protection,Gender Based Violence as subsidiary clusters,100,368508
+South Sudan,19,7,2015,Standard,288,SSD-15/SA1/P/UN/288,Protection,Gender Based Violence as subsidiary clusters,100,213040.21
+South Sudan,19,7,2015,Standard,377,SSD-15/SA1/P/UN/377,Protection,Child Protection in Emergencies,100,518274.01
+South Sudan,19,7,2015,Standard,389,SSD-15/SA1/P/UN/389,Protection,,100,478825
+South Sudan,19,7,2015,Standard,420,SSD-15/SA1/P/UN/420,Protection,Gender Based Violence as subsidiary clusters,100,212827.28
+South Sudan,19,7,2015,Standard,204,SSD-15/SA1/WASH/INGO/204,"Water, Sanitation and Hygiene",,100,495049.51
+South Sudan,19,7,2015,Standard,331,SSD-15/SA1/WASH/INGO/331,"Water, Sanitation and Hygiene",,100,415753.96
+South Sudan,19,7,2015,Standard,373,SSD-15/SA1/WASH/INGO/373,"Water, Sanitation and Hygiene",,100,1271901.94
+South Sudan,19,7,2015,Standard,375,SSD-15/SA1/WASH/INGO/375,"Water, Sanitation and Hygiene",,100,742573.99
+South Sudan,19,7,2015,Standard,188,SSD-15/SA1/WASH/NGO/188,"Water, Sanitation and Hygiene",,100,148513.86
+South Sudan,19,7,2015,Standard,199,SSD-15/SA1/WASH/NGO/199,"Water, Sanitation and Hygiene",,100,99010.43
+South Sudan,19,7,2015,Standard,226,SSD-15/SA1/WASH/NGO/226,"Water, Sanitation and Hygiene",,100,198019.8
+South Sudan,19,7,2015,Standard,298,SSD-15/SA1/WASH/NGO/298,"Water, Sanitation and Hygiene",,100,49485.71
+South Sudan,19,7,2015,Standard,305,SSD-15/SA1/WASH/UN/305,"Water, Sanitation and Hygiene",,100,1000000.49
+South Sudan,19,7,2015,Standard,323,SSD-15/SA1/WASH/UN/323,"Water, Sanitation and Hygiene",,100,2783999.62
+South Sudan,19,7,2015,Standard,332,SSD-15/SA1/WASH/UN/332,"Water, Sanitation and Hygiene",,100,1283048.53
+South Sudan,19,7,2015,Standard,398,SSD-15/SA1/WASH/UN/398,"Water, Sanitation and Hygiene",,100,499956.22
+South Sudan,19,17,2016,Reserve,884,SSD-16/HSS10/HF-DC/CCS/UN/884,Coordination and Support Services,,100,1122505.07
+South Sudan,19,19,2016,Reserve,4437,SSD-16/HSS10/RA 2/E/UN/4437,Education,,100,449990.64
+South Sudan,19,19,2016,Reserve,4438,SSD-16/HSS10/RA 2/FSL/UN/4438,Food Security,,100,800000
+South Sudan,19,19,2016,Reserve,4439,SSD-16/HSS10/RA 2/H/UN/4439,Health,,100,372031.83
+South Sudan,19,19,2016,Reserve,4440,SSD-16/HSS10/RA 2/H/UN/4440,Health,,100,777145.42
+South Sudan,19,19,2016,Reserve,4441,SSD-16/HSS10/RA 2/H/UN/4441,Health,,100,1224388.74
+South Sudan,19,19,2016,Reserve,4442,SSD-16/HSS10/RA 2/N/UN/4442,Nutrition,,100,1256779.2
+South Sudan,19,19,2016,Reserve,4443,SSD-16/HSS10/RA 2/N/UN/4443,Nutrition,,100,943481.81
+South Sudan,19,19,2016,Reserve,4453,SSD-16/HSS10/RA 2/NFI/UN/4453,Emergency Shelter and NFI,,100,1599998.1
+South Sudan,19,19,2016,Reserve,4444,SSD-16/HSS10/RA 2/P/UN/4444,Protection,Gender Based Violence as subsidiary clusters,100,919883.28
+South Sudan,19,19,2016,Reserve,4445,SSD-16/HSS10/RA 2/P/UN/4445,Protection,Child Protection in Emergencies,100,300000.18
+South Sudan,19,19,2016,Reserve,4446,SSD-16/HSS10/RA 2/WASH/UN/4446,"Water, Sanitation and Hygiene",,100,949989.67
+South Sudan,19,19,2016,Reserve,4447,SSD-16/HSS10/RA 2/WASH/UN/4447,"Water, Sanitation and Hygiene",,100,1380006.82
+South Sudan,19,16,2016,Reserve,3165,SSD-16/HSS10/RA1/E/INGO/3165,Education,,100,84999.73
+South Sudan,19,16,2016,Reserve,3156,SSD-16/HSS10/RA1/H/UN/3156,Health,,100,125000
+South Sudan,19,16,2016,Reserve,3161,SSD-16/HSS10/RA1/H/UN/3161,Health,,100,100000.5
+South Sudan,19,16,2016,Reserve,3162,SSD-16/HSS10/RA1/H/UN/3162,Health,,100,61632
+South Sudan,19,16,2016,Reserve,3166,SSD-16/HSS10/RA1/H/UN/3166,Health,,100,204618.24
+South Sudan,19,16,2016,Reserve,3163,SSD-16/HSS10/RA1/N/NGO/3163,Nutrition,,100,156862
+South Sudan,19,16,2016,Reserve,3157,SSD-16/HSS10/RA1/N/UN/3157,Nutrition,,100,370013.47
+South Sudan,19,16,2016,Reserve,3150,SSD-16/HSS10/RA1/NFI/UN/3150,Emergency Shelter and NFI,,100,479203.99
+South Sudan,19,16,2016,Reserve,3160,SSD-16/HSS10/RA1/P/INGO/3160,Protection,Gender Based Violence as subsidiary clusters,100,150000
+South Sudan,19,16,2016,Reserve,3155,SSD-16/HSS10/RA1/P/UN/3155,Protection,,100,150000.09
+South Sudan,19,16,2016,Reserve,3164,SSD-16/HSS10/RA1/WASH/INGO/3164,"Water, Sanitation and Hygiene",,100,530000
+South Sudan,19,14,2016,Standard,722,SSD-16/HSS10/SA1/CCCM/INGO/722,Camp Coordination / Management,,100,495048.13
+South Sudan,19,14,2016,Standard,786,SSD-16/HSS10/SA1/CCCM/INGO/786,Camp Coordination / Management,,100,499999.1
+South Sudan,19,14,2016,Standard,880,SSD-16/HSS10/SA1/CCCM/INGO/880,Camp Coordination / Management,,100,499999.68
+South Sudan,19,14,2016,Standard,881,SSD-16/HSS10/SA1/CCCM/INGO/881,Camp Coordination / Management,,100,499998.74
+South Sudan,19,14,2016,Standard,788,SSD-16/HSS10/SA1/E/INGO/788,Education,,100,199848.07
+South Sudan,19,14,2016,Standard,797,SSD-16/HSS10/SA1/E/INGO/797,Education,,100,199989.1
+South Sudan,19,14,2016,Standard,862,SSD-16/HSS10/SA1/E/INGO/862,Education,,100,200000
+South Sudan,19,14,2016,Standard,875,SSD-16/HSS10/SA1/E/INGO/875,Education,,100,200342.76
+South Sudan,19,14,2016,Standard,673,SSD-16/HSS10/SA1/E/NGO/673,Education,,100,150002.38
+South Sudan,19,14,2016,Standard,695,SSD-16/HSS10/SA1/E/NGO/695,Education,,100,119995.15
+South Sudan,19,14,2016,Standard,715,SSD-16/HSS10/SA1/E/NGO/715,Education,,100,125000.4
+South Sudan,19,14,2016,Standard,724,SSD-16/HSS10/SA1/E/NGO/724,Education,,100,80000.04
+South Sudan,19,14,2016,Standard,848,SSD-16/HSS10/SA1/E/NGO/848,Education,,100,150000
+South Sudan,19,14,2016,Standard,807,SSD-16/HSS10/SA1/E/UN/807,Education,,100,474999.75
+South Sudan,19,14,2016,Standard,785,SSD-16/HSS10/SA1/ETC/UN/785,Emergency Telecommunications,,100,250013.6
+South Sudan,19,14,2016,Standard,882,SSD-16/HSS10/SA1/ETC/UN/882,Emergency Telecommunications,,100,413359.68
+South Sudan,19,14,2016,Standard,702,SSD-16/HSS10/SA1/FSL/INGO/702,Food Security,,100,297029.7
+South Sudan,19,14,2016,Standard,728,SSD-16/HSS10/SA1/FSL/INGO/728,Food Security,,100,501953.05
+South Sudan,19,14,2016,Standard,739,SSD-16/HSS10/SA1/FSL/INGO/739,Food Security,,100,350000
+South Sudan,19,14,2016,Standard,759,SSD-16/HSS10/SA1/FSL/INGO/759,Food Security,,100,254005.25
+South Sudan,19,14,2016,Standard,839,SSD-16/HSS10/SA1/FSL/INGO/839,Food Security,,100,545994.46
+South Sudan,19,14,2016,Standard,843,SSD-16/HSS10/SA1/FSL/INGO/843,Food Security,,100,90164.23
+South Sudan,19,14,2016,Standard,859,SSD-16/HSS10/SA1/FSL/INGO/859,Food Security,,100,400000.03
+South Sudan,19,14,2016,Standard,865,SSD-16/HSS10/SA1/FSL/INGO/865,Food Security,,100,381010.82
+South Sudan,19,14,2016,Standard,783,SSD-16/HSS10/SA1/FSL/NGO/783,Food Security,,100,180000
+South Sudan,19,14,2016,Standard,706,SSD-16/HSS10/SA1/FSL/UN/706,Food Security,,100,2000000.13
+South Sudan,19,14,2016,Standard,678,SSD-16/HSS10/SA1/H/INGO/678,Health,,100,416000
+South Sudan,19,14,2016,Standard,731,SSD-16/HSS10/SA1/H/INGO/731,Health,,100,300000
+South Sudan,19,14,2016,Standard,738,SSD-16/HSS10/SA1/H/INGO/738,Health,,100,300000
+South Sudan,19,14,2016,Standard,775,SSD-16/HSS10/SA1/H/INGO/775,Health,,100,199999.91
+South Sudan,19,14,2016,Standard,784,SSD-16/HSS10/SA1/H/INGO/784,Health,,100,472000.01
+South Sudan,19,14,2016,Standard,817,SSD-16/HSS10/SA1/H/INGO/817,Health,,100,199562.52
+South Sudan,19,14,2016,Standard,829,SSD-16/HSS10/SA1/H/INGO/829,Health,,100,276978.21
+South Sudan,19,14,2016,Standard,693,SSD-16/HSS10/SA1/H/NGO/693,Health,,100,100000
+South Sudan,19,14,2016,Standard,766,SSD-16/HSS10/SA1/H/NGO/766,Health,,100,405018.75
+South Sudan,19,14,2016,Standard,773,SSD-16/HSS10/SA1/H/NGO/773,Health,,100,221000.05
+South Sudan,19,14,2016,Standard,815,SSD-16/HSS10/SA1/H/NGO/815,Health,,100,100000.06
+South Sudan,19,14,2016,Standard,685,SSD-16/HSS10/SA1/H/UN/685,Health,,100,509000.01
+South Sudan,19,14,2016,Standard,750,SSD-16/HSS10/SA1/H/UN/750,Health,,100,614990.01
+South Sudan,19,14,2016,Standard,806,SSD-16/HSS10/SA1/H/UN/806,Health,,100,633196.04
+South Sudan,19,14,2016,Standard,686,SSD-16/HSS10/SA1/L/UN/686,Logistics,,100,1250000
+South Sudan,19,14,2016,Standard,688,SSD-16/HSS10/SA1/L/UN/688,Logistics,,100,3000063.45
+South Sudan,19,14,2016,Standard,754,SSD-16/HSS10/SA1/L/UN/754,Logistics,,100,899999.47
+South Sudan,19,14,2016,Standard,780,SSD-16/HSS10/SA1/L/UN/780,Logistics,,100,1000003.34
+South Sudan,19,14,2016,Standard,704,SSD-16/HSS10/SA1/N/INGO/704,Nutrition,,100,252256
+South Sudan,19,14,2016,Standard,733,SSD-16/HSS10/SA1/N/INGO/733,Nutrition,,100,227133
+South Sudan,19,14,2016,Standard,795,SSD-16/HSS10/SA1/N/INGO/795,Nutrition,,100,721582
+South Sudan,19,14,2016,Standard,810,SSD-16/HSS10/SA1/N/INGO/810,Nutrition,,100,263698.5
+South Sudan,19,14,2016,Standard,811,SSD-16/HSS10/SA1/N/INGO/811,Nutrition,,100,355274
+South Sudan,19,14,2016,Standard,823,SSD-16/HSS10/SA1/N/INGO/823,Nutrition,,100,224582.3
+South Sudan,19,14,2016,Standard,825,SSD-16/HSS10/SA1/N/INGO/825,Nutrition,,100,286871.75
+South Sudan,19,14,2016,Standard,847,SSD-16/HSS10/SA1/N/INGO/847,Nutrition,,100,460982.04
+South Sudan,19,14,2016,Standard,869,SSD-16/HSS10/SA1/N/INGO/869,Nutrition,,100,502209.81
+South Sudan,19,14,2016,Standard,675,SSD-16/HSS10/SA1/N/NGO/675,Nutrition,,100,201717
+South Sudan,19,14,2016,Standard,713,SSD-16/HSS10/SA1/N/NGO/713,Nutrition,,100,162189.53
+South Sudan,19,14,2016,Standard,736,SSD-16/HSS10/SA1/N/NGO/736,Nutrition,,100,296116.58
+South Sudan,19,14,2016,Standard,771,SSD-16/HSS10/SA1/N/NGO/771,Nutrition,,100,267217.09
+South Sudan,19,14,2016,Standard,711,SSD-16/HSS10/SA1/N/UN/711,Nutrition,,100,772678.03
+South Sudan,19,14,2016,Standard,721,SSD-16/HSS10/SA1/N/UN/721,Nutrition,,100,1249999.68
+South Sudan,19,14,2016,Standard,767,SSD-16/HSS10/SA1/N/UN/767,Nutrition,,100,250000
+South Sudan,19,14,2016,Standard,712,SSD-16/HSS10/SA1/NFI/INGO/712,Emergency Shelter and NFI,,100,200000
+South Sudan,19,14,2016,Standard,725,SSD-16/HSS10/SA1/NFI/INGO/725,Emergency Shelter and NFI,,100,450000.27
+South Sudan,19,14,2016,Standard,763,SSD-16/HSS10/SA1/NFI/INGO/763,Emergency Shelter and NFI,,100,180000.8
+South Sudan,19,14,2016,Standard,776,SSD-16/HSS10/SA1/NFI/INGO/776,Emergency Shelter and NFI,,100,281709.06
+South Sudan,19,14,2016,Standard,812,SSD-16/HSS10/SA1/NFI/INGO/812,Emergency Shelter and NFI,,100,300000
+South Sudan,19,14,2016,Standard,828,SSD-16/HSS10/SA1/NFI/INGO/828,Emergency Shelter and NFI,,100,350000
+South Sudan,19,14,2016,Standard,831,SSD-16/HSS10/SA1/NFI/INGO/831,Emergency Shelter and NFI,,100,290000.28
+South Sudan,19,14,2016,Standard,694,SSD-16/HSS10/SA1/NFI/NGO/694,Emergency Shelter and NFI,,100,70003.68
+South Sudan,19,14,2016,Standard,765,SSD-16/HSS10/SA1/NFI/NGO/765,Emergency Shelter and NFI,,100,100002.2
+South Sudan,19,14,2016,Standard,687,SSD-16/HSS10/SA1/NFI/UN/687,Emergency Shelter and NFI,,100,1500000
+South Sudan,19,14,2016,Standard,709,SSD-16/HSS10/SA1/NFI/UN/709,Emergency Shelter and NFI,,100,320000
+South Sudan,19,14,2016,Standard,755,SSD-16/HSS10/SA1/P/INGO/755,Protection,Mine Action,100,400000
+South Sudan,19,14,2016,Standard,778,SSD-16/HSS10/SA1/P/INGO/778,Protection,Gender Based Violence as subsidiary clusters,100,250078.26
+South Sudan,19,14,2016,Standard,850,SSD-16/HSS10/SA1/P/INGO/850,Protection,Gender Based Violence as subsidiary clusters,100,300000.11
+South Sudan,19,14,2016,Standard,748,SSD-16/HSS10/SA1/P/NGO/748,Protection,Gender Based Violence as subsidiary clusters,100,120001.54
+South Sudan,19,14,2016,Standard,774,SSD-16/HSS10/SA1/P/NGO/774,Protection,Gender Based Violence as subsidiary clusters,100,150000.3
+South Sudan,19,14,2016,Standard,824,SSD-16/HSS10/SA1/P/NGO/824,Protection,Child Protection in Emergencies,100,160018.5
+South Sudan,19,14,2016,Standard,853,SSD-16/HSS10/SA1/P/NGO/853,Protection,Child Protection in Emergencies,100,189983.85
+South Sudan,19,14,2016,Standard,672,SSD-16/HSS10/SA1/P/UN/672,Protection,Gender Based Violence as subsidiary clusters,100,229857.4
+South Sudan,19,14,2016,Standard,732,SSD-16/HSS10/SA1/P/UN/732,Protection,Child Protection in Emergencies,100,249930.6
+South Sudan,19,14,2016,Standard,842,SSD-16/HSS10/SA1/P/UN/842,Protection,,100,199841.76
+South Sudan,19,14,2016,Standard,679,SSD-16/HSS10/SA1/WASH/INGO/679,"Water, Sanitation and Hygiene",,100,400000
+South Sudan,19,14,2016,Standard,701,SSD-16/HSS10/SA1/WASH/INGO/701,"Water, Sanitation and Hygiene",,100,398740.32
+South Sudan,19,14,2016,Standard,737,SSD-16/HSS10/SA1/WASH/INGO/737,"Water, Sanitation and Hygiene",,100,349795.31
+South Sudan,19,14,2016,Standard,747,SSD-16/HSS10/SA1/WASH/INGO/747,"Water, Sanitation and Hygiene",,100,200000
+South Sudan,19,14,2016,Standard,751,SSD-16/HSS10/SA1/WASH/INGO/751,"Water, Sanitation and Hygiene",,100,400000
+South Sudan,19,14,2016,Standard,792,SSD-16/HSS10/SA1/WASH/INGO/792,"Water, Sanitation and Hygiene",,100,200000
+South Sudan,19,14,2016,Standard,804,SSD-16/HSS10/SA1/WASH/INGO/804,"Water, Sanitation and Hygiene",,100,200000
+South Sudan,19,14,2016,Standard,827,SSD-16/HSS10/SA1/WASH/INGO/827,"Water, Sanitation and Hygiene",,100,250000
+South Sudan,19,14,2016,Standard,845,SSD-16/HSS10/SA1/WASH/INGO/845,"Water, Sanitation and Hygiene",,100,299666.3
+South Sudan,19,14,2016,Standard,870,SSD-16/HSS10/SA1/WASH/INGO/870,"Water, Sanitation and Hygiene",,100,500000.01
+South Sudan,19,14,2016,Standard,671,SSD-16/HSS10/SA1/WASH/NGO/671,"Water, Sanitation and Hygiene",,100,125008.99
+South Sudan,19,14,2016,Standard,683,SSD-16/HSS10/SA1/WASH/NGO/683,"Water, Sanitation and Hygiene",,100,100002.2
+South Sudan,19,14,2016,Standard,690,SSD-16/HSS10/SA1/WASH/NGO/690,"Water, Sanitation and Hygiene",,100,75071.2
+South Sudan,19,14,2016,Standard,692,SSD-16/HSS10/SA1/WASH/NGO/692,"Water, Sanitation and Hygiene",,100,200000.01
+South Sudan,19,14,2016,Standard,698,SSD-16/HSS10/SA1/WASH/NGO/698,"Water, Sanitation and Hygiene",,100,99991.5
+South Sudan,19,14,2016,Standard,761,SSD-16/HSS10/SA1/WASH/NGO/761,"Water, Sanitation and Hygiene",,100,100000
+South Sudan,19,14,2016,Standard,779,SSD-16/HSS10/SA1/WASH/NGO/779,"Water, Sanitation and Hygiene",,100,150000.19
+South Sudan,19,14,2016,Standard,794,SSD-16/HSS10/SA1/WASH/UN/794,"Water, Sanitation and Hygiene",,100,400000
+South Sudan,19,14,2016,Standard,813,SSD-16/HSS10/SA1/WASH/UN/813,"Water, Sanitation and Hygiene",,100,600000.36
+South Sudan,19,14,2016,Standard,814,SSD-16/HSS10/SA1/WASH/UN/814,"Water, Sanitation and Hygiene",,100,400002.59
+South Sudan,19,18,2016,Standard,3469,SSD-16/HSS10/SA2/CCCM/INGO/3469,Camp Coordination / Management,,100,200000
+South Sudan,19,18,2016,Standard,3413,SSD-16/HSS10/SA2/E/INGO/3413,Education,,100,304732.37
+South Sudan,19,18,2016,Standard,3596,SSD-16/HSS10/SA2/E/INGO/3596,Education,,100,207489.05
+South Sudan,19,18,2016,Standard,3601,SSD-16/HSS10/SA2/E/INGO/3601,Education,,100,278737.14
+South Sudan,19,18,2016,Standard,3402,SSD-16/HSS10/SA2/E/NGO/3402,Education,,100,204750
+South Sudan,19,18,2016,Standard,3426,SSD-16/HSS10/SA2/E/NGO/3426,Education,,100,204749.85
+South Sudan,19,18,2016,Standard,3443,SSD-16/HSS10/SA2/E/NGO/3443,Education,,100,154750.25
+South Sudan,19,18,2016,Standard,3540,SSD-16/HSS10/SA2/E/NGO/3540,Education,,100,118000.67
+South Sudan,19,18,2016,Standard,3585,SSD-16/HSS10/SA2/E/UN/3585,Education,,100,426382.37
+South Sudan,19,18,2016,Standard,3408,SSD-16/HSS10/SA2/FSL/INGO/3408,Food Security,,100,280000.28
+South Sudan,19,18,2016,Standard,3554,SSD-16/HSS10/SA2/FSL/INGO/3554,Food Security,,100,300000.04
+South Sudan,19,18,2016,Standard,3591,SSD-16/HSS10/SA2/FSL/INGO/3591,Food Security,,100,219628.2
+South Sudan,19,18,2016,Standard,3620,SSD-16/HSS10/SA2/FSL/INGO/3620,Food Security,,100,299979.42
+South Sudan,19,18,2016,Standard,3539,SSD-16/HSS10/SA2/FSL/NGO/3539,Food Security,,100,170001.6
+South Sudan,19,18,2016,Standard,3555,SSD-16/HSS10/SA2/FSL/NGO/3555,Food Security,,100,200005.2
+South Sudan,19,18,2016,Standard,3575,SSD-16/HSS10/SA2/FSL/NGO/3575,Food Security,,100,230620
+South Sudan,19,18,2016,Standard,3775,SSD-16/HSS10/SA2/FSL/UN/3775,Food Security,,100,1300000
+South Sudan,19,18,2016,Standard,3493,SSD-16/HSS10/SA2/H/INGO/3493,Health,,100,365999.92
+South Sudan,19,18,2016,Standard,3569,SSD-16/HSS10/SA2/H/INGO/3569,Health,,100,150000
+South Sudan,19,18,2016,Standard,3588,SSD-16/HSS10/SA2/H/INGO/3588,Health,,100,484000
+South Sudan,19,18,2016,Standard,3589,SSD-16/HSS10/SA2/H/INGO/3589,Health,,100,270000
+South Sudan,19,18,2016,Standard,3595,SSD-16/HSS10/SA2/H/INGO/3595,Health,,100,150000
+South Sudan,19,18,2016,Standard,3628,SSD-16/HSS10/SA2/H/INGO/3628,Health,,100,150362.56
+South Sudan,19,18,2016,Standard,3410,SSD-16/HSS10/SA2/H/NGO/3410,Health,,100,298003.04
+South Sudan,19,18,2016,Standard,3417,SSD-16/HSS10/SA2/H/NGO/3417,Health,,100,100385.55
+South Sudan,19,18,2016,Standard,3441,SSD-16/HSS10/SA2/H/NGO/3441,Health,,100,243759.38
+South Sudan,19,18,2016,Standard,3455,SSD-16/HSS10/SA2/H/NGO/3455,Health,,100,197753.12
+South Sudan,19,18,2016,Standard,3462,SSD-16/HSS10/SA2/H/NGO/3462,Health,,100,255669.99
+South Sudan,19,18,2016,Standard,3445,SSD-16/HSS10/SA2/H/UN/3445,Health,,100,385000.06
+South Sudan,19,18,2016,Standard,3560,SSD-16/HSS10/SA2/H/UN/3560,Health,,100,314991.59
+South Sudan,19,18,2016,Standard,3570,SSD-16/HSS10/SA2/H/UN/3570,Health,,100,510000.01
+South Sudan,19,18,2016,Standard,3636,SSD-16/HSS10/SA2/H/UN/3636,Health,,100,399998.84
+South Sudan,19,18,2016,Standard,3479,SSD-16/HSS10/SA2/L/UN/3479,Logistics,,100,1200000
+South Sudan,19,18,2016,Standard,3517,SSD-16/HSS10/SA2/L/UN/3517,Logistics,,100,1699994.07
+South Sudan,19,18,2016,Standard,3458,SSD-16/HSS10/SA2/N/INGO/3458,Nutrition,,100,300000.02
+South Sudan,19,18,2016,Standard,3558,SSD-16/HSS10/SA2/N/INGO/3558,Nutrition,,100,604539.37
+South Sudan,19,18,2016,Standard,3573,SSD-16/HSS10/SA2/N/INGO/3573,Nutrition,,100,288000
+South Sudan,19,18,2016,Standard,3597,SSD-16/HSS10/SA2/N/INGO/3597,Nutrition,,100,308769.24
+South Sudan,19,18,2016,Standard,3603,SSD-16/HSS10/SA2/N/INGO/3603,Nutrition,,100,400799.87
+South Sudan,19,18,2016,Standard,3604,SSD-16/HSS10/SA2/N/INGO/3604,Nutrition,,100,600000
+South Sudan,19,18,2016,Standard,3617,SSD-16/HSS10/SA2/N/INGO/3617,Nutrition,,100,169986
+South Sudan,19,18,2016,Standard,3631,SSD-16/HSS10/SA2/N/INGO/3631,Nutrition,,100,581996.5
+South Sudan,19,18,2016,Standard,3429,SSD-16/HSS10/SA2/N/NGO/3429,Nutrition,,100,227947.45
+South Sudan,19,18,2016,Standard,3461,SSD-16/HSS10/SA2/N/NGO/3461,Nutrition,,100,413667.94
+South Sudan,19,18,2016,Standard,3481,SSD-16/HSS10/SA2/N/NGO/3481,Nutrition,,100,355573.09
+South Sudan,19,18,2016,Standard,3594,SSD-16/HSS10/SA2/N/UN/3594,Nutrition,,100,600000
+South Sudan,19,18,2016,Standard,3411,SSD-16/HSS10/SA2/NFI/INGO/3411,Emergency Shelter and NFI,,100,315881.93
+South Sudan,19,18,2016,Standard,3449,SSD-16/HSS10/SA2/NFI/INGO/3449,Emergency Shelter and NFI,,100,405444.4
+South Sudan,19,18,2016,Standard,3459,SSD-16/HSS10/SA2/NFI/INGO/3459,Emergency Shelter and NFI,,100,404265.75
+South Sudan,19,18,2016,Standard,3508,SSD-16/HSS10/SA2/NFI/INGO/3508,Emergency Shelter and NFI,,100,360000.43
+South Sudan,19,18,2016,Standard,3538,SSD-16/HSS10/SA2/NFI/INGO/3538,Emergency Shelter and NFI,,100,205033.4
+South Sudan,19,18,2016,Standard,3453,SSD-16/HSS10/SA2/NFI/NGO/3453,Emergency Shelter and NFI,,100,129373.7
+South Sudan,19,18,2016,Standard,3599,SSD-16/HSS10/SA2/NFI/NGO/3599,Emergency Shelter and NFI,,100,125500.3
+South Sudan,19,18,2016,Standard,3544,SSD-16/HSS10/SA2/NFI/UN/3544,Emergency Shelter and NFI,,100,320000
+South Sudan,19,18,2016,Standard,3547,SSD-16/HSS10/SA2/NFI/UN/3547,Emergency Shelter and NFI,,100,1700014.29
+South Sudan,19,18,2016,Standard,3414,SSD-16/HSS10/SA2/P/INGO/3414,Protection,Child Protection in Emergencies,100,199892.26
+South Sudan,19,18,2016,Standard,3456,SSD-16/HSS10/SA2/P/INGO/3456,Protection,,100,247660.06
+South Sudan,19,18,2016,Standard,3514,SSD-16/HSS10/SA2/P/INGO/3514,Protection,,100,250000.14
+South Sudan,19,18,2016,Standard,3593,SSD-16/HSS10/SA2/P/INGO/3593,Protection,Gender Based Violence as subsidiary clusters,100,200746.98
+South Sudan,19,18,2016,Standard,3653,SSD-16/HSS10/SA2/P/INGO/3653,Protection,,100,200000
+South Sudan,19,18,2016,Standard,3719,SSD-16/HSS10/SA2/P/INGO/3719,Protection,Mine Action,100,650000.17
+South Sudan,19,18,2016,Standard,3427,SSD-16/HSS10/SA2/P/NGO/3427,Protection,Child Protection in Emergencies,100,80001.76
+South Sudan,19,18,2016,Standard,3447,SSD-16/HSS10/SA2/P/NGO/3447,Protection,Child Protection in Emergencies,100,99999.9
+South Sudan,19,18,2016,Standard,3450,SSD-16/HSS10/SA2/P/NGO/3450,Protection,Child Protection in Emergencies,100,100000.49
+South Sudan,19,18,2016,Standard,3537,SSD-16/HSS10/SA2/P/NGO/3537,Protection,Child Protection in Emergencies,100,100000
+South Sudan,19,18,2016,Standard,3572,SSD-16/HSS10/SA2/P/NGO/3572,Protection,Gender Based Violence as subsidiary clusters,100,150000.09
+South Sudan,19,18,2016,Standard,3495,SSD-16/HSS10/SA2/P/UN/3495,Protection,Gender Based Violence as subsidiary clusters,100,199999.05
+South Sudan,19,18,2016,Standard,3576,SSD-16/HSS10/SA2/P/UN/3576,Protection,Gender Based Violence as subsidiary clusters,100,149833
+South Sudan,19,18,2016,Standard,3635,SSD-16/HSS10/SA2/P/UN/3635,Protection,Child Protection in Emergencies,100,369267.7
+South Sudan,19,18,2016,Standard,3574,SSD-16/HSS10/SA2/WASH/INGO/3574,"Water, Sanitation and Hygiene",,100,200000
+South Sudan,19,18,2016,Standard,3586,SSD-16/HSS10/SA2/WASH/INGO/3586,"Water, Sanitation and Hygiene",,100,444000
+South Sudan,19,18,2016,Standard,3600,SSD-16/HSS10/SA2/WASH/INGO/3600,"Water, Sanitation and Hygiene",,100,200000.09
+South Sudan,19,18,2016,Standard,3618,SSD-16/HSS10/SA2/WASH/INGO/3618,"Water, Sanitation and Hygiene",,100,400000
+South Sudan,19,18,2016,Standard,3622,SSD-16/HSS10/SA2/WASH/INGO/3622,"Water, Sanitation and Hygiene",,100,100044.43
+South Sudan,19,18,2016,Standard,3633,SSD-16/HSS10/SA2/WASH/INGO/3633,"Water, Sanitation and Hygiene",,100,300000
+South Sudan,19,18,2016,Standard,3395,SSD-16/HSS10/SA2/WASH/NGO/3395,"Water, Sanitation and Hygiene",,100,179963.3
+South Sudan,19,18,2016,Standard,3431,SSD-16/HSS10/SA2/WASH/NGO/3431,"Water, Sanitation and Hygiene",,100,144000
+South Sudan,19,18,2016,Standard,3437,SSD-16/HSS10/SA2/WASH/NGO/3437,"Water, Sanitation and Hygiene",,100,300000.18
+South Sudan,19,18,2016,Standard,3442,SSD-16/HSS10/SA2/WASH/NGO/3442,"Water, Sanitation and Hygiene",,100,300000.18
+South Sudan,19,18,2016,Standard,3457,SSD-16/HSS10/SA2/WASH/NGO/3457,"Water, Sanitation and Hygiene",,100,162533
+South Sudan,19,18,2016,Standard,3471,SSD-16/HSS10/SA2/WASH/NGO/3471,"Water, Sanitation and Hygiene",,100,100000
+South Sudan,19,18,2016,Standard,3472,SSD-16/HSS10/SA2/WASH/NGO/3472,"Water, Sanitation and Hygiene",,100,75000.15
+South Sudan,19,18,2016,Standard,3583,SSD-16/HSS10/SA2/WASH/NGO/3583,"Water, Sanitation and Hygiene",,100,100000.07
+South Sudan,19,18,2016,Standard,3627,SSD-16/HSS10/SA2/WASH/NGO/3627,"Water, Sanitation and Hygiene",,100,50008.88
+South Sudan,19,18,2016,Standard,3520,SSD-16/HSS10/SA2/WASH/UN/3520,"Water, Sanitation and Hygiene",,100,700000.05
+South Sudan,19,18,2016,Standard,3638,SSD-16/HSS10/SA2/WASH/UN/3638,"Water, Sanitation and Hygiene",,100,444008.27
+South Sudan,19,18,2016,Standard,3640,SSD-16/HSS10/SA2/WASH/UN/3640,"Water, Sanitation and Hygiene",,100,900000.97
+South Sudan,19,21,2017,Reserve,4902,SSD-17/HSS10/HF-DC/CCS/UN/4902,Coordination and Support Services,,100,1123012.08
+South Sudan,19,21,2017,Reserve,7122,SSD-17/HSS10/HF-DC/CCS/UN/7122,Coordination and Support Services,,100,263067.9
+South Sudan,19,24,2017,Reserve,7638,SSD-17/HSS10/RA1/E/UN/7638,Education,,100,900000.54
+South Sudan,19,24,2017,Reserve,7639,SSD-17/HSS10/RA1/FSL/UN/7639,Food Security,,100,1000000.77
+South Sudan,19,24,2017,Reserve,7621,SSD-17/HSS10/RA1/H/UN/7621,Health,,100,599735
+South Sudan,19,24,2017,Reserve,7624,SSD-17/HSS10/RA1/H/UN/7624,Health,,100,500000.09
+South Sudan,19,24,2017,Reserve,7625,SSD-17/HSS10/RA1/H/UN/7625,Health,,100,899943.83
+South Sudan,19,24,2017,Reserve,7627,SSD-17/HSS10/RA1/N/UN/7627,Nutrition,,100,1025003.83
+South Sudan,19,24,2017,Reserve,7642,SSD-17/HSS10/RA1/N/UN/7642,Nutrition,,100,1024997.75
+South Sudan,19,24,2017,Reserve,7641,SSD-17/HSS10/RA1/NFI/UN/7641,Emergency Shelter and NFI,,100,1700047.08
+South Sudan,19,24,2017,Reserve,7629,SSD-17/HSS10/RA1/P/UN/7629,Protection,Gender Based Violence as subsidiary clusters,100,600000.36
+South Sudan,19,24,2017,Reserve,7640,SSD-17/HSS10/RA1/P/UN/7640,Protection,Child Protection in Emergencies,100,600002.5
+South Sudan,19,24,2017,Reserve,7626,SSD-17/HSS10/RA1/WASH/UN/7626,"Water, Sanitation and Hygiene",,100,1075719.55
+South Sudan,19,24,2017,Reserve,7630,SSD-17/HSS10/RA1/WASH/UN/7630,"Water, Sanitation and Hygiene",,100,1075290.08
+South Sudan,19,22,2017,Standard,5080,SSD-17/HSS10/SA1/CCCM/INGO/5080,Camp Coordination / Management,,100,403400
+South Sudan,19,22,2017,Standard,5088,SSD-17/HSS10/SA1/CCCM/INGO/5088,Camp Coordination / Management,,100,145030
+South Sudan,19,22,2017,Standard,5222,SSD-17/HSS10/SA1/CCCM/INGO/5222,Camp Coordination / Management,,100,251529.99
+South Sudan,19,22,2017,Standard,5082,SSD-17/HSS10/SA1/E/INGO/5082,Education,,100,381000
+South Sudan,19,22,2017,Standard,5095,SSD-17/HSS10/SA1/E/INGO/5095,Education,,100,220000
+South Sudan,19,22,2017,Standard,5158,SSD-17/HSS10/SA1/E/INGO/5158,Education,,100,260000.91
+South Sudan,19,22,2017,Standard,5073,SSD-17/HSS10/SA1/E/NGO/5073,Education,,100,139000.49
+South Sudan,19,22,2017,Standard,5060,SSD-17/HSS10/SA1/FSL/INGO/5060,Food Security,,100,270000
+South Sudan,19,22,2017,Standard,5103,SSD-17/HSS10/SA1/FSL/INGO/5103,Food Security,,100,162000.4
+South Sudan,19,22,2017,Standard,5228,SSD-17/HSS10/SA1/FSL/INGO/5228,Food Security,,100,299575.75
+South Sudan,19,22,2017,Standard,5113,SSD-17/HSS10/SA1/FSL/NGO/5113,Food Security,,100,105000
+South Sudan,19,22,2017,Standard,5116,SSD-17/HSS10/SA1/FSL/NGO/5116,Food Security,,100,179999.68
+South Sudan,19,22,2017,Standard,5164,SSD-17/HSS10/SA1/FSL/NGO/5164,Food Security,,100,311999.97
+South Sudan,19,22,2017,Standard,5230,SSD-17/HSS10/SA1/FSL/NGO/5230,Food Security,,100,389801
+South Sudan,19,22,2017,Standard,5239,SSD-17/HSS10/SA1/FSL/NGO/5239,Food Security,,100,269999.86
+South Sudan,19,22,2017,Standard,5243,SSD-17/HSS10/SA1/FSL/NGO/5243,Food Security,,100,270000.06
+South Sudan,19,22,2017,Standard,5259,SSD-17/HSS10/SA1/FSL/NGO/5259,Food Security,,100,72000
+South Sudan,19,22,2017,Standard,5079,SSD-17/HSS10/SA1/H/INGO/5079,Health,,100,204500.01
+South Sudan,19,22,2017,Standard,5089,SSD-17/HSS10/SA1/H/INGO/5089,Health,,100,183999.59
+South Sudan,19,22,2017,Standard,5105,SSD-17/HSS10/SA1/H/INGO/5105,Health,,100,244030.96
+South Sudan,19,22,2017,Standard,5117,SSD-17/HSS10/SA1/H/INGO/5117,Health,,100,142993.9
+South Sudan,19,22,2017,Standard,5174,SSD-17/HSS10/SA1/H/INGO/5174,Health,,100,144000
+South Sudan,19,22,2017,Standard,5263,SSD-17/HSS10/SA1/H/INGO/5263,Health,,100,100000.17
+South Sudan,19,22,2017,Standard,5097,SSD-17/HSS10/SA1/H/NGO/5097,Health,,100,100000.06
+South Sudan,19,22,2017,Standard,5098,SSD-17/HSS10/SA1/H/NGO/5098,Health,,100,145000.92
+South Sudan,19,22,2017,Standard,5107,SSD-17/HSS10/SA1/H/NGO/5107,Health,,100,245000.03
+South Sudan,19,22,2017,Standard,5125,SSD-17/HSS10/SA1/H/NGO/5125,Health,,100,174500
+South Sudan,19,22,2017,Standard,5157,SSD-17/HSS10/SA1/H/NGO/5157,Health,,100,244599.95
+South Sudan,19,22,2017,Standard,5180,SSD-17/HSS10/SA1/H/NGO/5180,Health,,100,100000.06
+South Sudan,19,22,2017,Standard,5191,SSD-17/HSS10/SA1/H/NGO/5191,Health,,100,100000
+South Sudan,19,22,2017,Standard,5261,SSD-17/HSS10/SA1/H/NGO/5261,Health,,100,131400.15
+South Sudan,19,22,2017,Standard,5262,SSD-17/HSS10/SA1/H/NGO/5262,Health,,100,143046.16
+South Sudan,19,22,2017,Standard,5093,SSD-17/HSS10/SA1/H/UN/5093,Health,,100,345000
+South Sudan,19,22,2017,Standard,5190,SSD-17/HSS10/SA1/H/UN/5190,Health,,100,400102.96
+South Sudan,19,22,2017,Standard,5232,SSD-17/HSS10/SA1/H/UN/5232,Health,,100,547947
+South Sudan,19,22,2017,Standard,5061,SSD-17/HSS10/SA1/L/UN/5061,Logistics,,100,851977.91
+South Sudan,19,22,2017,Standard,5087,SSD-17/HSS10/SA1/L/UN/5087,Logistics,,100,851977.87
+South Sudan,19,22,2017,Standard,5108,SSD-17/HSS10/SA1/L/UN/5108,Logistics,,100,796044.01
+South Sudan,19,22,2017,Standard,5559,SSD-17/HSS10/SA1/L/UN/5559,Logistics,,100,350000.17
+South Sudan,19,22,2017,Standard,5076,SSD-17/HSS10/SA1/N/INGO/5076,Nutrition,,100,289200.35
+South Sudan,19,22,2017,Standard,5090,SSD-17/HSS10/SA1/N/INGO/5090,Nutrition,,100,192986.98
+South Sudan,19,22,2017,Standard,5104,SSD-17/HSS10/SA1/N/INGO/5104,Nutrition,,100,492121.26
+South Sudan,19,22,2017,Standard,5119,SSD-17/HSS10/SA1/N/INGO/5119,Nutrition,,100,583789.35
+South Sudan,19,22,2017,Standard,5266,SSD-17/HSS10/SA1/N/INGO/5266,Nutrition,,100,373921.44
+South Sudan,19,22,2017,Standard,5268,SSD-17/HSS10/SA1/N/INGO/5268,Nutrition,,100,350141
+South Sudan,19,22,2017,Standard,5276,SSD-17/HSS10/SA1/N/INGO/5276,Nutrition,,100,550140.05
+South Sudan,19,22,2017,Standard,5121,SSD-17/HSS10/SA1/N/NGO/5121,Nutrition,,100,502861
+South Sudan,19,22,2017,Standard,5155,SSD-17/HSS10/SA1/N/NGO/5155,Nutrition,,100,124558.7
+South Sudan,19,22,2017,Standard,5177,SSD-17/HSS10/SA1/N/NGO/5177,Nutrition,,100,264231.15
+South Sudan,19,22,2017,Standard,5173,SSD-17/HSS10/SA1/N/UN/5173,Nutrition,,100,835465.1
+South Sudan,19,22,2017,Standard,5283,SSD-17/HSS10/SA1/N/UN/5283,Nutrition,,100,231036.54
+South Sudan,19,22,2017,Standard,5138,SSD-17/HSS10/SA1/NFI/INGO/5138,Emergency Shelter and NFI,,100,330000.01
+South Sudan,19,22,2017,Standard,5223,SSD-17/HSS10/SA1/NFI/INGO/5223,Emergency Shelter and NFI,,100,399999.3
+South Sudan,19,22,2017,Standard,5238,SSD-17/HSS10/SA1/NFI/INGO/5238,Emergency Shelter and NFI,,100,333223.68
+South Sudan,19,22,2017,Standard,5260,SSD-17/HSS10/SA1/NFI/INGO/5260,Emergency Shelter and NFI,,100,136686.96
+South Sudan,19,22,2017,Standard,5058,SSD-17/HSS10/SA1/NFI/NGO/5058,Emergency Shelter and NFI,,100,100003.05
+South Sudan,19,22,2017,Standard,5184,SSD-17/HSS10/SA1/NFI/NGO/5184,Emergency Shelter and NFI,,100,50001.1
+South Sudan,19,22,2017,Standard,5224,SSD-17/HSS10/SA1/NFI/NGO/5224,Emergency Shelter and NFI,,100,149994.74
+South Sudan,19,22,2017,Standard,5086,SSD-17/HSS10/SA1/P/INGO/5086,Protection,Mine Action,100,400000
+South Sudan,19,22,2017,Standard,5096,SSD-17/HSS10/SA1/P/INGO/5096,Protection,Child Protection in Emergencies,100,198748.39
+South Sudan,19,22,2017,Standard,5122,SSD-17/HSS10/SA1/P/INGO/5122,Protection,Child Protection in Emergencies,100,109999.49
+South Sudan,19,22,2017,Standard,5147,SSD-17/HSS10/SA1/P/INGO/5147,Protection,Gender Based Violence as subsidiary clusters,100,289999.92
+South Sudan,19,22,2017,Standard,5235,SSD-17/HSS10/SA1/P/INGO/5235,Protection,Gender Based Violence as subsidiary clusters,100,200364.56
+South Sudan,19,22,2017,Standard,5064,SSD-17/HSS10/SA1/P/NGO/5064,Protection,Child Protection in Emergencies,100,140000
+South Sudan,19,22,2017,Standard,5137,SSD-17/HSS10/SA1/P/NGO/5137,Protection,Child Protection in Emergencies,100,100000.06
+South Sudan,19,22,2017,Standard,5206,SSD-17/HSS10/SA1/P/NGO/5206,Protection,,100,90000.05
+South Sudan,19,22,2017,Standard,5236,SSD-17/HSS10/SA1/P/UN/5236,Protection,Child Protection in Emergencies,100,270000.59
+South Sudan,19,22,2017,Standard,5063,SSD-17/HSS10/SA1/WASH/INGO/5063,"Water, Sanitation and Hygiene",,100,200000
+South Sudan,19,22,2017,Standard,5132,SSD-17/HSS10/SA1/WASH/INGO/5132,"Water, Sanitation and Hygiene",,100,400000
+South Sudan,19,22,2017,Standard,5156,SSD-17/HSS10/SA1/WASH/INGO/5156,"Water, Sanitation and Hygiene",,100,199999.22
+South Sudan,19,22,2017,Standard,5203,SSD-17/HSS10/SA1/WASH/INGO/5203,"Water, Sanitation and Hygiene",,100,200000
+South Sudan,19,22,2017,Standard,5216,SSD-17/HSS10/SA1/WASH/INGO/5216,"Water, Sanitation and Hygiene",,100,230000
+South Sudan,19,22,2017,Standard,5233,SSD-17/HSS10/SA1/WASH/INGO/5233,"Water, Sanitation and Hygiene",,100,199996.91
+South Sudan,19,22,2017,Standard,5234,SSD-17/HSS10/SA1/WASH/INGO/5234,"Water, Sanitation and Hygiene",,100,389960.12
+South Sudan,19,22,2017,Standard,5253,SSD-17/HSS10/SA1/WASH/INGO/5253,"Water, Sanitation and Hygiene",,100,250000
+South Sudan,19,22,2017,Standard,5056,SSD-17/HSS10/SA1/WASH/NGO/5056,"Water, Sanitation and Hygiene",,100,100000.29
+South Sudan,19,22,2017,Standard,5059,SSD-17/HSS10/SA1/WASH/NGO/5059,"Water, Sanitation and Hygiene",,100,70000
+South Sudan,19,22,2017,Standard,5065,SSD-17/HSS10/SA1/WASH/NGO/5065,"Water, Sanitation and Hygiene",,100,340000.09
+South Sudan,19,22,2017,Standard,5071,SSD-17/HSS10/SA1/WASH/NGO/5071,"Water, Sanitation and Hygiene",,100,200000.12
+South Sudan,19,22,2017,Standard,5078,SSD-17/HSS10/SA1/WASH/NGO/5078,"Water, Sanitation and Hygiene",,100,220000.24
+South Sudan,19,22,2017,Standard,5109,SSD-17/HSS10/SA1/WASH/NGO/5109,"Water, Sanitation and Hygiene",,100,100000
+South Sudan,19,22,2017,Standard,5185,SSD-17/HSS10/SA1/WASH/NGO/5185,"Water, Sanitation and Hygiene",,100,100000
+South Sudan,19,22,2017,Standard,5215,SSD-17/HSS10/SA1/WASH/NGO/5215,"Water, Sanitation and Hygiene",,100,150005.1
+South Sudan,19,22,2017,Standard,5196,SSD-17/HSS10/SA1/WASH/UN/5196,"Water, Sanitation and Hygiene",,100,400000.45
+South Sudan,19,23,2017,Standard,6880,SSD-17/HSS10/SA2/CCCM/INGO/6880,Camp Coordination / Management,,100,249999.98
+South Sudan,19,23,2017,Standard,6463,SSD-17/HSS10/SA2/CCS/UN/6463,Coordination and Support Services,,100,250000
+South Sudan,19,23,2017,Standard,6451,SSD-17/HSS10/SA2/E/INGO/6451,Education,,100,622266.86
+South Sudan,19,23,2017,Standard,6571,SSD-17/HSS10/SA2/E/INGO/6571,Education,,100,448934.55
+South Sudan,19,23,2017,Standard,6577,SSD-17/HSS10/SA2/E/INGO/6577,Education,,100,302507.51
+South Sudan,19,23,2017,Standard,6439,SSD-17/HSS10/SA2/E/NGO/6439,Education,,100,583118.33
+South Sudan,19,23,2017,Standard,6567,SSD-17/HSS10/SA2/E/NGO/6567,Education,,100,673704.01
+South Sudan,19,23,2017,Standard,6572,SSD-17/HSS10/SA2/E/NGO/6572,Education,,100,178390
+South Sudan,19,23,2017,Standard,6441,SSD-17/HSS10/SA2/FSL/NGO/6441,Food Security,,100,345000.1
+South Sudan,19,23,2017,Standard,6454,SSD-17/HSS10/SA2/FSL/NGO/6454,Food Security,,100,209997.09
+South Sudan,19,23,2017,Standard,6490,SSD-17/HSS10/SA2/FSL/NGO/6490,Food Security,,100,284999.85
+South Sudan,19,23,2017,Standard,6500,SSD-17/HSS10/SA2/FSL/NGO/6500,Food Security,,100,105000
+South Sudan,19,23,2017,Standard,6547,SSD-17/HSS10/SA2/FSL/NGO/6547,Food Security,,100,224000.01
+South Sudan,19,23,2017,Standard,6559,SSD-17/HSS10/SA2/FSL/NGO/6559,Food Security,,100,120000.5
+South Sudan,19,23,2017,Standard,6581,SSD-17/HSS10/SA2/FSL/NGO/6581,Food Security,,100,89903.9
+South Sudan,19,23,2017,Standard,6590,SSD-17/HSS10/SA2/FSL/UN/6590,Food Security,,100,1620000.01
+South Sudan,19,23,2017,Standard,6450,SSD-17/HSS10/SA2/H/INGO/6450,Health,,100,250000.36
+South Sudan,19,23,2017,Standard,6456,SSD-17/HSS10/SA2/H/INGO/6456,Health,,100,198956.23
+South Sudan,19,23,2017,Standard,6479,SSD-17/HSS10/SA2/H/INGO/6479,Health,,100,100000
+South Sudan,19,23,2017,Standard,6499,SSD-17/HSS10/SA2/H/INGO/6499,Health,,100,249596.55
+South Sudan,19,23,2017,Standard,6508,SSD-17/HSS10/SA2/H/INGO/6508,Health,,100,399054.14
+South Sudan,19,23,2017,Standard,6556,SSD-17/HSS10/SA2/H/INGO/6556,Health,,100,100000
+South Sudan,19,23,2017,Standard,6442,SSD-17/HSS10/SA2/H/NGO/6442,Health,,100,150000.09
+South Sudan,19,23,2017,Standard,6449,SSD-17/HSS10/SA2/H/NGO/6449,Health,,100,300015.04
+South Sudan,19,23,2017,Standard,6461,SSD-17/HSS10/SA2/H/NGO/6461,Health,,100,150000
+South Sudan,19,23,2017,Standard,6467,SSD-17/HSS10/SA2/H/NGO/6467,Health,,100,300000
+South Sudan,19,23,2017,Standard,6471,SSD-17/HSS10/SA2/H/NGO/6471,Health,,100,90000
+South Sudan,19,23,2017,Standard,6472,SSD-17/HSS10/SA2/H/NGO/6472,Health,,100,230000.01
+South Sudan,19,23,2017,Standard,6474,SSD-17/HSS10/SA2/H/NGO/6474,Health,,100,90000.01
+South Sudan,19,23,2017,Standard,6482,SSD-17/HSS10/SA2/H/NGO/6482,Health,,100,100000
+South Sudan,19,23,2017,Standard,6507,SSD-17/HSS10/SA2/H/NGO/6507,Health,,100,208000.3
+South Sudan,19,23,2017,Standard,6489,SSD-17/HSS10/SA2/H/UN/6489,Health,,100,400000.02
+South Sudan,19,23,2017,Standard,6521,SSD-17/HSS10/SA2/H/UN/6521,Health,,100,659441
+South Sudan,19,23,2017,Standard,6580,SSD-17/HSS10/SA2/H/UN/6580,Health,,100,522689.65
+South Sudan,19,23,2017,Standard,6457,SSD-17/HSS10/SA2/L/UN/6457,Logistics,,100,1000000.58
+South Sudan,19,23,2017,Standard,6525,SSD-17/HSS10/SA2/L/UN/6525,Logistics,,100,1000000.6
+South Sudan,19,23,2017,Standard,6536,SSD-17/HSS10/SA2/L/UN/6536,Logistics,,100,1000000
+South Sudan,19,23,2017,Standard,6495,SSD-17/HSS10/SA2/N/INGO/6495,Nutrition,,100,217999.98
+South Sudan,19,23,2017,Standard,6509,SSD-17/HSS10/SA2/N/INGO/6509,Nutrition,,100,556000.72
+South Sudan,19,23,2017,Standard,6534,SSD-17/HSS10/SA2/N/INGO/6534,Nutrition,,100,276000.12
+South Sudan,19,23,2017,Standard,6542,SSD-17/HSS10/SA2/N/INGO/6542,Nutrition,,100,230999.65
+South Sudan,19,23,2017,Standard,6557,SSD-17/HSS10/SA2/N/INGO/6557,Nutrition,,100,236000.05
+South Sudan,19,23,2017,Standard,6460,SSD-17/HSS10/SA2/N/NGO/6460,Nutrition,,100,99999.9
+South Sudan,19,23,2017,Standard,6478,SSD-17/HSS10/SA2/N/NGO/6478,Nutrition,,100,179972
+South Sudan,19,23,2017,Standard,6501,SSD-17/HSS10/SA2/N/NGO/6501,Nutrition,,100,320000
+South Sudan,19,23,2017,Standard,6518,SSD-17/HSS10/SA2/N/NGO/6518,Nutrition,,100,248000.02
+South Sudan,19,23,2017,Standard,6596,SSD-17/HSS10/SA2/N/NGO/6596,Nutrition,,100,205996.4
+South Sudan,19,23,2017,Standard,6587,SSD-17/HSS10/SA2/N/UN/6587,Nutrition,,100,428993.43
+South Sudan,19,23,2017,Standard,6446,SSD-17/HSS10/SA2/NFI/INGO/6446,Emergency Shelter and NFI,,100,128530.27
+South Sudan,19,23,2017,Standard,6512,SSD-17/HSS10/SA2/NFI/INGO/6512,Emergency Shelter and NFI,,100,319245.2
+South Sudan,19,23,2017,Standard,6555,SSD-17/HSS10/SA2/NFI/INGO/6555,Emergency Shelter and NFI,,100,202113.37
+South Sudan,19,23,2017,Standard,6568,SSD-17/HSS10/SA2/NFI/INGO/6568,Emergency Shelter and NFI,,100,380269.79
+South Sudan,19,23,2017,Standard,6438,SSD-17/HSS10/SA2/NFI/NGO/6438,Emergency Shelter and NFI,,100,77984.81
+South Sudan,19,23,2017,Standard,6470,SSD-17/HSS10/SA2/NFI/NGO/6470,Emergency Shelter and NFI,,100,121635.02
+South Sudan,19,23,2017,Standard,6486,SSD-17/HSS10/SA2/NFI/NGO/6486,Emergency Shelter and NFI,,100,139185.6
+South Sudan,19,23,2017,Standard,6494,SSD-17/HSS10/SA2/NFI/NGO/6494,Emergency Shelter and NFI,,100,50000
+South Sudan,19,23,2017,Standard,6504,SSD-17/HSS10/SA2/NFI/NGO/6504,Emergency Shelter and NFI,,100,81972.7
+South Sudan,19,23,2017,Standard,6539,SSD-17/HSS10/SA2/NFI/UN/6539,Emergency Shelter and NFI,,100,1989185.06
+South Sudan,19,23,2017,Standard,6452,SSD-17/HSS10/SA2/P/INGO/6452,Protection,,100,299998.58
+South Sudan,19,23,2017,Standard,6492,SSD-17/HSS10/SA2/P/INGO/6492,Protection,Gender Based Violence as subsidiary clusters,100,200009.75
+South Sudan,19,23,2017,Standard,6502,SSD-17/HSS10/SA2/P/INGO/6502,Protection,Gender Based Violence as subsidiary clusters,100,499999.28
+South Sudan,19,23,2017,Standard,6550,SSD-17/HSS10/SA2/P/INGO/6550,Protection,Child Protection in Emergencies,100,224999.6
+South Sudan,19,23,2017,Standard,6574,SSD-17/HSS10/SA2/P/INGO/6574,Protection,Child Protection in Emergencies,100,224999.77
+South Sudan,19,23,2017,Standard,6598,SSD-17/HSS10/SA2/P/INGO/6598,Protection,Gender Based Violence as subsidiary clusters,100,100000
+South Sudan,19,23,2017,Standard,6604,SSD-17/HSS10/SA2/P/INGO/6604,Protection,Mine Action,100,850000
+South Sudan,19,23,2017,Standard,6491,SSD-17/HSS10/SA2/P/NGO/6491,Protection,Child Protection in Emergencies,100,231000
+South Sudan,19,23,2017,Standard,6493,SSD-17/HSS10/SA2/P/NGO/6493,Protection,Child Protection in Emergencies,100,100000.06
+South Sudan,19,23,2017,Standard,6517,SSD-17/HSS10/SA2/P/NGO/6517,Protection,Child Protection in Emergencies,100,310000.01
+South Sudan,19,23,2017,Standard,6537,SSD-17/HSS10/SA2/P/NGO/6537,Protection,Child Protection in Emergencies,100,99960.04
+South Sudan,19,23,2017,Standard,6544,SSD-17/HSS10/SA2/P/NGO/6544,Protection,Child Protection in Emergencies,100,74999.99
+South Sudan,19,23,2017,Standard,6546,SSD-17/HSS10/SA2/P/NGO/6546,Protection,Child Protection in Emergencies,100,84000
+South Sudan,19,23,2017,Standard,6573,SSD-17/HSS10/SA2/P/NGO/6573,Protection,Gender Based Violence as subsidiary clusters,100,99999.9
+South Sudan,19,23,2017,Standard,6584,SSD-17/HSS10/SA2/P/NGO/6584,Protection,Gender Based Violence as subsidiary clusters,100,150000.05
+South Sudan,19,23,2017,Standard,6515,SSD-17/HSS10/SA2/P/UN/6515,Protection,Gender Based Violence as subsidiary clusters,100,250000.15
+South Sudan,19,23,2017,Standard,6554,SSD-17/HSS10/SA2/P/UN/6554,Protection,,100,199999.05
+South Sudan,19,23,2017,Standard,6480,SSD-17/HSS10/SA2/WASH/INGO/6480,"Water, Sanitation and Hygiene",,100,200000
+South Sudan,19,23,2017,Standard,6503,SSD-17/HSS10/SA2/WASH/INGO/6503,"Water, Sanitation and Hygiene",,100,200000
+South Sudan,19,23,2017,Standard,6519,SSD-17/HSS10/SA2/WASH/INGO/6519,"Water, Sanitation and Hygiene",,100,374643.05
+South Sudan,19,23,2017,Standard,6527,SSD-17/HSS10/SA2/WASH/INGO/6527,"Water, Sanitation and Hygiene",,100,200000
+South Sudan,19,23,2017,Standard,6535,SSD-17/HSS10/SA2/WASH/INGO/6535,"Water, Sanitation and Hygiene",,100,219999.99
+South Sudan,19,23,2017,Standard,6440,SSD-17/HSS10/SA2/WASH/NGO/6440,"Water, Sanitation and Hygiene",,100,450000.38
+South Sudan,19,23,2017,Standard,6444,SSD-17/HSS10/SA2/WASH/NGO/6444,"Water, Sanitation and Hygiene",,100,144599.8
+South Sudan,19,23,2017,Standard,6445,SSD-17/HSS10/SA2/WASH/NGO/6445,"Water, Sanitation and Hygiene",,100,167279.52
+South Sudan,19,23,2017,Standard,6468,SSD-17/HSS10/SA2/WASH/NGO/6468,"Water, Sanitation and Hygiene",,100,138614.22
+South Sudan,19,23,2017,Standard,6483,SSD-17/HSS10/SA2/WASH/NGO/6483,"Water, Sanitation and Hygiene",,100,154851
+South Sudan,19,23,2017,Standard,6513,SSD-17/HSS10/SA2/WASH/NGO/6513,"Water, Sanitation and Hygiene",,100,50000.16
+South Sudan,19,23,2017,Standard,6545,SSD-17/HSS10/SA2/WASH/NGO/6545,"Water, Sanitation and Hygiene",,100,50000.12
+South Sudan,19,23,2017,Standard,6593,SSD-17/HSS10/SA2/WASH/NGO/6593,"Water, Sanitation and Hygiene",,100,50003.24
+South Sudan,19,23,2017,Standard,6462,SSD-17/HSS10/SA2/WASH/UN/6462,"Water, Sanitation and Hygiene",,100,800000.52
+South Sudan,19,23,2017,Standard,6465,SSD-17/HSS10/SA2/WASH/UN/6465,"Water, Sanitation and Hygiene",,100,800000
+South Sudan,19,27,2018,Reserve,11268,SSD-18/HSS10/RA1/H/INGO/11268,Health,,100,499999.02
+South Sudan,19,27,2018,Reserve,11297,SSD-18/HSS10/RA1/H/INGO/11297,Health,,100,603783.77
+South Sudan,19,27,2018,Reserve,11427,SSD-18/HSS10/RA1/H/INGO/11427,Health,,100,249637.42
+South Sudan,19,27,2018,Reserve,11428,SSD-18/HSS10/RA1/H/NGO/11428,Health,,100,250001.18
+South Sudan,19,27,2018,Reserve,11248,SSD-18/HSS10/RA1/L/UN/11248,Logistics,,100,360000
+South Sudan,19,25,2018,Standard,7921,SSD-18/HSS10/SA1/CCCM/NGO/7921,Camp Coordination / Management,,100,260000
+South Sudan,19,25,2018,Standard,8266,SSD-18/HSS10/SA1/CCCM/NGO/8266,Camp Coordination / Management,,100,340003.2
+South Sudan,19,25,2018,Standard,7890,SSD-18/HSS10/SA1/CCCM/UN/7890,Camp Coordination / Management,,100,200000
+South Sudan,19,25,2018,Standard,7954,SSD-18/HSS10/SA1/E/INGO/7954,Education,,100,347345.01
+South Sudan,19,25,2018,Standard,7997,SSD-18/HSS10/SA1/E/INGO/7997,Education,,100,280001
+South Sudan,19,25,2018,Standard,8126,SSD-18/HSS10/SA1/E/INGO/8126,Education,,100,251075.5
+South Sudan,19,25,2018,Standard,8191,SSD-18/HSS10/SA1/E/INGO/8191,Education,,100,200000
+South Sudan,19,25,2018,Standard,7880,SSD-18/HSS10/SA1/E/NGO/7880,Education,,100,325000.73
+South Sudan,19,25,2018,Standard,8036,SSD-18/HSS10/SA1/E/NGO/8036,Education,,100,326353.99
+South Sudan,19,25,2018,Standard,8144,SSD-18/HSS10/SA1/E/NGO/8144,Education,,100,269722.18
+South Sudan,19,25,2018,Standard,7965,SSD-18/HSS10/SA1/FSL/INGO/7965,Food Security,,100,105000
+South Sudan,19,25,2018,Standard,8008,SSD-18/HSS10/SA1/FSL/INGO/8008,Food Security,,100,145500
+South Sudan,19,25,2018,Standard,8190,SSD-18/HSS10/SA1/FSL/INGO/8190,Food Security,,100,130500.41
+South Sudan,19,25,2018,Standard,8255,SSD-18/HSS10/SA1/FSL/INGO/8255,Food Security,,100,390000.15
+South Sudan,19,25,2018,Standard,7929,SSD-18/HSS10/SA1/FSL/NGO/7929,Food Security,,100,213037
+South Sudan,19,25,2018,Standard,7947,SSD-18/HSS10/SA1/FSL/NGO/7947,Food Security,,100,105074
+South Sudan,19,25,2018,Standard,8046,SSD-18/HSS10/SA1/FSL/NGO/8046,Food Security,,100,204000.08
+South Sudan,19,25,2018,Standard,8069,SSD-18/HSS10/SA1/FSL/NGO/8069,Food Security,,100,105000
+South Sudan,19,25,2018,Standard,8089,SSD-18/HSS10/SA1/FSL/NGO/8089,Food Security,,100,135000
+South Sudan,19,25,2018,Standard,8252,SSD-18/HSS10/SA1/FSL/NGO/8252,Food Security,,100,162026.3
+South Sudan,19,25,2018,Standard,8259,SSD-18/HSS10/SA1/FSL/NGO/8259,Food Security,,100,105068.5
+South Sudan,19,25,2018,Standard,8300,SSD-18/HSS10/SA1/FSL/NGO/8300,Food Security,,100,299998.47
+South Sudan,19,25,2018,Standard,7924,SSD-18/HSS10/SA1/H/INGO/7924,Health,,100,99998.78
+South Sudan,19,25,2018,Standard,7941,SSD-18/HSS10/SA1/H/INGO/7941,Health,,100,140000
+South Sudan,19,25,2018,Standard,8099,SSD-18/HSS10/SA1/H/INGO/8099,Health,,100,99999.9
+South Sudan,19,25,2018,Standard,8205,SSD-18/HSS10/SA1/H/INGO/8205,Health,,100,300000.24
+South Sudan,19,25,2018,Standard,7883,SSD-18/HSS10/SA1/H/NGO/7883,Health,,100,150000.09
+South Sudan,19,25,2018,Standard,7931,SSD-18/HSS10/SA1/H/NGO/7931,Health,,100,170041.58
+South Sudan,19,25,2018,Standard,7976,SSD-18/HSS10/SA1/H/NGO/7976,Health,,100,100000.06
+South Sudan,19,25,2018,Standard,7977,SSD-18/HSS10/SA1/H/NGO/7977,Health,,100,140000
+South Sudan,19,25,2018,Standard,7979,SSD-18/HSS10/SA1/H/NGO/7979,Health,,100,180000
+South Sudan,19,25,2018,Standard,7985,SSD-18/HSS10/SA1/H/NGO/7985,Health,,100,100000.06
+South Sudan,19,25,2018,Standard,8049,SSD-18/HSS10/SA1/H/NGO/8049,Health,,100,250000
+South Sudan,19,25,2018,Standard,8064,SSD-18/HSS10/SA1/H/NGO/8064,Health,,100,220045.5
+South Sudan,19,25,2018,Standard,8081,SSD-18/HSS10/SA1/H/NGO/8081,Health,,100,100000.06
+South Sudan,19,25,2018,Standard,8137,SSD-18/HSS10/SA1/H/NGO/8137,Health,,100,120000.3
+South Sudan,19,25,2018,Standard,8157,SSD-18/HSS10/SA1/H/NGO/8157,Health,,100,150000
+South Sudan,19,25,2018,Standard,8169,SSD-18/HSS10/SA1/H/NGO/8169,Health,,100,180000
+South Sudan,19,25,2018,Standard,8301,SSD-18/HSS10/SA1/H/NGO/8301,Health,,100,100002.2
+South Sudan,19,25,2018,Standard,7897,SSD-18/HSS10/SA1/H/UN/7897,Health,,100,200000
+South Sudan,19,25,2018,Standard,8088,SSD-18/HSS10/SA1/H/UN/8088,Health,,100,700000.85
+South Sudan,19,25,2018,Standard,8121,SSD-18/HSS10/SA1/H/UN/8121,Health,,100,202551
+South Sudan,19,25,2018,Standard,7900,SSD-18/HSS10/SA1/L/UN/7900,Logistics,,100,1300000
+South Sudan,19,25,2018,Standard,7904,SSD-18/HSS10/SA1/L/UN/7904,Logistics,,100,700000.03
+South Sudan,19,25,2018,Standard,7917,SSD-18/HSS10/SA1/N/INGO/7917,Nutrition,,100,370404
+South Sudan,19,25,2018,Standard,7978,SSD-18/HSS10/SA1/N/INGO/7978,Nutrition,,100,400000.02
+South Sudan,19,25,2018,Standard,8074,SSD-18/HSS10/SA1/N/INGO/8074,Nutrition,,100,200000.18
+South Sudan,19,25,2018,Standard,8114,SSD-18/HSS10/SA1/N/INGO/8114,Nutrition,,100,199999.69
+South Sudan,19,25,2018,Standard,7911,SSD-18/HSS10/SA1/N/NGO/7911,Nutrition,,100,100012.9
+South Sudan,19,25,2018,Standard,7926,SSD-18/HSS10/SA1/N/NGO/7926,Nutrition,,100,400000
+South Sudan,19,25,2018,Standard,7944,SSD-18/HSS10/SA1/N/NGO/7944,Nutrition,,100,300000.18
+South Sudan,19,25,2018,Standard,8289,SSD-18/HSS10/SA1/N/NGO/8289,Nutrition,,100,150000.3
+South Sudan,19,25,2018,Standard,8176,SSD-18/HSS10/SA1/N/UN/8176,Nutrition,,100,424321.34
+South Sudan,19,25,2018,Standard,8178,SSD-18/HSS10/SA1/N/UN/8178,Nutrition,,100,200009.75
+South Sudan,19,25,2018,Standard,8314,SSD-18/HSS10/SA1/N/UN/8314,Nutrition,,100,396901.3
+South Sudan,19,25,2018,Standard,7919,SSD-18/HSS10/SA1/NFI/INGO/7919,Emergency Shelter and NFI,,100,130000.12
+South Sudan,19,25,2018,Standard,7937,SSD-18/HSS10/SA1/NFI/INGO/7937,Emergency Shelter and NFI,,100,99999.5
+South Sudan,19,25,2018,Standard,7953,SSD-18/HSS10/SA1/NFI/INGO/7953,Emergency Shelter and NFI,,100,169962
+South Sudan,19,25,2018,Standard,8009,SSD-18/HSS10/SA1/NFI/INGO/8009,Emergency Shelter and NFI,,100,265007.44
+South Sudan,19,25,2018,Standard,8035,SSD-18/HSS10/SA1/NFI/INGO/8035,Emergency Shelter and NFI,,100,259982.7
+South Sudan,19,25,2018,Standard,8220,SSD-18/HSS10/SA1/NFI/INGO/8220,Emergency Shelter and NFI,,100,105531.53
+South Sudan,19,25,2018,Standard,8258,SSD-18/HSS10/SA1/NFI/INGO/8258,Emergency Shelter and NFI,,100,200000
+South Sudan,19,25,2018,Standard,7916,SSD-18/HSS10/SA1/NFI/NGO/7916,Emergency Shelter and NFI,,100,57442.74
+South Sudan,19,25,2018,Standard,7988,SSD-18/HSS10/SA1/NFI/NGO/7988,Emergency Shelter and NFI,,100,140309.1
+South Sudan,19,25,2018,Standard,7998,SSD-18/HSS10/SA1/NFI/NGO/7998,Emergency Shelter and NFI,,100,103710.7
+South Sudan,19,25,2018,Standard,8078,SSD-18/HSS10/SA1/NFI/NGO/8078,Emergency Shelter and NFI,,100,100000
+South Sudan,19,25,2018,Standard,8094,SSD-18/HSS10/SA1/NFI/NGO/8094,Emergency Shelter and NFI,,100,64310.66
+South Sudan,19,25,2018,Standard,8110,SSD-18/HSS10/SA1/NFI/NGO/8110,Emergency Shelter and NFI,,100,103699.05
+South Sudan,19,25,2018,Standard,7987,SSD-18/HSS10/SA1/P/INGO/7987,Protection,,100,260099.3
+South Sudan,19,25,2018,Standard,8101,SSD-18/HSS10/SA1/P/INGO/8101,Protection,,100,276830.4
+South Sudan,19,25,2018,Standard,8108,SSD-18/HSS10/SA1/P/INGO/8108,Protection,Mine Action,100,600000
+South Sudan,19,25,2018,Standard,8129,SSD-18/HSS10/SA1/P/INGO/8129,Protection,Gender Based Violence as subsidiary clusters,100,264999.94
+South Sudan,19,25,2018,Standard,8152,SSD-18/HSS10/SA1/P/INGO/8152,Protection,Gender Based Violence as subsidiary clusters,100,50000.35
+South Sudan,19,25,2018,Standard,8182,SSD-18/HSS10/SA1/P/INGO/8182,Protection,,100,250000
+South Sudan,19,25,2018,Standard,8184,SSD-18/HSS10/SA1/P/INGO/8184,Protection,Gender Based Violence as subsidiary clusters,100,250000
+South Sudan,19,25,2018,Standard,7948,SSD-18/HSS10/SA1/P/NGO/7948,Protection,Child Protection in Emergencies,100,49999.14
+South Sudan,19,25,2018,Standard,7980,SSD-18/HSS10/SA1/P/NGO/7980,Protection,Child Protection in Emergencies,100,100000
+South Sudan,19,25,2018,Standard,8060,SSD-18/HSS10/SA1/P/NGO/8060,Protection,Gender Based Violence as subsidiary clusters,100,53999.69
+South Sudan,19,25,2018,Standard,8072,SSD-18/HSS10/SA1/P/NGO/8072,Protection,Gender Based Violence as subsidiary clusters,100,49958.3
+South Sudan,19,25,2018,Standard,8090,SSD-18/HSS10/SA1/P/NGO/8090,Protection,Gender Based Violence as subsidiary clusters,100,50000.03
+South Sudan,19,25,2018,Standard,8092,SSD-18/HSS10/SA1/P/NGO/8092,Protection,,100,260000.05
+South Sudan,19,25,2018,Standard,8096,SSD-18/HSS10/SA1/P/NGO/8096,Protection,Child Protection in Emergencies,100,100000.04
+South Sudan,19,25,2018,Standard,8113,SSD-18/HSS10/SA1/P/NGO/8113,Protection,Gender Based Violence as subsidiary clusters,100,49999.15
+South Sudan,19,25,2018,Standard,8179,SSD-18/HSS10/SA1/P/NGO/8179,Protection,Gender Based Violence as subsidiary clusters,100,50000.03
+South Sudan,19,25,2018,Standard,8204,SSD-18/HSS10/SA1/P/NGO/8204,Protection,Child Protection in Emergencies,100,100000
+South Sudan,19,25,2018,Standard,8241,SSD-18/HSS10/SA1/P/NGO/8241,Protection,,100,45903
+South Sudan,19,25,2018,Standard,8256,SSD-18/HSS10/SA1/P/NGO/8256,Protection,Child Protection in Emergencies,100,50000.03
+South Sudan,19,25,2018,Standard,8306,SSD-18/HSS10/SA1/P/NGO/8306,Protection,Gender Based Violence as subsidiary clusters,100,48654
+South Sudan,19,25,2018,Standard,7915,SSD-18/HSS10/SA1/WASH/INGO/7915,"Water, Sanitation and Hygiene",,100,259991.29
+South Sudan,19,25,2018,Standard,8118,SSD-18/HSS10/SA1/WASH/INGO/8118,"Water, Sanitation and Hygiene",,100,260000
+South Sudan,19,25,2018,Standard,8146,SSD-18/HSS10/SA1/WASH/INGO/8146,"Water, Sanitation and Hygiene",,100,200000.02
+South Sudan,19,25,2018,Standard,8212,SSD-18/HSS10/SA1/WASH/INGO/8212,"Water, Sanitation and Hygiene",,100,200000
+South Sudan,19,25,2018,Standard,7881,SSD-18/HSS10/SA1/WASH/NGO/7881,"Water, Sanitation and Hygiene",,100,260000.16
+South Sudan,19,25,2018,Standard,7892,SSD-18/HSS10/SA1/WASH/NGO/7892,"Water, Sanitation and Hygiene",,100,200000.01
+South Sudan,19,25,2018,Standard,7893,SSD-18/HSS10/SA1/WASH/NGO/7893,"Water, Sanitation and Hygiene",,100,130000
+South Sudan,19,25,2018,Standard,7894,SSD-18/HSS10/SA1/WASH/NGO/7894,"Water, Sanitation and Hygiene",,100,150000
+South Sudan,19,25,2018,Standard,7981,SSD-18/HSS10/SA1/WASH/NGO/7981,"Water, Sanitation and Hygiene",,100,133000
+South Sudan,19,25,2018,Standard,7984,SSD-18/HSS10/SA1/WASH/NGO/7984,"Water, Sanitation and Hygiene",,100,259977.9
+South Sudan,19,25,2018,Standard,8005,SSD-18/HSS10/SA1/WASH/NGO/8005,"Water, Sanitation and Hygiene",,100,100948.08
+South Sudan,19,25,2018,Standard,8189,SSD-18/HSS10/SA1/WASH/NGO/8189,"Water, Sanitation and Hygiene",,100,120000.07
+South Sudan,19,25,2018,Standard,8238,SSD-18/HSS10/SA1/WASH/NGO/8238,"Water, Sanitation and Hygiene",,100,150000
+South Sudan,19,25,2018,Standard,8174,SSD-18/HSS10/SA1/WASH/UN/8174,"Water, Sanitation and Hygiene",,100,76028.85
+South Sudan,19,26,2018,Standard,9776,SSD-18/HSS10/SA2/CCCM/INGO/9776,Camp Coordination / Management,,100,269670.44
+South Sudan,19,26,2018,Standard,9780,SSD-18/HSS10/SA2/CCCM/INGO/9780,Camp Coordination / Management,,100,265000
+South Sudan,19,26,2018,Standard,9963,SSD-18/HSS10/SA2/CCCM/INGO/9963,Camp Coordination / Management,,100,349999.93
+South Sudan,19,26,2018,Standard,9918,SSD-18/HSS10/SA2/CCCM/NGO/9918,Camp Coordination / Management,,100,215000.04
+South Sudan,19,26,2018,Standard,9810,SSD-18/HSS10/SA2/E/INGO/9810,Education,,100,700703.02
+South Sudan,19,26,2018,Standard,9832,SSD-18/HSS10/SA2/E/INGO/9832,Education,,100,481006.46
+South Sudan,19,26,2018,Standard,9889,SSD-18/HSS10/SA2/E/INGO/9889,Education,,100,302711.89
+South Sudan,19,26,2018,Standard,9795,SSD-18/HSS10/SA2/E/NGO/9795,Education,,100,411434.26
+South Sudan,19,26,2018,Standard,9796,SSD-18/HSS10/SA2/E/NGO/9796,Education,,100,700215.39
+South Sudan,19,26,2018,Standard,9959,SSD-18/HSS10/SA2/E/NGO/9959,Education,,100,519172
+South Sudan,19,26,2018,Standard,10046,SSD-18/HSS10/SA2/FSL/INGO/10046,Food Security,,100,159986.4
+South Sudan,19,26,2018,Standard,9996,SSD-18/HSS10/SA2/FSL/INGO/9996,Food Security,,100,255000
+South Sudan,19,26,2018,Standard,10015,SSD-18/HSS10/SA2/FSL/NGO/10015,Food Security,,100,240000.02
+South Sudan,19,26,2018,Standard,10077,SSD-18/HSS10/SA2/FSL/NGO/10077,Food Security,,100,159873.73
+South Sudan,19,26,2018,Standard,9789,SSD-18/HSS10/SA2/FSL/NGO/9789,Food Security,,100,186070.86
+South Sudan,19,26,2018,Standard,9830,SSD-18/HSS10/SA2/FSL/NGO/9830,Food Security,,100,104860
+South Sudan,19,26,2018,Standard,9903,SSD-18/HSS10/SA2/FSL/NGO/9903,Food Security,,100,178165.76
+South Sudan,19,26,2018,Standard,9920,SSD-18/HSS10/SA2/FSL/NGO/9920,Food Security,,100,260056.78
+South Sudan,19,26,2018,Standard,9966,SSD-18/HSS10/SA2/FSL/NGO/9966,Food Security,,100,105020.5
+South Sudan,19,26,2018,Standard,10025,SSD-18/HSS10/SA2/FSL/UN/10025,Food Security,,100,1450000.01
+South Sudan,19,26,2018,Standard,10080,SSD-18/HSS10/SA2/H/INGO/10080,Health,,100,200000.39
+South Sudan,19,26,2018,Standard,9782,SSD-18/HSS10/SA2/H/INGO/9782,Health,,100,200000
+South Sudan,19,26,2018,Standard,9787,SSD-18/HSS10/SA2/H/INGO/9787,Health,,100,200000.01
+South Sudan,19,26,2018,Standard,9873,SSD-18/HSS10/SA2/H/INGO/9873,Health,,100,199998.71
+South Sudan,19,26,2018,Standard,9890,SSD-18/HSS10/SA2/H/INGO/9890,Health,,100,199750.28
+South Sudan,19,26,2018,Standard,9921,SSD-18/HSS10/SA2/H/INGO/9921,Health,,100,200000
+South Sudan,19,26,2018,Standard,9953,SSD-18/HSS10/SA2/H/INGO/9953,Health,,100,199999.05
+South Sudan,19,26,2018,Standard,10030,SSD-18/HSS10/SA2/H/NGO/10030,Health,,100,100000
+South Sudan,19,26,2018,Standard,10032,SSD-18/HSS10/SA2/H/NGO/10032,Health,,100,100000.01
+South Sudan,19,26,2018,Standard,9790,SSD-18/HSS10/SA2/H/NGO/9790,Health,,100,100000
+South Sudan,19,26,2018,Standard,9798,SSD-18/HSS10/SA2/H/NGO/9798,Health,,100,100000.06
+South Sudan,19,26,2018,Standard,9820,SSD-18/HSS10/SA2/H/NGO/9820,Health,,100,361400
+South Sudan,19,26,2018,Standard,9824,SSD-18/HSS10/SA2/H/NGO/9824,Health,,100,100000.83
+South Sudan,19,26,2018,Standard,9836,SSD-18/HSS10/SA2/H/NGO/9836,Health,,100,149992.6
+South Sudan,19,26,2018,Standard,9869,SSD-18/HSS10/SA2/H/NGO/9869,Health,,100,99999.99
+South Sudan,19,26,2018,Standard,9910,SSD-18/HSS10/SA2/H/NGO/9910,Health,,100,100000
+South Sudan,19,26,2018,Standard,9954,SSD-18/HSS10/SA2/H/NGO/9954,Health,,100,100000
+South Sudan,19,26,2018,Standard,9981,SSD-18/HSS10/SA2/H/NGO/9981,Health,,100,100000.1
+South Sudan,19,26,2018,Standard,10071,SSD-18/HSS10/SA2/H/UN/10071,Health,,100,200000
+South Sudan,19,26,2018,Standard,9860,SSD-18/HSS10/SA2/H/UN/9860,Health,,100,375000.01
+South Sudan,19,26,2018,Standard,9932,SSD-18/HSS10/SA2/H/UN/9932,Health,,100,375006.32
+South Sudan,19,26,2018,Standard,9933,SSD-18/HSS10/SA2/H/UN/9933,Health,,100,200090
+South Sudan,19,26,2018,Standard,9934,SSD-18/HSS10/SA2/H/UN/9934,Health,,100,750000.45
+South Sudan,19,26,2018,Standard,9935,SSD-18/HSS10/SA2/H/UN/9935,Health,,100,500000.09
+South Sudan,19,26,2018,Standard,10026,SSD-18/HSS10/SA2/L/UN/10026,Logistics,,100,1200000
+South Sudan,19,26,2018,Standard,10040,SSD-18/HSS10/SA2/N/INGO/10040,Nutrition,,100,279502.23
+South Sudan,19,26,2018,Standard,10070,SSD-18/HSS10/SA2/N/INGO/10070,Nutrition,,100,191250.73
+South Sudan,19,26,2018,Standard,9774,SSD-18/HSS10/SA2/N/INGO/9774,Nutrition,,100,171156.64
+South Sudan,19,26,2018,Standard,9825,SSD-18/HSS10/SA2/N/INGO/9825,Nutrition,,100,533806.01
+South Sudan,19,26,2018,Standard,9827,SSD-18/HSS10/SA2/N/INGO/9827,Nutrition,,100,365262.16
+South Sudan,19,26,2018,Standard,9833,SSD-18/HSS10/SA2/N/INGO/9833,Nutrition,,100,221432.13
+South Sudan,19,26,2018,Standard,9847,SSD-18/HSS10/SA2/N/INGO/9847,Nutrition,,100,211309.01
+South Sudan,19,26,2018,Standard,9902,SSD-18/HSS10/SA2/N/INGO/9902,Nutrition,,100,184920.49
+South Sudan,19,26,2018,Standard,9944,SSD-18/HSS10/SA2/N/INGO/9944,Nutrition,,100,194407.44
+South Sudan,19,26,2018,Standard,9955,SSD-18/HSS10/SA2/N/INGO/9955,Nutrition,,100,256015.48
+South Sudan,19,26,2018,Standard,9965,SSD-18/HSS10/SA2/N/INGO/9965,Nutrition,,100,160237.85
+South Sudan,19,26,2018,Standard,10057,SSD-18/HSS10/SA2/N/NGO/10057,Nutrition,,100,202151.89
+South Sudan,19,26,2018,Standard,9773,SSD-18/HSS10/SA2/N/NGO/9773,Nutrition,,100,308230.19
+South Sudan,19,26,2018,Standard,9870,SSD-18/HSS10/SA2/N/NGO/9870,Nutrition,,100,279964
+South Sudan,19,26,2018,Standard,9891,SSD-18/HSS10/SA2/N/NGO/9891,Nutrition,,100,175649
+South Sudan,19,26,2018,Standard,9951,SSD-18/HSS10/SA2/N/NGO/9951,Nutrition,,100,132303.36
+South Sudan,19,26,2018,Standard,10045,SSD-18/HSS10/SA2/N/UN/10045,Nutrition,,100,176015.11
+South Sudan,19,26,2018,Standard,9848,SSD-18/HSS10/SA2/N/UN/9848,Nutrition,,100,1083152.98
+South Sudan,19,26,2018,Standard,10038,SSD-18/HSS10/SA2/NFI/INGO/10038,Emergency Shelter and NFI,,100,189552.49
+South Sudan,19,26,2018,Standard,10041,SSD-18/HSS10/SA2/NFI/INGO/10041,Emergency Shelter and NFI,,100,224928
+South Sudan,19,26,2018,Standard,10087,SSD-18/HSS10/SA2/NFI/INGO/10087,Emergency Shelter and NFI,,100,200004.59
+South Sudan,19,26,2018,Standard,9771,SSD-18/HSS10/SA2/NFI/INGO/9771,Emergency Shelter and NFI,,100,203016.06
+South Sudan,19,26,2018,Standard,9784,SSD-18/HSS10/SA2/NFI/INGO/9784,Emergency Shelter and NFI,,100,275274.26
+South Sudan,19,26,2018,Standard,9874,SSD-18/HSS10/SA2/NFI/INGO/9874,Emergency Shelter and NFI,,100,262674.3
+South Sudan,19,26,2018,Standard,9938,SSD-18/HSS10/SA2/NFI/INGO/9938,Emergency Shelter and NFI,,100,215000.24
+South Sudan,19,26,2018,Standard,10056,SSD-18/HSS10/SA2/NFI/NGO/10056,Emergency Shelter and NFI,,100,100000.06
+South Sudan,19,26,2018,Standard,9783,SSD-18/HSS10/SA2/NFI/NGO/9783,Emergency Shelter and NFI,,100,100002.2
+South Sudan,19,26,2018,Standard,9859,SSD-18/HSS10/SA2/NFI/NGO/9859,Emergency Shelter and NFI,,100,121881.56
+South Sudan,19,26,2018,Standard,9924,SSD-18/HSS10/SA2/NFI/NGO/9924,Emergency Shelter and NFI,,100,100002.2
+South Sudan,19,26,2018,Standard,10009,SSD-18/HSS10/SA2/P/INGO/10009,Protection,Child Protection in Emergencies,100,100007.55
+South Sudan,19,26,2018,Standard,10034,SSD-18/HSS10/SA2/P/INGO/10034,Protection,Gender Based Violence as subsidiary clusters,100,210014.25
+South Sudan,19,26,2018,Standard,10072,SSD-18/HSS10/SA2/P/INGO/10072,Protection,Gender Based Violence as subsidiary clusters,100,179997.54
+South Sudan,19,26,2018,Standard,9792,SSD-18/HSS10/SA2/P/INGO/9792,Protection,,100,249999.97
+South Sudan,19,26,2018,Standard,9840,SSD-18/HSS10/SA2/P/INGO/9840,Protection,Gender Based Violence as subsidiary clusters,100,209999.27
+South Sudan,19,26,2018,Standard,9896,SSD-18/HSS10/SA2/P/INGO/9896,Protection,,100,249991.59
+South Sudan,19,26,2018,Standard,9897,SSD-18/HSS10/SA2/P/INGO/9897,Protection,,100,299204.1
+South Sudan,19,26,2018,Standard,9900,SSD-18/HSS10/SA2/P/INGO/9900,Protection,Gender Based Violence as subsidiary clusters,100,200000.02
+South Sudan,19,26,2018,Standard,9939,SSD-18/HSS10/SA2/P/INGO/9939,Protection,Child Protection in Emergencies,100,200003.99
+South Sudan,19,26,2018,Standard,9946,SSD-18/HSS10/SA2/P/INGO/9946,Protection,Mine Action,100,849999.98
+South Sudan,19,26,2018,Standard,9987,SSD-18/HSS10/SA2/P/INGO/9987,Protection,Child Protection in Emergencies,100,200000
+South Sudan,19,26,2018,Standard,9997,SSD-18/HSS10/SA2/P/INGO/9997,Protection,,100,250000
+South Sudan,19,26,2018,Standard,10005,SSD-18/HSS10/SA2/P/NGO/10005,Protection,Gender Based Violence as subsidiary clusters,100,120231.01
+South Sudan,19,26,2018,Standard,10020,SSD-18/HSS10/SA2/P/NGO/10020,Protection,Gender Based Violence as subsidiary clusters,100,100002.7
+South Sudan,19,26,2018,Standard,10043,SSD-18/HSS10/SA2/P/NGO/10043,Protection,Child Protection in Emergencies,100,175000.86
+South Sudan,19,26,2018,Standard,10073,SSD-18/HSS10/SA2/P/NGO/10073,Protection,Mine Action,100,49927.2
+South Sudan,19,26,2018,Standard,9769,SSD-18/HSS10/SA2/P/NGO/9769,Protection,,100,150000
+South Sudan,19,26,2018,Standard,9770,SSD-18/HSS10/SA2/P/NGO/9770,Protection,Gender Based Violence as subsidiary clusters,100,130000.72
+South Sudan,19,26,2018,Standard,9772,SSD-18/HSS10/SA2/P/NGO/9772,Protection,Gender Based Violence as subsidiary clusters,100,130000.04
+South Sudan,19,26,2018,Standard,9777,SSD-18/HSS10/SA2/P/NGO/9777,Protection,Child Protection in Emergencies,100,100000
+South Sudan,19,26,2018,Standard,9804,SSD-18/HSS10/SA2/P/NGO/9804,Protection,Gender Based Violence as subsidiary clusters,100,125000.02
+South Sudan,19,26,2018,Standard,9834,SSD-18/HSS10/SA2/P/NGO/9834,Protection,Gender Based Violence as subsidiary clusters,100,124999.81
+South Sudan,19,26,2018,Standard,9842,SSD-18/HSS10/SA2/P/NGO/9842,Protection,Gender Based Violence as subsidiary clusters,100,94000
+South Sudan,19,26,2018,Standard,9849,SSD-18/HSS10/SA2/P/NGO/9849,Protection,Child Protection in Emergencies,100,275000
+South Sudan,19,26,2018,Standard,9861,SSD-18/HSS10/SA2/P/NGO/9861,Protection,Mine Action,100,50009.66
+South Sudan,19,26,2018,Standard,9919,SSD-18/HSS10/SA2/P/NGO/9919,Protection,Gender Based Violence as subsidiary clusters,100,125000.03
+South Sudan,19,26,2018,Standard,9979,SSD-18/HSS10/SA2/P/NGO/9979,Protection,Gender Based Violence as subsidiary clusters,100,125000
+South Sudan,19,26,2018,Standard,9982,SSD-18/HSS10/SA2/P/NGO/9982,Protection,Child Protection in Emergencies,100,150000
+South Sudan,19,26,2018,Standard,9983,SSD-18/HSS10/SA2/P/NGO/9983,Protection,,100,249999.08
+South Sudan,19,26,2018,Standard,9812,SSD-18/HSS10/SA2/P/UN/9812,Protection,Child Protection in Emergencies,100,199469.72
+South Sudan,19,26,2018,Standard,9841,SSD-18/HSS10/SA2/WASH/INGO/9841,"Water, Sanitation and Hygiene",,100,365364.3
+South Sudan,19,26,2018,Standard,9989,SSD-18/HSS10/SA2/WASH/INGO/9989,"Water, Sanitation and Hygiene",,100,300000.01
+South Sudan,19,26,2018,Standard,10014,SSD-18/HSS10/SA2/WASH/NGO/10014,"Water, Sanitation and Hygiene",,100,240000.47
+South Sudan,19,26,2018,Standard,10039,SSD-18/HSS10/SA2/WASH/NGO/10039,"Water, Sanitation and Hygiene",,100,148077.3
+South Sudan,19,26,2018,Standard,10081,SSD-18/HSS10/SA2/WASH/NGO/10081,"Water, Sanitation and Hygiene",,100,170407.13
+South Sudan,19,26,2018,Standard,10099,SSD-18/HSS10/SA2/WASH/NGO/10099,"Water, Sanitation and Hygiene",,100,218622.4
+South Sudan,19,26,2018,Standard,9786,SSD-18/HSS10/SA2/WASH/NGO/9786,"Water, Sanitation and Hygiene",,100,351984.01
+South Sudan,19,26,2018,Standard,9791,SSD-18/HSS10/SA2/WASH/NGO/9791,"Water, Sanitation and Hygiene",,100,399999.98
+South Sudan,19,26,2018,Standard,9797,SSD-18/HSS10/SA2/WASH/NGO/9797,"Water, Sanitation and Hygiene",,100,438789.35
+South Sudan,19,26,2018,Standard,9801,SSD-18/HSS10/SA2/WASH/NGO/9801,"Water, Sanitation and Hygiene",,100,271546.31
+South Sudan,19,26,2018,Standard,9845,SSD-18/HSS10/SA2/WASH/NGO/9845,"Water, Sanitation and Hygiene",,100,205859.4
+South Sudan,19,26,2018,Standard,9885,SSD-18/HSS10/SA2/WASH/NGO/9885,"Water, Sanitation and Hygiene",,100,300000.18
+South Sudan,19,26,2018,Standard,9907,SSD-18/HSS10/SA2/WASH/NGO/9907,"Water, Sanitation and Hygiene",,100,200405.65
+South Sudan,19,26,2018,Standard,9945,SSD-18/HSS10/SA2/WASH/NGO/9945,"Water, Sanitation and Hygiene",,100,270000.01
+South Sudan,19,29,2019,Reserve,12596,SSD-19/HSS10/RA1/WASH/NGO/12596,"Water, Sanitation and Hygiene",,100,94917.32
+South Sudan,19,31,2019,Reserve,14817,SSD-19/HSS10/RA2/E/INGO/14817,Education,,100,251434.77
+South Sudan,19,31,2019,Reserve,14733,SSD-19/HSS10/RA2/E-H-N-P/UN/14733,Education,,33,499242.6978
+South Sudan,19,31,2019,Reserve,14733,SSD-19/HSS10/RA2/E-H-N-P/UN/14733,Health,,21,317699.8986
+South Sudan,19,31,2019,Reserve,14733,SSD-19/HSS10/RA2/E-H-N-P/UN/14733,Nutrition,,33,499242.6978
+South Sudan,19,31,2019,Reserve,14733,SSD-19/HSS10/RA2/E-H-N-P/UN/14733,Protection,,13,196671.3658
+South Sudan,19,31,2019,Reserve,14820,SSD-19/HSS10/RA2/FSL/UN/14820,Food Security,,100,1278236.45
+South Sudan,19,31,2019,Reserve,14800,SSD-19/HSS10/RA2/H/INGO/14800,Health,,100,200000
+South Sudan,19,31,2019,Reserve,14684,SSD-19/HSS10/RA2/H/NGO/14684,Health,,100,190000.01
+South Sudan,19,31,2019,Reserve,14688,SSD-19/HSS10/RA2/H/NGO/14688,Health,,100,200000
+South Sudan,19,31,2019,Reserve,14690,SSD-19/HSS10/RA2/H/NGO/14690,Health,,100,200025
+South Sudan,19,31,2019,Reserve,14675,SSD-19/HSS10/RA2/H/UN/14675,Health,,100,700001.49
+South Sudan,19,31,2019,Reserve,14692,SSD-19/HSS10/RA2/H-NFI/NGO/14692,Emergency Shelter and NFI,,50,199897.4
+South Sudan,19,31,2019,Reserve,14692,SSD-19/HSS10/RA2/H-NFI/NGO/14692,Health,,50,199897.4
+South Sudan,19,31,2019,Reserve,14716,SSD-19/HSS10/RA2/N/INGO/14716,Nutrition,,100,117133.85
+South Sudan,19,31,2019,Reserve,14723,SSD-19/HSS10/RA2/N/INGO/14723,Nutrition,,100,90035.95
+South Sudan,19,31,2019,Reserve,14755,SSD-19/HSS10/RA2/N/INGO/14755,Nutrition,,100,219536.76
+South Sudan,19,31,2019,Reserve,14819,SSD-19/HSS10/RA2/N/INGO/14819,Nutrition,,100,306314.68
+South Sudan,19,31,2019,Reserve,14725,SSD-19/HSS10/RA2/N/NGO/14725,Nutrition,,100,177271.18
+South Sudan,19,31,2019,Reserve,14802,SSD-19/HSS10/RA2/NFI/INGO/14802,Emergency Shelter and NFI,,100,300084.39
+South Sudan,19,31,2019,Reserve,14717,SSD-19/HSS10/RA2/NFI/NGO/14717,Emergency Shelter and NFI,,100,200004.73
+South Sudan,19,31,2019,Reserve,14750,SSD-19/HSS10/RA2/NFI/NGO/14750,Emergency Shelter and NFI,,100,200000.12
+South Sudan,19,31,2019,Reserve,14791,SSD-19/HSS10/RA2/NFI/NGO/14791,Emergency Shelter and NFI,,100,200000.06
+South Sudan,19,31,2019,Reserve,14710,SSD-19/HSS10/RA2/P/INGO/14710,Protection,,100,100000
+South Sudan,19,31,2019,Reserve,14793,SSD-19/HSS10/RA2/P/INGO/14793,Protection,Child Protection in Emergencies,100,165000.27
+South Sudan,19,31,2019,Reserve,14796,SSD-19/HSS10/RA2/P/INGO/14796,Protection,,100,100000.01
+South Sudan,19,31,2019,Reserve,14718,SSD-19/HSS10/RA2/P/NGO/14718,Protection,Gender Based Violence as subsidiary clusters,100,99998.99
+South Sudan,19,31,2019,Reserve,14732,SSD-19/HSS10/RA2/P/NGO/14732,Protection,,100,285835.01
+South Sudan,19,31,2019,Reserve,14756,SSD-19/HSS10/RA2/P/UN/14756,Protection,,100,130005
+South Sudan,19,31,2019,Reserve,14770,SSD-19/HSS10/RA2/P/UN/14770,Protection,Gender Based Violence as subsidiary clusters,100,250594
+South Sudan,19,31,2019,Reserve,14714,SSD-19/HSS10/RA2/P-E/INGO/14714,Education,,58,209883.0108
+South Sudan,19,31,2019,Reserve,14714,SSD-19/HSS10/RA2/P-E/INGO/14714,Protection,Gender Based Violence as subsidiary clusters,42,151984.2492
+South Sudan,19,31,2019,Reserve,14744,SSD-19/HSS10/RA2/WASH/INGO/14744,"Water, Sanitation and Hygiene",,100,299999.72
+South Sudan,19,31,2019,Reserve,14811,SSD-19/HSS10/RA2/WASH/INGO/14811,"Water, Sanitation and Hygiene",,100,300881.85
+South Sudan,19,31,2019,Reserve,14697,SSD-19/HSS10/RA2/WASH/NGO/14697,"Water, Sanitation and Hygiene",,100,300000.18
+South Sudan,19,31,2019,Reserve,14763,SSD-19/HSS10/RA2/WASH-NFI/INGO/14763,Emergency Shelter and NFI,,50,315195.485
+South Sudan,19,31,2019,Reserve,14763,SSD-19/HSS10/RA2/WASH-NFI/INGO/14763,"Water, Sanitation and Hygiene",,50,315195.485
+South Sudan,19,28,2019,Standard,11706,SSD-19/HSS10/SA1/CCCM/INGO/11706,Camp Coordination / Management,,100,300000.01
+South Sudan,19,28,2019,Standard,11778,SSD-19/HSS10/SA1/CCCM/INGO/11778,Camp Coordination / Management,,100,300000.61
+South Sudan,19,28,2019,Standard,11512,SSD-19/HSS10/SA1/CCCM/NGO/11512,Camp Coordination / Management,,100,100002.2
+South Sudan,19,28,2019,Standard,11492,SSD-19/HSS10/SA1/CCCM/UN/11492,Camp Coordination / Management,,100,300000
+South Sudan,19,28,2019,Standard,11741,SSD-19/HSS10/SA1/CCS/INGO/11741,Coordination and Support Services,,100,380000
+South Sudan,19,28,2019,Standard,11792,SSD-19/HSS10/SA1/CCS/INGO/11792,Coordination and Support Services,,100,99999.99
+South Sudan,19,28,2019,Standard,11541,SSD-19/HSS10/SA1/CCS/NGO/11541,Coordination and Support Services,,100,100000
+South Sudan,19,28,2019,Standard,11589,SSD-19/HSS10/SA1/E/INGO/11589,Education,,100,215105.58
+South Sudan,19,28,2019,Standard,11593,SSD-19/HSS10/SA1/E/INGO/11593,Education,,100,400000
+South Sudan,19,28,2019,Standard,11598,SSD-19/HSS10/SA1/E/INGO/11598,Education,,100,369304.3
+South Sudan,19,28,2019,Standard,11685,SSD-19/HSS10/SA1/E/INGO/11685,Education,,100,307000
+South Sudan,19,28,2019,Standard,11457,SSD-19/HSS10/SA1/E/NGO/11457,Education,,100,390692.31
+South Sudan,19,28,2019,Standard,11592,SSD-19/HSS10/SA1/E/NGO/11592,Education,,100,317450.45
+South Sudan,19,28,2019,Standard,11497,SSD-19/HSS10/SA1/FSL/INGO/11497,Food Security,,100,178620
+South Sudan,19,28,2019,Standard,11566,SSD-19/HSS10/SA1/FSL/INGO/11566,Food Security,,100,215187.98
+South Sudan,19,28,2019,Standard,11635,SSD-19/HSS10/SA1/FSL/INGO/11635,Food Security,,100,141436.35
+South Sudan,19,28,2019,Standard,11637,SSD-19/HSS10/SA1/FSL/INGO/11637,Food Security,,100,218129.98
+South Sudan,19,28,2019,Standard,11716,SSD-19/HSS10/SA1/FSL/INGO/11716,Food Security,,100,190432.91
+South Sudan,19,28,2019,Standard,11737,SSD-19/HSS10/SA1/FSL/INGO/11737,Food Security,,100,119997.94
+South Sudan,19,28,2019,Standard,11744,SSD-19/HSS10/SA1/FSL/INGO/11744,Food Security,,100,178680.58
+South Sudan,19,28,2019,Standard,11751,SSD-19/HSS10/SA1/FSL/INGO/11751,Food Security,,100,178600
+South Sudan,19,28,2019,Standard,11440,SSD-19/HSS10/SA1/FSL/NGO/11440,Food Security,,100,176673.75
+South Sudan,19,28,2019,Standard,11538,SSD-19/HSS10/SA1/FSL/NGO/11538,Food Security,,100,103740.78
+South Sudan,19,28,2019,Standard,11562,SSD-19/HSS10/SA1/FSL/NGO/11562,Food Security,,100,120054
+South Sudan,19,28,2019,Standard,11597,SSD-19/HSS10/SA1/FSL/NGO/11597,Food Security,,100,154290.04
+South Sudan,19,28,2019,Standard,11633,SSD-19/HSS10/SA1/FSL/NGO/11633,Food Security,,100,154272.6
+South Sudan,19,28,2019,Standard,11669,SSD-19/HSS10/SA1/FSL/NGO/11669,Food Security,,100,172399.96
+South Sudan,19,28,2019,Standard,11670,SSD-19/HSS10/SA1/FSL/NGO/11670,Food Security,,100,154289.93
+South Sudan,19,28,2019,Standard,11733,SSD-19/HSS10/SA1/FSL/NGO/11733,Food Security,,100,176919.9
+South Sudan,19,28,2019,Standard,11742,SSD-19/HSS10/SA1/FSL/NGO/11742,Food Security,,100,127950.6
+South Sudan,19,28,2019,Standard,11761,SSD-19/HSS10/SA1/FSL/NGO/11761,Food Security,,100,103650.79
+South Sudan,19,28,2019,Standard,11787,SSD-19/HSS10/SA1/FSL/NGO/11787,Food Security,,100,120000.48
+South Sudan,19,28,2019,Standard,11471,SSD-19/HSS10/SA1/H/INGO/11471,Health,,100,149999.56
+South Sudan,19,28,2019,Standard,11485,SSD-19/HSS10/SA1/H/INGO/11485,Health,,100,130000
+South Sudan,19,28,2019,Standard,11559,SSD-19/HSS10/SA1/H/INGO/11559,Health,,100,100000
+South Sudan,19,28,2019,Standard,11584,SSD-19/HSS10/SA1/H/INGO/11584,Health,,100,100000
+South Sudan,19,28,2019,Standard,11585,SSD-19/HSS10/SA1/H/INGO/11585,Health,,100,129999.65
+South Sudan,19,28,2019,Standard,11629,SSD-19/HSS10/SA1/H/INGO/11629,Health,,100,102000.94
+South Sudan,19,28,2019,Standard,11643,SSD-19/HSS10/SA1/H/INGO/11643,Health,,100,110000.44
+South Sudan,19,28,2019,Standard,11674,SSD-19/HSS10/SA1/H/INGO/11674,Health,,100,150002.02
+South Sudan,19,28,2019,Standard,11703,SSD-19/HSS10/SA1/H/INGO/11703,Health,,100,150500.02
+South Sudan,19,28,2019,Standard,11732,SSD-19/HSS10/SA1/H/INGO/11732,Health,,100,100000
+South Sudan,19,28,2019,Standard,11777,SSD-19/HSS10/SA1/H/INGO/11777,Health,,100,138662.97
+South Sudan,19,28,2019,Standard,11442,SSD-19/HSS10/SA1/H/NGO/11442,Health,,100,100505.1
+South Sudan,19,28,2019,Standard,11445,SSD-19/HSS10/SA1/H/NGO/11445,Health,,100,200500.24
+South Sudan,19,28,2019,Standard,11451,SSD-19/HSS10/SA1/H/NGO/11451,Health,,100,100000.06
+South Sudan,19,28,2019,Standard,11452,SSD-19/HSS10/SA1/H/NGO/11452,Health,,100,100000.02
+South Sudan,19,28,2019,Standard,11454,SSD-19/HSS10/SA1/H/NGO/11454,Health,,100,150000.09
+South Sudan,19,28,2019,Standard,11466,SSD-19/HSS10/SA1/H/NGO/11466,Health,,100,100000
+South Sudan,19,28,2019,Standard,11472,SSD-19/HSS10/SA1/H/NGO/11472,Health,,100,102000
+South Sudan,19,28,2019,Standard,11476,SSD-19/HSS10/SA1/H/NGO/11476,Health,,100,430000
+South Sudan,19,28,2019,Standard,11495,SSD-19/HSS10/SA1/H/NGO/11495,Health,,100,175000
+South Sudan,19,28,2019,Standard,11498,SSD-19/HSS10/SA1/H/NGO/11498,Health,,100,115063.2
+South Sudan,19,28,2019,Standard,11505,SSD-19/HSS10/SA1/H/NGO/11505,Health,,100,100000
+South Sudan,19,28,2019,Standard,11508,SSD-19/HSS10/SA1/H/NGO/11508,Health,,100,123009.17
+South Sudan,19,28,2019,Standard,11520,SSD-19/HSS10/SA1/H/NGO/11520,Health,,100,100000.1
+South Sudan,19,28,2019,Standard,11521,SSD-19/HSS10/SA1/H/NGO/11521,Health,,100,100000.06
+South Sudan,19,28,2019,Standard,11542,SSD-19/HSS10/SA1/H/NGO/11542,Health,,100,252500.1
+South Sudan,19,28,2019,Standard,11616,SSD-19/HSS10/SA1/H/NGO/11616,Health,,100,100000.92
+South Sudan,19,28,2019,Standard,11696,SSD-19/HSS10/SA1/H/NGO/11696,Health,,100,149999.02
+South Sudan,19,28,2019,Standard,11702,SSD-19/HSS10/SA1/H/NGO/11702,Health,,100,100019.32
+South Sudan,19,28,2019,Standard,11735,SSD-19/HSS10/SA1/H/NGO/11735,Health,,100,114000.15
+South Sudan,19,28,2019,Standard,11753,SSD-19/HSS10/SA1/H/NGO/11753,Health,,100,100000.06
+South Sudan,19,28,2019,Standard,11448,SSD-19/HSS10/SA1/H/UN/11448,Health,,100,347004.21
+South Sudan,19,28,2019,Standard,11503,SSD-19/HSS10/SA1/H/UN/11503,Health,,100,900000.01
+South Sudan,19,28,2019,Standard,11700,SSD-19/HSS10/SA1/H/UN/11700,Health,,100,300000
+South Sudan,19,28,2019,Standard,11745,SSD-19/HSS10/SA1/H/UN/11745,Health,,100,280000.02
+South Sudan,19,28,2019,Standard,11625,SSD-19/HSS10/SA1/L/UN/11625,Logistics,,100,1103127
+South Sudan,19,28,2019,Standard,11678,SSD-19/HSS10/SA1/L/UN/11678,Logistics,,100,400000
+South Sudan,19,28,2019,Standard,11701,SSD-19/HSS10/SA1/L/UN/11701,Logistics,,100,1200000
+South Sudan,19,28,2019,Standard,11450,SSD-19/HSS10/SA1/N/INGO/11450,Nutrition,,100,200000
+South Sudan,19,28,2019,Standard,11478,SSD-19/HSS10/SA1/N/INGO/11478,Nutrition,,100,200000.07
+South Sudan,19,28,2019,Standard,11483,SSD-19/HSS10/SA1/N/INGO/11483,Nutrition,,100,198700.16
+South Sudan,19,28,2019,Standard,11486,SSD-19/HSS10/SA1/N/INGO/11486,Nutrition,,100,280000
+South Sudan,19,28,2019,Standard,11509,SSD-19/HSS10/SA1/N/INGO/11509,Nutrition,,100,289879.64
+South Sudan,19,28,2019,Standard,11516,SSD-19/HSS10/SA1/N/INGO/11516,Nutrition,,100,231343.74
+South Sudan,19,28,2019,Standard,11519,SSD-19/HSS10/SA1/N/INGO/11519,Nutrition,,100,199704.8
+South Sudan,19,28,2019,Standard,11529,SSD-19/HSS10/SA1/N/INGO/11529,Nutrition,,100,200014.97
+South Sudan,19,28,2019,Standard,11583,SSD-19/HSS10/SA1/N/INGO/11583,Nutrition,,100,166632.71
+South Sudan,19,28,2019,Standard,11596,SSD-19/HSS10/SA1/N/INGO/11596,Nutrition,,100,289984.1
+South Sudan,19,28,2019,Standard,11599,SSD-19/HSS10/SA1/N/INGO/11599,Nutrition,,100,200000.15
+South Sudan,19,28,2019,Standard,11620,SSD-19/HSS10/SA1/N/INGO/11620,Nutrition,,100,200000
+South Sudan,19,28,2019,Standard,11642,SSD-19/HSS10/SA1/N/INGO/11642,Nutrition,,100,125911.49
+South Sudan,19,28,2019,Standard,11688,SSD-19/HSS10/SA1/N/INGO/11688,Nutrition,,100,200000
+South Sudan,19,28,2019,Standard,11768,SSD-19/HSS10/SA1/N/INGO/11768,Nutrition,,100,150011.88
+South Sudan,19,28,2019,Standard,11444,SSD-19/HSS10/SA1/N/NGO/11444,Nutrition,,100,100000.17
+South Sudan,19,28,2019,Standard,11570,SSD-19/HSS10/SA1/N/NGO/11570,Nutrition,,100,200000
+South Sudan,19,28,2019,Standard,11575,SSD-19/HSS10/SA1/N/NGO/11575,Nutrition,,100,400000.24
+South Sudan,19,28,2019,Standard,11581,SSD-19/HSS10/SA1/N/NGO/11581,Nutrition,,100,300000.42
+South Sudan,19,28,2019,Standard,11619,SSD-19/HSS10/SA1/N/NGO/11619,Nutrition,,100,100000.06
+South Sudan,19,28,2019,Standard,11640,SSD-19/HSS10/SA1/N/NGO/11640,Nutrition,,100,100001.21
+South Sudan,19,28,2019,Standard,11680,SSD-19/HSS10/SA1/N/NGO/11680,Nutrition,,100,200000.12
+South Sudan,19,28,2019,Standard,11749,SSD-19/HSS10/SA1/N/NGO/11749,Nutrition,,100,100000.49
+South Sudan,19,28,2019,Standard,11611,SSD-19/HSS10/SA1/N/UN/11611,Nutrition,,100,200098.56
+South Sudan,19,28,2019,Standard,11730,SSD-19/HSS10/SA1/N/UN/11730,Nutrition,,100,379848.54
+South Sudan,19,28,2019,Standard,11755,SSD-19/HSS10/SA1/N/UN/11755,Nutrition,,100,196162.64
+South Sudan,19,28,2019,Standard,11555,SSD-19/HSS10/SA1/NFI/INGO/11555,Emergency Shelter and NFI,,100,254318.99
+South Sudan,19,28,2019,Standard,11660,SSD-19/HSS10/SA1/NFI/INGO/11660,Emergency Shelter and NFI,,100,200000.12
+South Sudan,19,28,2019,Standard,11675,SSD-19/HSS10/SA1/NFI/INGO/11675,Emergency Shelter and NFI,,100,200004.94
+South Sudan,19,28,2019,Standard,11683,SSD-19/HSS10/SA1/NFI/INGO/11683,Emergency Shelter and NFI,,100,193333.8
+South Sudan,19,28,2019,Standard,11691,SSD-19/HSS10/SA1/NFI/INGO/11691,Emergency Shelter and NFI,,100,200000
+South Sudan,19,28,2019,Standard,11784,SSD-19/HSS10/SA1/NFI/INGO/11784,Emergency Shelter and NFI,,100,200000
+South Sudan,19,28,2019,Standard,11467,SSD-19/HSS10/SA1/NFI/NGO/11467,Emergency Shelter and NFI,,100,100000
+South Sudan,19,28,2019,Standard,11493,SSD-19/HSS10/SA1/NFI/NGO/11493,Emergency Shelter and NFI,,100,100000.49
+South Sudan,19,28,2019,Standard,11530,SSD-19/HSS10/SA1/NFI/NGO/11530,Emergency Shelter and NFI,,100,100000.06
+South Sudan,19,28,2019,Standard,11573,SSD-19/HSS10/SA1/NFI/NGO/11573,Emergency Shelter and NFI,,100,100002
+South Sudan,19,28,2019,Standard,11601,SSD-19/HSS10/SA1/NFI/NGO/11601,Emergency Shelter and NFI,,100,100000.79
+South Sudan,19,28,2019,Standard,11613,SSD-19/HSS10/SA1/NFI/NGO/11613,Emergency Shelter and NFI,,100,100000
+South Sudan,19,28,2019,Standard,11628,SSD-19/HSS10/SA1/NFI/NGO/11628,Emergency Shelter and NFI,,100,100002.2
+South Sudan,19,28,2019,Standard,11724,SSD-19/HSS10/SA1/NFI/UN/11724,Emergency Shelter and NFI,,100,352338
+South Sudan,19,28,2019,Standard,11477,SSD-19/HSS10/SA1/P/INGO/11477,Protection,Child Protection in Emergencies,100,180000
+South Sudan,19,28,2019,Standard,11496,SSD-19/HSS10/SA1/P/INGO/11496,Protection,Gender Based Violence as subsidiary clusters,100,190000.01
+South Sudan,19,28,2019,Standard,11501,SSD-19/HSS10/SA1/P/INGO/11501,Protection,,100,130057
+South Sudan,19,28,2019,Standard,11524,SSD-19/HSS10/SA1/P/INGO/11524,Protection,Child Protection in Emergencies,100,100000
+South Sudan,19,28,2019,Standard,11558,SSD-19/HSS10/SA1/P/INGO/11558,Protection,Child Protection in Emergencies,100,129999.65
+South Sudan,19,28,2019,Standard,11571,SSD-19/HSS10/SA1/P/INGO/11571,Protection,,100,250000.58
+South Sudan,19,28,2019,Standard,11572,SSD-19/HSS10/SA1/P/INGO/11572,Protection,Child Protection in Emergencies,100,100000.3
+South Sudan,19,28,2019,Standard,11595,SSD-19/HSS10/SA1/P/INGO/11595,Protection,Gender Based Violence as subsidiary clusters,100,180000.75
+South Sudan,19,28,2019,Standard,11604,SSD-19/HSS10/SA1/P/INGO/11604,Protection,,100,201510
+South Sudan,19,28,2019,Standard,11627,SSD-19/HSS10/SA1/P/INGO/11627,Protection,Gender Based Violence as subsidiary clusters,100,190000.7
+South Sudan,19,28,2019,Standard,11658,SSD-19/HSS10/SA1/P/INGO/11658,Protection,,100,138490
+South Sudan,19,28,2019,Standard,11686,SSD-19/HSS10/SA1/P/INGO/11686,Protection,,100,250000
+South Sudan,19,28,2019,Standard,11721,SSD-19/HSS10/SA1/P/INGO/11721,Protection,Mine Action,100,580548.51
+South Sudan,19,28,2019,Standard,11723,SSD-19/HSS10/SA1/P/INGO/11723,Protection,Gender Based Violence as subsidiary clusters,100,190000
+South Sudan,19,28,2019,Standard,11725,SSD-19/HSS10/SA1/P/INGO/11725,Protection,,100,300000
+South Sudan,19,28,2019,Standard,11734,SSD-19/HSS10/SA1/P/INGO/11734,Protection,Gender Based Violence as subsidiary clusters,100,240000.05
+South Sudan,19,28,2019,Standard,11767,SSD-19/HSS10/SA1/P/INGO/11767,Protection,,100,210000.01
+South Sudan,19,28,2019,Standard,11437,SSD-19/HSS10/SA1/P/NGO/11437,Protection,,100,200000.18
+South Sudan,19,28,2019,Standard,11460,SSD-19/HSS10/SA1/P/NGO/11460,Protection,Child Protection in Emergencies,100,170000
+South Sudan,19,28,2019,Standard,11463,SSD-19/HSS10/SA1/P/NGO/11463,Protection,Mine Action,100,149987.25
+South Sudan,19,28,2019,Standard,11500,SSD-19/HSS10/SA1/P/NGO/11500,Protection,Gender Based Violence as subsidiary clusters,100,120000
+South Sudan,19,28,2019,Standard,11523,SSD-19/HSS10/SA1/P/NGO/11523,Protection,Gender Based Violence as subsidiary clusters,100,150000.09
+South Sudan,19,28,2019,Standard,11550,SSD-19/HSS10/SA1/P/NGO/11550,Protection,Gender Based Violence as subsidiary clusters,100,180000.07
+South Sudan,19,28,2019,Standard,11553,SSD-19/HSS10/SA1/P/NGO/11553,Protection,Child Protection in Emergencies,100,180000.02
+South Sudan,19,28,2019,Standard,11557,SSD-19/HSS10/SA1/P/NGO/11557,Protection,Child Protection in Emergencies,100,160000.87
+South Sudan,19,28,2019,Standard,11623,SSD-19/HSS10/SA1/P/NGO/11623,Protection,,100,150020.27
+South Sudan,19,28,2019,Standard,11631,SSD-19/HSS10/SA1/P/NGO/11631,Protection,Child Protection in Emergencies,100,100000
+South Sudan,19,28,2019,Standard,11634,SSD-19/HSS10/SA1/P/NGO/11634,Protection,Mine Action,100,150040.75
+South Sudan,19,28,2019,Standard,11682,SSD-19/HSS10/SA1/P/NGO/11682,Protection,Gender Based Violence as subsidiary clusters,100,119993.01
+South Sudan,19,28,2019,Standard,11699,SSD-19/HSS10/SA1/P/NGO/11699,Protection,Gender Based Violence as subsidiary clusters,100,139923.9
+South Sudan,19,28,2019,Standard,11746,SSD-19/HSS10/SA1/P/NGO/11746,Protection,Gender Based Violence as subsidiary clusters,100,100000.06
+South Sudan,19,28,2019,Standard,11563,SSD-19/HSS10/SA1/P/UN/11563,Protection,Child Protection in Emergencies,100,149917.12
+South Sudan,19,28,2019,Standard,11560,SSD-19/HSS10/SA1/WASH/INGO/11560,"Water, Sanitation and Hygiene",,100,245300
+South Sudan,19,28,2019,Standard,11600,SSD-19/HSS10/SA1/WASH/INGO/11600,"Water, Sanitation and Hygiene",,100,255100.41
+South Sudan,19,28,2019,Standard,11617,SSD-19/HSS10/SA1/WASH/INGO/11617,"Water, Sanitation and Hygiene",,100,297900.84
+South Sudan,19,28,2019,Standard,11630,SSD-19/HSS10/SA1/WASH/INGO/11630,"Water, Sanitation and Hygiene",,100,300000.18
+South Sudan,19,28,2019,Standard,11639,SSD-19/HSS10/SA1/WASH/INGO/11639,"Water, Sanitation and Hygiene",,100,216533.4
+South Sudan,19,28,2019,Standard,11748,SSD-19/HSS10/SA1/WASH/INGO/11748,"Water, Sanitation and Hygiene",,100,292958.3
+South Sudan,19,28,2019,Standard,11763,SSD-19/HSS10/SA1/WASH/INGO/11763,"Water, Sanitation and Hygiene",,100,300000
+South Sudan,19,28,2019,Standard,11443,SSD-19/HSS10/SA1/WASH/NGO/11443,"Water, Sanitation and Hygiene",,100,299996.97
+South Sudan,19,28,2019,Standard,11453,SSD-19/HSS10/SA1/WASH/NGO/11453,"Water, Sanitation and Hygiene",,100,300000.18
+South Sudan,19,28,2019,Standard,11489,SSD-19/HSS10/SA1/WASH/NGO/11489,"Water, Sanitation and Hygiene",,100,212140
+South Sudan,19,28,2019,Standard,11490,SSD-19/HSS10/SA1/WASH/NGO/11490,"Water, Sanitation and Hygiene",,100,150163.8
+South Sudan,19,28,2019,Standard,11502,SSD-19/HSS10/SA1/WASH/NGO/11502,"Water, Sanitation and Hygiene",,100,245040.7
+South Sudan,19,28,2019,Standard,11507,SSD-19/HSS10/SA1/WASH/NGO/11507,"Water, Sanitation and Hygiene",,100,204000.17
+South Sudan,19,28,2019,Standard,11510,SSD-19/HSS10/SA1/WASH/NGO/11510,"Water, Sanitation and Hygiene",,100,166572.04
+South Sudan,19,28,2019,Standard,11552,SSD-19/HSS10/SA1/WASH/NGO/11552,"Water, Sanitation and Hygiene",,100,100000.02
+South Sudan,19,28,2019,Standard,11569,SSD-19/HSS10/SA1/WASH/NGO/11569,"Water, Sanitation and Hygiene",,100,240000
+South Sudan,19,28,2019,Standard,11580,SSD-19/HSS10/SA1/WASH/NGO/11580,"Water, Sanitation and Hygiene",,100,225000.64
+South Sudan,19,28,2019,Standard,11594,SSD-19/HSS10/SA1/WASH/NGO/11594,"Water, Sanitation and Hygiene",,100,218700.02
+South Sudan,19,28,2019,Standard,11614,SSD-19/HSS10/SA1/WASH/NGO/11614,"Water, Sanitation and Hygiene",,100,300000
+South Sudan,19,28,2019,Standard,11665,SSD-19/HSS10/SA1/WASH/NGO/11665,"Water, Sanitation and Hygiene",,100,100001.23
+South Sudan,19,28,2019,Standard,11709,SSD-19/HSS10/SA1/WASH/NGO/11709,"Water, Sanitation and Hygiene",,100,263000.03
+South Sudan,19,28,2019,Standard,11714,SSD-19/HSS10/SA1/WASH/NGO/11714,"Water, Sanitation and Hygiene",,100,300000.18
+South Sudan,19,28,2019,Standard,11747,SSD-19/HSS10/SA1/WASH/NGO/11747,"Water, Sanitation and Hygiene",,100,219114.6
+South Sudan,19,28,2019,Standard,11760,SSD-19/HSS10/SA1/WASH/NGO/11760,"Water, Sanitation and Hygiene",,100,230000.78
+South Sudan,19,30,2019,Standard,13512,SSD-19/HSS10/SA2/CCCM/INGO/13512,Camp Coordination / Management,,100,500000
+South Sudan,19,30,2019,Standard,13426,SSD-19/HSS10/SA2/CCCM/NGO/13426,Camp Coordination / Management,,100,100000.06
+South Sudan,19,30,2019,Standard,13596,SSD-19/HSS10/SA2/CCCM-FSL-NFI/INGO/13596,Camp Coordination / Management,,60,453899.316
+South Sudan,19,30,2019,Standard,13596,SSD-19/HSS10/SA2/CCCM-FSL-NFI/INGO/13596,Emergency Shelter and NFI,,26,196689.7036
+South Sudan,19,30,2019,Standard,13596,SSD-19/HSS10/SA2/CCCM-FSL-NFI/INGO/13596,Food Security,,14,105909.8404
+South Sudan,19,30,2019,Standard,13358,SSD-19/HSS10/SA2/E/INGO/13358,Education,,100,500000
+South Sudan,19,30,2019,Standard,13446,SSD-19/HSS10/SA2/E/INGO/13446,Education,,100,349998.57
+South Sudan,19,30,2019,Standard,13516,SSD-19/HSS10/SA2/E/INGO/13516,Education,,100,300000
+South Sudan,19,30,2019,Standard,13419,SSD-19/HSS10/SA2/E-FSL/NGO/13419,Education,,75,350250.0825
+South Sudan,19,30,2019,Standard,13419,SSD-19/HSS10/SA2/E-FSL/NGO/13419,Food Security,,25,116750.0275
+South Sudan,19,30,2019,Standard,13440,SSD-19/HSS10/SA2/E-FSL-WASH-NFI/NGO/13440,Education,,35,262082.45
+South Sudan,19,30,2019,Standard,13440,SSD-19/HSS10/SA2/E-FSL-WASH-NFI/NGO/13440,Emergency Shelter and NFI,,15,112321.05
+South Sudan,19,30,2019,Standard,13440,SSD-19/HSS10/SA2/E-FSL-WASH-NFI/NGO/13440,Food Security,,20,149761.4
+South Sudan,19,30,2019,Standard,13440,SSD-19/HSS10/SA2/E-FSL-WASH-NFI/NGO/13440,"Water, Sanitation and Hygiene",,30,224642.1
+South Sudan,19,30,2019,Standard,13545,SSD-19/HSS10/SA2/E-WASH/NGO/13545,Education,,63.7,350350.59241
+South Sudan,19,30,2019,Standard,13545,SSD-19/HSS10/SA2/E-WASH/NGO/13545,"Water, Sanitation and Hygiene",,36.3,199650.33759
+South Sudan,19,30,2019,Standard,13361,SSD-19/HSS10/SA2/FSL/INGO/13361,Food Security,,100,179999.68
+South Sudan,19,30,2019,Standard,13412,SSD-19/HSS10/SA2/FSL/INGO/13412,Food Security,,100,135000.72
+South Sudan,19,30,2019,Standard,13449,SSD-19/HSS10/SA2/FSL/INGO/13449,Food Security,,100,146121.81
+South Sudan,19,30,2019,Standard,13541,SSD-19/HSS10/SA2/FSL/INGO/13541,Food Security,,100,179982.03
+South Sudan,19,30,2019,Standard,13626,SSD-19/HSS10/SA2/FSL/INGO/13626,Food Security,,100,134861.2
+South Sudan,19,30,2019,Standard,13665,SSD-19/HSS10/SA2/FSL/INGO/13665,Food Security,,100,134959.1
+South Sudan,19,30,2019,Standard,13354,SSD-19/HSS10/SA2/FSL/NGO/13354,Food Security,,100,160999.69
+South Sudan,19,30,2019,Standard,13356,SSD-19/HSS10/SA2/FSL/NGO/13356,Food Security,,100,116995.94
+South Sudan,19,30,2019,Standard,13357,SSD-19/HSS10/SA2/FSL/NGO/13357,Food Security,,100,122390.88
+South Sudan,19,30,2019,Standard,13403,SSD-19/HSS10/SA2/FSL/NGO/13403,Food Security,,100,136674.3
+South Sudan,19,30,2019,Standard,13524,SSD-19/HSS10/SA2/FSL/NGO/13524,Food Security,,100,112500.87
+South Sudan,19,30,2019,Standard,13562,SSD-19/HSS10/SA2/FSL/NGO/13562,Food Security,,100,163977.5
+South Sudan,19,30,2019,Standard,13631,SSD-19/HSS10/SA2/FSL/NGO/13631,Food Security,,100,125000.86
+South Sudan,19,30,2019,Standard,13660,SSD-19/HSS10/SA2/FSL/NGO/13660,Food Security,,100,109809.82
+South Sudan,19,30,2019,Standard,13661,SSD-19/HSS10/SA2/FSL/NGO/13661,Food Security,,100,101519.11
+South Sudan,19,30,2019,Standard,13573,SSD-19/HSS10/SA2/FSL-NFI/NGO/13573,Emergency Shelter and NFI,,34.92,106331.4
+South Sudan,19,30,2019,Standard,13573,SSD-19/HSS10/SA2/FSL-NFI/NGO/13573,Food Security,,65.08,198168.6
+South Sudan,19,30,2019,Standard,13376,SSD-19/HSS10/SA2/H/INGO/13376,Health,,100,238154.54
+South Sudan,19,30,2019,Standard,13486,SSD-19/HSS10/SA2/H/INGO/13486,Health,,100,100000
+South Sudan,19,30,2019,Standard,13557,SSD-19/HSS10/SA2/H/INGO/13557,Health,,100,200008.18
+South Sudan,19,30,2019,Standard,13587,SSD-19/HSS10/SA2/H/INGO/13587,Health,,100,168355.78
+South Sudan,19,30,2019,Standard,13642,SSD-19/HSS10/SA2/H/INGO/13642,Health,,100,230006.13
+South Sudan,19,30,2019,Standard,13650,SSD-19/HSS10/SA2/H/INGO/13650,Health,,100,238158.97
+South Sudan,19,30,2019,Standard,13655,SSD-19/HSS10/SA2/H/INGO/13655,Health,,100,204060.77
+South Sudan,19,30,2019,Standard,13369,SSD-19/HSS10/SA2/H/NGO/13369,Health,,100,151193.14
+South Sudan,19,30,2019,Standard,13372,SSD-19/HSS10/SA2/H/NGO/13372,Health,,100,150969.16
+South Sudan,19,30,2019,Standard,13375,SSD-19/HSS10/SA2/H/NGO/13375,Health,,100,100634.25
+South Sudan,19,30,2019,Standard,13431,SSD-19/HSS10/SA2/H/NGO/13431,Health,,100,126649
+South Sudan,19,30,2019,Standard,13441,SSD-19/HSS10/SA2/H/NGO/13441,Health,,100,126860
+South Sudan,19,30,2019,Standard,13544,SSD-19/HSS10/SA2/H/NGO/13544,Health,,100,126531.03
+South Sudan,19,30,2019,Standard,13553,SSD-19/HSS10/SA2/H/NGO/13553,Health,,100,201735.83
+South Sudan,19,30,2019,Standard,13555,SSD-19/HSS10/SA2/H/NGO/13555,Health,,100,153820
+South Sudan,19,30,2019,Standard,13610,SSD-19/HSS10/SA2/H/NGO/13610,Health,,100,102707
+South Sudan,19,30,2019,Standard,13636,SSD-19/HSS10/SA2/H/NGO/13636,Health,,100,101613.23
+South Sudan,19,30,2019,Standard,13464,SSD-19/HSS10/SA2/H/UN/13464,Health,,100,200000
+South Sudan,19,30,2019,Standard,13468,SSD-19/HSS10/SA2/H-N/NGO/13468,Health,,36,159794.8272
+South Sudan,19,30,2019,Standard,13468,SSD-19/HSS10/SA2/H-N/NGO/13468,Nutrition,,64,284079.6928
+South Sudan,19,30,2019,Standard,13510,SSD-19/HSS10/SA2/H-N/NGO/13510,Health,,44,138108.7796
+South Sudan,19,30,2019,Standard,13510,SSD-19/HSS10/SA2/H-N/NGO/13510,Nutrition,,56,175774.8104
+South Sudan,19,30,2019,Standard,13644,SSD-19/HSS10/SA2/H-N/UN/13644,Health,,78.4,750049.94624
+South Sudan,19,30,2019,Standard,13644,SSD-19/HSS10/SA2/H-N/UN/13644,Nutrition,,21.6,206646.41376
+South Sudan,19,30,2019,Standard,13628,SSD-19/HSS10/SA2/H-N-P/INGO/13628,Health,,22,149834.6652
+South Sudan,19,30,2019,Standard,13628,SSD-19/HSS10/SA2/H-N-P/INGO/13628,Nutrition,,34,231562.6644
+South Sudan,19,30,2019,Standard,13628,SSD-19/HSS10/SA2/H-N-P/INGO/13628,Protection,,44,299669.3304
+South Sudan,19,30,2019,Standard,13454,SSD-19/HSS10/SA2/H-N-WASH/NGO/13454,Health,,26,218477.3032
+South Sudan,19,30,2019,Standard,13454,SSD-19/HSS10/SA2/H-N-WASH/NGO/13454,Nutrition,,42,352924.8744
+South Sudan,19,30,2019,Standard,13454,SSD-19/HSS10/SA2/H-N-WASH/NGO/13454,"Water, Sanitation and Hygiene",,32,268895.1424
+South Sudan,19,30,2019,Standard,13459,SSD-19/HSS10/SA2/H-P-CCCM/NGO/13459,Camp Coordination / Management,,39,127158.993
+South Sudan,19,30,2019,Standard,13459,SSD-19/HSS10/SA2/H-P-CCCM/NGO/13459,Health,,31,101075.097
+South Sudan,19,30,2019,Standard,13459,SSD-19/HSS10/SA2/H-P-CCCM/NGO/13459,Protection,,30,97814.61
+South Sudan,19,30,2019,Standard,13460,SSD-19/HSS10/SA2/H-WASH/NGO/13460,Health,,26.3,107054.939
+South Sudan,19,30,2019,Standard,13460,SSD-19/HSS10/SA2/H-WASH/NGO/13460,"Water, Sanitation and Hygiene",,73.7,299998.061
+South Sudan,19,30,2019,Standard,13614,SSD-19/HSS10/SA2/H-WASH/NGO/13614,Health,,35.29,150249.655887
+South Sudan,19,30,2019,Standard,13614,SSD-19/HSS10/SA2/H-WASH/NGO/13614,"Water, Sanitation and Hygiene",,64.71,275507.374113
+South Sudan,19,30,2019,Standard,13492,SSD-19/HSS10/SA2/L/UN/13492,Logistics,,100,1372000
+South Sudan,19,30,2019,Standard,13450,SSD-19/HSS10/SA2/N/INGO/13450,Nutrition,,100,263793.64
+South Sudan,19,30,2019,Standard,13477,SSD-19/HSS10/SA2/N/INGO/13477,Nutrition,,100,174845.38
+South Sudan,19,30,2019,Standard,13656,SSD-19/HSS10/SA2/N/INGO/13656,Nutrition,,100,154860.67
+South Sudan,19,30,2019,Standard,13669,SSD-19/HSS10/SA2/N/INGO/13669,Nutrition,,100,320582.52
+South Sudan,19,30,2019,Standard,13668,SSD-19/HSS10/SA2/N/UN/13668,Nutrition,,100,142249.39
+South Sudan,19,30,2019,Standard,13452,SSD-19/HSS10/SA2/NFI/INGO/13452,Emergency Shelter and NFI,,100,217500
+South Sudan,19,30,2019,Standard,13483,SSD-19/HSS10/SA2/NFI/INGO/13483,Emergency Shelter and NFI,,100,185000
+South Sudan,19,30,2019,Standard,13551,SSD-19/HSS10/SA2/NFI/INGO/13551,Emergency Shelter and NFI,,100,199305.48
+South Sudan,19,30,2019,Standard,13554,SSD-19/HSS10/SA2/NFI/INGO/13554,Emergency Shelter and NFI,,100,165000.92
+South Sudan,19,30,2019,Standard,13621,SSD-19/HSS10/SA2/NFI/INGO/13621,Emergency Shelter and NFI,,100,112500.2
+South Sudan,19,30,2019,Standard,13638,SSD-19/HSS10/SA2/NFI/INGO/13638,Emergency Shelter and NFI,,100,170000
+South Sudan,19,30,2019,Standard,13427,SSD-19/HSS10/SA2/NFI/NGO/13427,Emergency Shelter and NFI,,100,109750.36
+South Sudan,19,30,2019,Standard,13467,SSD-19/HSS10/SA2/NFI/NGO/13467,Emergency Shelter and NFI,,100,115500.08
+South Sudan,19,30,2019,Standard,13489,SSD-19/HSS10/SA2/NFI/NGO/13489,Emergency Shelter and NFI,,100,108500.68
+South Sudan,19,30,2019,Standard,13622,SSD-19/HSS10/SA2/NFI/NGO/13622,Emergency Shelter and NFI,,100,153265.73
+South Sudan,19,30,2019,Standard,13487,SSD-19/HSS10/SA2/NFI/UN/13487,Emergency Shelter and NFI,,100,589000
+South Sudan,19,30,2019,Standard,13433,SSD-19/HSS10/SA2/NFI-WASH/NGO/13433,Emergency Shelter and NFI,,48.5,139516.37555
+South Sudan,19,30,2019,Standard,13433,SSD-19/HSS10/SA2/NFI-WASH/NGO/13433,"Water, Sanitation and Hygiene",,51.5,148146.25445
+South Sudan,19,30,2019,Standard,13439,SSD-19/HSS10/SA2/N-FSL/NGO/13439,Food Security,,31,116676.9072
+South Sudan,19,30,2019,Standard,13439,SSD-19/HSS10/SA2/N-FSL/NGO/13439,Nutrition,,69,259700.2128
+South Sudan,19,30,2019,Standard,13351,SSD-19/HSS10/SA2/N-FSL-H-P/INGO/13351,Food Security,,11,135850.9845
+South Sudan,19,30,2019,Standard,13351,SSD-19/HSS10/SA2/N-FSL-H-P/INGO/13351,Health,,24.4,301342.1838
+South Sudan,19,30,2019,Standard,13351,SSD-19/HSS10/SA2/N-FSL-H-P/INGO/13351,Nutrition,,48.5,598979.34075
+South Sudan,19,30,2019,Standard,13351,SSD-19/HSS10/SA2/N-FSL-H-P/INGO/13351,Protection,Gender Based Violence as subsidiary clusters,16.1,198836.44095
+South Sudan,19,30,2019,Standard,13647,SSD-19/HSS10/SA2/N-H/INGO/13647,Health,,35.55,220250.675565
+South Sudan,19,30,2019,Standard,13647,SSD-19/HSS10/SA2/N-H/INGO/13647,Nutrition,,64.45,399301.154435
+South Sudan,19,30,2019,Standard,13399,SSD-19/HSS10/SA2/N-H/NGO/13399,Health,,43,153903.4973
+South Sudan,19,30,2019,Standard,13399,SSD-19/HSS10/SA2/N-H/NGO/13399,Nutrition,,57,204011.6127
+South Sudan,19,30,2019,Standard,13559,SSD-19/HSS10/SA2/N-H-P/UN/13559,Health,,35,349061.202
+South Sudan,19,30,2019,Standard,13559,SSD-19/HSS10/SA2/N-H-P/UN/13559,Nutrition,,44,438819.7968
+South Sudan,19,30,2019,Standard,13559,SSD-19/HSS10/SA2/N-H-P/UN/13559,Protection,Child Protection in Emergencies,21,209436.7212
+South Sudan,19,30,2019,Standard,13392,SSD-19/HSS10/SA2/N-P-NFI/INGO/13392,Emergency Shelter and NFI,,24.04,121611.097516
+South Sudan,19,30,2019,Standard,13392,SSD-19/HSS10/SA2/N-P-NFI/INGO/13392,Nutrition,,44.73,226275.557067
+South Sudan,19,30,2019,Standard,13392,SSD-19/HSS10/SA2/N-P-NFI/INGO/13392,Protection,Child Protection in Emergencies,31.23,157983.135417
+South Sudan,19,30,2019,Standard,13472,SSD-19/HSS10/SA2/N-WASH/INGO/13472,Nutrition,,54.64,261998.8
+South Sudan,19,30,2019,Standard,13472,SSD-19/HSS10/SA2/N-WASH/INGO/13472,"Water, Sanitation and Hygiene",,45.36,217501.2
+South Sudan,19,30,2019,Standard,13408,SSD-19/HSS10/SA2/P/INGO/13408,Protection,Gender Based Violence as subsidiary clusters,100,200000.01
+South Sudan,19,30,2019,Standard,13476,SSD-19/HSS10/SA2/P/INGO/13476,Protection,Mine Action,100,585025.91
+South Sudan,19,30,2019,Standard,13521,SSD-19/HSS10/SA2/P/INGO/13521,Protection,,100,500000.03
+South Sudan,19,30,2019,Standard,13547,SSD-19/HSS10/SA2/P/INGO/13547,Protection,Child Protection in Emergencies,100,164000
+South Sudan,19,30,2019,Standard,13561,SSD-19/HSS10/SA2/P/INGO/13561,Protection,Gender Based Violence as subsidiary clusters,100,165372.25
+South Sudan,19,30,2019,Standard,13606,SSD-19/HSS10/SA2/P/INGO/13606,Protection,Mine Action,100,585000
+South Sudan,19,30,2019,Standard,13645,SSD-19/HSS10/SA2/P/INGO/13645,Protection,,100,410000
+South Sudan,19,30,2019,Standard,13353,SSD-19/HSS10/SA2/P/NGO/13353,Protection,,100,150000.09
+South Sudan,19,30,2019,Standard,13368,SSD-19/HSS10/SA2/P/NGO/13368,Protection,,100,100000.8
+South Sudan,19,30,2019,Standard,13407,SSD-19/HSS10/SA2/P/NGO/13407,Protection,Mine Action,100,128592.6
+South Sudan,19,30,2019,Standard,13420,SSD-19/HSS10/SA2/P/NGO/13420,Protection,,100,220000
+South Sudan,19,30,2019,Standard,13432,SSD-19/HSS10/SA2/P/NGO/13432,Protection,Child Protection in Emergencies,100,165000.09
+South Sudan,19,30,2019,Standard,13445,SSD-19/HSS10/SA2/P/NGO/13445,Protection,,100,150000.05
+South Sudan,19,30,2019,Standard,13455,SSD-19/HSS10/SA2/P/NGO/13455,Protection,Gender Based Violence as subsidiary clusters,100,120073.26
+South Sudan,19,30,2019,Standard,13523,SSD-19/HSS10/SA2/P/NGO/13523,Protection,Gender Based Violence as subsidiary clusters,100,120000.52
+South Sudan,19,30,2019,Standard,13534,SSD-19/HSS10/SA2/P/NGO/13534,Protection,,100,279109.5
+South Sudan,19,30,2019,Standard,13550,SSD-19/HSS10/SA2/P/NGO/13550,Protection,Gender Based Violence as subsidiary clusters,100,119999.97
+South Sudan,19,30,2019,Standard,13615,SSD-19/HSS10/SA2/P/NGO/13615,Protection,Gender Based Violence as subsidiary clusters,100,103677
+South Sudan,19,30,2019,Standard,13514,SSD-19/HSS10/SA2/P-E/INGO/13514,Education,,60,300000.024
+South Sudan,19,30,2019,Standard,13514,SSD-19/HSS10/SA2/P-E/INGO/13514,Protection,,40,200000.016
+South Sudan,19,30,2019,Standard,13374,SSD-19/HSS10/SA2/P-FSL/NGO/13374,Food Security,,55.7,150830.29736
+South Sudan,19,30,2019,Standard,13374,SSD-19/HSS10/SA2/P-FSL/NGO/13374,Protection,Gender Based Violence as subsidiary clusters,44.3,119960.18264
+South Sudan,19,30,2019,Standard,13478,SSD-19/HSS10/SA2/P-H/INGO/13478,Health,,50,200005.665
+South Sudan,19,30,2019,Standard,13478,SSD-19/HSS10/SA2/P-H/INGO/13478,Protection,,50,200005.665
+South Sudan,19,30,2019,Standard,13560,SSD-19/HSS10/SA2/P-H-NFI/NGO/13560,Emergency Shelter and NFI,,32,104192.0064
+South Sudan,19,30,2019,Standard,13560,SSD-19/HSS10/SA2/P-H-NFI/NGO/13560,Health,,31,100936.0062
+South Sudan,19,30,2019,Standard,13560,SSD-19/HSS10/SA2/P-H-NFI/NGO/13560,Protection,Gender Based Violence as subsidiary clusters,37,120472.0074
+South Sudan,19,30,2019,Standard,13388,SSD-19/HSS10/SA2/P-H-WASH/NGO/13388,Health,,22.47,100004.759547
+South Sudan,19,30,2019,Standard,13388,SSD-19/HSS10/SA2/P-H-WASH/NGO/13388,Protection,,38.21,170057.047721
+South Sudan,19,30,2019,Standard,13388,SSD-19/HSS10/SA2/P-H-WASH/NGO/13388,"Water, Sanitation and Hygiene",,39.32,174997.202732
+South Sudan,19,30,2019,Standard,13379,SSD-19/HSS10/SA2/P-N/INGO/13379,Nutrition,,48.5,199821.0573
+South Sudan,19,30,2019,Standard,13379,SSD-19/HSS10/SA2/P-N/INGO/13379,Protection,Child Protection in Emergencies,51.5,212181.1227
+South Sudan,19,30,2019,Standard,13569,SSD-19/HSS10/SA2/P-N/NGO/13569,Nutrition,,53,198750.1749
+South Sudan,19,30,2019,Standard,13569,SSD-19/HSS10/SA2/P-N/NGO/13569,Protection,Child Protection in Emergencies,47,176250.1551
+South Sudan,19,30,2019,Standard,13418,SSD-19/HSS10/SA2/WASH/INGO/13418,"Water, Sanitation and Hygiene",,100,449129.43
+South Sudan,19,30,2019,Standard,13470,SSD-19/HSS10/SA2/WASH/INGO/13470,"Water, Sanitation and Hygiene",,100,400000
+South Sudan,19,30,2019,Standard,13501,SSD-19/HSS10/SA2/WASH/INGO/13501,"Water, Sanitation and Hygiene",,100,111292.52
+South Sudan,19,30,2019,Standard,13563,SSD-19/HSS10/SA2/WASH/INGO/13563,"Water, Sanitation and Hygiene",,100,300000.01
+South Sudan,19,30,2019,Standard,13371,SSD-19/HSS10/SA2/WASH/NGO/13371,"Water, Sanitation and Hygiene",,100,280585.33
+South Sudan,19,30,2019,Standard,13451,SSD-19/HSS10/SA2/WASH/NGO/13451,"Water, Sanitation and Hygiene",,100,150000
+South Sudan,19,30,2019,Standard,13488,SSD-19/HSS10/SA2/WASH/NGO/13488,"Water, Sanitation and Hygiene",,100,300000.01
+South Sudan,19,30,2019,Standard,13556,SSD-19/HSS10/SA2/WASH/NGO/13556,"Water, Sanitation and Hygiene",,100,200000.01
+South Sudan,19,30,2019,Standard,13570,SSD-19/HSS10/SA2/WASH/NGO/13570,"Water, Sanitation and Hygiene",,100,195000.71
+South Sudan,19,30,2019,Standard,13574,SSD-19/HSS10/SA2/WASH/NGO/13574,"Water, Sanitation and Hygiene",,100,150000.04
+South Sudan,19,30,2019,Standard,13662,SSD-19/HSS10/SA2/WASH/NGO/13662,"Water, Sanitation and Hygiene",,100,122260.34
+South Sudan,19,30,2019,Standard,13475,SSD-19/HSS10/SA2/WASH/UN/13475,"Water, Sanitation and Hygiene",,100,374169
+South Sudan,19,30,2019,Standard,13350,SSD-19/HSS10/SA2/WASH-FSL/NGO/13350,Food Security,,42.78,179419.32
+South Sudan,19,30,2019,Standard,13350,SSD-19/HSS10/SA2/WASH-FSL/NGO/13350,"Water, Sanitation and Hygiene",,57.22,239980.68
+South Sudan,19,30,2019,Standard,13657,SSD-19/HSS10/SA2/WASH-H-N/INGO/13657,Health,,26.69,200883.0857
+South Sudan,19,30,2019,Standard,13657,SSD-19/HSS10/SA2/WASH-H-N/INGO/13657,Nutrition,,33.45,251762.4285
+South Sudan,19,30,2019,Standard,13657,SSD-19/HSS10/SA2/WASH-H-N/INGO/13657,"Water, Sanitation and Hygiene",,39.86,300007.4858
+South Sudan,19,30,2019,Standard,13532,SSD-19/HSS10/SA2/WASH-N-P/NGO/13532,Nutrition,,17,97920.153
+South Sudan,19,30,2019,Standard,13532,SSD-19/HSS10/SA2/WASH-N-P/NGO/13532,Protection,Child Protection in Emergencies,31,178560.279
+South Sudan,19,30,2019,Standard,13532,SSD-19/HSS10/SA2/WASH-N-P/NGO/13532,"Water, Sanitation and Hygiene",,52,299520.468
+South Sudan,19,30,2019,Standard,13387,SSD-19/HSS10/SA2/WASH-P-NFI/NGO/13387,Emergency Shelter and NFI,,20,104999.87
+South Sudan,19,30,2019,Standard,13387,SSD-19/HSS10/SA2/WASH-P-NFI/NGO/13387,Protection,,23,120749.8505
+South Sudan,19,30,2019,Standard,13387,SSD-19/HSS10/SA2/WASH-P-NFI/NGO/13387,"Water, Sanitation and Hygiene",,57,299249.6295
+South Sudan,19,475,2023,Reserve,25345,CBPF-SSD-23-R-INGO-25345,"Water, Sanitation and Hygiene",,100,300000
+South Sudan,19,475,2023,Reserve,25346,CBPF-SSD-23-R-INGO-25346,Health,,40,220000
+South Sudan,19,475,2023,Reserve,25346,CBPF-SSD-23-R-INGO-25346,Protection,,60,330000
+South Sudan,19,475,2023,Reserve,25360,CBPF-SSD-23-R-INGO-25360,Camp Coordination / Management,,100,899987.45
+South Sudan,19,475,2023,Reserve,25362,CBPF-SSD-23-R-INGO-25362,Health,,43,301000
+South Sudan,19,475,2023,Reserve,25362,CBPF-SSD-23-R-INGO-25362,Nutrition,,28,196000
+South Sudan,19,475,2023,Reserve,25362,CBPF-SSD-23-R-INGO-25362,Protection,,29,203000
+South Sudan,19,475,2023,Reserve,25366,CBPF-SSD-23-R-INGO-25366,Health,,57,199500
+South Sudan,19,475,2023,Reserve,25366,CBPF-SSD-23-R-INGO-25366,Nutrition,,43,150500
+South Sudan,19,475,2023,Reserve,25371,CBPF-SSD-23-R-INGO-25371,Protection,,100,849999.96
+South Sudan,19,475,2023,Reserve,25376,CBPF-SSD-23-R-INGO-25376,"Water, Sanitation and Hygiene",,100,300000
+South Sudan,19,475,2023,Reserve,25399,CBPF-SSD-23-R-INGO-25399,Nutrition,,100,150000
+South Sudan,19,479,2023,Reserve,25537,CBPF-SSD-23-R-INGO-25537,Food Security,,100,1200000
+South Sudan,19,479,2023,Reserve,25539,CBPF-SSD-23-R-INGO-25539,"Water, Sanitation and Hygiene",,100,999996.32
+South Sudan,19,479,2023,Reserve,25544,CBPF-SSD-23-R-INGO-25544,Nutrition,,26,210600
+South Sudan,19,479,2023,Reserve,25544,CBPF-SSD-23-R-INGO-25544,"Water, Sanitation and Hygiene",,74,599400
+South Sudan,19,479,2023,Reserve,25552,CBPF-SSD-23-R-INGO-25552,Nutrition,,34,206620.1046
+South Sudan,19,479,2023,Reserve,25552,CBPF-SSD-23-R-INGO-25552,"Water, Sanitation and Hygiene",,66,401086.0854
+South Sudan,19,479,2023,Reserve,25554,CBPF-SSD-23-R-INGO-25554,Nutrition,,100,760258.05
+South Sudan,19,479,2023,Reserve,25557,CBPF-SSD-23-R-INGO-25557,Nutrition,,100,619999.92
+South Sudan,19,479,2023,Reserve,25559,CBPF-SSD-23-R-INGO-25559,Food Security,,100,800000
+South Sudan,19,479,2023,Reserve,25568,CBPF-SSD-23-R-INGO-25568,Health,,40,374664.512
+South Sudan,19,479,2023,Reserve,25568,CBPF-SSD-23-R-INGO-25568,"Water, Sanitation and Hygiene",,60,561996.768
+South Sudan,19,479,2023,Reserve,25577,CBPF-SSD-23-R-INGO-25577,Health,,100,500000
+South Sudan,19,479,2023,Reserve,25622,CBPF-SSD-23-R-INGO-25622,Health,,60,468000
+South Sudan,19,479,2023,Reserve,25622,CBPF-SSD-23-R-INGO-25622,Nutrition,,40,312000
+South Sudan,19,487,2023,Reserve,25792,CBPF-SSD-23-R-INGO-25792,Protection,,100,300000
+South Sudan,19,487,2023,Reserve,25795,CBPF-SSD-23-R-INGO-25795,"Water, Sanitation and Hygiene",,100,949004.13
+South Sudan,19,487,2023,Reserve,25797,CBPF-SSD-23-R-INGO-25797,Emergency Shelter and NFI,,100,1000000.07
+South Sudan,19,487,2023,Reserve,25819,CBPF-SSD-23-R-INGO-25819,Health,,100,465289.18
+South Sudan,19,487,2023,Reserve,25829,CBPF-SSD-23-R-INGO-25829,Food Security,,40,400000
+South Sudan,19,487,2023,Reserve,25829,CBPF-SSD-23-R-INGO-25829,Nutrition,,60,600000
+South Sudan,19,502,2023,Reserve,26422,CBPF-SSD-23-R-INGO-26422,Protection,,100,300000
+South Sudan,19,502,2023,Reserve,26513,CBPF-SSD-23-R-INGO-26513,Health,,100,350000
+South Sudan,19,502,2023,Reserve,26559,CBPF-SSD-23-R-INGO-26559,"Water, Sanitation and Hygiene",,100,350000
+South Sudan,19,475,2023,Reserve,25356,CBPF-SSD-23-R-NGO-25356,Protection,,100,350000
+South Sudan,19,475,2023,Reserve,25358,CBPF-SSD-23-R-NGO-25358,Multi-purpose CASH,,60,299999.976
+South Sudan,19,475,2023,Reserve,25358,CBPF-SSD-23-R-NGO-25358,Protection,,40,199999.984
+South Sudan,19,475,2023,Reserve,25402,CBPF-SSD-23-R-NGO-25402,Multi-purpose CASH,,100,450000.01
+South Sudan,19,479,2023,Reserve,25543,CBPF-SSD-23-R-NGO-25543,Food Security,,42,504000
+South Sudan,19,479,2023,Reserve,25543,CBPF-SSD-23-R-NGO-25543,"Water, Sanitation and Hygiene",,58,696000
+South Sudan,19,479,2023,Reserve,25546,CBPF-SSD-23-R-NGO-25546,Health,,100,200000
+South Sudan,19,479,2023,Reserve,25565,CBPF-SSD-23-R-NGO-25565,"Water, Sanitation and Hygiene",,100,500000
+South Sudan,19,479,2023,Reserve,25566,CBPF-SSD-23-R-NGO-25566,Health,,100,259999.3
+South Sudan,19,479,2023,Reserve,25619,CBPF-SSD-23-R-NGO-25619,"Water, Sanitation and Hygiene",,100,400000
+South Sudan,19,487,2023,Reserve,25831,CBPF-SSD-23-R-NGO-25831,Protection,,100,200000
+South Sudan,19,502,2023,Reserve,26489,CBPF-SSD-23-R-NGO-26489,Health,,100,374960.1
+South Sudan,19,502,2023,Reserve,26509,CBPF-SSD-23-R-NGO-26509,Emergency Shelter and NFI,,100,375000
+South Sudan,19,502,2023,Reserve,26577,CBPF-SSD-23-R-NGO-26577,Protection,,100,249999.98
+South Sudan,19,470,2023,Reserve,25192,CBPF-SSD-23-R-UN-25192,Logistics,,100,1999942.64
+South Sudan,19,470,2023,Reserve,25195,CBPF-SSD-23-R-UN-25195,Camp Coordination / Management,,100,2000000
+South Sudan,19,470,2023,Reserve,25196,CBPF-SSD-23-R-UN-25196,Emergency Shelter and NFI,,100,4500000
+South Sudan,19,470,2023,Reserve,25198,CBPF-SSD-23-R-UN-25198,"Water, Sanitation and Hygiene",,100,2750000
+South Sudan,19,470,2023,Reserve,25200,CBPF-SSD-23-R-UN-25200,Protection,,100,750000.33
+South Sudan,19,469,2023,Reserve,25202,CBPF-SSD-23-R-UN-25202,Emergency Shelter and NFI,,100,1000000
+South Sudan,19,475,2023,Reserve,25373,CBPF-SSD-23-R-UN-25373,Health,,100,450000
+South Sudan,19,475,2023,Reserve,25382,CBPF-SSD-23-R-UN-25382,Health,,100,900000.01
+South Sudan,19,475,2023,Reserve,25393,CBPF-SSD-23-R-UN-25393,Camp Coordination / Management,,100,1100000
+South Sudan,19,475,2023,Reserve,25398,CBPF-SSD-23-R-UN-25398,"Water, Sanitation and Hygiene",,100,2400000
+South Sudan,19,475,2023,Reserve,25401,CBPF-SSD-23-R-UN-25401,Multi-purpose CASH,,100,737567.31
+South Sudan,19,475,2023,Reserve,25403,CBPF-SSD-23-R-UN-25403,Food Security,,100,1000000
+South Sudan,19,479,2023,Reserve,25556,CBPF-SSD-23-R-UN-25556,Nutrition,,25,483478.375
+South Sudan,19,479,2023,Reserve,25556,CBPF-SSD-23-R-UN-25556,"Water, Sanitation and Hygiene",,75,1450435.125
+South Sudan,19,479,2023,Reserve,25591,CBPF-SSD-23-R-UN-25591,Health,,100,650000
+South Sudan,19,479,2023,Reserve,25608,CBPF-SSD-23-R-UN-25608,Health,,100,2540000.09
+South Sudan,19,487,2023,Reserve,25785,CBPF-SSD-23-R-UN-25785,Logistics,,100,5500000
+South Sudan,19,487,2023,Reserve,25787,CBPF-SSD-23-R-UN-25787,Logistics,,100,499999.98
+South Sudan,19,502,2023,Reserve,26495,CBPF-SSD-23-R-UN-26495,Logistics,,100,3000000
+South Sudan,19,528,2024,Reserve,27492,CBPF-SSD-24-R-INGO-27492,"Water, Sanitation and Hygiene",,100,150000.19
+South Sudan,19,528,2024,Reserve,27496,CBPF-SSD-24-R-INGO-27496,Health,,100,300000
+South Sudan,19,528,2024,Reserve,27498,CBPF-SSD-24-R-INGO-27498,Health,,100,300000
+South Sudan,19,528,2024,Reserve,27499,CBPF-SSD-24-R-INGO-27499,Nutrition,,100,500000
+South Sudan,19,528,2024,Reserve,27500,CBPF-SSD-24-R-INGO-27500,"Water, Sanitation and Hygiene",,100,350000
+South Sudan,19,528,2024,Reserve,27501,CBPF-SSD-24-R-INGO-27501,Protection,,100,400000
+South Sudan,19,528,2024,Reserve,27502,CBPF-SSD-24-R-INGO-27502,Protection,,100,250000
+South Sudan,19,528,2024,Reserve,27537,CBPF-SSD-24-R-INGO-27537,"Water, Sanitation and Hygiene",,100,350000
+South Sudan,19,1341,2024,Reserve,33914,CBPF-SSD-24-R-INGO-33914,Health,,100,258600
+South Sudan,19,1341,2024,Reserve,33933,CBPF-SSD-24-R-INGO-33933,"Water, Sanitation and Hygiene",,100,300162
+South Sudan,19,1341,2024,Reserve,33939,CBPF-SSD-24-R-INGO-33939,Emergency Shelter and NFI,,100,214531
+South Sudan,19,1341,2024,Reserve,33947,CBPF-SSD-24-R-INGO-33947,"Water, Sanitation and Hygiene",,100,495000
+South Sudan,19,1374,2024,Reserve,34498,CBPF-SSD-24-R-INGO-34498,Health,,100,621244.33
+South Sudan,19,1374,2024,Reserve,34508,CBPF-SSD-24-R-INGO-34508,"Water, Sanitation and Hygiene",,100,400000
+South Sudan,19,528,2024,Reserve,27497,CBPF-SSD-24-R-NGO-27497,"Water, Sanitation and Hygiene",,100,149999.98
+South Sudan,19,1341,2024,Reserve,33905,CBPF-SSD-24-R-NGO-33905,Health,,100,269999.52
+South Sudan,19,1341,2024,Reserve,33912,CBPF-SSD-24-R-NGO-33912,Health,,100,249000
+South Sudan,19,1341,2024,Reserve,33925,CBPF-SSD-24-R-NGO-33925,Health,,100,248000
+South Sudan,19,1341,2024,Reserve,33937,CBPF-SSD-24-R-NGO-33937,Emergency Shelter and NFI,,51,392239.7964
+South Sudan,19,1341,2024,Reserve,33937,CBPF-SSD-24-R-NGO-33937,Health,,31,238420.2684
+South Sudan,19,1341,2024,Reserve,33937,CBPF-SSD-24-R-NGO-33937,"Water, Sanitation and Hygiene",,18,138437.5752
+South Sudan,19,1341,2024,Reserve,33940,CBPF-SSD-24-R-NGO-33940,Emergency Shelter and NFI,,44,275065.1156
+South Sudan,19,1341,2024,Reserve,33940,CBPF-SSD-24-R-NGO-33940,"Water, Sanitation and Hygiene",,56,350082.8744
+South Sudan,19,1374,2024,Reserve,34499,CBPF-SSD-24-R-NGO-34499,Health,,100,547249.36
+South Sudan,19,1374,2024,Reserve,34502,CBPF-SSD-24-R-NGO-34502,Health,,100,492801.34
+South Sudan,19,1374,2024,Reserve,34503,CBPF-SSD-24-R-NGO-34503,"Water, Sanitation and Hygiene",,100,649347.44
+South Sudan,19,1374,2024,Reserve,34504,CBPF-SSD-24-R-NGO-34504,"Water, Sanitation and Hygiene",,100,450000
+South Sudan,19,1374,2024,Reserve,34514,CBPF-SSD-24-R-NGO-34514,"Water, Sanitation and Hygiene",,100,271283.99
+South Sudan,19,528,2024,Reserve,27493,CBPF-SSD-24-R-UN-27493,Camp Coordination / Management,,100,750000
+South Sudan,19,528,2024,Reserve,27494,CBPF-SSD-24-R-UN-27494,Logistics,,100,2000000
+South Sudan,19,528,2024,Reserve,27495,CBPF-SSD-24-R-UN-27495,"Water, Sanitation and Hygiene",,100,500000
+South Sudan,19,1341,2024,Reserve,33961,CBPF-SSD-24-R-UN-33961,Health,,100,499991.04
+South Sudan,19,1341,2024,Reserve,33971,CBPF-SSD-24-R-UN-33971,Emergency Shelter and NFI,,40,428185.2
+South Sudan,19,1341,2024,Reserve,33971,CBPF-SSD-24-R-UN-33971,"Water, Sanitation and Hygiene",,60,642277.8
+South Sudan,19,1374,2024,Reserve,34501,CBPF-SSD-24-R-UN-34501,"Water, Sanitation and Hygiene",,100,1899615
+South Sudan,19,1374,2024,Reserve,34520,CBPF-SSD-24-R-UN-34520,Health,,71,426000
+South Sudan,19,1374,2024,Reserve,34520,CBPF-SSD-24-R-UN-34520,"Water, Sanitation and Hygiene",,29,174000
+South Sudan,19,1374,2024,Reserve,34528,CBPF-SSD-24-R-UN-34528,Health,,100,1229030.64
+South Sudan,19,1374,2024,Reserve,34529,CBPF-SSD-24-R-UN-34529,Logistics,,100,800000.01
+South Sudan,19,538,2024,Standard,32726,CBPF-SSD-24-S-INGO-32726,Food Security,,100,375000
+South Sudan,19,538,2024,Standard,32736,CBPF-SSD-24-S-INGO-32736,Education,,52,260000
+South Sudan,19,538,2024,Standard,32736,CBPF-SSD-24-S-INGO-32736,Protection,,48,240000
+South Sudan,19,538,2024,Standard,32760,CBPF-SSD-24-S-INGO-32760,Emergency Shelter and NFI,,21,252420
+South Sudan,19,538,2024,Standard,32760,CBPF-SSD-24-S-INGO-32760,"Water, Sanitation and Hygiene",,79,949580
+South Sudan,19,538,2024,Standard,32773,CBPF-SSD-24-S-INGO-32773,Nutrition,,42,252000
+South Sudan,19,538,2024,Standard,32773,CBPF-SSD-24-S-INGO-32773,"Water, Sanitation and Hygiene",,58,348000
+South Sudan,19,538,2024,Standard,32776,CBPF-SSD-24-S-INGO-32776,Food Security,,30,201442.41
+South Sudan,19,538,2024,Standard,32776,CBPF-SSD-24-S-INGO-32776,Nutrition,,70,470032.29
+South Sudan,19,538,2024,Standard,32777,CBPF-SSD-24-S-INGO-32777,Food Security,,100,911000
+South Sudan,19,538,2024,Standard,32792,CBPF-SSD-24-S-INGO-32792,Health,,100,330000.04
+South Sudan,19,538,2024,Standard,32795,CBPF-SSD-24-S-INGO-32795,Education,,26,244399.4332
+South Sudan,19,538,2024,Standard,32795,CBPF-SSD-24-S-INGO-32795,Protection,,21,197399.5422
+South Sudan,19,538,2024,Standard,32795,CBPF-SSD-24-S-INGO-32795,"Water, Sanitation and Hygiene",,53,498198.8446
+South Sudan,19,538,2024,Standard,32812,CBPF-SSD-24-S-INGO-32812,Health,,39,448500.0039
+South Sudan,19,538,2024,Standard,32812,CBPF-SSD-24-S-INGO-32812,Nutrition,,61,701500.0061
+South Sudan,19,538,2024,Standard,32814,CBPF-SSD-24-S-INGO-32814,Food Security,,100,375000
+South Sudan,19,538,2024,Standard,32865,CBPF-SSD-24-S-INGO-32865,Emergency Shelter and NFI,,56,385280
+South Sudan,19,538,2024,Standard,32865,CBPF-SSD-24-S-INGO-32865,Protection,,44,302720
+South Sudan,19,538,2024,Standard,32873,CBPF-SSD-24-S-INGO-32873,Food Security,,100,303000
+South Sudan,19,538,2024,Standard,32882,CBPF-SSD-24-S-INGO-32882,Food Security,,100,375000.12
+South Sudan,19,538,2024,Standard,32943,CBPF-SSD-24-S-INGO-32943,Nutrition,,22,197999.9978
+South Sudan,19,538,2024,Standard,32943,CBPF-SSD-24-S-INGO-32943,"Water, Sanitation and Hygiene",,78,701999.9922
+South Sudan,19,538,2024,Standard,32945,CBPF-SSD-24-S-INGO-32945,Coordination and Support Services,,100,500000
+South Sudan,19,538,2024,Standard,32713,CBPF-SSD-24-S-NGO-32713,Protection,,100,360000
+South Sudan,19,538,2024,Standard,32731,CBPF-SSD-24-S-NGO-32731,Health,,44,198000
+South Sudan,19,538,2024,Standard,32731,CBPF-SSD-24-S-NGO-32731,Nutrition,,56,252000
+South Sudan,19,538,2024,Standard,32734,CBPF-SSD-24-S-NGO-32734,Protection,,100,250000
+South Sudan,19,538,2024,Standard,32750,CBPF-SSD-24-S-NGO-32750,Education,,50,199999.855
+South Sudan,19,538,2024,Standard,32750,CBPF-SSD-24-S-NGO-32750,Health,,50,199999.855
+South Sudan,19,538,2024,Standard,32755,CBPF-SSD-24-S-NGO-32755,Education,,35,350000
+South Sudan,19,538,2024,Standard,32755,CBPF-SSD-24-S-NGO-32755,Protection,,40,400000
+South Sudan,19,538,2024,Standard,32755,CBPF-SSD-24-S-NGO-32755,"Water, Sanitation and Hygiene",,25,250000
+South Sudan,19,538,2024,Standard,32758,CBPF-SSD-24-S-NGO-32758,Food Security,,20,100199.994
+South Sudan,19,538,2024,Standard,32758,CBPF-SSD-24-S-NGO-32758,Protection,,80,400799.976
+South Sudan,19,538,2024,Standard,32803,CBPF-SSD-24-S-NGO-32803,Education,,100,350000
+South Sudan,19,538,2024,Standard,32813,CBPF-SSD-24-S-NGO-32813,Health,,100,350000
+South Sudan,19,538,2024,Standard,32840,CBPF-SSD-24-S-NGO-32840,"Water, Sanitation and Hygiene",,100,350000
+South Sudan,19,538,2024,Standard,32844,CBPF-SSD-24-S-NGO-32844,Education,,47,352500
+South Sudan,19,538,2024,Standard,32844,CBPF-SSD-24-S-NGO-32844,Protection,,53,397500
+South Sudan,19,538,2024,Standard,32849,CBPF-SSD-24-S-NGO-32849,Emergency Shelter and NFI,,53,341850
+South Sudan,19,538,2024,Standard,32849,CBPF-SSD-24-S-NGO-32849,"Water, Sanitation and Hygiene",,47,303150
+South Sudan,19,538,2024,Standard,32856,CBPF-SSD-24-S-NGO-32856,Protection,,100,400000
+South Sudan,19,538,2024,Standard,32861,CBPF-SSD-24-S-NGO-32861,Education,,70,350000
+South Sudan,19,538,2024,Standard,32861,CBPF-SSD-24-S-NGO-32861,"Water, Sanitation and Hygiene",,30,150000
+South Sudan,19,538,2024,Standard,32887,CBPF-SSD-24-S-NGO-32887,Food Security,,100,374999.69
+South Sudan,19,538,2024,Standard,32903,CBPF-SSD-24-S-NGO-32903,"Water, Sanitation and Hygiene",,100,149999.02
+South Sudan,19,538,2024,Standard,32919,CBPF-SSD-24-S-NGO-32919,Protection,,100,250000
+South Sudan,19,538,2024,Standard,32757,CBPF-SSD-24-S-UN-32757,Emergency Shelter and NFI,,100,1165000
+South Sudan,19,538,2024,Standard,32810,CBPF-SSD-24-S-UN-32810,Health,,100,820000.02
+South Sudan,19,538,2024,Standard,32925,CBPF-SSD-24-S-UN-32925,Food Security,,100,720000.05
+South Sudan,19,538,2024,Standard,32960,CBPF-SSD-24-S-UN-32960,Health,,100,349999.03
+South Sudan,19,1400,2025,Reserve,34947,CBPF-SSD-25-R-INGO-34947,"Water, Sanitation and Hygiene",,100,567000.49
+South Sudan,19,1400,2025,Reserve,34949,CBPF-SSD-25-R-INGO-34949,Emergency Shelter and NFI,,100,238000
+South Sudan,19,1400,2025,Reserve,34955,CBPF-SSD-25-R-INGO-34955,"Water, Sanitation and Hygiene",,100,380000
+South Sudan,19,1430,2025,Reserve,35623,CBPF-SSD-25-R-INGO-35623,Health,,40,400000
+South Sudan,19,1430,2025,Reserve,35623,CBPF-SSD-25-R-INGO-35623,Nutrition,,60,600000
+South Sudan,19,1430,2025,Reserve,35626,CBPF-SSD-25-R-INGO-35626,Health,,100,400000
+South Sudan,19,1430,2025,Reserve,35629,CBPF-SSD-25-R-INGO-35629,"Water, Sanitation and Hygiene",,100,300000.01
+South Sudan,19,1517,2025,Reserve,38343,CBPF-SSD-25-R-INGO-38343,Nutrition,,100,209994.78
+South Sudan,19,1517,2025,Reserve,38350,CBPF-SSD-25-R-INGO-38350,Health,,50,175000
+South Sudan,19,1517,2025,Reserve,38350,CBPF-SSD-25-R-INGO-38350,Nutrition,,50,175000
+South Sudan,19,1517,2025,Reserve,38355,CBPF-SSD-25-R-INGO-38355,Health,,50,165550
+South Sudan,19,1517,2025,Reserve,38355,CBPF-SSD-25-R-INGO-38355,Nutrition,,50,165550
+South Sudan,19,1517,2025,Reserve,38369,CBPF-SSD-25-R-INGO-38369,Nutrition,,46,224741.096
+South Sudan,19,1517,2025,Reserve,38369,CBPF-SSD-25-R-INGO-38369,"Water, Sanitation and Hygiene",,54,263826.504
+South Sudan,19,1517,2025,Reserve,38374,CBPF-SSD-25-R-INGO-38374,Food Security,,48,176252.5296
+South Sudan,19,1517,2025,Reserve,38374,CBPF-SSD-25-R-INGO-38374,Nutrition,,52,190940.2404
+South Sudan,19,1517,2025,Reserve,38385,CBPF-SSD-25-R-INGO-38385,"Water, Sanitation and Hygiene",,100,300000.18
+South Sudan,19,1520,2025,Reserve,38554,CBPF-SSD-25-R-INGO-38554,Emergency Shelter and NFI,,100,331527.75
+South Sudan,19,1520,2025,Reserve,38563,CBPF-SSD-25-R-INGO-38563,Health,,37,220068.6
+South Sudan,19,1520,2025,Reserve,38563,CBPF-SSD-25-R-INGO-38563,Protection,,63,374711.4
+South Sudan,19,1520,2025,Reserve,38576,CBPF-SSD-25-R-INGO-38576,Nutrition,,100,401314.69
+South Sudan,19,1400,2025,Reserve,34943,CBPF-SSD-25-R-NGO-34943,Emergency Shelter and NFI,,100,339000
+South Sudan,19,1400,2025,Reserve,34944,CBPF-SSD-25-R-NGO-34944,Protection,,100,239990.3
+South Sudan,19,1400,2025,Reserve,34946,CBPF-SSD-25-R-NGO-34946,Health,,100,359999.96
+South Sudan,19,1400,2025,Reserve,34950,CBPF-SSD-25-R-NGO-34950,Health,,100,320000
+South Sudan,19,1400,2025,Reserve,35132,CBPF-SSD-25-R-NGO-35132,Protection,,100,329999.98
+South Sudan,19,1430,2025,Reserve,35617,CBPF-SSD-25-R-NGO-35617,"Water, Sanitation and Hygiene",,100,150000.3
+South Sudan,19,1430,2025,Reserve,35620,CBPF-SSD-25-R-NGO-35620,Protection,,100,200000
+South Sudan,19,1430,2025,Reserve,35622,CBPF-SSD-25-R-NGO-35622,Health,,100,266666.98
+South Sudan,19,1449,2025,Reserve,36010,CBPF-SSD-25-R-NGO-36010,Health,,100,150000
+South Sudan,19,1449,2025,Reserve,36012,CBPF-SSD-25-R-NGO-36012,Health,,100,249731.58
+South Sudan,19,1517,2025,Reserve,38321,CBPF-SSD-25-R-NGO-38321,Health,,100,626499.45
+South Sudan,19,1517,2025,Reserve,38327,CBPF-SSD-25-R-NGO-38327,"Water, Sanitation and Hygiene",,100,134400
+South Sudan,19,1517,2025,Reserve,38331,CBPF-SSD-25-R-NGO-38331,Health,,100,210000
+South Sudan,19,1517,2025,Reserve,38332,CBPF-SSD-25-R-NGO-38332,"Water, Sanitation and Hygiene",,100,129000.1
+South Sudan,19,1517,2025,Reserve,38334,CBPF-SSD-25-R-NGO-38334,Food Security,,100,404654.74
+South Sudan,19,1517,2025,Reserve,38339,CBPF-SSD-25-R-NGO-38339,Food Security,,32,184576
+South Sudan,19,1517,2025,Reserve,38339,CBPF-SSD-25-R-NGO-38339,Health,,34,196112
+South Sudan,19,1517,2025,Reserve,38339,CBPF-SSD-25-R-NGO-38339,Nutrition,,34,196112
+South Sudan,19,1517,2025,Reserve,38341,CBPF-SSD-25-R-NGO-38341,Health,,42,361922.4
+South Sudan,19,1517,2025,Reserve,38341,CBPF-SSD-25-R-NGO-38341,Nutrition,,42,361922.4
+South Sudan,19,1517,2025,Reserve,38341,CBPF-SSD-25-R-NGO-38341,"Water, Sanitation and Hygiene",,16,137875.2
+South Sudan,19,1517,2025,Reserve,38357,CBPF-SSD-25-R-NGO-38357,Health,,100,140000
+South Sudan,19,1517,2025,Reserve,38359,CBPF-SSD-25-R-NGO-38359,Food Security,,100,191565.4
+South Sudan,19,1517,2025,Reserve,38361,CBPF-SSD-25-R-NGO-38361,Food Security,,58,156373.8
+South Sudan,19,1517,2025,Reserve,38361,CBPF-SSD-25-R-NGO-38361,"Water, Sanitation and Hygiene",,42,113236.2
+South Sudan,19,1517,2025,Reserve,38372,CBPF-SSD-25-R-NGO-38372,Nutrition,,100,437499.14
+South Sudan,19,1517,2025,Reserve,38392,CBPF-SSD-25-R-NGO-38392,Food Security,,71,348606.45
+South Sudan,19,1517,2025,Reserve,38392,CBPF-SSD-25-R-NGO-38392,"Water, Sanitation and Hygiene",,29,142388.55
+South Sudan,19,1517,2025,Reserve,38397,CBPF-SSD-25-R-NGO-38397,"Water, Sanitation and Hygiene",,100,96000
+South Sudan,19,1517,2025,Reserve,38403,CBPF-SSD-25-R-NGO-38403,Food Security,,49,214913.8432
+South Sudan,19,1517,2025,Reserve,38403,CBPF-SSD-25-R-NGO-38403,Health,,51,223685.8368
+South Sudan,19,1517,2025,Reserve,38404,CBPF-SSD-25-R-NGO-38404,Food Security,,58,165135.2974
+South Sudan,19,1517,2025,Reserve,38404,CBPF-SSD-25-R-NGO-38404,"Water, Sanitation and Hygiene",,42,119580.7326
+South Sudan,19,1517,2025,Reserve,38411,CBPF-SSD-25-R-NGO-38411,Food Security,,49,133280
+South Sudan,19,1517,2025,Reserve,38411,CBPF-SSD-25-R-NGO-38411,Nutrition,,51,138720
+South Sudan,19,1520,2025,Reserve,38532,CBPF-SSD-25-R-NGO-38532,Emergency Shelter and NFI,,100,320260
+South Sudan,19,1520,2025,Reserve,38535,CBPF-SSD-25-R-NGO-38535,"Water, Sanitation and Hygiene",,100,311635.79
+South Sudan,19,1520,2025,Reserve,38542,CBPF-SSD-25-R-NGO-38542,"Water, Sanitation and Hygiene",,100,322599
+South Sudan,19,1520,2025,Reserve,38556,CBPF-SSD-25-R-NGO-38556,Health,,100,215119
+South Sudan,19,1520,2025,Reserve,38571,CBPF-SSD-25-R-NGO-38571,Nutrition,,100,299914.58
+South Sudan,19,1520,2025,Reserve,38575,CBPF-SSD-25-R-NGO-38575,Protection,,100,285465.3
+South Sudan,19,1520,2025,Reserve,38583,CBPF-SSD-25-R-NGO-38583,Protection,,100,73983.01
+South Sudan,19,1400,2025,Reserve,34954,CBPF-SSD-25-R-UN-34954,Emergency Shelter and NFI,,100,226000
+South Sudan,19,1430,2025,Reserve,35612,CBPF-SSD-25-R-UN-35612,Health,,30,129999.9
+South Sudan,19,1430,2025,Reserve,35612,CBPF-SSD-25-R-UN-35612,"Water, Sanitation and Hygiene",,70,303333.1
+South Sudan,19,1430,2025,Reserve,35628,CBPF-SSD-25-R-UN-35628,Health,,100,250000
+South Sudan,19,1449,2025,Reserve,36004,CBPF-SSD-25-R-UN-36004,Camp Coordination / Management,,20,400000
+South Sudan,19,1449,2025,Reserve,36004,CBPF-SSD-25-R-UN-36004,"Water, Sanitation and Hygiene",,80,1600000
+South Sudan,19,1449,2025,Reserve,36050,CBPF-SSD-25-R-UN-36050,Health,,100,399998.51
+South Sudan,19,1517,2025,Reserve,38329,CBPF-SSD-25-R-UN-38329,"Water, Sanitation and Hygiene",,100,959999.85
+South Sudan,19,1517,2025,Reserve,38337,CBPF-SSD-25-R-UN-38337,Health,,100,600000
+South Sudan,19,1517,2025,Reserve,38405,CBPF-SSD-25-R-UN-38405,Food Security,,100,1620000
+South Sudan,19,1517,2025,Reserve,38557,CBPF-SSD-25-R-UN-38557,Nutrition,,100,897375.49
+South Sudan,19,1520,2025,Reserve,38582,CBPF-SSD-25-R-UN-38582,Health,,100,191867.96
+South Sudan,19,1520,2025,Reserve,38619,CBPF-SSD-25-R-UN-38619,Emergency Shelter and NFI,,51,281088.03
+South Sudan,19,1520,2025,Reserve,38619,CBPF-SSD-25-R-UN-38619,"Water, Sanitation and Hygiene",,49,270064.97
+South Sudan,19,1517,2025,Reserve,38672,CBPF-SSD-25-R-UN-38672,Health,,100,300000.42
+South Sudan,19,1520,2025,Reserve,38675,CBPF-SSD-25-R-UN-38675,Health,,100,99999.99
+South Sudan,19,1431,2025,Standard,36181,CBPF-SSD-25-S-INGO-36181,Emergency Shelter and NFI,,28,170800.0504
+South Sudan,19,1431,2025,Standard,36181,CBPF-SSD-25-S-INGO-36181,Protection,,72,439200.1296
+South Sudan,19,1431,2025,Standard,36190,CBPF-SSD-25-S-INGO-36190,Nutrition,,100,300000
+South Sudan,19,1431,2025,Standard,36215,CBPF-SSD-25-S-INGO-36215,Education,,16,96640
+South Sudan,19,1431,2025,Standard,36215,CBPF-SSD-25-S-INGO-36215,Food Security,,32,193280
+South Sudan,19,1431,2025,Standard,36215,CBPF-SSD-25-S-INGO-36215,Nutrition,,20,120800
+South Sudan,19,1431,2025,Standard,36215,CBPF-SSD-25-S-INGO-36215,"Water, Sanitation and Hygiene",,32,193280
+South Sudan,19,1431,2025,Standard,36235,CBPF-SSD-25-S-INGO-36235,Protection,,100,222000
+South Sudan,19,1431,2025,Standard,36245,CBPF-SSD-25-S-INGO-36245,Nutrition,,43,180600
+South Sudan,19,1431,2025,Standard,36245,CBPF-SSD-25-S-INGO-36245,"Water, Sanitation and Hygiene",,57,239400
+South Sudan,19,1431,2025,Standard,36316,CBPF-SSD-25-S-INGO-36316,"Water, Sanitation and Hygiene",,100,288000
+South Sudan,19,1431,2025,Standard,36331,CBPF-SSD-25-S-INGO-36331,Education,,100,115000
+South Sudan,19,1431,2025,Standard,36361,CBPF-SSD-25-S-INGO-36361,Food Security,,60,240000
+South Sudan,19,1431,2025,Standard,36361,CBPF-SSD-25-S-INGO-36361,Protection,,40,160000
+South Sudan,19,1431,2025,Standard,36368,CBPF-SSD-25-S-INGO-36368,Food Security,,100,288000
+South Sudan,19,1431,2025,Standard,36387,CBPF-SSD-25-S-INGO-36387,Education,,37,227550.0111
+South Sudan,19,1431,2025,Standard,36387,CBPF-SSD-25-S-INGO-36387,Protection,,16,98400.0048
+South Sudan,19,1431,2025,Standard,36387,CBPF-SSD-25-S-INGO-36387,"Water, Sanitation and Hygiene",,47,289050.0141
+South Sudan,19,1431,2025,Standard,36480,CBPF-SSD-25-S-INGO-36480,Health,,100,474000
+South Sudan,19,1431,2025,Standard,36530,CBPF-SSD-25-S-INGO-36530,Protection,,100,240999.99
+South Sudan,19,1431,2025,Standard,36627,CBPF-SSD-25-S-INGO-36627,Emergency Shelter and NFI,,100,251960.36
+South Sudan,19,1431,2025,Standard,36158,CBPF-SSD-25-S-NGO-36158,Protection,,100,284997.62
+South Sudan,19,1431,2025,Standard,36177,CBPF-SSD-25-S-NGO-36177,Emergency Shelter and NFI,,100,210000
+South Sudan,19,1431,2025,Standard,36185,CBPF-SSD-25-S-NGO-36185,Food Security,,29,291742.3838
+South Sudan,19,1431,2025,Standard,36185,CBPF-SSD-25-S-NGO-36185,Health,,31,311862.5482
+South Sudan,19,1431,2025,Standard,36185,CBPF-SSD-25-S-NGO-36185,Protection,,40,402403.288
+South Sudan,19,1431,2025,Standard,36196,CBPF-SSD-25-S-NGO-36196,Health,,46,466440
+South Sudan,19,1431,2025,Standard,36196,CBPF-SSD-25-S-NGO-36196,Nutrition,,18,182520
+South Sudan,19,1431,2025,Standard,36196,CBPF-SSD-25-S-NGO-36196,"Water, Sanitation and Hygiene",,36,365040
+South Sudan,19,1431,2025,Standard,36197,CBPF-SSD-25-S-NGO-36197,"Water, Sanitation and Hygiene",,100,240000
+South Sudan,19,1431,2025,Standard,36198,CBPF-SSD-25-S-NGO-36198,Health,,45,571950
+South Sudan,19,1431,2025,Standard,36198,CBPF-SSD-25-S-NGO-36198,Nutrition,,21,266910
+South Sudan,19,1431,2025,Standard,36198,CBPF-SSD-25-S-NGO-36198,"Water, Sanitation and Hygiene",,34,432140
+South Sudan,19,1431,2025,Standard,36201,CBPF-SSD-25-S-NGO-36201,Emergency Shelter and NFI,,15,142919.967
+South Sudan,19,1431,2025,Standard,36201,CBPF-SSD-25-S-NGO-36201,Health,,33,314423.9274
+South Sudan,19,1431,2025,Standard,36201,CBPF-SSD-25-S-NGO-36201,Protection,,52,495455.8856
+South Sudan,19,1431,2025,Standard,36214,CBPF-SSD-25-S-NGO-36214,Emergency Shelter and NFI,,100,140000
+South Sudan,19,1431,2025,Standard,36232,CBPF-SSD-25-S-NGO-36232,Protection,,100,246000
+South Sudan,19,1431,2025,Standard,36243,CBPF-SSD-25-S-NGO-36243,Education,,100,136000
+South Sudan,19,1431,2025,Standard,36255,CBPF-SSD-25-S-NGO-36255,Emergency Shelter and NFI,,100,209947.38
+South Sudan,19,1431,2025,Standard,36257,CBPF-SSD-25-S-NGO-36257,Food Security,,62,362700
+South Sudan,19,1431,2025,Standard,36257,CBPF-SSD-25-S-NGO-36257,Nutrition,,38,222300
+South Sudan,19,1431,2025,Standard,36266,CBPF-SSD-25-S-NGO-36266,Health,,100,378961.9
+South Sudan,19,1431,2025,Standard,36268,CBPF-SSD-25-S-NGO-36268,Food Security,,47,427699.7039
+South Sudan,19,1431,2025,Standard,36268,CBPF-SSD-25-S-NGO-36268,Nutrition,,25,227499.8425
+South Sudan,19,1431,2025,Standard,36268,CBPF-SSD-25-S-NGO-36268,Protection,,28,254799.8236
+South Sudan,19,1431,2025,Standard,36295,CBPF-SSD-25-S-NGO-36295,Education,,100,222000
+South Sudan,19,1431,2025,Standard,36298,CBPF-SSD-25-S-NGO-36298,Emergency Shelter and NFI,,100,112000
+South Sudan,19,1431,2025,Standard,36301,CBPF-SSD-25-S-NGO-36301,"Water, Sanitation and Hygiene",,100,360000.07
+South Sudan,19,1431,2025,Standard,36317,CBPF-SSD-25-S-NGO-36317,Protection,,100,333000
+South Sudan,19,1431,2025,Standard,36324,CBPF-SSD-25-S-NGO-36324,Health,,100,252000
+South Sudan,19,1431,2025,Standard,36325,CBPF-SSD-25-S-NGO-36325,Emergency Shelter and NFI,,100,167999.99
+South Sudan,19,1431,2025,Standard,36360,CBPF-SSD-25-S-NGO-36360,Food Security,,100,241000.02
+South Sudan,19,1431,2025,Standard,36451,CBPF-SSD-25-S-NGO-36451,Health,,100,380000
+South Sudan,19,1431,2025,Standard,36452,CBPF-SSD-25-S-NGO-36452,Protection,,100,131000
+South Sudan,19,1431,2025,Standard,36155,CBPF-SSD-25-S-UN-36155,Health,,100,1158494.01
+South Sudan,19,1431,2025,Standard,36333,CBPF-SSD-25-S-UN-36333,Emergency Shelter and NFI,,43,602000.0043
+South Sudan,19,1431,2025,Standard,36333,CBPF-SSD-25-S-UN-36333,"Water, Sanitation and Hygiene",,57,798000.0057
+South Sudan,19,1431,2025,Standard,36468,CBPF-SSD-25-S-UN-36468,Health,,63,483849.0342
+South Sudan,19,1431,2025,Standard,36468,CBPF-SSD-25-S-UN-36468,Protection,,37,284165.3058
+South Sudan,19,1431,2025,Standard,36581,CBPF-SSD-25-S-UN-36581,Food Security,,100,1199000
+South Sudan,19,1431,2025,Standard,36655,CBPF-SSD-25-S-UN-36655,Nutrition,,100,500000.01
+South Sudan,19,268,2020,Reserve,16404,SSD-20/HSS10/RA1/H/UN/16404,Health,,100,4999500.01
+South Sudan,19,297,2020,Reserve,17639,SSD-20/HSS10/RA2/CCS/UN/17639,Coordination and Support Services,,100,500000
+South Sudan,19,297,2020,Reserve,17630,SSD-20/HSS10/RA2/FSL/INGO/17630,Food Security,,100,282255.65
+South Sudan,19,297,2020,Reserve,17616,SSD-20/HSS10/RA2/H-FSL/INGO/17616,Food Security,,12.7,50812.7
+South Sudan,19,297,2020,Reserve,17616,SSD-20/HSS10/RA2/H-FSL/INGO/17616,Health,,87.3,349287.3
+South Sudan,19,297,2020,Reserve,17641,SSD-20/HSS10/RA2/H-N/INGO/17641,Health,,55,357500
+South Sudan,19,297,2020,Reserve,17641,SSD-20/HSS10/RA2/H-N/INGO/17641,Nutrition,,45,292500
+South Sudan,19,297,2020,Reserve,17619,SSD-20/HSS10/RA2/N/INGO/17619,Nutrition,,100,300000
+South Sudan,19,297,2020,Reserve,17643,SSD-20/HSS10/RA2/N/INGO/17643,Nutrition,,100,293596.83
+South Sudan,19,297,2020,Reserve,17632,SSD-20/HSS10/RA2/N/NGO/17632,Nutrition,,100,299835.4
+South Sudan,19,297,2020,Reserve,17624,SSD-20/HSS10/RA2/NFI/INGO/17624,Emergency Shelter and NFI,,100,444106.26
+South Sudan,19,297,2020,Reserve,17627,SSD-20/HSS10/RA2/NFI/INGO/17627,Emergency Shelter and NFI,,100,339269.91
+South Sudan,19,297,2020,Reserve,17622,SSD-20/HSS10/RA2/NFI/NGO/17622,Emergency Shelter and NFI,,100,310202.2
+South Sudan,19,297,2020,Reserve,17638,SSD-20/HSS10/RA2/NFI/NGO/17638,Emergency Shelter and NFI,,100,306757.17
+South Sudan,19,297,2020,Reserve,17626,SSD-20/HSS10/RA2/N-FSL/INGO/17626,Food Security,,18.17,75535.2338
+South Sudan,19,297,2020,Reserve,17626,SSD-20/HSS10/RA2/N-FSL/INGO/17626,Nutrition,,81.83,340178.7662
+South Sudan,19,297,2020,Reserve,17614,SSD-20/HSS10/RA2/P/INGO/17614,Protection,,100,300000
+South Sudan,19,297,2020,Reserve,17621,SSD-20/HSS10/RA2/P/NGO/17621,Protection,Child Protection in Emergencies,100,500000.02
+South Sudan,19,297,2020,Reserve,17628,SSD-20/HSS10/RA2/P/NGO/17628,Protection,Child Protection in Emergencies,100,400000
+South Sudan,19,297,2020,Reserve,17646,SSD-20/HSS10/RA2/P-FSL/NGO/17646,Food Security,,22,65152.0298
+South Sudan,19,297,2020,Reserve,17646,SSD-20/HSS10/RA2/P-FSL/NGO/17646,Protection,Gender Based Violence as subsidiary clusters,78,230993.5602
+South Sudan,19,297,2020,Reserve,17636,SSD-20/HSS10/RA2/P-H/INGO/17636,Health,,37.5,294740.82375
+South Sudan,19,297,2020,Reserve,17636,SSD-20/HSS10/RA2/P-H/INGO/17636,Protection,Gender Based Violence as subsidiary clusters,62.5,491234.70625
+South Sudan,19,297,2020,Reserve,17637,SSD-20/HSS10/RA2/P-N/INGO/17637,Nutrition,,40,196425.252
+South Sudan,19,297,2020,Reserve,17637,SSD-20/HSS10/RA2/P-N/INGO/17637,Protection,Child Protection in Emergencies,60,294637.878
+South Sudan,19,297,2020,Reserve,17647,SSD-20/HSS10/RA2/WASH/INGO/17647,"Water, Sanitation and Hygiene",,100,300000.04
+South Sudan,19,297,2020,Reserve,17617,SSD-20/HSS10/RA2/WASH/NGO/17617,"Water, Sanitation and Hygiene",,100,343072.82
+South Sudan,19,297,2020,Reserve,17629,SSD-20/HSS10/RA2/WASH/NGO/17629,"Water, Sanitation and Hygiene",,100,345358.79
+South Sudan,19,297,2020,Reserve,17631,SSD-20/HSS10/RA2/WASH/NGO/17631,"Water, Sanitation and Hygiene",,100,300000.05
+South Sudan,19,297,2020,Reserve,17644,SSD-20/HSS10/RA2/WASH-FSL/INGO/17644,Food Security,,7,26276.7925
+South Sudan,19,297,2020,Reserve,17644,SSD-20/HSS10/RA2/WASH-FSL/INGO/17644,"Water, Sanitation and Hygiene",,93,349105.9575
+South Sudan,19,297,2020,Reserve,17615,SSD-20/HSS10/RA2/WASH-NFI-FSL/NGO/17615,Emergency Shelter and NFI,,44,320455.2912
+South Sudan,19,297,2020,Reserve,17615,SSD-20/HSS10/RA2/WASH-NFI-FSL/NGO/17615,Food Security,,8,58264.5984
+South Sudan,19,297,2020,Reserve,17615,SSD-20/HSS10/RA2/WASH-NFI-FSL/NGO/17615,"Water, Sanitation and Hygiene",,48,349587.5904
+South Sudan,19,312,2020,Reserve,18010,SSD-20/HSS10/RA3/FSL/INGO/18010,Food Security,,100,374563.45
+South Sudan,19,312,2020,Reserve,18030,SSD-20/HSS10/RA3/FSL/INGO/18030,Food Security,,100,194133.1
+South Sudan,19,312,2020,Reserve,18049,SSD-20/HSS10/RA3/FSL/UN/18049,Food Security,,100,2000000.13
+South Sudan,19,312,2020,Reserve,18006,SSD-20/HSS10/RA3/H/NGO/18006,Health,,100,389126.99
+South Sudan,19,312,2020,Reserve,18011,SSD-20/HSS10/RA3/H/NGO/18011,Health,,100,400000
+South Sudan,19,312,2020,Reserve,18025,SSD-20/HSS10/RA3/H/NGO/18025,Health,,100,300000
+South Sudan,19,312,2020,Reserve,18027,SSD-20/HSS10/RA3/H/NGO/18027,Health,,100,300000
+South Sudan,19,312,2020,Reserve,18021,SSD-20/HSS10/RA3/H/UN/18021,Health,,100,999999.11
+South Sudan,19,312,2020,Reserve,18024,SSD-20/HSS10/RA3/N/INGO/18024,Nutrition,,100,372102.6
+South Sudan,19,312,2020,Reserve,18028,SSD-20/HSS10/RA3/N/INGO/18028,Nutrition,,100,134768.18
+South Sudan,19,312,2020,Reserve,18020,SSD-20/HSS10/RA3/N-FSL/INGO/18020,Food Security,,54,325686.8196
+South Sudan,19,312,2020,Reserve,18020,SSD-20/HSS10/RA3/N-FSL/INGO/18020,Nutrition,,46,277436.9204
+South Sudan,19,312,2020,Reserve,18043,SSD-20/HSS10/RA3/N-L/UN/18043,Logistics,,50,1000000
+South Sudan,19,312,2020,Reserve,18043,SSD-20/HSS10/RA3/N-L/UN/18043,Nutrition,,50,1000000
+South Sudan,19,312,2020,Reserve,18019,SSD-20/HSS10/RA3/P/INGO/18019,Protection,Gender Based Violence as subsidiary clusters,100,200000
+South Sudan,19,312,2020,Reserve,18008,SSD-20/HSS10/RA3/P-FSL-H-N/INGO/18008,Food Security,,26,587055.0556
+South Sudan,19,312,2020,Reserve,18008,SSD-20/HSS10/RA3/P-FSL-H-N/INGO/18008,Health,,25,564476.015
+South Sudan,19,312,2020,Reserve,18008,SSD-20/HSS10/RA3/P-FSL-H-N/INGO/18008,Nutrition,,29,654792.1774
+South Sudan,19,312,2020,Reserve,18008,SSD-20/HSS10/RA3/P-FSL-H-N/INGO/18008,Protection,Child Protection in Emergencies,20,451580.812
+South Sudan,19,312,2020,Reserve,18023,SSD-20/HSS10/RA3/P-N/INGO/18023,Nutrition,,60,445407
+South Sudan,19,312,2020,Reserve,18023,SSD-20/HSS10/RA3/P-N/INGO/18023,Protection,,40,296938
+South Sudan,19,312,2020,Reserve,18018,SSD-20/HSS10/RA3/WASH/UN/18018,"Water, Sanitation and Hygiene",,100,1700000
+South Sudan,19,243,2020,Standard,15293,SSD-20/HSS10/SA1/CCCM/NGO/15293,Camp Coordination / Management,,100,330954
+South Sudan,19,243,2020,Standard,15587,SSD-20/HSS10/SA1/CCCM/NGO/15587,Camp Coordination / Management,,100,349999.68
+South Sudan,19,243,2020,Standard,15235,SSD-20/HSS10/SA1/CCCM-NFI-P/INGO/15235,Camp Coordination / Management,,27,165173.7123
+South Sudan,19,243,2020,Standard,15235,SSD-20/HSS10/SA1/CCCM-NFI-P/INGO/15235,Emergency Shelter and NFI,,39,238584.2511
+South Sudan,19,243,2020,Standard,15235,SSD-20/HSS10/SA1/CCCM-NFI-P/INGO/15235,Protection,,34,207996.5266
+South Sudan,19,243,2020,Standard,15245,SSD-20/HSS10/SA1/CCCM-NFI-P/INGO/15245,Camp Coordination / Management,,27,182616.3819
+South Sudan,19,243,2020,Standard,15245,SSD-20/HSS10/SA1/CCCM-NFI-P/INGO/15245,Emergency Shelter and NFI,,39,263779.2183
+South Sudan,19,243,2020,Standard,15245,SSD-20/HSS10/SA1/CCCM-NFI-P/INGO/15245,Protection,,34,229961.3698
+South Sudan,19,243,2020,Standard,15597,SSD-20/HSS10/SA1/CCCM-NFI-P/UN/15597,Camp Coordination / Management,,26,238544.8
+South Sudan,19,243,2020,Standard,15597,SSD-20/HSS10/SA1/CCCM-NFI-P/UN/15597,Emergency Shelter and NFI,,52,477089.6
+South Sudan,19,243,2020,Standard,15597,SSD-20/HSS10/SA1/CCCM-NFI-P/UN/15597,Protection,,22,201845.6
+South Sudan,19,243,2020,Standard,15685,SSD-20/HSS10/SA1/CCCM-P-NFI/INGO/15685,Camp Coordination / Management,,27,181184.6637
+South Sudan,19,243,2020,Standard,15685,SSD-20/HSS10/SA1/CCCM-P-NFI/INGO/15685,Emergency Shelter and NFI,,39,261711.1809
+South Sudan,19,243,2020,Standard,15685,SSD-20/HSS10/SA1/CCCM-P-NFI/INGO/15685,Protection,Gender Based Violence as subsidiary clusters,34,228158.4654
+South Sudan,19,243,2020,Standard,15712,SSD-20/HSS10/SA1/CCS/INGO/15712,Coordination and Support Services,,100,500000
+South Sudan,19,243,2020,Standard,15505,SSD-20/HSS10/SA1/E-P/INGO/15505,Education,,71,317528.3939
+South Sudan,19,243,2020,Standard,15505,SSD-20/HSS10/SA1/E-P/INGO/15505,Protection,Child Protection in Emergencies,29,129694.6961
+South Sudan,19,243,2020,Standard,15616,SSD-20/HSS10/SA1/E-P/INGO/15616,Education,,71,319500.5964
+South Sudan,19,243,2020,Standard,15616,SSD-20/HSS10/SA1/E-P/INGO/15616,Protection,Child Protection in Emergencies,29,130500.2436
+South Sudan,19,243,2020,Standard,15643,SSD-20/HSS10/SA1/E-P/INGO/15643,Education,,71,319478.3024
+South Sudan,19,243,2020,Standard,15643,SSD-20/HSS10/SA1/E-P/INGO/15643,Protection,Child Protection in Emergencies,29,130491.1376
+South Sudan,19,243,2020,Standard,15652,SSD-20/HSS10/SA1/E-P/INGO/15652,Education,,71,319500.0142
+South Sudan,19,243,2020,Standard,15652,SSD-20/HSS10/SA1/E-P/INGO/15652,Protection,Child Protection in Emergencies,29,130500.0058
+South Sudan,19,243,2020,Standard,15663,SSD-20/HSS10/SA1/E-P/INGO/15663,Education,,71,355000
+South Sudan,19,243,2020,Standard,15663,SSD-20/HSS10/SA1/E-P/INGO/15663,Protection,,29,145000
+South Sudan,19,243,2020,Standard,15684,SSD-20/HSS10/SA1/E-P/INGO/15684,Education,,71,354999.5456
+South Sudan,19,243,2020,Standard,15684,SSD-20/HSS10/SA1/E-P/INGO/15684,Protection,,29,144999.8144
+South Sudan,19,243,2020,Standard,15516,SSD-20/HSS10/SA1/E-P/NGO/15516,Education,,71,213000.355
+South Sudan,19,243,2020,Standard,15516,SSD-20/HSS10/SA1/E-P/NGO/15516,Protection,,29,87000.145
+South Sudan,19,243,2020,Standard,15677,SSD-20/HSS10/SA1/E-P/NGO/15677,Education,,71,284000.5538
+South Sudan,19,243,2020,Standard,15677,SSD-20/HSS10/SA1/E-P/NGO/15677,Protection,,29,116000.2262
+South Sudan,19,243,2020,Standard,15321,SSD-20/HSS10/SA1/FSL/INGO/15321,Food Security,,100,216928.5
+South Sudan,19,243,2020,Standard,15513,SSD-20/HSS10/SA1/FSL/INGO/15513,Food Security,,100,261318.97
+South Sudan,19,243,2020,Standard,15474,SSD-20/HSS10/SA1/FSL/NGO/15474,Food Security,,100,211824.48
+South Sudan,19,243,2020,Standard,15594,SSD-20/HSS10/SA1/FSL/NGO/15594,Food Security,,100,283455.16
+South Sudan,19,243,2020,Standard,15636,SSD-20/HSS10/SA1/FSL/NGO/15636,Food Security,,100,243943.31
+South Sudan,19,243,2020,Standard,15658,SSD-20/HSS10/SA1/FSL/NGO/15658,Food Security,,100,178987.67
+South Sudan,19,243,2020,Standard,15682,SSD-20/HSS10/SA1/FSL/NGO/15682,Food Security,,100,205530.95
+South Sudan,19,243,2020,Standard,15696,SSD-20/HSS10/SA1/FSL/NGO/15696,Food Security,,100,228373.85
+South Sudan,19,243,2020,Standard,15267,SSD-20/HSS10/SA1/H/INGO/15267,Health,,100,299998.31
+South Sudan,19,243,2020,Standard,15320,SSD-20/HSS10/SA1/H/NGO/15320,Health,,100,350000
+South Sudan,19,243,2020,Standard,15419,SSD-20/HSS10/SA1/H/NGO/15419,Health,,100,350000.21
+South Sudan,19,243,2020,Standard,15471,SSD-20/HSS10/SA1/H/NGO/15471,Health,,100,400000
+South Sudan,19,243,2020,Standard,15538,SSD-20/HSS10/SA1/H/NGO/15538,Health,,100,384913.24
+South Sudan,19,243,2020,Standard,15556,SSD-20/HSS10/SA1/H/UN/15556,Health,,100,300000
+South Sudan,19,243,2020,Standard,15671,SSD-20/HSS10/SA1/H-FSL-N-P-WASH/INGO/15671,Food Security,,14,287280.0406
+South Sudan,19,243,2020,Standard,15671,SSD-20/HSS10/SA1/H-FSL-N-P-WASH/INGO/15671,Health,,23,471960.0667
+South Sudan,19,243,2020,Standard,15671,SSD-20/HSS10/SA1/H-FSL-N-P-WASH/INGO/15671,Nutrition,,24,492480.0696
+South Sudan,19,243,2020,Standard,15671,SSD-20/HSS10/SA1/H-FSL-N-P-WASH/INGO/15671,Protection,,24,492480.0696
+South Sudan,19,243,2020,Standard,15671,SSD-20/HSS10/SA1/H-FSL-N-P-WASH/INGO/15671,"Water, Sanitation and Hygiene",,15,307800.0435
+South Sudan,19,243,2020,Standard,15517,SSD-20/HSS10/SA1/H-FSL-N-P-WASH/NGO/15517,Food Security,,20,172000
+South Sudan,19,243,2020,Standard,15517,SSD-20/HSS10/SA1/H-FSL-N-P-WASH/NGO/15517,Health,,24,206400
+South Sudan,19,243,2020,Standard,15517,SSD-20/HSS10/SA1/H-FSL-N-P-WASH/NGO/15517,Nutrition,,23,197800
+South Sudan,19,243,2020,Standard,15517,SSD-20/HSS10/SA1/H-FSL-N-P-WASH/NGO/15517,Protection,,15,129000
+South Sudan,19,243,2020,Standard,15517,SSD-20/HSS10/SA1/H-FSL-N-P-WASH/NGO/15517,"Water, Sanitation and Hygiene",,18,154800
+South Sudan,19,243,2020,Standard,15174,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/INGO/15174,Food Security,,20,300000.018
+South Sudan,19,243,2020,Standard,15174,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/INGO/15174,Health,,24,360000.0216
+South Sudan,19,243,2020,Standard,15174,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/INGO/15174,Nutrition,,23,345000.0207
+South Sudan,19,243,2020,Standard,15174,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/INGO/15174,Protection,Child Protection in Emergencies,15,225000.0135
+South Sudan,19,243,2020,Standard,15174,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/INGO/15174,"Water, Sanitation and Hygiene",,18,270000.0162
+South Sudan,19,243,2020,Standard,15445,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/INGO/15445,Food Security,,20,239999.912
+South Sudan,19,243,2020,Standard,15445,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/INGO/15445,Health,,24,287999.8944
+South Sudan,19,243,2020,Standard,15445,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/INGO/15445,Nutrition,,23,275999.8988
+South Sudan,19,243,2020,Standard,15445,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/INGO/15445,Protection,,15,179999.934
+South Sudan,19,243,2020,Standard,15445,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/INGO/15445,"Water, Sanitation and Hygiene",,18,215999.9208
+South Sudan,19,243,2020,Standard,15674,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/INGO/15674,Food Security,,20,239995.142
+South Sudan,19,243,2020,Standard,15674,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/INGO/15674,Health,,24,287994.1704
+South Sudan,19,243,2020,Standard,15674,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/INGO/15674,Nutrition,,23,275994.4133
+South Sudan,19,243,2020,Standard,15674,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/INGO/15674,Protection,Gender Based Violence as subsidiary clusters,15,179996.3565
+South Sudan,19,243,2020,Standard,15674,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/INGO/15674,"Water, Sanitation and Hygiene",,18,215995.6278
+South Sudan,19,243,2020,Standard,15609,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/NGO/15609,Food Security,,20,240000
+South Sudan,19,243,2020,Standard,15609,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/NGO/15609,Health,,24,288000
+South Sudan,19,243,2020,Standard,15609,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/NGO/15609,Nutrition,,23,276000
+South Sudan,19,243,2020,Standard,15609,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/NGO/15609,Protection,Child Protection in Emergencies,15,180000
+South Sudan,19,243,2020,Standard,15609,SSD-20/HSS10/SA1/H-N-FSL-WASH-P/NGO/15609,"Water, Sanitation and Hygiene",,18,216000
+South Sudan,19,243,2020,Standard,15383,SSD-20/HSS10/SA1/H-N-P-FSL-WASH/INGO/15383,Food Security,,15,333663.0315
+South Sudan,19,243,2020,Standard,15383,SSD-20/HSS10/SA1/H-N-P-FSL-WASH/INGO/15383,Health,,20,444884.042
+South Sudan,19,243,2020,Standard,15383,SSD-20/HSS10/SA1/H-N-P-FSL-WASH/INGO/15383,Nutrition,,20,444884.042
+South Sudan,19,243,2020,Standard,15383,SSD-20/HSS10/SA1/H-N-P-FSL-WASH/INGO/15383,Protection,,25,556105.0525
+South Sudan,19,243,2020,Standard,15383,SSD-20/HSS10/SA1/H-N-P-FSL-WASH/INGO/15383,"Water, Sanitation and Hygiene",,20,444884.042
+South Sudan,19,243,2020,Standard,15626,SSD-20/HSS10/SA1/H-N-WASH-FSL-P/UN/15626,Food Security,,18,213067.728
+South Sudan,19,243,2020,Standard,15626,SSD-20/HSS10/SA1/H-N-WASH-FSL-P/UN/15626,Health,,24,284090.304
+South Sudan,19,243,2020,Standard,15626,SSD-20/HSS10/SA1/H-N-WASH-FSL-P/UN/15626,Nutrition,,23,272253.208
+South Sudan,19,243,2020,Standard,15626,SSD-20/HSS10/SA1/H-N-WASH-FSL-P/UN/15626,Protection,,15,177556.44
+South Sudan,19,243,2020,Standard,15626,SSD-20/HSS10/SA1/H-N-WASH-FSL-P/UN/15626,"Water, Sanitation and Hygiene",,20,236741.92
+South Sudan,19,243,2020,Standard,15619,SSD-20/HSS10/SA1/L/UN/15619,Logistics,,100,1200000.05
+South Sudan,19,243,2020,Standard,15407,SSD-20/HSS10/SA1/N/INGO/15407,Nutrition,,100,299999.11
+South Sudan,19,243,2020,Standard,15526,SSD-20/HSS10/SA1/N/INGO/15526,Nutrition,,100,300000
+South Sudan,19,243,2020,Standard,15219,SSD-20/HSS10/SA1/N/NGO/15219,Nutrition,,100,300000.05
+South Sudan,19,243,2020,Standard,15373,SSD-20/HSS10/SA1/N/NGO/15373,Nutrition,,100,300000.86
+South Sudan,19,243,2020,Standard,15167,SSD-20/HSS10/SA1/NFI/INGO/15167,Emergency Shelter and NFI,,100,300000
+South Sudan,19,243,2020,Standard,15226,SSD-20/HSS10/SA1/NFI/INGO/15226,Emergency Shelter and NFI,,100,293478.32
+South Sudan,19,243,2020,Standard,15462,SSD-20/HSS10/SA1/NFI/NGO/15462,Emergency Shelter and NFI,,100,300000.07
+South Sudan,19,243,2020,Standard,15520,SSD-20/HSS10/SA1/NFI/NGO/15520,Emergency Shelter and NFI,,100,299994.93
+South Sudan,19,243,2020,Standard,15576,SSD-20/HSS10/SA1/NFI/NGO/15576,Emergency Shelter and NFI,,100,300000
+South Sudan,19,243,2020,Standard,15484,SSD-20/HSS10/SA1/N-H-WASH-FSL-P/INGO/15484,Food Security,,5,87217.9495
+South Sudan,19,243,2020,Standard,15484,SSD-20/HSS10/SA1/N-H-WASH-FSL-P/INGO/15484,Health,,29,505864.1071
+South Sudan,19,243,2020,Standard,15484,SSD-20/HSS10/SA1/N-H-WASH-FSL-P/INGO/15484,Nutrition,,25,436089.7475
+South Sudan,19,243,2020,Standard,15484,SSD-20/HSS10/SA1/N-H-WASH-FSL-P/INGO/15484,Protection,,21,366315.3879
+South Sudan,19,243,2020,Standard,15484,SSD-20/HSS10/SA1/N-H-WASH-FSL-P/INGO/15484,"Water, Sanitation and Hygiene",,20,348871.798
+South Sudan,19,243,2020,Standard,15357,SSD-20/HSS10/SA1/N-P-FSL-WASH-H/INGO/15357,Food Security,,20,98291.29
+South Sudan,19,243,2020,Standard,15357,SSD-20/HSS10/SA1/N-P-FSL-WASH-H/INGO/15357,Health,,24,117949.548
+South Sudan,19,243,2020,Standard,15357,SSD-20/HSS10/SA1/N-P-FSL-WASH-H/INGO/15357,Nutrition,,23,113034.9835
+South Sudan,19,243,2020,Standard,15357,SSD-20/HSS10/SA1/N-P-FSL-WASH-H/INGO/15357,Protection,,15,73718.4675
+South Sudan,19,243,2020,Standard,15357,SSD-20/HSS10/SA1/N-P-FSL-WASH-H/INGO/15357,"Water, Sanitation and Hygiene",,18,88462.161
+South Sudan,19,243,2020,Standard,15338,SSD-20/HSS10/SA1/P/INGO/15338,Protection,Gender Based Violence as subsidiary clusters,100,380000
+South Sudan,19,243,2020,Standard,15356,SSD-20/HSS10/SA1/P/INGO/15356,Protection,Child Protection in Emergencies,100,400000.81
+South Sudan,19,243,2020,Standard,15376,SSD-20/HSS10/SA1/P/INGO/15376,Protection,Mine Action,100,550000.01
+South Sudan,19,243,2020,Standard,15390,SSD-20/HSS10/SA1/P/INGO/15390,Protection,Gender Based Violence as subsidiary clusters,100,340000.16
+South Sudan,19,243,2020,Standard,15497,SSD-20/HSS10/SA1/P/INGO/15497,Protection,,100,288518.9
+South Sudan,19,243,2020,Standard,15181,SSD-20/HSS10/SA1/P/NGO/15181,Protection,Gender Based Violence as subsidiary clusters,100,339999.99
+South Sudan,19,243,2020,Standard,15202,SSD-20/HSS10/SA1/P/NGO/15202,Protection,Gender Based Violence as subsidiary clusters,100,300004.89
+South Sudan,19,243,2020,Standard,15249,SSD-20/HSS10/SA1/P/NGO/15249,Protection,,100,349980.69
+South Sudan,19,243,2020,Standard,15298,SSD-20/HSS10/SA1/P/NGO/15298,Protection,Child Protection in Emergencies,100,400000.24
+South Sudan,19,243,2020,Standard,15528,SSD-20/HSS10/SA1/P/NGO/15528,Protection,Gender Based Violence as subsidiary clusters,100,340001.06
+South Sudan,19,243,2020,Standard,15605,SSD-20/HSS10/SA1/P/NGO/15605,Protection,,100,300000.39
+South Sudan,19,243,2020,Standard,15302,SSD-20/HSS10/SA1/WASH/INGO/15302,"Water, Sanitation and Hygiene",,100,299997.39
+South Sudan,19,243,2020,Standard,15683,SSD-20/HSS10/SA1/WASH/INGO/15683,"Water, Sanitation and Hygiene",,100,500000
+South Sudan,19,243,2020,Standard,15319,SSD-20/HSS10/SA1/WASH/NGO/15319,"Water, Sanitation and Hygiene",,100,299997.43
+South Sudan,19,243,2020,Standard,15371,SSD-20/HSS10/SA1/WASH/NGO/15371,"Water, Sanitation and Hygiene",,100,300000.72
+South Sudan,19,243,2020,Standard,15586,SSD-20/HSS10/SA1/WASH/NGO/15586,"Water, Sanitation and Hygiene",,100,300000
+South Sudan,19,360,2021,Reserve,20259,SSD-21/HSS10/RA1/CCCM-WASH-NFI/UN/20259,Camp Coordination / Management,,14.59,492790.675718
+South Sudan,19,360,2021,Reserve,20259,SSD-21/HSS10/RA1/CCCM-WASH-NFI/UN/20259,Emergency Shelter and NFI,,50.39,1701968.618878
+South Sudan,19,360,2021,Reserve,20259,SSD-21/HSS10/RA1/CCCM-WASH-NFI/UN/20259,"Water, Sanitation and Hygiene",,35.02,1182832.725404
+South Sudan,19,360,2021,Reserve,20244,SSD-21/HSS10/RA1/E-P/INGO/20244,Education,,65,298860.5425
+South Sudan,19,360,2021,Reserve,20244,SSD-21/HSS10/RA1/E-P/INGO/20244,Protection,,35,160924.9075
+South Sudan,19,360,2021,Reserve,20253,SSD-21/HSS10/RA1/E-P/INGO/20253,Education,,68,474619.3756
+South Sudan,19,360,2021,Reserve,20253,SSD-21/HSS10/RA1/E-P/INGO/20253,Protection,,32,223350.2944
+South Sudan,19,360,2021,Reserve,20228,SSD-21/HSS10/RA1/FSL/NGO/20228,Food Security,,100,301973.55
+South Sudan,19,360,2021,Reserve,20229,SSD-21/HSS10/RA1/FSL-E-WASH-N/INGO/20229,Education,,5,124828.927
+South Sudan,19,360,2021,Reserve,20229,SSD-21/HSS10/RA1/FSL-E-WASH-N/INGO/20229,Food Security,,64,1597810.2656
+South Sudan,19,360,2021,Reserve,20229,SSD-21/HSS10/RA1/FSL-E-WASH-N/INGO/20229,Nutrition,,13,324555.2102
+South Sudan,19,360,2021,Reserve,20229,SSD-21/HSS10/RA1/FSL-E-WASH-N/INGO/20229,"Water, Sanitation and Hygiene",,18,449384.1372
+South Sudan,19,360,2021,Reserve,20235,SSD-21/HSS10/RA1/H/INGO/20235,Health,,100,296826.84
+South Sudan,19,360,2021,Reserve,20241,SSD-21/HSS10/RA1/H/INGO/20241,Health,,100,300000
+South Sudan,19,360,2021,Reserve,20222,SSD-21/HSS10/RA1/H/NGO/20222,Health,,100,470000
+South Sudan,19,360,2021,Reserve,20225,SSD-21/HSS10/RA1/H/NGO/20225,Health,,100,444864
+South Sudan,19,360,2021,Reserve,20250,SSD-21/HSS10/RA1/H/NGO/20250,Health,,100,448074.66
+South Sudan,19,360,2021,Reserve,20239,SSD-21/HSS10/RA1/H/UN/20239,Health,,100,1000000.6
+South Sudan,19,360,2021,Reserve,20270,SSD-21/HSS10/RA1/H/UN/20270,Health,,100,300000.12
+South Sudan,19,360,2021,Reserve,20266,SSD-21/HSS10/RA1/H-FSL/NGO/20266,Food Security,,61.62,431283.950448
+South Sudan,19,360,2021,Reserve,20266,SSD-21/HSS10/RA1/H-FSL/NGO/20266,Health,,38.38,268625.089552
+South Sudan,19,360,2021,Reserve,20232,SSD-21/HSS10/RA1/H-P-WASH-N/INGO/20232,Health,,22.5,450000
+South Sudan,19,360,2021,Reserve,20232,SSD-21/HSS10/RA1/H-P-WASH-N/INGO/20232,Nutrition,,29.25,585000
+South Sudan,19,360,2021,Reserve,20232,SSD-21/HSS10/RA1/H-P-WASH-N/INGO/20232,Protection,,30.75,615000
+South Sudan,19,360,2021,Reserve,20232,SSD-21/HSS10/RA1/H-P-WASH-N/INGO/20232,"Water, Sanitation and Hygiene",,17.5,350000
+South Sudan,19,360,2021,Reserve,20223,SSD-21/HSS10/RA1/L/UN/20223,Logistics,,100,899477.43
+South Sudan,19,360,2021,Reserve,20267,SSD-21/HSS10/RA1/N/INGO/20267,Nutrition,,100,226119.3
+South Sudan,19,360,2021,Reserve,20233,SSD-21/HSS10/RA1/NFI/INGO/20233,Emergency Shelter and NFI,,100,438118.56
+South Sudan,19,360,2021,Reserve,20234,SSD-21/HSS10/RA1/NFI/NGO/20234,Emergency Shelter and NFI,,100,300000.18
+South Sudan,19,360,2021,Reserve,20251,SSD-21/HSS10/RA1/NFI-FSL/NGO/20251,Emergency Shelter and NFI,,88.64,364015.636544
+South Sudan,19,360,2021,Reserve,20251,SSD-21/HSS10/RA1/NFI-FSL/NGO/20251,Food Security,,11.36,46651.823456
+South Sudan,19,360,2021,Reserve,20226,SSD-21/HSS10/RA1/NFI-WASH/NGO/20226,Emergency Shelter and NFI,,46,174216.1818
+South Sudan,19,360,2021,Reserve,20226,SSD-21/HSS10/RA1/NFI-WASH/NGO/20226,"Water, Sanitation and Hygiene",,54,204514.6482
+South Sudan,19,360,2021,Reserve,20252,SSD-21/HSS10/RA1/P/NGO/20252,Protection,Child Protection in Emergencies,100,470000
+South Sudan,19,360,2021,Reserve,20257,SSD-21/HSS10/RA1/P-CCCM/INGO/20257,Camp Coordination / Management,,50,235000
+South Sudan,19,360,2021,Reserve,20257,SSD-21/HSS10/RA1/P-CCCM/INGO/20257,Protection,Gender Based Violence as subsidiary clusters,50,235000
+South Sudan,19,360,2021,Reserve,20238,SSD-21/HSS10/RA1/P-WASH/INGO/20238,Protection,,34.8,156226.36284
+South Sudan,19,360,2021,Reserve,20238,SSD-21/HSS10/RA1/P-WASH/INGO/20238,"Water, Sanitation and Hygiene",,65.2,292699.96716
+South Sudan,19,360,2021,Reserve,20237,SSD-21/HSS10/RA1/WASH/INGO/20237,"Water, Sanitation and Hygiene",,100,312637.2
+South Sudan,19,360,2021,Reserve,20247,SSD-21/HSS10/RA1/WASH/INGO/20247,"Water, Sanitation and Hygiene",,100,300000
+South Sudan,19,360,2021,Reserve,20268,SSD-21/HSS10/RA1/WASH/INGO/20268,"Water, Sanitation and Hygiene",,100,359800.46
+South Sudan,19,360,2021,Reserve,20261,SSD-21/HSS10/RA1/WASH/NGO/20261,"Water, Sanitation and Hygiene",,100,296584.31
+South Sudan,19,360,2021,Reserve,20224,SSD-21/HSS10/RA1/WASH/UN/20224,"Water, Sanitation and Hygiene",,100,747297.07
+South Sudan,19,343,2021,Standard,19490,SSD-21/HSS10/SA1/CCCM-H-NFI-WASH/UN/19490,Camp Coordination / Management,,25,957262.455
+South Sudan,19,343,2021,Standard,19490,SSD-21/HSS10/SA1/CCCM-H-NFI-WASH/UN/19490,Emergency Shelter and NFI,,5,191452.491
+South Sudan,19,343,2021,Standard,19490,SSD-21/HSS10/SA1/CCCM-H-NFI-WASH/UN/19490,Health,,15,574357.473
+South Sudan,19,343,2021,Standard,19490,SSD-21/HSS10/SA1/CCCM-H-NFI-WASH/UN/19490,"Water, Sanitation and Hygiene",,55,2105977.401
+South Sudan,19,343,2021,Standard,19466,SSD-21/HSS10/SA1/CCCM-NFI/INGO/19466,Camp Coordination / Management,,62.8,246176.05652
+South Sudan,19,343,2021,Standard,19466,SSD-21/HSS10/SA1/CCCM-NFI/INGO/19466,Emergency Shelter and NFI,,37.2,145824.03348
+South Sudan,19,343,2021,Standard,19735,SSD-21/HSS10/SA1/CCCM-NFI-P/INGO/19735,Camp Coordination / Management,,11.8,99698.14218
+South Sudan,19,343,2021,Standard,19735,SSD-21/HSS10/SA1/CCCM-NFI-P/INGO/19735,Emergency Shelter and NFI,,39.3,332045.50743
+South Sudan,19,343,2021,Standard,19735,SSD-21/HSS10/SA1/CCCM-NFI-P/INGO/19735,Protection,,48.9,413155.86039
+South Sudan,19,343,2021,Standard,19723,SSD-21/HSS10/SA1/CCCM-NFI-P-WASH/INGO/19723,Camp Coordination / Management,,45,502122.348
+South Sudan,19,343,2021,Standard,19723,SSD-21/HSS10/SA1/CCCM-NFI-P-WASH/INGO/19723,Emergency Shelter and NFI,,11,122741.0184
+South Sudan,19,343,2021,Standard,19723,SSD-21/HSS10/SA1/CCCM-NFI-P-WASH/INGO/19723,Protection,,37,412856.1528
+South Sudan,19,343,2021,Standard,19723,SSD-21/HSS10/SA1/CCCM-NFI-P-WASH/INGO/19723,"Water, Sanitation and Hygiene",,7,78107.9208
+South Sudan,19,343,2021,Standard,19442,SSD-21/HSS10/SA1/CCCM-P-NFI-WASH/UN/19442,Camp Coordination / Management,,23.91,561353.4807
+South Sudan,19,343,2021,Standard,19442,SSD-21/HSS10/SA1/CCCM-P-NFI-WASH/UN/19442,Emergency Shelter and NFI,,24.1,565814.257
+South Sudan,19,343,2021,Standard,19442,SSD-21/HSS10/SA1/CCCM-P-NFI-WASH/UN/19442,Protection,Gender Based Violence as subsidiary clusters,14.35,336905.9995
+South Sudan,19,343,2021,Standard,19442,SSD-21/HSS10/SA1/CCCM-P-NFI-WASH/UN/19442,"Water, Sanitation and Hygiene",,37.64,883703.2628
+South Sudan,19,343,2021,Standard,19430,SSD-21/HSS10/SA1/CCS/INGO/19430,Coordination and Support Services,,100,500000
+South Sudan,19,343,2021,Standard,19541,SSD-21/HSS10/SA1/E/INGO/19541,Education,,100,391018.44
+South Sudan,19,343,2021,Standard,19569,SSD-21/HSS10/SA1/E/INGO/19569,Education,,100,319112.55
+South Sudan,19,343,2021,Standard,19386,SSD-21/HSS10/SA1/E/NGO/19386,Education,,100,254318.28
+South Sudan,19,343,2021,Standard,19602,SSD-21/HSS10/SA1/E/NGO/19602,Education,,100,251208.82
+South Sudan,19,343,2021,Standard,19702,SSD-21/HSS10/SA1/E/NGO/19702,Education,,100,268956
+South Sudan,19,343,2021,Standard,19755,SSD-21/HSS10/SA1/E/NGO/19755,Education,,100,244409.4
+South Sudan,19,343,2021,Standard,19710,SSD-21/HSS10/SA1/E-FSL-NFI/INGO/19710,Education,,33,243696.3837
+South Sudan,19,343,2021,Standard,19710,SSD-21/HSS10/SA1/E-FSL-NFI/INGO/19710,Emergency Shelter and NFI,,31,228926.9059
+South Sudan,19,343,2021,Standard,19710,SSD-21/HSS10/SA1/E-FSL-NFI/INGO/19710,Food Security,,36,265850.6004
+South Sudan,19,343,2021,Standard,19403,SSD-21/HSS10/SA1/E-NFI-P-WASH-N/INGO/19403,Education,,18,257297.9976
+South Sudan,19,343,2021,Standard,19403,SSD-21/HSS10/SA1/E-NFI-P-WASH-N/INGO/19403,Emergency Shelter and NFI,,15,214414.998
+South Sudan,19,343,2021,Standard,19403,SSD-21/HSS10/SA1/E-NFI-P-WASH-N/INGO/19403,Nutrition,,21,300180.9972
+South Sudan,19,343,2021,Standard,19403,SSD-21/HSS10/SA1/E-NFI-P-WASH-N/INGO/19403,Protection,,21,300180.9972
+South Sudan,19,343,2021,Standard,19403,SSD-21/HSS10/SA1/E-NFI-P-WASH-N/INGO/19403,"Water, Sanitation and Hygiene",,25,357358.33
+South Sudan,19,343,2021,Standard,19405,SSD-21/HSS10/SA1/E-P/INGO/19405,Education,,40,308411.132
+South Sudan,19,343,2021,Standard,19405,SSD-21/HSS10/SA1/E-P/INGO/19405,Protection,,60,462616.698
+South Sudan,19,343,2021,Standard,19598,SSD-21/HSS10/SA1/E-P/INGO/19598,Education,,36,280848.096
+South Sudan,19,343,2021,Standard,19598,SSD-21/HSS10/SA1/E-P/INGO/19598,Protection,Child Protection in Emergencies,64,499285.504
+South Sudan,19,343,2021,Standard,19669,SSD-21/HSS10/SA1/FSL/INGO/19669,Food Security,,100,408293.81
+South Sudan,19,343,2021,Standard,19483,SSD-21/HSS10/SA1/FSL/NGO/19483,Food Security,,100,335630.32
+South Sudan,19,343,2021,Standard,19736,SSD-21/HSS10/SA1/FSL/UN/19736,Food Security,,100,499851.01
+South Sudan,19,343,2021,Standard,19621,SSD-21/HSS10/SA1/FSL-H-N/INGO/19621,Food Security,,30,403819.248
+South Sudan,19,343,2021,Standard,19621,SSD-21/HSS10/SA1/FSL-H-N/INGO/19621,Health,,28,376897.9648
+South Sudan,19,343,2021,Standard,19621,SSD-21/HSS10/SA1/FSL-H-N/INGO/19621,Nutrition,,42,565346.9472
+South Sudan,19,343,2021,Standard,19460,SSD-21/HSS10/SA1/FSL-P/INGO/19460,Food Security,,68.25,643797.4452
+South Sudan,19,343,2021,Standard,19460,SSD-21/HSS10/SA1/FSL-P/INGO/19460,Protection,Gender Based Violence as subsidiary clusters,31.75,299495.5148
+South Sudan,19,343,2021,Standard,19339,SSD-21/HSS10/SA1/H/INGO/19339,Health,,100,300000.03
+South Sudan,19,343,2021,Standard,19416,SSD-21/HSS10/SA1/H/INGO/19416,Health,,100,1187054
+South Sudan,19,343,2021,Standard,19581,SSD-21/HSS10/SA1/H/INGO/19581,Health,,100,299999.94
+South Sudan,19,343,2021,Standard,19691,SSD-21/HSS10/SA1/H/INGO/19691,Health,,100,1335219.67
+South Sudan,19,343,2021,Standard,19389,SSD-21/HSS10/SA1/H/NGO/19389,Health,,100,499999.91
+South Sudan,19,343,2021,Standard,19450,SSD-21/HSS10/SA1/H/NGO/19450,Health,,100,350000
+South Sudan,19,343,2021,Standard,19573,SSD-21/HSS10/SA1/H/UN/19573,Health,,100,599684.43
+South Sudan,19,343,2021,Standard,19674,SSD-21/HSS10/SA1/H/UN/19674,Health,,100,317405.23
+South Sudan,19,343,2021,Standard,19302,SSD-21/HSS10/SA1/H-N/INGO/19302,Health,,48,301068.48
+South Sudan,19,343,2021,Standard,19302,SSD-21/HSS10/SA1/H-N/INGO/19302,Nutrition,,52,326157.52
+South Sudan,19,343,2021,Standard,19500,SSD-21/HSS10/SA1/H-N/INGO/19500,Health,,73,596188.2479
+South Sudan,19,343,2021,Standard,19500,SSD-21/HSS10/SA1/H-N/INGO/19500,Nutrition,,27,220507.9821
+South Sudan,19,343,2021,Standard,19451,SSD-21/HSS10/SA1/H-P/INGO/19451,Health,,36.84,408529.988832
+South Sudan,19,343,2021,Standard,19451,SSD-21/HSS10/SA1/H-P/INGO/19451,Protection,,63.16,700400.491168
+South Sudan,19,343,2021,Standard,19454,SSD-21/HSS10/SA1/H-P/INGO/19454,Health,,70.4,711645.35552
+South Sudan,19,343,2021,Standard,19454,SSD-21/HSS10/SA1/H-P/INGO/19454,Protection,,29.6,299214.52448
+South Sudan,19,343,2021,Standard,19425,SSD-21/HSS10/SA1/H-P-E-N/INGO/19425,Education,,22,252380.1214
+South Sudan,19,343,2021,Standard,19425,SSD-21/HSS10/SA1/H-P-E-N/INGO/19425,Health,,26,298267.4162
+South Sudan,19,343,2021,Standard,19425,SSD-21/HSS10/SA1/H-P-E-N/INGO/19425,Nutrition,,26,298267.4162
+South Sudan,19,343,2021,Standard,19425,SSD-21/HSS10/SA1/H-P-E-N/INGO/19425,Protection,,26,298267.4162
+South Sudan,19,343,2021,Standard,19666,SSD-21/HSS10/SA1/H-P-NFI/NGO/19666,Emergency Shelter and NFI,,30,149700
+South Sudan,19,343,2021,Standard,19666,SSD-21/HSS10/SA1/H-P-NFI/NGO/19666,Health,,40,199600
+South Sudan,19,343,2021,Standard,19666,SSD-21/HSS10/SA1/H-P-NFI/NGO/19666,Protection,,30,149700
+South Sudan,19,343,2021,Standard,19644,SSD-21/HSS10/SA1/L/UN/19644,Logistics,,100,2499946.87
+South Sudan,19,343,2021,Standard,19444,SSD-21/HSS10/SA1/L-CCS/UN/19444,Coordination and Support Services,,14,228566.1518
+South Sudan,19,343,2021,Standard,19444,SSD-21/HSS10/SA1/L-CCS/UN/19444,Logistics,,86,1404049.2182
+South Sudan,19,343,2021,Standard,19575,SSD-21/HSS10/SA1/N/INGO/19575,Nutrition,,100,733455.04
+South Sudan,19,343,2021,Standard,19722,SSD-21/HSS10/SA1/N/INGO/19722,Nutrition,,100,225976.64
+South Sudan,19,343,2021,Standard,19653,SSD-21/HSS10/SA1/NFI-P/NGO/19653,Emergency Shelter and NFI,,76,379676.3008
+South Sudan,19,343,2021,Standard,19653,SSD-21/HSS10/SA1/NFI-P/NGO/19653,Protection,Child Protection in Emergencies,24,119897.7792
+South Sudan,19,343,2021,Standard,19286,SSD-21/HSS10/SA1/NFI-P-WASH/INGO/19286,Emergency Shelter and NFI,,24,280319.82
+South Sudan,19,343,2021,Standard,19286,SSD-21/HSS10/SA1/NFI-P-WASH/INGO/19286,Protection,,47,548959.6475
+South Sudan,19,343,2021,Standard,19286,SSD-21/HSS10/SA1/NFI-P-WASH/INGO/19286,"Water, Sanitation and Hygiene",,29,338719.7825
+South Sudan,19,343,2021,Standard,19289,SSD-21/HSS10/SA1/NFI-WASH/INGO/19289,Emergency Shelter and NFI,,18.75,143837.619375
+South Sudan,19,343,2021,Standard,19289,SSD-21/HSS10/SA1/NFI-WASH/INGO/19289,"Water, Sanitation and Hygiene",,81.25,623296.350625
+South Sudan,19,343,2021,Standard,19564,SSD-21/HSS10/SA1/NFI-WASH/INGO/19564,Emergency Shelter and NFI,,46,299551.5354
+South Sudan,19,343,2021,Standard,19564,SSD-21/HSS10/SA1/NFI-WASH/INGO/19564,"Water, Sanitation and Hygiene",,54,351647.4546
+South Sudan,19,343,2021,Standard,19372,SSD-21/HSS10/SA1/N-FSL/INGO/19372,Food Security,,38.9,246479.93828
+South Sudan,19,343,2021,Standard,19372,SSD-21/HSS10/SA1/N-FSL/INGO/19372,Nutrition,,61.1,387144.58172
+South Sudan,19,343,2021,Standard,19689,SSD-21/HSS10/SA1/N-P/INGO/19689,Nutrition,,60,702844.2
+South Sudan,19,343,2021,Standard,19689,SSD-21/HSS10/SA1/N-P/INGO/19689,Protection,Gender Based Violence as subsidiary clusters,40,468562.8
+South Sudan,19,343,2021,Standard,19489,SSD-21/HSS10/SA1/N-WASH-P/INGO/19489,Nutrition,,49,436596.9041
+South Sudan,19,343,2021,Standard,19489,SSD-21/HSS10/SA1/N-WASH-P/INGO/19489,Protection,,17,151472.3953
+South Sudan,19,343,2021,Standard,19489,SSD-21/HSS10/SA1/N-WASH-P/INGO/19489,"Water, Sanitation and Hygiene",,34,302944.7906
+South Sudan,19,343,2021,Standard,19320,SSD-21/HSS10/SA1/P/INGO/19320,Protection,Gender Based Violence as subsidiary clusters,100,300000
+South Sudan,19,343,2021,Standard,19455,SSD-21/HSS10/SA1/P/INGO/19455,Protection,Gender Based Violence as subsidiary clusters,100,299930.23
+South Sudan,19,343,2021,Standard,19458,SSD-21/HSS10/SA1/P/INGO/19458,Protection,,100,299979.71
+South Sudan,19,343,2021,Standard,19583,SSD-21/HSS10/SA1/P/INGO/19583,Protection,,100,350000
+South Sudan,19,343,2021,Standard,19763,SSD-21/HSS10/SA1/P/INGO/19763,Protection,,100,750000.11
+South Sudan,19,343,2021,Standard,19283,SSD-21/HSS10/SA1/P/NGO/19283,Protection,,100,300000
+South Sudan,19,343,2021,Standard,19328,SSD-21/HSS10/SA1/P/NGO/19328,Protection,Child Protection in Emergencies,100,340000.02
+South Sudan,19,343,2021,Standard,19576,SSD-21/HSS10/SA1/P/NGO/19576,Protection,Gender Based Violence as subsidiary clusters,100,382002.84
+South Sudan,19,343,2021,Standard,19676,SSD-21/HSS10/SA1/P/NGO/19676,Protection,Gender Based Violence as subsidiary clusters,100,240000
+South Sudan,19,343,2021,Standard,19728,SSD-21/HSS10/SA1/P-CCCM/UN/19728,Camp Coordination / Management,,54,350994.4596
+South Sudan,19,343,2021,Standard,19728,SSD-21/HSS10/SA1/P-CCCM/UN/19728,Protection,,46,298995.2804
+South Sudan,19,343,2021,Standard,19526,SSD-21/HSS10/SA1/P-FSL/NGO/19526,Food Security,,20.2,75948.3539
+South Sudan,19,343,2021,Standard,19526,SSD-21/HSS10/SA1/P-FSL/NGO/19526,Protection,,79.8,300033.5961
+South Sudan,19,343,2021,Standard,19753,SSD-21/HSS10/SA1/P-FSL/NGO/19753,Food Security,,18,76667.859
+South Sudan,19,343,2021,Standard,19753,SSD-21/HSS10/SA1/P-FSL/NGO/19753,Protection,,82,349264.691
+South Sudan,19,343,2021,Standard,19464,SSD-21/HSS10/SA1/WASH/INGO/19464,"Water, Sanitation and Hygiene",,100,399156.22
+South Sudan,19,343,2021,Standard,19507,SSD-21/HSS10/SA1/WASH/INGO/19507,"Water, Sanitation and Hygiene",,100,599957.04
+South Sudan,19,343,2021,Standard,19709,SSD-21/HSS10/SA1/WASH/INGO/19709,"Water, Sanitation and Hygiene",,100,600000.49
+South Sudan,19,343,2021,Standard,19420,SSD-21/HSS10/SA1/WASH/NGO/19420,"Water, Sanitation and Hygiene",,100,500000
+South Sudan,19,343,2021,Standard,19471,SSD-21/HSS10/SA1/WASH/NGO/19471,"Water, Sanitation and Hygiene",,100,350000
+South Sudan,19,343,2021,Standard,19570,SSD-21/HSS10/SA1/WASH/NGO/19570,"Water, Sanitation and Hygiene",,100,292578
+South Sudan,19,343,2021,Standard,19465,SSD-21/HSS10/SA1/WASH/UN/19465,"Water, Sanitation and Hygiene",,100,1436296.17
+South Sudan,19,343,2021,Standard,19321,SSD-21/HSS10/SA1/WASH-N-E/INGO/19321,Education,,20,284845.002
+South Sudan,19,343,2021,Standard,19321,SSD-21/HSS10/SA1/WASH-N-E/INGO/19321,Nutrition,,20,284845.002
+South Sudan,19,343,2021,Standard,19321,SSD-21/HSS10/SA1/WASH-N-E/INGO/19321,"Water, Sanitation and Hygiene",,60,854535.006
+South Sudan,19,343,2021,Standard,19418,SSD-21/HSS10/SA1/WASH-P/NGO/19418,Protection,Gender Based Violence as subsidiary clusters,60,299664.54
+South Sudan,19,343,2021,Standard,19418,SSD-21/HSS10/SA1/WASH-P/NGO/19418,"Water, Sanitation and Hygiene",,40,199776.36
+South Sudan,19,394,2022,Reserve,21570,SSD-22/HSS10/RA1/L/UN/21570,Logistics,,100,9000000.04
+South Sudan,19,402,2022,Reserve,21787,SSD-22/HSS10/RA2/L/UN/21787,Logistics,,100,2702038.1
+South Sudan,19,402,2022,Reserve,21788,SSD-22/HSS10/RA2/L/UN/21788,Logistics,,100,1300060.99
+South Sudan,19,411,2022,Reserve,22317,SSD-22/HSS10/RA3/CCS/INGO/22317,Coordination and Support Services,,100,424554.56
+South Sudan,19,422,2022,Reserve,22749,SSD-22/HSS10/RA4/H/INGO/22749,Health,,100,242850.13
+South Sudan,19,441,2022,Reserve,23922,SSD-22/HSS10/RA5/CCCM-CCS/UN/23922,Camp Coordination / Management,,80,720000.008
+South Sudan,19,441,2022,Reserve,23922,SSD-22/HSS10/RA5/CCCM-CCS/UN/23922,Coordination and Support Services,,20,180000.002
+South Sudan,19,441,2022,Reserve,23899,SSD-22/HSS10/RA5/E/INGO/23899,Education,,100,499232.79
+South Sudan,19,441,2022,Reserve,23896,SSD-22/HSS10/RA5/FSL/INGO/23896,Food Security,,100,500000
+South Sudan,19,441,2022,Reserve,23890,SSD-22/HSS10/RA5/FSL/UN/23890,Food Security,,100,500000.23
+South Sudan,19,441,2022,Reserve,23900,SSD-22/HSS10/RA5/H/NGO/23900,Health,,100,249987.31
+South Sudan,19,441,2022,Reserve,23889,SSD-22/HSS10/RA5/H/UN/23889,Health,,100,600000
+South Sudan,19,441,2022,Reserve,23895,SSD-22/HSS10/RA5/NFI/INGO/23895,Emergency Shelter and NFI,,100,478833.05
+South Sudan,19,441,2022,Reserve,23923,SSD-22/HSS10/RA5/NFI/UN/23923,Emergency Shelter and NFI,,100,1975757.1
+South Sudan,19,441,2022,Reserve,23887,SSD-22/HSS10/RA5/NFI-WASH/UN/23887,Emergency Shelter and NFI,,53,795000
+South Sudan,19,441,2022,Reserve,23887,SSD-22/HSS10/RA5/NFI-WASH/UN/23887,"Water, Sanitation and Hygiene",,47,705000
+South Sudan,19,441,2022,Reserve,23888,SSD-22/HSS10/RA5/N-FSL/UN/23888,Food Security,,80,800016.912
+South Sudan,19,441,2022,Reserve,23888,SSD-22/HSS10/RA5/N-FSL/UN/23888,Nutrition,,20,200004.228
+South Sudan,19,441,2022,Reserve,23894,SSD-22/HSS10/RA5/N-H/INGO/23894,Health,,57,398993.4108
+South Sudan,19,441,2022,Reserve,23894,SSD-22/HSS10/RA5/N-H/INGO/23894,Nutrition,,43,300995.0292
+South Sudan,19,441,2022,Reserve,23893,SSD-22/HSS10/RA5/P/INGO/23893,Protection,,100,249999.97
+South Sudan,19,441,2022,Reserve,23901,SSD-22/HSS10/RA5/P/INGO/23901,Protection,,100,299999.14
+South Sudan,19,441,2022,Reserve,23919,SSD-22/HSS10/RA5/P/INGO/23919,Protection,,100,247227.44
+South Sudan,19,441,2022,Reserve,23897,SSD-22/HSS10/RA5/WASH/INGO/23897,"Water, Sanitation and Hygiene",,100,390000
+South Sudan,19,441,2022,Reserve,23936,SSD-22/HSS10/RA5/WASH/UN/23936,"Water, Sanitation and Hygiene",,100,992296
+South Sudan,19,421,2022,Standard,22821,SSD-22/HSS10/SA1/CCCM/INGO/22821,Camp Coordination / Management,,100,499304.5
+South Sudan,19,421,2022,Standard,22717,SSD-22/HSS10/SA1/E/INGO/22717,Education,,100,552500
+South Sudan,19,421,2022,Standard,22768,SSD-22/HSS10/SA1/E/NGO/22768,Education,,100,299903.72
+South Sudan,19,421,2022,Standard,22962,SSD-22/HSS10/SA1/E/NGO/22962,Education,,100,299999.11
+South Sudan,19,421,2022,Standard,22908,SSD-22/HSS10/SA1/E-N/INGO/22908,Education,,62.5,499750.24375
+South Sudan,19,421,2022,Standard,22908,SSD-22/HSS10/SA1/E-N/INGO/22908,Nutrition,,37.5,299850.14625
+South Sudan,19,421,2022,Standard,22719,SSD-22/HSS10/SA1/H/NGO/22719,Health,,100,500000
+South Sudan,19,421,2022,Standard,22909,SSD-22/HSS10/SA1/H/NGO/22909,Health,,100,299999.11
+South Sudan,19,421,2022,Standard,23091,SSD-22/HSS10/SA1/H/NGO/23091,Health,,100,300000
+South Sudan,19,421,2022,Standard,22851,SSD-22/HSS10/SA1/H-N/INGO/22851,Health,,50,250000
+South Sudan,19,421,2022,Standard,22851,SSD-22/HSS10/SA1/H-N/INGO/22851,Nutrition,,50,250000
+South Sudan,19,421,2022,Standard,22995,SSD-22/HSS10/SA1/H-N/INGO/22995,Health,,37,292157.2799
+South Sudan,19,421,2022,Standard,22995,SSD-22/HSS10/SA1/H-N/INGO/22995,Nutrition,,63,497456.9901
+South Sudan,19,421,2022,Standard,22716,SSD-22/HSS10/SA1/H-N/NGO/22716,Health,,65,313950
+South Sudan,19,421,2022,Standard,22716,SSD-22/HSS10/SA1/H-N/NGO/22716,Nutrition,,35,169050
+South Sudan,19,421,2022,Standard,23139,SSD-22/HSS10/SA1/H-P/UN/23139,Health,,72.73,400015
+South Sudan,19,421,2022,Standard,23139,SSD-22/HSS10/SA1/H-P/UN/23139,Protection,Gender Based Violence as subsidiary clusters,27.27,149985
+South Sudan,19,421,2022,Standard,22759,SSD-22/HSS10/SA1/H-P-NFI/INGO/22759,Emergency Shelter and NFI,,14.5,100906.19165
+South Sudan,19,421,2022,Standard,22759,SSD-22/HSS10/SA1/H-P-NFI/INGO/22759,Health,,57.5,400145.24275
+South Sudan,19,421,2022,Standard,22759,SSD-22/HSS10/SA1/H-P-NFI/INGO/22759,Protection,,28,194853.3356
+South Sudan,19,421,2022,Standard,23033,SSD-22/HSS10/SA1/H-WASH-N/UN/23033,Health,,65,851013.3125
+South Sudan,19,421,2022,Standard,23033,SSD-22/HSS10/SA1/H-WASH-N/UN/23033,Nutrition,,20,261850.25
+South Sudan,19,421,2022,Standard,23033,SSD-22/HSS10/SA1/H-WASH-N/UN/23033,"Water, Sanitation and Hygiene",,15,196387.6875
+South Sudan,19,421,2022,Standard,23118,SSD-22/HSS10/SA1/N/INGO/23118,Nutrition,,100,362234.32
+South Sudan,19,421,2022,Standard,22820,SSD-22/HSS10/SA1/N-E/INGO/22820,Education,,25.64,199992.14102
+South Sudan,19,421,2022,Standard,22820,SSD-22/HSS10/SA1/N-E/INGO/22820,Nutrition,,74.36,580008.40898
+South Sudan,19,421,2022,Standard,22892,SSD-22/HSS10/SA1/NFI/NGO/22892,Emergency Shelter and NFI,,100,377426
+South Sudan,19,421,2022,Standard,22864,SSD-22/HSS10/SA1/NFI-CCCM-WASH-H/UN/22864,Camp Coordination / Management,,18,1004644.5426
+South Sudan,19,421,2022,Standard,22864,SSD-22/HSS10/SA1/NFI-CCCM-WASH-H/UN/22864,Emergency Shelter and NFI,,66,3683696.6562
+South Sudan,19,421,2022,Standard,22864,SSD-22/HSS10/SA1/NFI-CCCM-WASH-H/UN/22864,Health,,12,669763.0284
+South Sudan,19,421,2022,Standard,22864,SSD-22/HSS10/SA1/NFI-CCCM-WASH-H/UN/22864,"Water, Sanitation and Hygiene",,4,223254.3428
+South Sudan,19,421,2022,Standard,22710,SSD-22/HSS10/SA1/NFI-E-WASH/INGO/22710,Education,,43,503943.0967
+South Sudan,19,421,2022,Standard,22710,SSD-22/HSS10/SA1/NFI-E-WASH/INGO/22710,Emergency Shelter and NFI,,18,210952.9242
+South Sudan,19,421,2022,Standard,22710,SSD-22/HSS10/SA1/NFI-E-WASH/INGO/22710,"Water, Sanitation and Hygiene",,39,457064.6691
+South Sudan,19,421,2022,Standard,22757,SSD-22/HSS10/SA1/NFI-WASH/INGO/22757,Emergency Shelter and NFI,,32,202899.296
+South Sudan,19,421,2022,Standard,22757,SSD-22/HSS10/SA1/NFI-WASH/INGO/22757,"Water, Sanitation and Hygiene",,68,431161.004
+South Sudan,19,421,2022,Standard,22758,SSD-22/HSS10/SA1/N-P/INGO/22758,Nutrition,,65,373098.0695
+South Sudan,19,421,2022,Standard,22758,SSD-22/HSS10/SA1/N-P/INGO/22758,Protection,,35,200898.9605
+South Sudan,19,421,2022,Standard,22876,SSD-22/HSS10/SA1/P/INGO/22876,Protection,Child Protection in Emergencies,100,300000
+South Sudan,19,421,2022,Standard,22731,SSD-22/HSS10/SA1/P/NGO/22731,Protection,,100,450000
+South Sudan,19,421,2022,Standard,22849,SSD-22/HSS10/SA1/P/NGO/22849,Protection,,100,449999.98
+South Sudan,19,421,2022,Standard,23115,SSD-22/HSS10/SA1/P/NGO/23115,Protection,Gender Based Violence as subsidiary clusters,100,199998.55
+South Sudan,19,421,2022,Standard,22816,SSD-22/HSS10/SA1/P-E/INGO/22816,Education,,68,637500
+South Sudan,19,421,2022,Standard,22816,SSD-22/HSS10/SA1/P-E/INGO/22816,Protection,,32,300000
+South Sudan,19,421,2022,Standard,22867,SSD-22/HSS10/SA1/P-H/INGO/22867,Health,,40,300000
+South Sudan,19,421,2022,Standard,22867,SSD-22/HSS10/SA1/P-H/INGO/22867,Protection,,60,450000
+South Sudan,19,421,2022,Standard,22846,SSD-22/HSS10/SA1/P-H/NGO/22846,Health,,60,300000
+South Sudan,19,421,2022,Standard,22846,SSD-22/HSS10/SA1/P-H/NGO/22846,Protection,Gender Based Violence as subsidiary clusters,40,200000
+South Sudan,19,421,2022,Standard,22800,SSD-22/HSS10/SA1/WASH/INGO/22800,"Water, Sanitation and Hygiene",,100,400000.07
+South Sudan,19,421,2022,Standard,22801,SSD-22/HSS10/SA1/WASH/INGO/22801,"Water, Sanitation and Hygiene",,100,433784.98
+South Sudan,19,421,2022,Standard,22910,SSD-22/HSS10/SA1/WASH/INGO/22910,"Water, Sanitation and Hygiene",,100,400000
+South Sudan,19,421,2022,Standard,22825,SSD-22/HSS10/SA1/WASH/NGO/22825,"Water, Sanitation and Hygiene",,100,500000.05
+South Sudan,19,421,2022,Standard,22853,SSD-22/HSS10/SA1/WASH-N/INGO/22853,Nutrition,,43,226179.9957
+South Sudan,19,421,2022,Standard,22853,SSD-22/HSS10/SA1/WASH-N/INGO/22853,"Water, Sanitation and Hygiene",,57,299819.9943
+South Sudan,19,421,2022,Standard,23023,SSD-22/HSS10/SA1/WASH-NFI/INGO/23023,Emergency Shelter and NFI,,43,251116.001
+South Sudan,19,421,2022,Standard,23023,SSD-22/HSS10/SA1/WASH-NFI/INGO/23023,"Water, Sanitation and Hygiene",,57,332874.699
+South Sudan,19,421,2022,Standard,23038,SSD-22/HSS10/SA1/WASH-NFI/NGO/23038,Emergency Shelter and NFI,,54.54,239930.824518
+South Sudan,19,421,2022,Standard,23038,SSD-22/HSS10/SA1/WASH-NFI/NGO/23038,"Water, Sanitation and Hygiene",,45.46,199986.345482
+South Sudan,19,421,2022,Standard,22752,SSD-22/HSS10/SA1/WASH-NFI-P/NGO/22752,Emergency Shelter and NFI,,25,124999.9975
+South Sudan,19,421,2022,Standard,22752,SSD-22/HSS10/SA1/WASH-NFI-P/NGO/22752,Protection,Child Protection in Emergencies,40,199999.996
+South Sudan,19,421,2022,Standard,22752,SSD-22/HSS10/SA1/WASH-NFI-P/NGO/22752,"Water, Sanitation and Hygiene",,35,174999.9965

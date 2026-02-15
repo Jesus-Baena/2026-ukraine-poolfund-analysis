@@ -28,7 +28,7 @@ execute:
 
 # Executive Summary
 
-This report provides a comprehensive analysis of the Ukraine Humanitarian Pooled Fund, examining funding allocations, organizational performance, beneficiary demographics, and project implementation from 2019 to 2025.
+This report provides a comprehensive analysis of the Ukraine Humanitarian Pooled Fund, examining funding allocations and project implementation from 2019 to 2025. These findings are contextualized within the global CBPF landscape, leveraging historical data from 28 country pooled funds spanning 2010 to 2025 to provide comparative insights and identify emerging trends in humanitarian financing.
 
 ## Key Findings
 
@@ -53,7 +53,7 @@ library(knitr)
 library(scales)
 
 # Set working directory
-setwd("/home/jbi-debian/Git/2026-analysis-ukraine-poolfund")
+setwd("/home/jbi-debian/Git/2026-ukraine-poolfund-analysis")
 
 # --- Consistent ggplot2 Theme ---
 theme_set(
@@ -81,7 +81,6 @@ theme_colors <- list(
 
 ```{r load-data}
 #| label: load-data
-#| echo: false
 
 # Load all data files
 allocation_flow <- read_csv("Raw-data/AllocationFlow__20260213_094810_UTC.csv", 
@@ -113,7 +112,6 @@ project_summary <- project_summary %>%
 
 ```{r dataset-overview}
 #| label: dataset-overview
-#| echo: false
 
 data_summary <- tibble(
   Dataset = c("Allocation Flow", "Project Summary", "Project Summary (Location)", 
@@ -137,7 +135,6 @@ kable(data_summary,
 
 ```{r allocation-countries}
 #| label: allocation-countries
-#| echo: false
 
 countries <- unique(allocation_flow$Fund)
 ukraine_allocation <- allocation_flow %>% filter(Fund == "Ukraine")
@@ -164,7 +161,6 @@ if(nrow(ukraine_allocation) > 0) {
 
 ```{r org-type-analysis}
 #| label: org-type-analysis
-#| echo: false
 #| fig-width: 10
 #| fig-height: 6
 
@@ -195,7 +191,6 @@ project_summary %>%
 
 ```{r projects-over-time}
 #| label: projects-over-time
-#| echo: false
 #| fig-width: 10
 #| fig-height: 6
 
@@ -225,7 +220,6 @@ project_summary %>%
 
 ```{r budget-analysis}
 #| label: budget-analysis
-#| echo: false
 
 budget_stats <- project_summary %>%
   summarise(
@@ -241,11 +235,80 @@ kable(budget_stats,
       caption = "Overall Budget Statistics")
 ```
 
+## Budget Distribution by Allocation Source
+
+```{r allocation-source-by-year}
+#| label: allocation-source-by-year
+#| fig-width: 10
+#| fig-height: 6
+
+# Calculate budget by allocation source and year (2022-2025)
+allocation_source_summary <- project_summary %>%
+  filter(AllocationYear >= 2022 & AllocationYear <= 2025) %>%
+  group_by(AllocationYear, AllocationSourceName) %>%
+  summarise(Total_Budget = sum(Budget, na.rm = TRUE), .groups = 'drop') %>%
+  group_by(AllocationYear) %>%
+  mutate(
+    Year_Total = sum(Total_Budget),
+    Percentage = (Total_Budget / Year_Total) * 100
+  ) %>%
+  arrange(AllocationYear, AllocationSourceName)
+
+# Summary table
+allocation_table <- allocation_source_summary %>%
+  select(AllocationYear, AllocationSourceName, Total_Budget, Percentage) %>%
+  mutate(
+    `Budget ($)` = format(round(Total_Budget, 0), big.mark = ","),
+    `Percentage (%)` = round(Percentage, 1)
+  ) %>%
+  select(Year = AllocationYear, `Allocation Source` = AllocationSourceName, 
+         `Budget ($)`, `Percentage (%)`)
+
+kable(allocation_table,
+      caption = "Budget Distribution by Allocation Source and Year")
+
+# Visualization - stacked bar chart with absolute values and percentages
+# Convert to millions for display
+allocation_source_summary <- allocation_source_summary %>%
+  mutate(Budget_Millions = Total_Budget / 1e6)
+
+ggplot(allocation_source_summary, 
+       aes(x = factor(AllocationYear), y = Budget_Millions, fill = AllocationSourceName)) +
+  geom_col(position = "stack", width = 0.7) +
+  geom_text(aes(label = paste0("$", round(Budget_Millions, 1), "M\n(", 
+                               round(Percentage, 1), "%)")),
+            position = position_stack(vjust = 0.5),
+            color = "white",
+            fontface = "bold",
+            size = 3.5,
+            lineheight = 0.9) +
+  scale_fill_manual(values = c("Standard" = "#005f73", "Reserve" = "#94d2bd"),
+                    name = "Allocation Source") +
+  scale_y_continuous(labels = function(x) paste0("$", x, "M"), 
+                     expand = expansion(mult = c(0, 0.05))) +
+  labs(
+    title = "Budget Distribution by Allocation Source Across Years",
+    subtitle = "Absolute values (millions USD) and percentage of total budget per year",
+    x = "Allocation Year",
+    y = "Total Budget (Millions USD)"
+  ) +
+  theme(
+    legend.position = "top",
+    panel.grid.major.x = element_blank()
+  )
+```
+
+::: callout-tip
+## Allocation Sources
+
+-   **Standard Allocation**: Regular funding cycles based on strategic response plans
+-   **Reserve Allocation**: Emergency funding for urgent needs and rapid response
+:::
+
 # Beneficiary Analysis
 
 ```{r beneficiary-analysis}
 #| label: beneficiary-analysis
-#| echo: false
 #| fig-width: 10
 #| fig-height: 6
 
@@ -312,7 +375,6 @@ The data shows **`r beneficiary_totals$'Female (%)'`%** female beneficiaries and
 
 ```{r project-status}
 #| label: project-status
-#| echo: false
 
 status_summary <- project_summary %>%
   count(ProjectStatus, name = "Count") %>%
@@ -329,7 +391,6 @@ kable(status_summary,
 
 ```{r funding-2025}
 #| label: funding-2025
-#| echo: false
 #| fig-width: 12
 #| fig-height: 8
 
@@ -383,7 +444,6 @@ funding_2025 %>%
 
 ```{r funding-type-2025}
 #| label: funding-type-2025
-#| echo: false
 #| fig-width: 10
 #| fig-height: 6
 
@@ -430,7 +490,6 @@ funding_by_type_2025 %>%
 
 ```{r final-summary}
 #| label: final-summary
-#| echo: false
 
 summary_stats <- tibble(
   Metric = c(
