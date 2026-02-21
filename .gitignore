@@ -44,3 +44,12 @@ _site/
 
 # pkgdown site
 docs/
+
+# Database files
+*.sql
+*.db
+*.sqlite
+
+# n8n workflow files
+n8n-*.js
+n8n-*.json

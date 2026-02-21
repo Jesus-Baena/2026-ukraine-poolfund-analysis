@@ -1,70 +1,99 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* --- Global Styles & Typography --- */
 body {
-    font-family: 'Lora', serif;
-    font-size: 17px;
-    line-height: 1.7;
-    color: #343a40;
-    background-color: #fdfdfd;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #2d3748;
+    background-color: #ffffff;
+}
+
+/* Increase container width */
+.quarto-container {
+    max-width: 1400px !important;
+}
+
+main.content {
+    max-width: 1400px !important;
+    padding: 4rem 2rem 2rem 2rem;
+}
+
+/* Wider table of contents */
+#TOC {
+    width: 300px !important;
 }
 
 /* --- Headers --- */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato', sans-serif;
-    color: #005f73;
+    font-family: 'Inter', sans-serif;
+    color: #1a202c;
     font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 h1 {
-    margin-top: 2.5em;
+    margin-top: 1em;
     margin-bottom: 1em;
-    padding-bottom: 0.3em;
+    padding-bottom: 0.5em;
     border-bottom: 3px solid #005f73;
+    font-size: 2.5em;
+}
+
+/* First h1 - Executive Summary - gets extra spacing below */
+h1:first-of-type {
+    margin-top: 0;
+    margin-bottom: 1em;
 }
 
 h2 {
-    margin-top: 2em;
+    margin-top: 1em;
     margin-bottom: 1em;
-    padding-bottom: 0.2em;
-    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 2em;
+}
+
+h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 /* --- Links --- */
 a {
-    color: #2B638B;
+    color: #2b6cb0;
     text-decoration: none;
-    border-bottom: 1px dotted #2B638B;
+    border-bottom: 1px solid transparent;
     transition: all 0.2s ease-in-out;
 }
 
 a:hover {
-    color: #005f73;
-    border-bottom: 1px solid #005f73;
+    color: #2c5282;
+    border-bottom: 1px solid #2c5282;
 }
 
 /* --- Code Blocks --- */
 pre, code {
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
 }
 
 pre {
-    background-color: #f8f9fa;
-    border: 1px solid #e9ecef;
-    border-radius: 5px;
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
     font-size: 14px;
-    padding: 1em;
-    margin-bottom: 1.5em;
+    padding: 1.5em;
+    margin-bottom: 2em;
     overflow-x: auto;
 }
 
 code {
-    background-color: #e9ecef;
-    color: #c7254e;
-    padding: .2em .4em;
-    border-radius: 3px;
-    font-size: 85%;
+    background-color: #edf2f7;
+    color: #c53030;
+    padding: .2em .5em;
+    border-radius: 4px;
+    font-size: 0.9em;
 }
 
 pre code {
@@ -79,21 +108,21 @@ pre code {
 hr {
     border: 0;
     height: 1px;
-    background-color: #dee2e6;
+    background-color: #e2e8f0;
     margin: 3em 0;
 }
 
 /* --- Info Boxes / Callouts --- */
 .callout {
-    padding: 1em 1.5em;
-    margin: 1.5em 0;
-    background-color: #eef7f7;
-    border-left: 5px solid #2B638B;
-    border-radius: 5px;
+    padding: 1.5em 2em;
+    margin: 2em 0;
+    background-color: #f0f9ff;
+    border-left: 4px solid #2B638B;
+    border-radius: 8px;
 }
 
 .callout-note {
-    background-color: #eef7f7;
+    background-color: #f0f9ff;
     border-left-color: #2B638B;
 }
 
@@ -106,58 +135,64 @@ hr {
 #TOC .nav > .active > a:hover,
 #TOC .nav > .active > a:focus {
     color: #ffffff;
-    background-color: #005f73;
-    border-left: 2px solid #005f73;
+    background-color: #2d3748;
+    border-left: 3px solid #2b6cb0;
+    border-bottom: none;
 }
 
 #TOC .nav > li > a:hover {
-    color: #005f73;
-    background-color: #f5f5f5;
-    border-left: 2px solid #005f73;
+    color: #2d3748;
+    background-color: #f7fafc;
+    border-left: 3px solid #2b6cb0;
+    border-bottom: none;
 }
 
 #TOC .nav > li > a {
-    color: #333333;
-    border-left: 2px solid transparent;
+    color: #4a5568;
+    border-left: 3px solid transparent;
     border-bottom: none;
 }
 
 /* --- Tables --- */
 table {
-    margin: 1.5em auto;
+    margin: 2em auto;
     border-collapse: collapse;
+    width: 100%;
 }
 
 table thead th {
-    background-color: #005f73;
+    background-color: #1a202c;
     color: white;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 600;
-    padding: 0.75em;
+    padding: 1em;
     text-align: left;
+    border: none;
 }
 
 table tbody tr:nth-child(odd) {
-    background-color: #f8f9fa;
+    background-color: #f7fafc;
 }
 
 table tbody tr:hover {
-    background-color: #e9ecef;
+    background-color: #edf2f7;
+    transition: background-color 0.2s ease;
 }
 
 table td {
-    padding: 0.6em;
-    border-bottom: 1px solid #dee2e6;
+    padding: 0.8em 1em;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 /* --- Plots and Figures --- */
 .cell-output-display {
-    margin: 2em 0;
+    margin: 3em 0;
 }
 
 .figure-caption {
     font-style: italic;
-    color: grey50;
+    color: #718096;
     text-align: center;
-    margin-top: 0.5em;
+    margin-top: 1em;
+    font-size: 0.95em;
 }

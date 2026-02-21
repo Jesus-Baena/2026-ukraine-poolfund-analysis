@@ -1,7 +1,7 @@
 ---
 title: "Ukraine Humanitarian Pooled Fund Analysis"
 subtitle: "Funding Allocation and Impact Assessment"
-author: "Ukraine Poolfund Analysis Team"
+author: "Jesus Baena"
 date: "2026-02-13"
 format:
   html:
@@ -26,9 +26,9 @@ execute:
   fig-dpi: 150
 ---
 
-# Executive Summary
+# Introduction
 
-This report provides a comprehensive analysis of the Ukraine Humanitarian Pooled Fund, examining funding allocations and project implementation from 2019 to 2025. These findings are contextualized within the global CBPF landscape, leveraging historical data from 28 country pooled funds spanning 2010 to 2025 to provide comparative insights and identify emerging trends in humanitarian financing.
+This report provides a comprehensive analysis of the Ukraine Humanitarian Pooled Fund, **examining funding allocations and project implementation from 2019 to 2025**. These findings are contextualized within the global CBPF landscape, leveraging historical data from 28 country pooled funds spanning **2014 to 2025** (the mature operational period) to provide comparative insights and identify emerging trends in humanitarian financing.
 
 ## Key Findings
 
@@ -37,6 +37,16 @@ This report provides a comprehensive analysis of the Ukraine Humanitarian Pooled
 -   **Data Sources**: Official UHF allocation and project data
 
 # Data Overview
+
+Data is retrieved from the official repository [data explorer](https://cbpf.data.unocha.org/dataexplorer.html), it was downloaded on Febrary 2026 and it is formed by raw .csv files. The raw data spans from 2010 onward, but **analysis focuses on 2014-2025** to ensure comparability (2010-2013 was the pilot phase with limited geographic coverage). Data was cut at the end of 2025 to use static data for this analysis.
+
+In total the data comprises:
+
+-   28 recipient countries
+
+-   16,304 projects
+
+-   xx allocations
 
 ```{r setup}
 #| label: setup
@@ -82,46 +92,162 @@ theme_colors <- list(
 ```{r load-data}
 #| label: load-data
 
-# Load all data files
-allocation_flow <- read_csv("Raw-data/AllocationFlow__20260213_094810_UTC.csv", 
+# Load all data files - Latest download from February 19, 2026
+# Using complete global dataset (ALL versions) for all 28 CBPF countries
+project_summary <- read_csv("Raw-data/ProjectSummary_ALL_20260219_100323_UTC.csv", 
                             show_col_types = FALSE)
-project_summary <- read_csv("Raw-data/ProjectSummary20260213095023733.csv", 
-                            show_col_types = FALSE)
-project_summary_location <- read_csv("Raw-data/ProjectSummaryWithLocation20260213095148892.csv", 
+project_summary_location <- read_csv("Raw-data/ProjectSummaryWithLocation_ALL_20260219_100323_UTC.csv", 
                                      show_col_types = FALSE)
-project_summary_cluster <- read_csv("Raw-data/ProjectSummaryWithLocationAndCluster20260213095151165.csv", 
-                                    show_col_types = FALSE)
-pipeline_summary <- read_csv("Raw-data/PipelineProjectSummary20260213095153268.csv", 
+pipeline_summary <- read_csv("Raw-data/PipelineProjectSummary_ALL_20260219_125012_UTC.csv", 
                              show_col_types = FALSE)
-pipeline_cluster <- read_csv("Raw-data/PipelineProjectCluster20260213095156107.csv", 
+pipeline_cluster <- read_csv("Raw-data/PipelineProjectCluster_ALL_20260219_100323_UTC.csv", 
                              show_col_types = FALSE)
-clusters <- read_csv("Raw-data/Cluster20260213095154538.csv", 
+clusters <- read_csv("Raw-data/Cluster_ALL_20260219_100323_UTC.csv", 
                      show_col_types = FALSE)
-contributions <- read_csv("Raw-data/Contribution20260213095157629.csv", 
+contributions <- read_csv("Raw-data/Contribution_ALL_20260219_100323_UTC.csv", 
                           show_col_types = FALSE)
+```
 
-# Data preprocessing
+## Data Preparation
+
+The raw data is well-structured and consistent with expected values. Minor transformations were applied to standardise date formats across datasets and to filter out 2026 entries, keeping the analysis within the 2014–2025 window. Helper functions `safe_date_format` and `safe_year_format` handle edge cases in date parsing robustly.
+
+::: {.callout-note collapse="true"}
+## Data Preparation Details
+
+**Date conversions**
+
+| Dataset | Date columns converted |
+|---|---|
+| `ProjectSummary` | `ProjectStartDate`, `ProjectEndDate` → `mdy_hms()` |
+| `ProjectSummaryWithLocation` | `ActualStartDate`, `ActualEndDate` → `mdy_hms()` |
+| `PipelineProjectSummary` | `ActualStartDate`, `ActualEndDate` → `mdy_hms()` |
+| `pipeline_cluster`, `clusters` | Use numeric `AllocationYear` — no conversion needed |
+| `contributions` | `PledgeDate` parsed on demand during analysis |
+
+**Temporal cutoff — analysis endpoint: December 31, 2025**
+
+- `AllocationYear != 2026` applied to: `project_summary`, `project_summary_location`, `pipeline_summary`, `pipeline_cluster`
+- `FiscalYear != 2026` applied to: `contributions`
+
+**Helper functions**
+
+- `safe_date_format()` — returns the min/max of a date vector, filtered to the 2000–2025 range; returns `"N/A"` if no valid dates remain
+- `safe_year_format()` — same logic for numeric year vectors; returns the result as a character string
+:::
+
+```{r data-preparation}
+#| label: data-preparation
+
+# ============================================================
+# PART 1: Date and Type Conversions
+# ============================================================
+
+# Parse date columns for project datasets
 project_summary <- project_summary %>%
   mutate(
     ProjectStartDate = mdy_hms(ProjectStartDate),
     ProjectEndDate = mdy_hms(ProjectEndDate)
   )
-```
 
-## Dataset Summary
+# Note: project_summary_location and pipeline_summary use ActualStartDate
+project_summary_location <- project_summary_location %>%
+  mutate(
+    ActualStartDate = mdy_hms(ActualStartDate),
+    ActualEndDate = mdy_hms(ActualEndDate)
+  )
+
+pipeline_summary <- pipeline_summary %>%
+  mutate(
+    ActualStartDate = mdy_hms(ActualStartDate),
+    ActualEndDate = mdy_hms(ActualEndDate)
+  )
+
+# Note: pipeline_cluster and clusters use AllocationYear (numeric)
+# Note: contributions uses PledgeDate (will be parsed when needed)
+
+# ============================================================
+# PART 2: Filter Out 2026 Data
+# ============================================================
+# Remove all data from 2026 to maintain analysis cutoff at end of 2025
+
+project_summary <- project_summary %>%
+  filter(AllocationYear != 2026)
+
+project_summary_location <- project_summary_location %>%
+  filter(AllocationYear != 2026)
+
+pipeline_summary <- pipeline_summary %>%
+  filter(AllocationYear != 2026)
+
+pipeline_cluster <- pipeline_cluster %>%
+  filter(AllocationYear != 2026)
+
+contributions <- contributions %>%
+  filter(FiscalYear != 2026)
+
+# ============================================================
+# PART 3: Helper Functions
+# ============================================================
+
+# Safely format date ranges, filtering invalid dates
+safe_date_format <- function(date_vec, func = min) {
+  valid_dates <- date_vec[!is.na(date_vec) & 
+                          year(date_vec) >= 2000 & 
+                          year(date_vec) <= 2025]
+  
+  if (length(valid_dates) == 0) return("N/A")
+  
+  result <- func(valid_dates)
+  return(format(result, "%B %d, %Y"))
+}
+
+# Format year ranges for datasets that use AllocationYear
+safe_year_format <- function(year_vec, func = min) {
+  valid_years <- year_vec[!is.na(year_vec) & year_vec >= 2000 & year_vec <= 2025]
+  
+  if (length(valid_years) == 0) return("N/A")
+  
+  return(as.character(func(valid_years)))
+}
+```
 
 ```{r dataset-overview}
 #| label: dataset-overview
 
 data_summary <- tibble(
-  Dataset = c("Allocation Flow", "Project Summary", "Project Summary (Location)", 
-              "Project Summary (Cluster)", "Pipeline Summary", "Clusters", "Contributions"),
-  Rows = c(nrow(allocation_flow), nrow(project_summary), nrow(project_summary_location),
-           nrow(project_summary_cluster), nrow(pipeline_summary), nrow(clusters), 
+  Dataset = c("Project Summary", "Project Summary (Location)", 
+              "Pipeline Summary", "Pipeline Cluster", "Clusters", "Contributions"),
+  Rows = c(nrow(project_summary), nrow(project_summary_location),
+           nrow(pipeline_summary), nrow(pipeline_cluster), nrow(clusters), 
            nrow(contributions)),
-  Columns = c(ncol(allocation_flow), ncol(project_summary), ncol(project_summary_location),
-              ncol(project_summary_cluster), ncol(pipeline_summary), ncol(clusters), 
-              ncol(contributions))
+  Columns = c(ncol(project_summary), ncol(project_summary_location),
+              ncol(pipeline_summary), ncol(pipeline_cluster), ncol(clusters), 
+              ncol(contributions)),
+  Countries = c(
+    n_distinct(project_summary$PooledFundName),
+    n_distinct(project_summary_location$PooledFundName),
+    n_distinct(pipeline_summary$PooledFundName),
+    n_distinct(pipeline_cluster$PooledFundName),
+    n_distinct(clusters$PooledFundName),
+    n_distinct(contributions$PooledFundName)
+  ),
+  `Earliest Entry` = c(
+    safe_date_format(project_summary$ProjectStartDate, min),
+    safe_date_format(project_summary_location$ActualStartDate, min),
+    safe_date_format(pipeline_summary$ActualStartDate, min),
+    safe_year_format(pipeline_cluster$AllocationYear, min),
+    safe_year_format(clusters$AllocationYear, min),
+    safe_date_format(mdy(contributions$PledgeDate), min)
+  ),
+  `Latest Entry` = c(
+    safe_date_format(project_summary$ProjectStartDate, max),
+    safe_date_format(project_summary_location$ActualStartDate, max),
+    safe_date_format(pipeline_summary$ActualStartDate, max),
+    safe_year_format(pipeline_cluster$AllocationYear, max),
+    safe_year_format(clusters$AllocationYear, max),
+    safe_date_format(mdy(contributions$PledgeDate), max)
+  )
 )
 
 kable(data_summary, 
@@ -129,400 +255,390 @@ kable(data_summary,
       caption = "Overview of Available Datasets")
 ```
 
+
+
+### Pipeline Data Note
+
+::: callout-important
+## Critical Data Limitation: Pipeline Data 
+
+The data site offers an endpoint to retrieve projects on the pipeline (under review, cancelled, etc...). After multiple attempts to retrieve comprehensive pipeline data from the CBPF API, it was confirmed that the **PipelineProjectSummary endpoint returns only 581 entries from scattered years** (2013-2015, 2022, 2025-2026), representing just a fraction of all project submissions across the CBPF system's history and with some inconsistencies (note the earlier enrty in 2002, when Pooled Funds did not exist).
+
+- **Ukraine-specific**: Only **1 entry** from 2022 allocation (out of 234 approved Ukraine projects in ProjectSummary)
+- **Cannot calculate meaningful approval/rejection rates**: Missing data prevents comprehensive submission vs approval analysis
+
+**What this means:** - We cannot analyze Ukraine’s proposal-to-approval ratio - We cannot determine how many Ukraine projects were rejected or cancelled - We cannot compare Ukraine’s approval success rate to other pooled funds - Analysis must focus on approved projects from the ProjectSummary dataset
+:::
+
+
+# Global summary 
+There have been 46 pool funds established, benefiting 42 unique countries. Four countries have had 2 pool funds due to situations like cross-border operations: Colombia, Haiti, Pakistan and Sri Lanka. 
+
+The data shows the humanitarian gap visible, in recent years, the number of countries receiving funding has increased, but the total budget allocated has gone in the wrong direction.  
+
+```{r global-budget-countries}
+#| label: global-budget-countries
+#| fig-width: 12
+#| fig-height: 7
+
+# Aggregate data by year - separate Ukraine from other countries
+# Keep all years (2010-2025) to show pilot phase vs mature operational period
+global_summary_detailed <- project_summary %>%
+  filter(!is.na(AllocationYear), !is.na(Budget)) %>%
+  mutate(Country_Group = if_else(PooledFundName == "Ukraine", "Ukraine", "Other Countries")) %>%
+  group_by(AllocationYear, Country_Group) %>%
+  summarise(Budget = sum(Budget, na.rm = TRUE), .groups = 'drop') %>%
+  arrange(AllocationYear, Country_Group)
+
+# Get total budget by year for labels
+global_totals <- global_summary_detailed %>%
+  group_by(AllocationYear) %>%
+  summarise(
+    Total_Budget = sum(Budget),
+    .groups = 'drop'
+  )
+
+# Get country count by year for the line
+country_counts <- project_summary %>%
+  filter(!is.na(AllocationYear)) %>%
+  group_by(AllocationYear) %>%
+  summarise(Countries = n_distinct(PooledFundName), .groups = 'drop')
+
+# Merge totals with country counts
+global_summary <- global_totals %>%
+  left_join(country_counts, by = "AllocationYear")
+
+# Create scaling factor for secondary axis
+scale_factor <- max(global_summary$Total_Budget) / max(global_summary$Countries) / 1e6
+
+# Create combination chart with Ukraine highlighted
+ggplot() +
+  # Stacked bars for budget (Ukraine in yellow, others in teal)
+  geom_col(data = global_summary_detailed,
+           aes(x = as.factor(AllocationYear), y = Budget/1e6, fill = Country_Group),
+           alpha = 0.8, width = 0.7) +
+  # Line for countries
+  geom_line(data = global_summary,
+            aes(x = as.factor(AllocationYear), y = Countries * scale_factor, group = 1),
+            color = "#e63946", linewidth = 1.2) +
+  geom_point(data = global_summary,
+             aes(x = as.factor(AllocationYear), y = Countries * scale_factor),
+             color = "#e63946", size = 3) +
+  # Labels at top of bars
+  geom_text(data = global_summary,
+            aes(x = as.factor(AllocationYear), y = Total_Budget/1e6,
+                label = paste0("$", round(Total_Budget/1e6, 0), "M")),
+            vjust = -0.5, size = 3.5, fontface = "bold", color = "#333333") +
+  # Color scale
+  scale_fill_manual(
+    values = c("Ukraine" = "#f4a261", "Other Countries" = "#005f73"),
+    name = "Region"
+  ) +
+  # Primary y-axis
+  scale_y_continuous(
+    name = "Total Budget Allocated (Million USD)",
+    labels = scales::comma,
+    limits = c(0, NA),
+    expand = expansion(mult = c(0, 0.1)),
+    # Secondary y-axis
+    sec.axis = sec_axis(~ . / scale_factor, 
+                        name = "Number of Countries",
+                        breaks = scales::pretty_breaks(n = 6))
+  ) +
+  labs(
+    title = "Global CBPF Funding Allocation and Country Coverage by Year (2010-2025)",
+    subtitle = "Budget shown in bars (Ukraine highlighted in yellow), country count shown as line • Pilot phase (2010-2013) shows limited scale",
+    x = "Allocation Year"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", size = 16),
+    plot.subtitle = element_text(size = 12, color = "#666666"),
+    axis.title.y.left = element_text(color = "#005f73", face = "bold", size = 12),
+    axis.title.y.right = element_text(color = "#e63946", face = "bold", size = 12),
+    axis.text = element_text(size = 11),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.minor = element_blank(),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold")
+  )
+```
+
+::: callout-important
+The 2010-2013 period represents the early pilot phase of CBPF with limited geographic coverage (primarily one country) and significantly lower funding levels. A major scale-up occurred in 2014 when the system expanded to multiple countries and reached operational maturity. **To ensure data comparability, subsequent analysis focuses on the mature operational period from 2014 to 2025.**
+:::
+
+
+## Budget Distribution by Country (2022-2025)
+
+This visualization shows how CBPF funding was distributed across countries for each year from 2022 to 2025. Ukraine is highlighted in yellow to track its position among the top recipients throughout this period.
+
+```{r budget-by-country-yearly}
+#| label: budget-by-country-yearly
+#| fig-width: 14
+#| fig-height: 11
+
+# Get top countries per year
+country_budget_yearly <- project_summary %>%
+  filter(AllocationYear >= 2022, AllocationYear <= 2025) %>%
+  filter(!is.na(Budget), !is.na(PooledFundName)) %>%
+  group_by(AllocationYear, PooledFundName) %>%
+  summarise(
+    Total_Budget = sum(Budget, na.rm = TRUE),
+    Projects = n(),
+    .groups = 'drop'
+  )
+
+# Get top 12 countries per year (or include Ukraine if not in top 12)
+top_countries_per_year <- country_budget_yearly %>%
+  group_by(AllocationYear) %>%
+  arrange(desc(Total_Budget)) %>%
+  slice_head(n = 12) %>%
+  ungroup()
+
+# Ensure Ukraine is included in all years
+ukraine_data <- country_budget_yearly %>%
+  filter(PooledFundName == "Ukraine")
+
+# Combine and remove duplicates
+country_budget_yearly_filtered <- bind_rows(top_countries_per_year, ukraine_data) %>%
+  distinct(AllocationYear, PooledFundName, .keep_all = TRUE)
+
+# Add highlighting, labels, and ordering within each year
+country_budget_yearly_filtered <- country_budget_yearly_filtered %>%
+  mutate(
+    Highlight = if_else(PooledFundName == "Ukraine", "Ukraine", "Other")
+  ) %>%
+  group_by(AllocationYear) %>%
+  mutate(
+    Rank = rank(-Total_Budget),
+    Label = if_else(Rank <= 8 | PooledFundName == "Ukraine",
+                    paste0("$", round(Total_Budget/1e6, 0), "M"),
+                    "")
+  ) %>%
+  ungroup() %>%
+  # Create a compound key for proper ordering within facets
+  mutate(
+    Year_Country = paste(AllocationYear, PooledFundName, sep = "_"),
+    Year_Country = reorder(Year_Country, Total_Budget)
+  )
+
+# Create faceted horizontal bar chart
+ggplot(country_budget_yearly_filtered, 
+       aes(x = Total_Budget/1e6, 
+           y = Year_Country)) +
+  geom_col(aes(fill = Highlight), alpha = 0.85, width = 0.75) +
+  geom_text(aes(label = Label), hjust = -0.1, size = 3, fontface = "bold", color = "#333333") +
+  scale_fill_manual(
+    values = c("Ukraine" = "#f4a261", "Other" = "#005f73"),
+    guide = "none"
+  ) +
+  scale_y_discrete(labels = function(x) gsub("^\\d{4}_", "", x)) +
+  scale_x_continuous(
+    labels = scales::comma,
+    expand = expansion(mult = c(0, 0.15))
+  ) +
+  facet_wrap(~ AllocationYear, ncol = 2, scales = "free_y") +
+  labs(
+    title = "Top Countries by CBPF Budget Allocation per Year (2022-2025)",
+    subtitle = "Ukraine highlighted in yellow • Shows top recipients each year and how rankings shift",
+    x = "Budget (Million USD)",
+    y = NULL
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, margin = margin(b = 5)),
+    plot.subtitle = element_text(size = 11, color = "#666666", margin = margin(b = 15)),
+    axis.text.y = element_text(size = 9.5),
+    axis.text.x = element_text(size = 9),
+    axis.title.x = element_text(face = "bold", size = 11, margin = margin(t = 10)),
+    strip.text = element_text(face = "bold", size = 13, margin = margin(b = 10)),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.spacing = unit(1.5, "lines"),
+    plot.margin = margin(15, 15, 15, 15)
+  )
+```
+
+Afganistan is the only country that has received more funding than Ukraine in 2022, this is due to commitments made at the global level following the Taliban takeover, probably made earlier than February 2022 as contributions to the appeal. 
+
+Also note, that this cannot be taken as an indicator of the *global humanitarian attention*, CBPFs is a flexible global mechanism that can balance the funding situation between different crises, considering the attention given by other donors.  
+
 # Allocation Flow Analysis
 
-## Countries in Dataset
+Country-Based Pool Funds have the two ways of publish allocations: the standard allocation and the reserve allocation. 
 
-```{r allocation-countries}
-#| label: allocation-countries
+-   **Standard Allocation**: Regular funding cycles based on strategic response plans and humanitarian response planning
+-   **Reserve Allocation**: Emergency funding for urgent needs, rapid response to sudden onset crises, and critical gaps
 
-countries <- unique(allocation_flow$Fund)
-ukraine_allocation <- allocation_flow %>% filter(Fund == "Ukraine")
+Key Differences from Standard Allocations:
 
-if(nrow(ukraine_allocation) > 0) {
-  ukraine_summary <- ukraine_allocation %>%
-    group_by(Year, `Partner type`) %>%
-    summarise(
-      `Direct Funding ($)` = sum(`Direct funding`, na.rm = TRUE),
-      `Net Funding ($)` = sum(`Net funding`, na.rm = TRUE),
-      .groups = 'drop'
-    ) %>%
-    arrange(Year, desc(`Net Funding ($)`))
-  
-  kable(ukraine_summary,
-        format.args = list(big.mark = ","),
-        caption = "Ukraine Allocation Summary by Year and Partner Type")
-}
-```
+- **Speed:** The timeline is compressed. A Reserve Allocation can be processed from launch to signature in as little as 48-72 hours in extreme cases, though 2-3 weeks is more common.
+- **Targeting:** The strategy is highly prescriptive. The HC may define not just the geographic area but the specific activities required (e.g., "Provision of emergency shelter kits in District X").
+- **Partner Selection:** While Standard Allocations are open calls, Reserve Allocations can be "closed" or restricted. The HC may invite specific partners who are known to have presence and capacity in the affected area to submit proposals, thereby bypassing the open competitive process to save time.
 
-# Project Analysis
-
-## Projects by Organization Type
-
-```{r org-type-analysis}
-#| label: org-type-analysis
-#| fig-width: 10
-#| fig-height: 6
-
-org_type_summary <- project_summary %>%
-  count(OrganizationType, name = "Projects") %>%
-  arrange(desc(Projects))
-
-# Table
-kable(org_type_summary,
-      format.args = list(big.mark = ","),
-      caption = "Projects by Organization Type")
-
-# Visualization
-project_summary %>%
-  group_by(OrganizationType) %>%
-  summarise(Total_Budget = sum(Budget, na.rm = TRUE), .groups = 'drop') %>%
-  ggplot(aes(x = reorder(OrganizationType, Total_Budget), y = Total_Budget/1e6)) +
-  geom_col(fill = "#005f73") +
-  coord_flip() +
-  labs(
-    title = "Total Budget by Organization Type",
-    x = "Organization Type",
-    y = "Total Budget (Millions USD)"
-  )
-```
-
-## Projects Over Time
-
-```{r projects-over-time}
-#| label: projects-over-time
-#| fig-width: 10
-#| fig-height: 6
-
-year_summary <- project_summary %>%
-  count(AllocationYear, name = "Projects") %>%
-  arrange(AllocationYear)
-
-# Table
-kable(year_summary,
-      format.args = list(big.mark = ","),
-      caption = "Projects by Allocation Year")
-
-# Trend visualization
-project_summary %>%
-  count(AllocationYear) %>%
-  ggplot(aes(x = AllocationYear, y = n)) +
-  geom_line(color = "#005f73", linewidth = 1.2) +
-  geom_point(color = "#005f73", size = 3) +
-  labs(
-    title = "Number of Projects by Allocation Year",
-    x = "Year",
-    y = "Number of Projects"
-  )
-```
-
-# Budget Analysis
-
-```{r budget-analysis}
-#| label: budget-analysis
-
-budget_stats <- project_summary %>%
-  summarise(
-    `Total Budget ($)` = sum(Budget, na.rm = TRUE),
-    `Mean Budget ($)` = mean(Budget, na.rm = TRUE),
-    `Median Budget ($)` = median(Budget, na.rm = TRUE),
-    `Min Budget ($)` = min(Budget, na.rm = TRUE),
-    `Max Budget ($)` = max(Budget, na.rm = TRUE)
-  )
-
-kable(budget_stats,
-      format.args = list(big.mark = ",", digits = 2),
-      caption = "Overall Budget Statistics")
-```
 
 ## Budget Distribution by Allocation Source
+
+```{r allocation-count-by-source}
+#| label: allocation-count-by-source
+#| fig-width: 12
+#| fig-height: 9
+
+# Ukraine allocation summary
+ukraine_allocation_summary <- project_summary %>%
+  filter(AllocationYear >= 2014, 
+         !is.na(AllocationSourceName),
+         PooledFundName == "Ukraine") %>%
+  group_by(AllocationSourceName) %>%
+  summarise(
+    Projects = n(),
+    Budget = sum(Budget, na.rm = TRUE),
+    .groups = 'drop'
+  ) %>%
+  mutate(
+    Region = "Ukraine",
+    # Force factor ordering: Standard first, Reserve second
+    AllocationSourceName = factor(AllocationSourceName, levels = c("Standard", "Reserve"))
+  ) %>%
+  arrange(AllocationSourceName)
+
+# Rest of World allocation summary (excluding Ukraine)
+rest_of_world_summary <- project_summary %>%
+  filter(AllocationYear >= 2014, 
+         !is.na(AllocationSourceName),
+         PooledFundName != "Ukraine") %>%
+  group_by(AllocationSourceName) %>%
+  summarise(
+    Projects = n(),
+    Budget = sum(Budget, na.rm = TRUE),
+    .groups = 'drop'
+  ) %>%
+  mutate(
+    Region = "Rest of World",
+    # Force factor ordering: Standard first, Reserve second
+    AllocationSourceName = factor(AllocationSourceName, levels = c("Standard", "Reserve"))
+  ) %>%
+  arrange(AllocationSourceName)
+
+# Combine both datasets and ensure ordering
+comparison_data <- bind_rows(ukraine_allocation_summary, rest_of_world_summary) %>%
+  arrange(Region, AllocationSourceName)
+
+# Recalculate percentages within each region
+comparison_data <- comparison_data %>%
+  group_by(Region) %>%
+  mutate(
+    Projects_Pct = round((Projects / sum(Projects)) * 100, 1),
+    Budget_Pct = round((Budget / sum(Budget)) * 100, 1)
+  ) %>%
+  ungroup() %>%
+  arrange(Region, AllocationSourceName)
+
+# Budget proportions chart - Standard at bottom (dark teal), Reserve on top (light teal)
+ggplot(comparison_data, 
+       aes(x = Region, y = Budget_Pct, fill = AllocationSourceName)) +
+  geom_col(position = position_stack(reverse = FALSE), width = 0.6) +
+  geom_text(aes(label = paste0(AllocationSourceName, "\n", Budget_Pct, "%\n($", round(Budget/1e6, 0), "M)")),
+            position = position_stack(vjust = 0.5, reverse = FALSE),
+            color = "white",
+            fontface = "bold",
+            size = 3.8,
+            lineheight = 0.85) +
+  scale_fill_manual(values = c("Standard" = "#005f73", "Reserve" = "#94d2bd"),
+                    name = "Allocation Type",
+                    breaks = c("Standard", "Reserve")) +
+  scale_y_continuous(labels = function(x) paste0(x, "%"),
+                     expand = expansion(mult = c(0, 0.02))) +
+  labs(
+    title = "Budget Distribution by Allocation Type: Ukraine vs Rest of World (2014-2025)",
+    subtitle = "Standard allocations (dark teal) at bottom, Reserve allocations (light teal) on top",
+    x = NULL,
+    y = "Percentage of Budget"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(size = 11, color = "#666666"),
+    panel.grid.major.x = element_blank(),
+    axis.text.x = element_text(size = 12, face = "bold"),
+    legend.position = "top",
+    legend.text = element_text(size = 11, face = "bold")
+  )
+```
 
 ```{r allocation-source-by-year}
 #| label: allocation-source-by-year
 #| fig-width: 10
 #| fig-height: 6
 
-# Calculate budget by allocation source and year (2022-2025)
-allocation_source_summary <- project_summary %>%
-  filter(AllocationYear >= 2022 & AllocationYear <= 2025) %>%
+# Calculate budget by allocation source and year for UKRAINE only (2019-2025)
+ukraine_allocation_by_year <- project_summary %>%
+  filter(PooledFundName == "Ukraine", 
+         AllocationYear >= 2019,
+         !is.na(AllocationSourceName)) %>%
   group_by(AllocationYear, AllocationSourceName) %>%
   summarise(Total_Budget = sum(Budget, na.rm = TRUE), .groups = 'drop') %>%
+  # Force factor ordering BEFORE calculating percentages
+  mutate(
+    AllocationSourceName = factor(AllocationSourceName, levels = c("Standard", "Reserve"))
+  ) %>%
+  arrange(AllocationYear, AllocationSourceName) %>%
   group_by(AllocationYear) %>%
   mutate(
     Year_Total = sum(Total_Budget),
-    Percentage = (Total_Budget / Year_Total) * 100
+    Percentage = round((Total_Budget / Year_Total) * 100, 1)
   ) %>%
+  ungroup() %>%
   arrange(AllocationYear, AllocationSourceName)
 
-# Summary table
-allocation_table <- allocation_source_summary %>%
-  select(AllocationYear, AllocationSourceName, Total_Budget, Percentage) %>%
-  mutate(
-    `Budget ($)` = format(round(Total_Budget, 0), big.mark = ","),
-    `Percentage (%)` = round(Percentage, 1)
-  ) %>%
-  select(Year = AllocationYear, `Allocation Source` = AllocationSourceName, 
-         `Budget ($)`, `Percentage (%)`)
-
-kable(allocation_table,
-      caption = "Budget Distribution by Allocation Source and Year")
-
-# Visualization - stacked bar chart with absolute values and percentages
+# Visualization - line chart showing percentage over time
 # Convert to millions for display
-allocation_source_summary <- allocation_source_summary %>%
+ukraine_allocation_by_year <- ukraine_allocation_by_year %>%
   mutate(Budget_Millions = Total_Budget / 1e6)
 
-ggplot(allocation_source_summary, 
-       aes(x = factor(AllocationYear), y = Budget_Millions, fill = AllocationSourceName)) +
-  geom_col(position = "stack", width = 0.7) +
-  geom_text(aes(label = paste0("$", round(Budget_Millions, 1), "M\n(", 
-                               round(Percentage, 1), "%)")),
-            position = position_stack(vjust = 0.5),
-            color = "white",
+ggplot(ukraine_allocation_by_year, 
+       aes(x = AllocationYear, y = Percentage, color = AllocationSourceName, group = AllocationSourceName)) +
+  geom_line(linewidth = 1.5) +
+  geom_point(size = 4) +
+  geom_text(aes(label = paste0(Percentage, "%")),
+            vjust = -1.2, 
+            size = 3.5,
             fontface = "bold",
-            size = 3.5,
-            lineheight = 0.9) +
-  scale_fill_manual(values = c("Standard" = "#005f73", "Reserve" = "#94d2bd"),
-                    name = "Allocation Source") +
-  scale_y_continuous(labels = function(x) paste0("$", x, "M"), 
-                     expand = expansion(mult = c(0, 0.05))) +
+            show.legend = FALSE) +
+  scale_color_manual(values = c("Standard" = "#005f73", "Reserve" = "#94d2bd"),
+                     name = "Allocation Type",
+                     breaks = c("Standard", "Reserve")) +
+  scale_y_continuous(labels = function(x) paste0(x, "%"),
+                     limits = c(0, 100),
+                     breaks = seq(0, 100, 20),
+                     expand = expansion(mult = c(0.05, 0.15))) +
+  scale_x_continuous(breaks = seq(2019, 2025, 1)) +
   labs(
-    title = "Budget Distribution by Allocation Source Across Years",
-    subtitle = "Absolute values (millions USD) and percentage of total budget per year",
+    title = "Ukraine Allocation Type Distribution Over Time (2019-2025)",
+    subtitle = "Percentage of budget allocated through Standard vs Reserve modalities by year",
     x = "Allocation Year",
-    y = "Total Budget (Millions USD)"
+    y = "Percentage of Total Budget"
   ) +
+  theme_minimal() +
   theme(
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(size = 11, color = "#666666"),
     legend.position = "top",
-    panel.grid.major.x = element_blank()
+    legend.text = element_text(size = 11, face = "bold"),
+    panel.grid.minor = element_blank(),
+    axis.text.x = element_text(size = 11)
   )
 ```
 
-::: callout-tip
-## Allocation Sources
 
--   **Standard Allocation**: Regular funding cycles based on strategic response plans
--   **Reserve Allocation**: Emergency funding for urgent needs and rapid response
-:::
+Although the balance between standard and reserve allocations appears to be correcting in 2025, it is important to note that since the counter-offensives of 2022, there have not been major events — such as large-scale population movements or recaptured territories — that would justify the recurrent use of the reserve modality. **Ukraine's humanitarian needs can be considered sustainably high, but not necessarily volatile.**
 
-# Beneficiary Analysis
+The global CBPF guidelines state that **only exceptionally** should the reserve allocation be used for non-emergency purposes: *"the Reserve Allocation may also be used to support special initiatives which may not be rapid onset or unforeseen per se..."* (CBPF Global Guidelines, art. 136).
 
-```{r beneficiary-analysis}
-#| label: beneficiary-analysis
-#| fig-width: 10
-#| fig-height: 6
 
-beneficiary_totals <- project_summary %>%
-  summarise(
-    Men = sum(Men, na.rm = TRUE),
-    Women = sum(Women, na.rm = TRUE),
-    Boys = sum(Boys, na.rm = TRUE),
-    Girls = sum(Girls, na.rm = TRUE)
-  ) %>%
-  mutate(
-    Adults = Men + Women,
-    Children = Boys + Girls,
-    Total = Adults + Children,
-    `Female (%)` = round((Women + Girls) / Total * 100, 1),
-    `Male (%)` = round((Men + Boys) / Total * 100, 1)
-  )
 
-# Summary table
-beneficiary_summary <- tibble(
-  Category = c("Men", "Women", "Boys", "Girls", "Total Adults", "Total Children", "Grand Total"),
-  Count = c(
-    beneficiary_totals$Men,
-    beneficiary_totals$Women,
-    beneficiary_totals$Boys,
-    beneficiary_totals$Girls,
-    beneficiary_totals$Adults,
-    beneficiary_totals$Children,
-    beneficiary_totals$Total
-  )
-)
 
-kable(beneficiary_summary,
-      format.args = list(big.mark = ","),
-      caption = "Beneficiary Demographics")
-
-# Visualization
-beneficiary_totals %>%
-  select(Men, Women, Boys, Girls) %>%
-  pivot_longer(everything(), names_to = "Category", values_to = "Count") %>%
-  ggplot(aes(x = Category, y = Count, fill = Category)) +
-  geom_col() +
-  geom_text(aes(label = format(Count, big.mark = ",")), 
-            vjust = -0.5, size = 4) +
-  scale_fill_manual(values = c("#005f73", "#2B638B", "#94d2bd", "#ee9b00")) +
-  scale_y_continuous(labels = scales::comma, expand = expansion(mult = c(0, 0.1))) +
-  labs(
-    title = "Beneficiaries by Gender and Age Group",
-    x = "Category",
-    y = "Number of Beneficiaries"
-  ) +
-  theme(
-    legend.position = "none"
-  )
-```
-
-::: callout-note
-## Gender Balance
-
-The data shows **`r beneficiary_totals$'Female (%)'`%** female beneficiaries and **`r beneficiary_totals$'Male (%)'`%** male beneficiaries across all projects.
-:::
-
-# Project Status Overview
-
-```{r project-status}
-#| label: project-status
-
-status_summary <- project_summary %>%
-  count(ProjectStatus, name = "Count") %>%
-  arrange(desc(Count))
-
-kable(status_summary,
-      format.args = list(big.mark = ","),
-      caption = "Project Status Distribution")
-```
-
-# 2025 Funding Analysis {#sec-2025}
-
-## Top Organizations
-
-```{r funding-2025}
-#| label: funding-2025
-#| fig-width: 12
-#| fig-height: 8
-
-# Filter for 2025 projects and aggregate by organization
-funding_2025 <- project_summary %>%
-  filter(AllocationYear == 2025) %>%
-  group_by(OrganizationName, OrganizationType) %>%
-  summarise(
-    `Total Funding ($)` = sum(Budget, na.rm = TRUE),
-    `Number of Projects` = n(),
-    .groups = 'drop'
-  ) %>%
-  arrange(desc(`Total Funding ($)`))
-
-# Total 2025 funding
-total_2025 <- sum(funding_2025$`Total Funding ($)`)
-
-# Display top 20 organizations
-kable(head(funding_2025, 20),
-      format.args = list(big.mark = ","),
-      caption = "Top 20 Organizations by Funding in 2025")
-
-# Visualization: Top 15 Organizations
-funding_2025 %>%
-  head(15) %>%
-  ggplot(aes(x = reorder(OrganizationName, `Total Funding ($)`), 
-             y = `Total Funding ($)` / 1e6,
-             fill = OrganizationType)) +
-  geom_col() +
-  geom_text(aes(label = paste0("$", format(round(`Total Funding ($)` / 1e6, 1), nsmall = 1), "M")),
-            hjust = -0.1,
-            size = 3.5,
-            color = "black") +
-  coord_flip() +
-  scale_fill_manual(values = c("#005f73", "#2B638B", "#94d2bd", "#ee9b00")) +
-  scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +
-  labs(
-    title = "Top 15 Organizations by Funding - 2025",
-    subtitle = paste("Total 2025 Funding: $", format(round(total_2025/1e6, 1), nsmall = 1), "M"),
-    x = "Organization",
-    y = "Funding (Millions USD)",
-    fill = "Organization Type"
-  ) +
-  theme(
-    legend.position = "bottom",
-    axis.text.y = element_text(size = 10)
-  )
-```
-
-## Funding by Organization Type (2025)
-
-```{r funding-type-2025}
-#| label: funding-type-2025
-#| fig-width: 10
-#| fig-height: 6
-
-funding_by_type_2025 <- project_summary %>%
-  filter(AllocationYear == 2025) %>%
-  group_by(OrganizationType) %>%
-  summarise(
-    `Total Funding ($)` = sum(Budget, na.rm = TRUE),
-    `Number of Organizations` = n_distinct(OrganizationName),
-    `Number of Projects` = n(),
-    `Average Project Size ($)` = round(`Total Funding ($)` / `Number of Projects`, 0),
-    .groups = 'drop'
-  ) %>%
-  arrange(desc(`Total Funding ($)`))
-
-kable(funding_by_type_2025,
-      format.args = list(big.mark = ","),
-      caption = "2025 Funding by Organization Type")
-
-# Pie chart for organization type distribution
-funding_by_type_2025 %>%
-  ggplot(aes(x = "", y = `Total Funding ($)`, fill = OrganizationType)) +
-  geom_col(width = 1, color = "white") +
-  geom_text(aes(label = paste0(OrganizationType, "\n$", 
-                                format(round(`Total Funding ($)`/1e6, 1), nsmall = 1), "M")),
-            position = position_stack(vjust = 0.5),
-            size = 3.5) +
-  coord_polar("y", start = 0) +
-  scale_fill_manual(values = c("#005f73", "#2B638B", "#94d2bd", "#ee9b00")) +
-  labs(
-    title = "2025 Funding Distribution by Organization Type",
-    fill = "Organization Type"
-  ) +
-  theme_void() +
-  theme(
-    legend.position = "right",
-    plot.title = element_text(face = "bold", color = "#005f73", hjust = 0.5, size = 16)
-  )
-```
-
-# Conclusions
-
-## Summary Statistics
-
-```{r final-summary}
-#| label: final-summary
-
-summary_stats <- tibble(
-  Metric = c(
-    "Total Projects",
-    "Total Organizations",
-    "Total Budget (All Years)",
-    "Total Beneficiaries",
-    "2025 Funding",
-    "Average Project Budget"
-  ),
-  Value = c(
-    format(nrow(project_summary), big.mark = ","),
-    format(n_distinct(project_summary$OrganizationName), big.mark = ","),
-    paste0("$", format(round(sum(project_summary$Budget, na.rm = TRUE)/1e6, 1), nsmall = 1), "M"),
-    format(beneficiary_totals$Total, big.mark = ","),
-    paste0("$", format(round(total_2025/1e6, 1), nsmall = 1), "M"),
-    paste0("$", format(round(mean(project_summary$Budget, na.rm = TRUE)/1e3, 0), big.mark = ","), "K")
-  )
-)
-
-kable(summary_stats,
-      caption = "Key Metrics Summary")
-```
-
-## Key Insights
-
-1.  **Organizational Diversity**: The fund supports multiple types of organizations including UN agencies, international NGOs, and national NGOs, ensuring broad implementation capacity.
-
-2.  **Consistent Funding**: Projects show steady funding trends over the years with significant allocations in 2025.
-
-3.  **Beneficiary Reach**: The program has reached a substantial number of beneficiaries across different demographic groups.
-
-4.  **Gender Consideration**: The funding demonstrates attention to gender-balanced programming with relatively even distribution between male and female beneficiaries.
 
 ------------------------------------------------------------------------
 
