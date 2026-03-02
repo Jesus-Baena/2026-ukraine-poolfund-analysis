@@ -12,17 +12,31 @@ body {
 
 /* Increase container width */
 .quarto-container {
-    max-width: 1400px !important;
+    max-width: 1600px !important;
+    width: 100% !important;
 }
 
-main.content {
-    max-width: 1400px !important;
+main.content,
+.column-body,
+.page-columns .column-body {
+    max-width: 100% !important;
+    width: 100% !important;
     padding: 4rem 2rem 2rem 2rem;
 }
 
 /* Wider table of contents */
 #TOC {
     width: 300px !important;
+    padding-top: 3rem !important;
+    padding-right: 2rem !important;
+}
+
+/* TOC sidebar container spacing */
+#quarto-sidebar,
+.sidebar.toc-left,
+nav[role="doc-toc"] {
+    padding-top: 3rem !important;
+    padding-right: 2rem !important;
 }
 
 /* --- Headers --- */

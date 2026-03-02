@@ -614,7 +614,7 @@ competitive, but for which achievement of the envisaged activities, outputs and 
 135. The Reserve Allocation is intended primarily to respond to rapid onset and unforeseen circumstances and address corresponding needs. Rapid response to an unforeseen cholera outbreak in a particular geographical location is an illustrative example.
 136. Exceptionally, the Reserve Allocation may also be used to support special initiatives which may not be rapid onset or unforeseen per se, but where the HC considers that the CBPF is uniquely placed to play a strategic
 
-38 E ligibility of expenditures can start prior to signature of the Grant Agreement, as noted in paragraphs 131 and 326.
+38 Eligibility of expenditures can start prior to signature of the Grant Agreement, as noted in paragraphs 131 and 326.
 
 39 While OCHA is responsible for the signing of the HC and EO, the timeline is also contingent on partners signing the Grant Agreement.
 

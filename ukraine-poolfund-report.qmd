@@ -1,6 +1,6 @@
 ---
 title: "Ukraine Humanitarian Pooled Fund Analysis"
-subtitle: "Funding Allocation and Impact Assessment"
+subtitle: "Funding Allocation and Grant Characteristics with emphasis on the health sector"
 author: "Jesus Baena"
 date: "2026-02-13"
 format:
@@ -15,6 +15,10 @@ format:
     smooth-scroll: true
     number-sections: true
     css: custom-style.css
+    grid:
+      sidebar-width: 300px
+      body-width: 1100px
+      margin-width: 0px
 editor: visual
 execute:
   warning: false
@@ -49,7 +53,6 @@ In total the data comprises:
 -   xx allocations
 
 ```{r setup}
-#| label: setup
 #| include: false
 
 # Load required libraries
@@ -61,6 +64,10 @@ library(lubridate)
 library(stringr)
 library(knitr)
 library(scales)
+library(patchwork)
+library(ggtext)
+library(gghighlight)
+library(ggrepel)
 
 # Set working directory
 setwd("/home/jbi-debian/Git/2026-ukraine-poolfund-analysis")
@@ -90,7 +97,6 @@ theme_colors <- list(
 ```
 
 ```{r load-data}
-#| label: load-data
 
 # Load all data files - Latest download from February 19, 2026
 # Using complete global dataset (ALL versions) for all 28 CBPF countries
@@ -137,7 +143,6 @@ The raw data is well-structured and consistent with expected values. Minor trans
 :::
 
 ```{r data-preparation}
-#| label: data-preparation
 
 # ============================================================
 # PART 1: Date and Type Conversions
@@ -213,7 +218,6 @@ safe_year_format <- function(year_vec, func = min) {
 ```
 
 ```{r dataset-overview}
-#| label: dataset-overview
 
 data_summary <- tibble(
   Dataset = c("Project Summary", "Project Summary (Location)", 
@@ -277,7 +281,6 @@ There have been 46 pool funds established, benefiting 42 unique countries. Four 
 The data shows the humanitarian gap visible, in recent years, the number of countries receiving funding has increased, but the total budget allocated has gone in the wrong direction.  
 
 ```{r global-budget-countries}
-#| label: global-budget-countries
 #| fig-width: 12
 #| fig-height: 7
 
@@ -374,7 +377,6 @@ The 2010-2013 period represents the early pilot phase of CBPF with limited geogr
 This visualization shows how CBPF funding was distributed across countries for each year from 2022 to 2025. Ukraine is highlighted in yellow to track its position among the top recipients throughout this period.
 
 ```{r budget-by-country-yearly}
-#| label: budget-by-country-yearly
 #| fig-width: 14
 #| fig-height: 11
 
@@ -480,8 +482,9 @@ Key Differences from Standard Allocations:
 
 ## Budget Distribution by Allocation Source
 
+**UHF has made more use of the reserve allocation than any other country-based pooled fund**, with a significant portion of its funding coming from this modality. This chart compares the distribution of standard vs reserve allocations for Ukraine against the rest of the world, showing that while Ukraine has a higher reliance on reserve allocations, there is a trend towards more balanced funding in 2025.
+
 ```{r allocation-count-by-source}
-#| label: allocation-count-by-source
 #| fig-width: 12
 #| fig-height: 9
 
@@ -568,7 +571,6 @@ ggplot(comparison_data,
 ```
 
 ```{r allocation-source-by-year}
-#| label: allocation-source-by-year
 #| fig-width: 10
 #| fig-height: 6
 
@@ -637,9 +639,987 @@ Although the balance between standard and reserve allocations appears to be corr
 The global CBPF guidelines state that **only exceptionally** should the reserve allocation be used for non-emergency purposes: *"the Reserve Allocation may also be used to support special initiatives which may not be rapid onset or unforeseen per se..."* (CBPF Global Guidelines, art. 136).
 
 
+## Budget Distribution by Type of Organization
+
+CBPF allocations reach beneficiaries through four types of implementing partners: International NGOs (INGOs), National NGOs (NNGOs), UN Agencies, and a residual "Others" category. The balance between these partner types reflects both operational realities on the ground and broader policy commitments — notably the Grand Bargain pledge to channel at least 25% of humanitarian funding to local and national actors.
+
+```{r org-type-combined}
+#| fig-width: 14
+#| fig-height: 7
+
+org_colors <- c("National NGO"      = "#2a9d8f",
+                "International NGO" = "#005f73",
+                "UN Agency"         = "#e9c46a",
+                "Others"            = "#adb5bd")
+
+# --- Left panel: proportional comparison Ukraine vs Rest of World ---
+org_type_ukraine <- project_summary %>%
+  filter(AllocationYear >= 2014, !is.na(OrganizationType),
+         PooledFundName == "Ukraine") %>%
+  group_by(OrganizationType) %>%
+  summarise(Budget = sum(Budget, na.rm = TRUE), Projects = n(), .groups = "drop") %>%
+  mutate(Region = "Ukraine")
+
+org_type_row <- project_summary %>%
+  filter(AllocationYear >= 2014, !is.na(OrganizationType),
+         PooledFundName != "Ukraine") %>%
+  group_by(OrganizationType) %>%
+  summarise(Budget = sum(Budget, na.rm = TRUE), Projects = n(), .groups = "drop") %>%
+  mutate(Region = "Rest of World")
+
+org_type_comparison <- bind_rows(org_type_ukraine, org_type_row) %>%
+  group_by(Region) %>%
+  mutate(
+    Budget_Pct = round((Budget / sum(Budget)) * 100, 1),
+    OrganizationType = factor(OrganizationType, levels = names(org_colors))
+  ) %>%
+  ungroup()
+
+p_comparison <- ggplot(org_type_comparison,
+       aes(x = Region, y = Budget_Pct, fill = OrganizationType)) +
+  geom_col(position = position_stack(reverse = TRUE), width = 0.55) +
+  geom_text(aes(label = paste0(OrganizationType, "\n", Budget_Pct, "%")),
+            position = position_stack(vjust = 0.5, reverse = TRUE),
+            color = "white", fontface = "bold", size = 3.2, lineheight = 0.9) +
+  scale_fill_manual(values = org_colors, name = "Organization Type") +
+  scale_y_continuous(labels = function(x) paste0(x, "%"),
+                     expand = expansion(mult = c(0, 0.02))) +
+  labs(title = "Ukraine vs Rest of World",
+       subtitle = "Budget share by org type (2014-2025)",
+       x = NULL, y = "Percentage of Budget") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", size = 13),
+    plot.subtitle = element_text(size = 10, color = "#666666"),
+    panel.grid.major.x = element_blank(),
+    axis.text.x = element_text(size = 11, face = "bold"),
+    legend.position = "none"
+  )
+
+# --- Right panel: Ukraine absolute budget over time ---
+ukraine_org_year <- project_summary %>%
+  filter(PooledFundName == "Ukraine", AllocationYear >= 2022,
+         !is.na(OrganizationType)) %>%
+  group_by(AllocationYear, OrganizationType) %>%
+  summarise(Budget = sum(Budget, na.rm = TRUE), .groups = "drop") %>%
+  mutate(OrganizationType = factor(OrganizationType, levels = names(org_colors)))
+
+p_over_time <- ggplot(ukraine_org_year,
+       aes(x = as.factor(AllocationYear), y = Budget / 1e6, fill = OrganizationType)) +
+  geom_col(position = position_stack(reverse = TRUE), width = 0.7, alpha = 0.9) +
+  scale_fill_manual(values = org_colors, name = "Organization Type") +
+  scale_y_continuous(labels = scales::comma, expand = expansion(mult = c(0, 0.08))) +
+  labs(title = "Ukraine Budget by Organization Type Over Time",
+       subtitle = "USD millions (2022-2025)",
+       x = "Allocation Year", y = "Budget (USD millions)") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", size = 13),
+    plot.subtitle = element_text(size = 10, color = "#666666"),
+    axis.text.x = element_text(size = 9, angle = 45, hjust = 1),
+    legend.position = "top",
+    legend.text = element_text(size = 9)
+  )
+
+p_comparison + p_over_time + plot_layout(widths = c(1, 2))
+```
+
+### Localization Trend: National NGO Share Over Time
+
+```{r localization-trend}
+#| fig-width: 12
+#| fig-height: 6
+
+# Calculate NNGO % of budget per year for Ukraine and global average
+localization_ukraine <- project_summary %>%
+  filter(AllocationYear >= 2014, !is.na(OrganizationType)) %>%
+  group_by(AllocationYear, PooledFundName) %>%
+  mutate(Year_Fund_Total = sum(Budget, na.rm = TRUE)) %>%
+  filter(OrganizationType == "National NGO") %>%
+  summarise(
+    NNGO_Budget = sum(Budget, na.rm = TRUE),
+    Year_Fund_Total = first(Year_Fund_Total),
+    .groups = "drop"
+  ) %>%
+  mutate(NNGO_Pct = round((NNGO_Budget / Year_Fund_Total) * 100, 1))
+
+# Global average per year (all funds EXCEPT Ukraine)
+global_nngo <- localization_ukraine %>%
+  filter(PooledFundName != "Ukraine") %>%
+  group_by(AllocationYear) %>%
+  summarise(
+    NNGO_Pct = round(sum(NNGO_Budget) / sum(Year_Fund_Total) * 100, 1),
+    .groups = "drop"
+  ) %>%
+  mutate(Series = "Global Average")
+
+ukraine_nngo <- localization_ukraine %>%
+  filter(PooledFundName == "Ukraine") %>%
+  select(AllocationYear, NNGO_Pct) %>%
+  mutate(Series = "Ukraine UHF")
+
+localization_plot <- bind_rows(ukraine_nngo, global_nngo)
+
+ggplot(localization_plot,
+       aes(x = AllocationYear, y = NNGO_Pct, color = Series, group = Series)) +
+  geom_hline(yintercept = 25, linetype = "dashed", color = "#e63946", linewidth = 0.8) +
+  annotate("text", x = 2014.2, y = 26.5, label = "Grand Bargain 25% target",
+           color = "#e63946", size = 3.5, hjust = 0, fontface = "italic") +
+  geom_line(linewidth = 1.5) +
+  geom_point(size = 4) +
+  geom_text(aes(label = paste0(NNGO_Pct, "%")),
+            vjust = -1.2, size = 3.5, fontface = "bold", show.legend = FALSE) +
+  scale_color_manual(
+    values = c("Ukraine UHF" = "#005f73", "Global Average" = "#94d2bd"),
+    name = NULL
+  ) +
+  scale_y_continuous(labels = function(x) paste0(x, "%"),
+                     limits = c(0, 60),
+                     breaks = seq(0, 60, 10),
+                     expand = expansion(mult = c(0.02, 0.12))) +
+  scale_x_continuous(breaks = seq(2014, 2025, 1)) +
+  labs(
+    title = "National NGO Budget Share Over Time: Ukraine vs Global Average (2014–2025)",
+    subtitle = "Dashed red line marks the Grand Bargain 25% localization target",
+    x = "Allocation Year", y = "National NGO % of Total Budget"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(size = 11, color = "#666666"),
+    legend.position = "top",
+    legend.text = element_text(size = 11, face = "bold"),
+    panel.grid.minor = element_blank(),
+    axis.text.x = element_text(size = 10, angle = 45, hjust = 1)
+  )
+```
+
+
+## Budget Distribution by Sector (Cluster)
+
+This section examines how humanitarian funding is distributed across sectors, comparing the global CBPF portfolio with Ukraine's UHF allocations (2014–2025). Sector labels in the CBPF system correspond to inter-agency clusters (e.g., Health, WASH, Protection).
+
+```{r cluster-prep}
+#| include: false
+
+# Build sector-level aggregates from the clusters dataset (already filtered to ≤2025)
+clusters_clean <- clusters %>%
+  filter(AllocationYear != 2026, !is.na(Cluster), Cluster != "")
+
+# Standardise minor cluster labels for readability
+clusters_clean <- clusters_clean %>%
+  mutate(Cluster = case_when(
+    Cluster == "Camp Coordination / Management" ~ "Camp Coordination/Mgmt",
+    Cluster == "Coordination and Support Services" ~ "Coord. & Support Services",
+    Cluster == "Emergency Shelter and NFI" ~ "Emergency Shelter & NFI",
+    Cluster == "Emergency Telecommunications" ~ "Emergency Telecoms",
+    Cluster == "Water, Sanitation and Hygiene" ~ "WASH",
+    TRUE ~ Cluster
+  ))
+
+# ---------- Global aggregate (all funds, 2014-2025) ----------
+global_cluster <- clusters_clean %>%
+  filter(AllocationYear >= 2014) %>%
+  group_by(Cluster) %>%
+  summarise(Total = sum(ClusterBudget, na.rm = TRUE), .groups = "drop") %>%
+  mutate(Share = Total / sum(Total) * 100,
+         Source = "Global CBPF")
+
+# ---------- Ukraine aggregate (2014-2025) ----------
+ukraine_cluster <- clusters_clean %>%
+  filter(PooledFundName == "Ukraine", AllocationYear >= 2014) %>%
+  group_by(Cluster) %>%
+  summarise(Total = sum(ClusterBudget, na.rm = TRUE), .groups = "drop") %>%
+  mutate(Share = Total / sum(Total) * 100,
+         Source = "Ukraine UHF")
+
+# Ordered by global share for consistent axis
+cluster_order <- global_cluster %>%
+  arrange(Share) %>%
+  pull(Cluster)
+
+# Combined for comparison chart
+comparison_df <- bind_rows(global_cluster, ukraine_cluster) %>%
+  mutate(Cluster = factor(Cluster, levels = cluster_order))
+```
+
+### Global vs Ukraine: Sector Budget Share
+
+```{r cluster-comparison}
+#| fig-width: 12
+#| fig-height: 7
+
+# Colour palette: one shade per source
+source_colors <- c("Global CBPF" = "#94d2bd", "Ukraine UHF" = "#005f73")
+
+ggplot(comparison_df,
+       aes(x = Cluster, y = Share, fill = Source)) +
+  geom_col(position = position_dodge(width = 0.75), width = 0.65, alpha = 0.9) +
+  geom_text(aes(label = paste0(round(Share, 1), "%")),
+            position = position_dodge(width = 0.75),
+            hjust = -0.15, size = 3.2, fontface = "bold") +
+  coord_flip() +
+  scale_fill_manual(values = source_colors, name = NULL) +
+  scale_y_continuous(
+    labels = function(x) paste0(x, "%"),
+    expand = expansion(mult = c(0, 0.25))
+  ) +
+  labs(
+    title = "Sector Budget Share: Global CBPF vs Ukraine UHF (2014–2025)",
+    subtitle = "Percentage of total allocated budget per sector",
+    x = NULL, y = "Share of Total Budget (%)",
+    caption = "Source: CBPF Cluster dataset, Feb 2026 extract"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title    = element_text(face = "bold", size = 14, color = "#005f73"),
+    plot.subtitle = element_text(size = 11, color = "#555555"),
+    legend.position = "top",
+    legend.text   = element_text(size = 11, face = "bold"),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor   = element_blank(),
+    axis.text.y        = element_text(size = 11)
+  )
+```
+
+::: {.callout-note}
+**Key observations:** Emergency Shelter & NFI and Protection dominate Ukraine's portfolio—reflecting the conflict-driven displacement crisis—while globally WASH and Health are the largest sectors. Ukraine's WASH and Health shares are notably lower than the global average, highlighting a context-specific funding pattern.
+:::
+
+### Ukraine Sector Budget Evolution Over Time
+
+```{r cluster-ukraine-trend}
+#| fig-width: 12
+#| fig-height: 6
+
+# Yearly breakdown for Ukraine per cluster
+ukraine_yearly <- clusters_clean %>%
+  filter(PooledFundName == "Ukraine", AllocationYear >= 2022) %>%
+  group_by(AllocationYear, Cluster) %>%
+  summarise(Budget_M = sum(ClusterBudget, na.rm = TRUE) / 1e6, .groups = "drop")
+
+# Keep sector order consistent with global ranking
+sector_palette <- c(
+  "WASH"                         = "#0077B6",
+  "Health"                       = "#e63946",  # highlighted
+  "Food Security"                = "#90E0EF",
+  "Emergency Shelter & NFI"      = "#005f73",
+  "Protection"                   = "#0A9396",
+  "Nutrition"                    = "#94D2BD",
+  "Education"                    = "#E9C46A",
+  "Camp Coordination/Mgmt"       = "#F4A261",
+  "Multi-purpose CASH"           = "#E76F51",
+  "Coord. & Support Services"    = "#ae2012",
+  "Multi-Sector"                 = "#9b2226",
+  "Early Recovery"               = "#6d6875",
+  "Logistics"                    = "#b5b5b5",
+  "Emergency Telecoms"           = "#d4d4d4",
+  "COVID-19"                     = "#ccc5b9"
+)
+
+ukraine_yearly <- ukraine_yearly %>%
+  mutate(Cluster = factor(Cluster, levels = rev(cluster_order)))
+
+ggplot(ukraine_yearly,
+       aes(x = as.factor(AllocationYear), y = Budget_M, fill = Cluster)) +
+  geom_col(position = position_stack(reverse = TRUE), width = 0.75, alpha = 0.92) +
+  scale_fill_manual(values = sector_palette, name = "Sector") +
+  scale_y_continuous(
+    labels = scales::comma,
+    expand = expansion(mult = c(0, 0.06))
+  ) +
+  labs(
+    title = "Ukraine UHF: Sector Budget Distribution Over Time (2022–2025)",
+    subtitle = "USD millions, stacked by cluster  |  \u2665 Health sector highlighted",
+    x = "Allocation Year", y = "Budget (USD millions)",
+    caption = "Source: CBPF Cluster dataset, Feb 2026 extract"
+  ) +
+  guides(fill = guide_legend(nrow = 3, byrow = TRUE)) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title    = element_text(face = "bold", size = 14, color = "#005f73"),
+    plot.subtitle = element_text(size = 11, color = "#555555"),
+    legend.position = "bottom",
+    legend.text   = element_text(size = 9),
+    panel.grid.minor   = element_blank(),
+    axis.text.x        = element_text(size = 10, angle = 45, hjust = 1)
+  )
+```
+
+### Divergence from Global Average
+
+```{r cluster-divergence}
+#| fig-width: 11
+#| fig-height: 6
+
+# Calculate difference: Ukraine share minus global share
+divergence_df <- ukraine_cluster %>%
+  select(Cluster, Ukraine_Share = Share) %>%
+  left_join(
+    global_cluster %>% select(Cluster, Global_Share = Share),
+    by = "Cluster"
+  ) %>%
+  mutate(
+    Global_Share  = replace_na(Global_Share, 0),
+    Diff          = Ukraine_Share - Global_Share,
+    Direction     = if_else(Diff >= 0, "Above global average", "Below global average"),
+    Cluster       = factor(Cluster, levels = cluster_order)
+  )
+
+ggplot(divergence_df,
+       aes(x = Cluster, y = Diff, fill = Direction)) +
+  geom_col(width = 0.7, alpha = 0.9) +
+  geom_hline(yintercept = 0, linewidth = 0.8, color = "grey30") +
+  geom_text(aes(label = paste0(if_else(Diff > 0, "+", ""), round(Diff, 1), " pp"),
+                hjust = if_else(Diff >= 0, -0.1, 1.1)),
+            size = 3.4, fontface = "bold") +
+  coord_flip() +
+  scale_fill_manual(
+    values = c("Above global average" = "#005f73", "Below global average" = "#e76f51"),
+    name = NULL
+  ) +
+  scale_y_continuous(
+    labels = function(x) paste0(x, " pp"),
+    expand = expansion(mult = c(0.25, 0.25))
+  ) +
+  labs(
+    title = "Ukraine UHF Sector Share vs Global CBPF Average (2014–2025)",
+    subtitle = "Percentage-point difference (Ukraine minus global); pp = percentage points",
+    x = NULL, y = "Difference (percentage points)",
+    caption = "Source: CBPF Cluster dataset, Feb 2026 extract"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title    = element_text(face = "bold", size = 14, color = "#005f73"),
+    plot.subtitle = element_text(size = 11, color = "#555555"),
+    legend.position = "top",
+    legend.text   = element_text(size = 11, face = "bold"),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor   = element_blank(),
+    axis.text.y        = element_text(size = 11)
+  )
+```
+
+
+
+# Grant Characteristics and Patterns
+
 
 
 
 ------------------------------------------------------------------------
 
-*Report generated on `r Sys.Date()` using Quarto*
+# Grant Size Distribution
+
+This chapter examines how large individual grants are across the CBPF system, comparing global patterns with Ukraine. Grant size reflects strategic choices: larger grants reduce transaction costs but concentrate risk; smaller grants enable broader partner diversity. Ukraine, as a high-intensity conflict fund, may follow different patterns.
+
+```{r grant-prep}
+#| include: false
+
+# Base dataset: all valid grants 2014-2025
+grants <- project_summary %>%
+  filter(AllocationYear >= 2014, !is.na(Budget), Budget > 0) %>%
+  mutate(
+    Context = if_else(PooledFundName == "Ukraine", "Ukraine UHF", "Global CBPF"),
+    OrgType = case_when(
+      OrganizationType == "International NGO" ~ "INGO",
+      OrganizationType == "National NGO"      ~ "NNGO",
+      OrganizationType == "UN Agency"         ~ "UN Agency",
+      TRUE                                    ~ NA_character_
+    )
+  ) %>%
+  filter(!is.na(OrgType))
+
+# Join primary cluster (highest budget percentage) from cluster dataset
+cl_primary <- clusters %>%
+  filter(AllocationYear >= 2014) %>%
+  group_by(ChfId) %>%
+  slice_max(Percentage, n = 1, with_ties = FALSE) %>%
+  ungroup() %>%
+  select(ChfId, Cluster) %>%
+  mutate(Cluster = case_when(
+    Cluster == "Water, Sanitation and Hygiene"      ~ "WASH",
+    Cluster == "Emergency Shelter and NFI"          ~ "Shelter & NFI",
+    Cluster == "Camp Coordination / Management"     ~ "Camp Coord./Mgmt",
+    Cluster == "Coordination and Support Services"  ~ "Coord. & Support",
+    Cluster == "Emergency Telecommunications"       ~ "Telecoms",
+    TRUE ~ Cluster
+  ))
+
+grants_cl <- grants %>%
+  left_join(cl_primary, by = "ChfId") %>%
+  mutate(Cluster = replace_na(Cluster, "Unknown"),
+         is_health = Cluster == "Health")
+
+# Shared colour scheme
+ctx_colors <- c("Global CBPF" = "#94d2bd", "Ukraine UHF" = "#005f73")
+org_order   <- c("UN Agency", "INGO", "NNGO")
+```
+
+## Grant Size: Global vs Ukraine
+
+The density plot below uses a **log₁₀ scale** to handle the wide spread of grant values (from ~\$25K to \$29M). Both distributions are right-skewed; the key question is whether Ukraine's curve sits systematically to the right.
+
+```{r grant-density}
+#| fig-width: 11
+#| fig-height: 5
+
+# Summary stats for annotation
+medians <- grants %>%
+  group_by(Context) %>%
+  summarise(med = median(Budget), .groups = "drop")
+
+ggplot(grants, aes(x = Budget, fill = Context, color = Context)) +
+  geom_density(alpha = 0.35, linewidth = 0.9, adjust = 0.8) +
+  geom_vline(data = medians,
+             aes(xintercept = med, color = Context),
+             linetype = "dashed", linewidth = 1.1) +
+  geom_label(data = medians,
+             aes(x = med, y = Inf,
+                 label = paste0("Median\n$", scales::comma(round(med / 1e3), suffix = "K")),
+                 color = Context),
+             vjust = 1.3, hjust = -0.08, size = 3.5, fontface = "bold",
+             fill = "white", label.size = 0.3, show.legend = FALSE) +
+  scale_x_log10(
+    labels = scales::dollar_format(scale = 1e-3, suffix = "K", accuracy = 1),
+    breaks = c(1e4, 5e4, 1e5, 5e5, 1e6, 5e6, 1e7)
+  ) +
+  scale_fill_manual(values  = ctx_colors, name = NULL) +
+  scale_color_manual(values = ctx_colors, name = NULL) +
+  labs(
+    title    = "Grant Size Distribution: Global CBPF vs Ukraine UHF (2014–2025)",
+    subtitle = "Log₁₀ scale — dashed lines mark medians. Ukraine grants are substantially larger.",
+    x = "Grant size (USD, log scale)", y = "Density",
+    caption = "Source: CBPF ProjectSummary dataset, Feb 2026 extract"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title    = element_text(face = "bold", size = 14, color = "#005f73"),
+    plot.subtitle = element_text(size = 11, color = "#555555"),
+    legend.position = "top",
+    legend.text   = element_text(size = 11, face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+::: {.callout-note}
+**Ukraine grants are 2.6× larger at the median** — \$1.13M vs \$440K globally. This reflects both the scale of needs and Ukraine's profile as a large, well-funded conflict response where donors consolidate resources into fewer, larger grants.
+:::
+
+## Grant Size by Organisation Type
+
+```{r grant-by-orgtype}
+#| fig-width: 12
+#| fig-height: 6
+
+grants_org <- grants %>%
+  filter(!is.na(OrgType)) %>%
+  mutate(OrgType = factor(OrgType, levels = org_order))
+
+ggplot(grants_org,
+       aes(x = OrgType, y = Budget / 1e6, fill = Context)) +
+  geom_boxplot(
+    outlier.shape = 16, outlier.size = 0.8, outlier.alpha = 0.3,
+    linewidth = 0.6, width = 0.55,
+    position = position_dodge(width = 0.7)
+  ) +
+  stat_summary(
+    fun = median,
+    geom = "text",
+    aes(label = scales::dollar(..y.. * 1e6, scale = 1e-3, suffix = "K",
+                               accuracy = 1, prefix = "$"),
+        color = Context),
+    position = position_dodge(width = 0.7),
+    vjust = -0.6, size = 3.0, fontface = "bold", show.legend = FALSE
+  ) +
+  scale_fill_manual(values  = ctx_colors, name = NULL) +
+  scale_color_manual(values = ctx_colors, name = NULL) +
+  scale_y_continuous(
+    labels = scales::dollar_format(suffix = "M", accuracy = 0.1),
+    trans  = "log10"
+  ) +
+  labs(
+    title    = "Grant Size by Organisation Type: Global vs Ukraine (2014–2025)",
+    subtitle = "Log₁₀ scale — boxes show IQR, labels mark medians",
+    x = NULL, y = "Grant size (USD millions, log scale)",
+    caption = "Source: CBPF ProjectSummary dataset, Feb 2026 extract"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title    = element_text(face = "bold", size = 14, color = "#005f73"),
+    plot.subtitle = element_text(size = 11, color = "#555555"),
+    legend.position = "top",
+    legend.text   = element_text(size = 11, face = "bold"),
+    panel.grid.minor   = element_blank(),
+    panel.grid.major.x = element_blank()
+  )
+```
+
+## INGO vs NNGO Grant Size: A Deeper Look
+
+Globally, INGOs receive grants about **28% larger** than NNGOs at the median. Ukraine's ratio (1.40×) is mid-table but masks a striking post-2022 shift.
+
+### How Does Ukraine Compare Across All Funds?
+
+```{r ingo-nngo-dumbbell}
+#| fig-width: 12
+#| fig-height: 9
+
+# Per-fund medians for INGO and NNGO (min 10 grants each)
+fund_ngotype <- project_summary %>%
+  filter(AllocationYear >= 2014,
+         !is.na(Budget), Budget > 0,
+         OrganizationType %in% c("International NGO", "National NGO")) %>%
+  group_by(PooledFundName, OrganizationType) %>%
+  summarise(med = median(Budget), n = n(), .groups = "drop")
+
+fund_wide <- fund_ngotype %>%
+  pivot_wider(names_from = OrganizationType, values_from = c(med, n)) %>%
+  rename(ingo_med = `med_International NGO`,
+         nngo_med = `med_National NGO`,
+         ingo_n   = `n_International NGO`,
+         nngo_n   = `n_National NGO`) %>%
+  filter(!is.na(ingo_med), !is.na(nngo_med),
+         ingo_n >= 10, nngo_n >= 10) %>%
+  mutate(
+    ratio     = ingo_med / nngo_med,
+    is_ukraine = PooledFundName == "Ukraine",
+    PooledFundName = factor(PooledFundName, levels = PooledFundName[order(ratio)])
+  )
+
+# Long form for dumbbell
+dumbbell_df <- fund_wide %>%
+  select(PooledFundName, ingo_med, nngo_med, ratio, is_ukraine) %>%
+  pivot_longer(cols = c(ingo_med, nngo_med),
+               names_to = "OrgType", values_to = "Median") %>%
+  mutate(OrgType = if_else(OrgType == "ingo_med", "INGO", "NNGO"))
+
+ggplot() +
+  # segment connecting NNGO to INGO per fund
+  geom_segment(
+    data = fund_wide,
+    aes(x = nngo_med / 1e3, xend = ingo_med / 1e3,
+        y = PooledFundName, yend = PooledFundName,
+        color = is_ukraine),
+    linewidth = 1.2, alpha = 0.7
+  ) +
+  # dots for each org type
+  geom_point(
+    data = dumbbell_df,
+    aes(x = Median / 1e3, y = PooledFundName,
+        shape = OrgType, color = is_ukraine),
+    size = 3.5, stroke = 1.0
+  ) +
+  # ratio label to the right
+  geom_text(
+    data = fund_wide,
+    aes(x = pmax(ingo_med, nngo_med) / 1e3,
+        y = PooledFundName,
+        label = paste0(round(ratio, 2), "×"),
+        fontface = if_else(is_ukraine, "bold", "plain")),
+    hjust = -0.25, size = 3.1, color = "grey30"
+  ) +
+  scale_x_continuous(
+    labels = scales::dollar_format(suffix = "K", accuracy = 1),
+    expand = expansion(mult = c(0.02, 0.18))
+  ) +
+  scale_color_manual(
+    values = c("TRUE" = "#e63946", "FALSE" = "#94d2bd"),
+    guide  = "none"
+  ) +
+  scale_shape_manual(values = c("INGO" = 16, "NNGO" = 1), name = NULL) +
+  labs(
+    title    = "Median Grant Size: INGO vs NNGO per CBPF Fund (2014–2025)",
+    subtitle = "Sorted by INGO/NNGO ratio (right labels)  |  <b style='color:#e63946'>Ukraine highlighted</b>  |  filled = INGO, open = NNGO",
+    x = "Median grant size (USD thousands)", y = NULL,
+    caption = "Funds with < 10 grants per org type excluded"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title    = element_text(face = "bold", size = 14, color = "#005f73"),
+    plot.subtitle = element_markdown(size = 10, color = "#555555"),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor   = element_blank(),
+    legend.position    = "top",
+    legend.text        = element_text(size = 11, face = "bold"),
+    axis.text.y        = element_text(
+      size  = ifelse(levels(fund_wide$PooledFundName) == "Ukraine", 12, 10),
+      face  = ifelse(levels(fund_wide$PooledFundName) == "Ukraine", "bold", "plain"),
+      color = ifelse(levels(fund_wide$PooledFundName) == "Ukraine", "#e63946", "grey30")
+    )
+  )
+```
+
+
+What the chart presents: Each horizontal segment represents one CBPF fund. The open circle is the NNGO median grant, the filled circle is the INGO median. The further right, the larger the absolute grants. The ratio label is what matters for the comparison.
+
+The headline finding: Ukraine's ratio is unremarkable
+At 1.40×, Ukraine sits exactly in the middle of the 26 funds — 13th out of 26. This is counterintuitive given Ukraine's reputation as a progressive localization context. The ratio alone doesn't signal any particular INGO advantage.
+
+But the absolute values tell a different story
+Ukraine's NNGO median (~$999K) is likely higher in absolute terms than many funds' INGO medians. A Ukrainian NNGO receives grants that would be considered large even by INGO standards in Sudan or Nigeria. The localization story in Ukraine is not just about equality of ratio — it's that everyone operates at a much higher scale.
+
+The high-ratio funds (Sudan 2.26×, Nigeria/Haiti 2.0×, Iraq 1.88×) are contexts where the NNGO ecosystem is less mature — smaller organizations, less absorptive capacity, so funders intentionally give them smaller grants to manage risk. The INGO premium there reflects structural capacity gaps.
+
+The low-ratio end (Ethiopia 0.87×, Somalia 1.02×, Syria cross-border 1.07×) is where NNGO capacity has caught up or where large national NGOs dominate the landscape, compressing the gap.
+
+The implication for Ukraine: The ratio of 1.40× aggregated over 2014–2025 understates how much has changed recently — that's exactly what the trend chart below it reveals, where the ratio collapsed to 0.84× in 2024. The aggregate figure is dragged up by the early pre-war years when Ukraine operated more like a typical fund.
+
+### Ukraine: INGO/NNGO Grant Ratio Over Time
+
+Since 2022, Ukraine's NNGO grants have grown faster than INGO grants. In 2023 and 2024 the ratio **fell below 1** — NNGOs received larger median grants than INGOs — a direct signal of the localization push intensifying after the full-scale invasion.
+
+```{r ingo-nngo-ratio-trend}
+#| fig-width: 12
+#| fig-height: 5
+
+# Year-by-year ratio for Ukraine and global average
+ngo_ratio_all <- project_summary %>%
+  filter(AllocationYear >= 2014,
+         !is.na(Budget), Budget > 0,
+         OrganizationType %in% c("International NGO", "National NGO")) %>%
+  group_by(PooledFundName, AllocationYear, OrganizationType) %>%
+  summarise(med = median(Budget), n = n(), .groups = "drop")
+
+make_ratio <- function(df) {
+  df %>%
+    pivot_wider(names_from = OrganizationType, values_from = c(med, n)) %>%
+    rename(ingo = `med_International NGO`, nngo = `med_National NGO`,
+           n_i  = `n_International NGO`,  n_n  = `n_National NGO`) %>%
+    filter(!is.na(ingo), !is.na(nngo), n_i >= 5, n_n >= 5) %>%
+    mutate(ratio = ingo / nngo)
+}
+
+ukraine_ratio <- ngo_ratio_all %>%
+  filter(PooledFundName == "Ukraine") %>%
+  make_ratio() %>%
+  mutate(Series = "Ukraine UHF")
+
+global_ratio <- ngo_ratio_all %>%
+  filter(PooledFundName != "Ukraine") %>%
+  group_by(AllocationYear, OrganizationType) %>%
+  summarise(med = median(med), n = sum(n), .groups = "drop") %>%
+  mutate(PooledFundName = "Global") %>%
+  make_ratio() %>%
+  mutate(Series = "Global CBPF average")
+
+ratio_trend <- bind_rows(ukraine_ratio, global_ratio)
+
+series_colors <- c("Ukraine UHF" = "#005f73", "Global CBPF average" = "#94d2bd")
+
+ggplot(ratio_trend,
+       aes(x = AllocationYear, y = ratio, color = Series, group = Series)) +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "#e63946",
+             linewidth = 0.9) +
+  annotate("text", x = 2014.2, y = 1.03,
+           label = "Parity (INGO = NNGO)", color = "#e63946",
+           size = 3.4, hjust = 0, fontface = "italic") +
+  geom_ribbon(
+    data = ratio_trend %>% filter(Series == "Ukraine UHF"),
+    aes(ymin = 1, ymax = ratio, fill = ratio < 1),
+    alpha = 0.15, color = NA
+  ) +
+  geom_line(linewidth = 1.5) +
+  geom_point(size = 4) +
+  geom_text(aes(label = round(ratio, 2)),
+            vjust = -1.1, size = 3.3, fontface = "bold",
+            show.legend = FALSE) +
+  scale_color_manual(values = series_colors, name = NULL) +
+  scale_fill_manual(values = c("FALSE" = "#005f73", "TRUE" = "#e63946"),
+                    guide = "none") +
+  scale_x_continuous(breaks = 2014:2025) +
+  scale_y_continuous(
+    labels = function(x) paste0(x, "×"),
+    breaks = seq(0.7, 1.8, 0.1)
+  ) +
+  labs(
+    title    = "INGO/NNGO Median Grant Ratio Over Time: Ukraine vs Global (2014–2025)",
+    subtitle = "Ratio > 1 means INGOs get larger grants  |  Red shading = years where NNGOs received larger grants (ratio < 1)",
+    x = "Allocation Year", y = "INGO median / NNGO median",
+    caption = "Global = median of fund-level medians, excluding Ukraine"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title    = element_text(face = "bold", size = 14, color = "#005f73"),
+    plot.subtitle = element_text(size = 11, color = "#555555"),
+    legend.position = "top",
+    legend.text   = element_text(size = 11, face = "bold"),
+    panel.grid.minor = element_blank(),
+    axis.text.x      = element_text(angle = 45, hjust = 1, size = 10)
+  )
+```
+
+
+A Ukrainian NNGO receives grants that would be considered large even by INGO standards in Sudan or Nigeria.
+
+::: {.callout-note}
+**Ukraine's localization in action**: while globally the INGO size premium has been stable at ~1.2–1.4×, Ukraine's ratio dropped to **0.94× in 2023** and **0.84× in 2024**, meaning NNGOs were receiving larger individual grants than INGOs. This likely reflects deliberate fund strategy to direct larger, more complex grants to national partners after the scale-up in 2022.
+:::
+
+## Grant Size by Sector — Health in Context
+
+Using each project's primary cluster (the sector receiving the highest budget share), this chart compares median grant sizes across sectors. Health grants are highlighted in red.
+
+```{r grant-by-sector}
+#| fig-width: 12
+#| fig-height: 7
+
+# Compute median + IQR per cluster for both contexts combined
+sector_stats <- grants_cl %>%
+  filter(Cluster != "Unknown") %>%
+  group_by(Cluster) %>%
+  summarise(
+    med    = median(Budget),
+    q1     = quantile(Budget, 0.25),
+    q3     = quantile(Budget, 0.75),
+    n      = n(),
+    .groups = "drop"
+  ) %>%
+  arrange(med) %>%
+  mutate(
+    Cluster    = factor(Cluster, levels = Cluster),
+    is_health  = Cluster == "Health"
+  )
+
+# Separate Ukraine medians to overlay
+ukraine_med <- grants_cl %>%
+  filter(Cluster != "Unknown", PooledFundName == "Ukraine") %>%
+  group_by(Cluster) %>%
+  summarise(ukraine_med = median(Budget), .groups = "drop") %>%
+  mutate(Cluster = factor(Cluster, levels = levels(sector_stats$Cluster)))
+
+sector_plot_df <- sector_stats %>%
+  left_join(ukraine_med, by = "Cluster")
+
+ggplot(sector_plot_df,
+       aes(x = Cluster, y = med / 1e3, fill = is_health)) +
+  geom_col(width = 0.7, alpha = 0.88) +
+  gghighlight(
+    is_health,
+    unhighlighted_params = list(fill = "#94d2bd", alpha = 0.6),
+    use_direct_label = FALSE
+  ) +
+  # Ukraine medians as points
+  geom_point(
+    aes(y = ukraine_med / 1e3),
+    shape = 23, size = 3.5, fill = "#005f73", color = "white", stroke = 0.8,
+    na.rm = TRUE
+  ) +
+  geom_text(
+    aes(label = paste0("$", scales::comma(round(med / 1e3)), "K")),
+    hjust = -0.1, size = 3.2, fontface = "bold"
+  ) +
+  coord_flip() +
+  scale_fill_manual(values = c("FALSE" = "#94d2bd", "TRUE" = "#e63946"),
+                    guide = "none") +
+  scale_y_continuous(
+    labels = scales::dollar_format(suffix = "K", accuracy = 1),
+    expand = expansion(mult = c(0, 0.3))
+  ) +
+  labs(
+    title    = "Median Grant Size by Sector — Global CBPF (2014–2025)",
+    subtitle = "<b style='color:#e63946'>♥ Health</b> highlighted  |  <b style='color:#005f73'>◆ Diamond</b> = Ukraine UHF median",
+    x = NULL, y = "Median grant size (USD thousands)",
+    caption = "Source: CBPF ProjectSummary + Cluster datasets, Feb 2026 extract"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title    = element_text(face = "bold", size = 14, color = "#005f73"),
+    plot.subtitle = element_markdown(size = 11, color = "#555555"),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor   = element_blank(),
+    axis.text.y        = element_markdown(
+      size  = ifelse(levels(sector_plot_df$Cluster) == "Health", 12, 11),
+      face  = ifelse(levels(sector_plot_df$Cluster) == "Health", "bold", "plain"),
+      color = ifelse(levels(sector_plot_df$Cluster) == "Health", "#e63946", "grey30")
+    )
+  )
+```
+
+::: {.callout-note}
+**Health grants rank in the middle of the pack globally** (~\$422K median), well below sectors like Logistics, Multi-purpose Cash, and Shelter & NFI. The ◆ diamonds show that Ukraine's health grants are significantly larger than the global norm, consistent with the fund's overall pattern of larger, more consolidated grants.
+:::
+
+------------------------------------------------------------------------
+
+# Localization in Context: Ukraine vs All CBPF Funds
+
+The INGO/NNGO grant-size story gains its full meaning when compared across all 26 CBPF pooled funds. How unusual is Ukraine's localization trajectory? Where did it stand in 2022, and where does it stand now?
+
+```{r crossfund-prep}
+#| message: false
+#| warning: false
+
+# --- Fund-level NNGO budget share, 2022-2025 aggregate ---
+loc_agg <- grants %>%
+  filter(AllocationYear >= 2022,
+         OrganizationType %in% c("International NGO", "National NGO")) %>%
+  group_by(PooledFundName) %>%
+  summarise(
+    total_M       = sum(Budget) / 1e6,
+    nngo_share    = sum(Budget[OrganizationType == "National NGO"]) / sum(Budget) * 100,
+    ingo_orgs     = n_distinct(OrganizationName[OrganizationType == "International NGO"]),
+    nngo_orgs     = n_distinct(OrganizationName[OrganizationType == "National NGO"]),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    is_ukraine  = PooledFundName == "Ukraine",
+    fund_label  = PooledFundName,
+    fund_label  = factor(fund_label, levels = fund_label[order(nngo_share)])
+  )
+
+# --- Year-by-year NNGO share for the 8 largest funds ---
+top_funds <- loc_agg %>%
+  slice_max(total_M, n = 8) %>%
+  pull(PooledFundName)
+
+loc_trend <- grants %>%
+  filter(AllocationYear >= 2019, AllocationYear <= 2025,
+         PooledFundName %in% top_funds,
+         OrganizationType %in% c("International NGO", "National NGO")) %>%
+  group_by(PooledFundName, AllocationYear) %>%
+  summarise(
+    nngo_share = sum(Budget[OrganizationType == "National NGO"]) / sum(Budget) * 100,
+    .groups = "drop"
+  ) %>%
+  mutate(is_ukraine = PooledFundName == "Ukraine")
+```
+
+## Where Ukraine Ranks Among All Funds {#sec-loc-rank}
+
+```{r crossfund-rank}
+#| fig-width: 9
+#| fig-height: 7
+#| fig-cap: "NNGO share of total budget (2022–2025 combined). Dot size reflects total fund volume. Ukraine sits 12th overall — but the aggregate masks a sharp recent acceleration."
+
+ggplot(loc_agg,
+       aes(x = fund_label, y = nngo_share)) +
+  geom_segment(
+    aes(xend = fund_label, y = 0, yend = nngo_share,
+        colour = is_ukraine, linewidth = is_ukraine),
+    show.legend = FALSE
+  ) +
+  geom_point(
+    aes(size = total_M, fill = is_ukraine),
+    shape = 21, colour = "white", stroke = 0.6
+  ) +
+  geom_text(
+    data = filter(loc_agg, is_ukraine),
+    aes(label = paste0(round(nngo_share, 0), "%")),
+    hjust = -0.5, fontface = "bold", size = 3.8, colour = "#005f73"
+  ) +
+  geom_text(
+    data = filter(loc_agg, !is_ukraine & (nngo_share > 60 | nngo_share < 6)),
+    aes(label = paste0(round(nngo_share, 0), "%")),
+    hjust = -0.45, size = 3, colour = "grey40"
+  ) +
+  scale_colour_manual(values = c("FALSE" = "grey70", "TRUE" = "#005f73")) +
+  scale_linewidth_manual(values = c("FALSE" = 0.5, "TRUE" = 1.1)) +
+  scale_fill_manual(values = c("FALSE" = "#94d2bd", "TRUE" = "#005f73"),
+                    guide = "none") +
+  scale_size_continuous(
+    name   = "Total fund size (2022–2025, $M)",
+    range  = c(3, 11),
+    breaks = c(10, 100, 300, 500),
+    labels = scales::dollar_format(suffix = "M", accuracy = 1)
+  ) +
+  scale_y_continuous(
+    labels = scales::percent_format(accuracy = 1, scale = 1),
+    limits = c(0, 115),
+    expand = expansion(mult = c(0, 0.05))
+  ) +
+  coord_flip() +
+  labs(
+    title   = "NNGO Share of CBPF Funding, All 26 Funds (2022–2025)",
+    subtitle = "Ukraine highlighted in <b style='color:#005f73'>teal</b> — 12th overall, but aggregate masks a sharp recent rise",
+    x = NULL, y = "NNGO share of total budget",
+    caption = "Source: CBPF ProjectSummary dataset, Feb 2026 extract. INGO/NNGO grants only."
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title       = element_text(face = "bold", size = 14, colour = "#005f73"),
+    plot.subtitle    = element_markdown(size = 11, colour = "#555555"),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor   = element_blank(),
+    legend.position  = "bottom",
+    legend.title     = element_text(size = 10)
+  )
+```
+
+::: {.callout-note}
+Ukraine's **37% aggregate NNGO share** places it 12th among all 26 CBPF funds — in the middle of the field, and well below high-localization contexts like Somalia (70%), Venezuela (69%), or Syria Cross-border (54%). However, this aggregate combines years when Ukraine's share was as low as 21% (2023) with 2025, when it reached 58%. The aggregate rank understates where Ukraine currently stands.
+:::
+
+## The Trajectory: Ukraine vs the Eight Largest Funds {#sec-loc-trend}
+
+```{r crossfund-trend}
+#| fig-width: 10
+#| fig-height: 6
+#| fig-cap: "NNGO budget share over time for the 8 largest CBPF funds (by total 2022–2025 volume). Ukraine's trajectory from 2023 to 2025 is the steepest acceleration of any large fund."
+
+# End-of-line labels
+trend_labels <- loc_trend %>%
+  group_by(PooledFundName) %>%
+  filter(AllocationYear == max(AllocationYear)) %>%
+  ungroup()
+
+ggplot(loc_trend,
+       aes(x = AllocationYear, y = nngo_share,
+           group = PooledFundName, colour = is_ukraine)) +
+  geom_hline(yintercept = 50, linetype = "dashed", colour = "grey60", linewidth = 0.5) +
+  annotate("text", x = 2019.1, y = 51.5, label = "50% parity line",
+           colour = "grey50", size = 3, hjust = 0) +
+  geom_line(
+    data = filter(loc_trend, !is_ukraine),
+    aes(linewidth = is_ukraine),
+    colour = "#94d2bd", alpha = 0.7
+  ) +
+  geom_line(
+    data = filter(loc_trend, is_ukraine),
+    linewidth = 1.6, colour = "#005f73"
+  ) +
+  geom_point(
+    data = filter(loc_trend, is_ukraine),
+    size = 3.5, colour = "#005f73"
+  ) +
+  geom_text_repel(
+    data = trend_labels,
+    aes(label = PooledFundName, colour = is_ukraine),
+    hjust = 0, nudge_x = 0.2, size = 3.2,
+    segment.size = 0.3, segment.colour = "grey60",
+    direction = "y", show.legend = FALSE
+  ) +
+  scale_colour_manual(values = c("FALSE" = "#94d2bd", "TRUE" = "#005f73"),
+                      guide = "none") +
+  scale_linewidth_manual(values = c("FALSE" = 0.7, "TRUE" = 1.6),
+                         guide = "none") +
+  scale_x_continuous(
+    breaks = 2019:2025,
+    limits = c(2019, 2026.8)
+  ) +
+  scale_y_continuous(
+    labels = scales::percent_format(accuracy = 1, scale = 1),
+    limits = c(0, 100)
+  ) +
+  labs(
+    title    = "NNGO Budget Share Over Time — Ukraine vs 7 Largest CBPF Funds",
+    subtitle = "<b style='color:#005f73'>Ukraine</b> shown in teal  |  Other large funds in light green",
+    x = NULL, y = "NNGO share of total budget",
+    caption = "Source: CBPF ProjectSummary dataset, Feb 2026 extract. Top 8 funds by 2022–2025 total volume."
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title       = element_text(face = "bold", size = 14, colour = "#005f73"),
+    plot.subtitle    = element_markdown(size = 11, colour = "#555555"),
+    panel.grid.minor = element_blank(),
+    legend.position  = "none"
+  )
+```
+
+::: {.callout-note}
+Among the eight largest CBPF funds, **Ukraine's acceleration from 2023 to 2025 is the steepest of any fund** — a +38 percentage point swing in two years, moving from 21% to 58%. Sudan moves in the opposite direction, dropping to near zero. Syria Cross-border and Ethiopia show similarly strong localization trajectories but started from a higher baseline. Afghanistan, the largest single fund at \$546M, remains consistently below 40%.
+:::
+
+------------------------------------------------------------------------
+
+*Report generated on `r Sys.Date()` using Quarto and the assistance of Gemini 3. Pro., Claude 4,6 and Ollama models. *
