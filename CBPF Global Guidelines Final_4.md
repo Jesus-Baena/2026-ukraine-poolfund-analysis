@@ -621,15 +621,20 @@ competitive, but for which achievement of the envisaged activities, outputs and 
 role  of  critical  importance  to  the  wider  humanitarian  response,  and for  which there  are very few  suitable partners,  and  a  Standard  Allocation  process  would  be  inefficient.  Undertaking  a  specialised  needs assessment, procuring specialised emergency supplies or supporting a unique common service not generally obtainable through other means are illustrative examples.
 
 137. A key characteristic of the Reserve Allocation, differentiating it from the Standard Allocation, is that funding applications will be entertained from a limited number of partners by invitation, and identified according to explicit  criteria.  In  this  way,  the  process  can  be  streamlined  as  compared  with  a  Standard  Allocation. To ensure transparency, the HFU will consult with sectors/clusters and/or other relevant coordination platforms and stakeholders to identify the criteria and the best-placed partners to be invited to submit proposals. 40  The Allocation Strategy (annex 2B) will outline the selection criteria for partner(s) invited to submit proposals. A fully-fledged Allocation Strategy comparable to that of a Standard Allocation is not required - however, the Strategic Statement will be accompanied in a short Allocation Strategy by other key parameters to execute the allocation quickly, such as geographical area(s), types of project(s) to be implemented, amount to be allocated.
+
 138. Projects selected for funding through Reserve Allocations will have a maximum implementation period of 12 months. This is a maximum and should not be construed as an entitlement. The appropriate time period for any given project will be considered in line with any relevant specifications in the Allocation Strategy and on a case-by-case basis and will be commensurate with the envisaged activities, outputs, programme quality and value for money. Proposals with unrealistically short timeframes to appear economical and competitive but for which achievement of the envisaged activities, outputs and desired level of quality is not feasible will be  deprioritised.  Projects  with  protracted  timeframes  which  go  beyond  what  is  required  to  achieve  the envisaged activities, outputs and programme quality and may include undue recurrent costs, will be similarly deprioritised.
 139. The total amount of funding to be allocated through the Reserve Allocation is set out in the Allocation Strategy. Maximum grant ceilings are set out in the Operational Modalities 41  for each Fund, regulated by the risk level assigned to any given partner and the project duration.
+
 140. CBPFs explore allocation processes that are streamlined and light  The indicative timeline for  a  Reserve Allocation ranges from 15 to 20 working days 42  through to the signature of Grant Agreements, followed by up to 10 working days for the first disbursements.  The steps are as follows:
 
 ## Step 1: Strategic Statement and Allocation Strategy development
 
 141. The HC determines that an allocation process will be conducted, setting out its strategic intent in a concise Strategic Statement that outlines why the allocation is appropriate at a particular juncture and the added value that addressing needs through the Fund will bring in terms of system improvements and quality of the wider response.
+
 142. HFU prepares a short Allocation Strategy, in consultation with the existing coordination mechanisms, which may  include  sectors/clusters  and/or  other  relevant  coordination  platforms  and  other  stakeholders,  that includes  the  Strategic  Statement  and  other  key  parameters  to  execute  the  allocation  quickly  (such  as geographical area(s),  types  of  project(s)  to  be  implemented,  amount  to  be  allocated,  and  criteria for  the partner(s) invited to submit proposals).
+
 143. The Allocation Strategy is reviewed by the CBPF Section to allow for feedback and guidance before being submitted to the AB. This ensures high quality and conformity with global templates and standards.
+
 144. HFU shares the Allocation Strategy with the AB for feedback. A meeting is not required, and a no-objections
 
 40 In situations where the application of the criteria to identify partners for invitation to submit proposals results in more than one partner being invited to submit a proposal for the same scope of work, a limited competitive process may be conducted. In such cases a rapid strategic review may be required, similar to the process used in Standard Allocations with a Review Committee to recommend project(s) for funding.
@@ -649,13 +654,17 @@ feedback process conducted within 24-48 hours is sufficient.
 ## Step 3: Final technical and financial review of proposal(s) 43
 
 147. The objective of the technical and financial review is to ensure that proposal(s) are of sufficient quality before the final approval by the HC. The HFU conducts the final technical and financial review in liaison with subject matter  experts  (for  example  sector/cluster  representatives,  gender  and  disability  inclusion  experts),  as needed, to ensure the appropriateness of project design and the proposed budget, including its conformity with relevant financial and budgetary rules. The HFU will send consolidated comments to partners. Final budget clearance is conducted by the HFU, the Finance Officers at the HFU or the Finance Unit in the CBPF Section and is subject to prevailing delegations of authority.
+
 148. Partners  resubmit  proposals  through  the  GMS  to  incorporate  required  changes  and  ensure  robust  final quality,  with  each  re-submission  receiving  further  comments  as  appropriate.  Given  the  urgency  of  the response, if after two cycles of re-submission a proposal does not meet requirements, it may be removed from the process.
 
 ## Step 4: Final project approval by the HC and signing of Grant Agreement
 
 149. Once  the  technical  and  financial  review  is  completed,  OCHA/HFU  will  recommend  it  to  the  HC  for  final approval and preparation of the Grant Agreement.
+
 150. HFU will liaise with the partner to determine the start date of the project. At the request of the partner, the agreed start date may be specified as early as the date when the budget was cleared at HQ level. This is a provision to accommodate the early start of activities and eligible expenditures in advance of signing the Grant Agreement and completing the first disbursement, should the partner wish to proceed in that manner. If the Grant Agreement, for extraordinary circumstances/force majeure, is not signed following the budget clearance, then the partner will be liable for any expenditures incurred - however, this scenario is extremely unlikely.
+
 151. Following the preparation of the Grant Agreement, it will be signed firstly by the HC, secondly by the partner, and finally by OCHA's EO. Signatures are made through the GMS and electronic signatures are acceptable.
+
 152. The  HFU  makes  consolidated  information  on  the  allocation  and  the  project  portfolio  widely  available  to stakeholders, including through the CBPF DataHub, Allocation Dashboards, and/or via mailing lists.
 
 43 In situations where the application of the criteria to identify partners to invite to submit proposals may result in more than one partner being invited to submit a proposal to complete the same scope of work, a limited competitive process with a rapid strategic review may be required.
@@ -688,9 +697,11 @@ feedback process conducted within 24-48 hours is sufficient.
 ## 4.2.1. Pre-positioning of funding for '48-hour response'
 
 154. In coordination with contingency planning processes and in view of the strategic use of the CBPFs to respond to  sudden-onset  emergencies  as  quickly  as  possible,  allocations  may  include  projects  designed  to  preposition funding with partners to enable a '48-hour response'. Pre-positioning of funding overcomes the need to conduct a new allocation process and establish new Grant Agreements following a sudden-onset situation, which requires a longer timeframe as outlined above.
+
 155. Funding  will  be  pre-positioned  with  pre-selected  partners  as  a  stand-alone  '48-hour  response'  project, unrelated to any other project selected for funding. The funds provided cannot be for extending or otherwise modifying other projects. The following criteria apply to the selection of best-placed partners for pre-positioned funding:
 - i. Geographical  coverage:  Partners  must  have  the  capacity  to  operate  and/or  have  access  to location(s) susceptible to sudden-onset emergencies and where the HC considers that 48-hour response capability is a strategic objective for the Fund.
 - ii. Operational capacity: Partners must have the technical capacity to provide an integrated, multisector response and be able to deliver quickly.
+
 156. In consultation with the AB and after the endorsement of the HC, a stand-alone Reserve Allocation for pre-
 
 44 Eligibility of expenditures can start prior to signature of the Grant Agreement, as noted in paragraphs 131 and 326.
