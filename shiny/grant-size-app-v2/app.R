@@ -118,10 +118,18 @@ ui <- fluidPage(
     sidebarPanel(
       width = 3,
 
+      p(
+        "Methodology and interpretation at ",
+        tags$a("baena.ai", href = "https://baena.ai", target = "_blank"),
+        style = "font-size:12px; color:#555; margin-bottom:12px;"
+      ),
+
+      hr(),
+
       sliderInput("years",
                   "Year range:",
                   min   = year_min,
-                  max   = year_max,
+                  max   = 2025L,
                   value = c(2022L, 2025L),
                   step  = 1L,
                   sep   = ""),
@@ -184,8 +192,8 @@ ui <- fluidPage(
 
     mainPanel(
       width = 9,
-      plotlyOutput("chart", height = "680px"),
-      div(style = "font-size:0.8em; color:#888; margin-top:6px; text-align:right;",
+      plotlyOutput("chart", height = "720px"),
+      div(style = "font-size:0.8em; color:#888; margin-top:4px; text-align:right;",
           "Click a dot to highlight · Search box adds gold rings · Zoom / pan with mouse")
     )
   )
@@ -292,16 +300,25 @@ server <- function(input, output, session) {
   output$selected_org_info <- renderUI({
     sel <- selected_org()
     if (is.null(sel)) return(NULL)
+    if (!grepl("|", sel, fixed = TRUE)) return(NULL)
+    parts <- strsplit(sel, "|", fixed = TRUE)[[1]]
+    fund_name <- parts[1]
+    org_name  <- parts[2]
     data <- org_stats()
-    row  <- data %>% filter(OrganizationName == sel)
+    row  <- data %>% filter(PooledFundName == fund_name, OrganizationName == org_name)
     if (nrow(row) == 0) return(NULL)
     div(
       class = "selected-org-box",
-      tags$b("Selected:"), br(),
-      sel, br(),
-      glue("{row$n_grants[1]} grants · ",
-           "{dollar(row$median_size[1], scale_cut=cut_short_scale(), accuracy=0.01)} median · ",
-           "{dollar(row$total_usd[1], scale_cut=cut_short_scale(), accuracy=0.01)} total")
+      tags$b(org_name), br(),
+      tags$span(style = "color:#005f73; font-weight:600;", fund_name), br(),
+      tags$small(row$OrganizationType[1]), br(), br(),
+      glue(
+        "{row$n_grants[1]} grants received", "\n",
+        "Median: {dollar(row$median_size[1], scale_cut=cut_short_scale(), accuracy=0.01)}", "\n",
+        "Total: {dollar(row$total_usd[1], scale_cut=cut_short_scale(), accuracy=0.01)}", "\n",
+        "Health share: {percent(row$pct_health[1], accuracy=1)}"
+      ) %>% strsplit("\n") %>% `[[`(1) %>%
+        lapply(function(line) tagList(line, br())) %>% tagList()
     )
   })
 
@@ -342,10 +359,11 @@ server <- function(input, output, session) {
       data[0, ]
     }
 
-    # Click-selected org
+    # Click-selected org (key = "fund|org")
     sel_org  <- selected_org()
-    data_sel <- if (!is.null(sel_org) && sel_org %in% data$OrganizationName) {
-      data %>% filter(OrganizationName == sel_org)
+    data_sel <- if (!is.null(sel_org) && grepl("|", sel_org, fixed = TRUE)) {
+      parts <- strsplit(sel_org, "|", fixed = TRUE)[[1]]
+      data %>% filter(PooledFundName == parts[1], OrganizationName == parts[2])
     } else {
       data[0, ]
     }
@@ -357,7 +375,7 @@ server <- function(input, output, session) {
                     color = dot_group,
                     size  = total_usd,
                     text  = tooltip,
-                    key   = OrganizationName)) +
+                    key   = paste0(PooledFundName, "|", OrganizationName))) +
       geom_point(alpha = 0.65, stroke = 0)
 
     # Ellipse annotation
@@ -435,8 +453,8 @@ server <- function(input, output, session) {
       ) +
       theme_minimal(base_size = 13) +
       theme(
-        legend.position  = c(0.98, 0.98),
-        legend.justification = c(1, 1),
+        legend.position      = c(0.02, 0.98),
+        legend.justification = c(0, 1),
         legend.background = element_rect(fill = alpha("white", 0.85), colour = "grey85", linewidth = 0.3),
         legend.margin    = margin(4, 6, 4, 6),
         panel.grid.minor = element_blank()
