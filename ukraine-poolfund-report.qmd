@@ -36,8 +36,8 @@ This report provides a comprehensive analysis of the Ukraine Humanitarian Pooled
 
 ## Key Findings
 
--   **Total Projects Analyzed**: Analysis spans multiple allocation years
--   **Primary Focus**: 2025 funding distribution and organizational performance
+-   **Higher use of the reserve allocation**: Although this is correcting in 2025, overall Ukraine has made more use of the reserve allocation than any other country-based pooled fund since this type of funding exists.
+-   **Great concentration of the funding**: Ukraine grants are significantly more concentrated in a few partners than the rest of the world. 
 -   **Data Sources**: Official UHF allocation and project data
 
 # Data Overview
@@ -70,7 +70,7 @@ library(gghighlight)
 library(ggrepel)
 
 # Set working directory
-setwd("/home/jbi-debian/Git/2026-ukraine-poolfund-analysis")
+setwd("/home/jbi/Git/2026-ukraine-poolfund-analysis")
 
 # --- Consistent ggplot2 Theme ---
 theme_set(
@@ -1069,6 +1069,13 @@ medians <- grants %>%
   group_by(Context) %>%
   summarise(med = median(Budget), .groups = "drop")
 
+fmt_usd <- function(x) {
+  ifelse(x >= 1e6,
+    paste0("$", formatC(x / 1e6, format = "f", digits = 2), "M"),
+    paste0("$", scales::comma(round(x / 1e3)), "K")
+  )
+}
+
 ggplot(grants, aes(x = Budget, fill = Context, color = Context)) +
   geom_density(alpha = 0.35, linewidth = 0.9, adjust = 0.8) +
   geom_vline(data = medians,
@@ -1076,12 +1083,12 @@ ggplot(grants, aes(x = Budget, fill = Context, color = Context)) +
              linetype = "dashed", linewidth = 1.1) +
   geom_label(data = medians,
              aes(x = med, y = Inf,
-                 label = paste0("Median\n$", scales::comma(round(med / 1e3), suffix = "K")),
+                 label = paste0("Median\n", fmt_usd(med)),
                  color = Context),
              vjust = 1.3, hjust = -0.08, size = 3.5, fontface = "bold",
              fill = "white", label.size = 0.3, show.legend = FALSE) +
   scale_x_log10(
-    labels = scales::dollar_format(scale = 1e-3, suffix = "K", accuracy = 1),
+    labels = scales::label_dollar(scale_cut = scales::cut_short_scale()),
     breaks = c(1e4, 5e4, 1e5, 5e5, 1e6, 5e6, 1e7)
   ) +
   scale_fill_manual(values  = ctx_colors, name = NULL) +
@@ -1224,13 +1231,13 @@ ggplot() +
     expand = expansion(mult = c(0.02, 0.18))
   ) +
   scale_color_manual(
-    values = c("TRUE" = "#e63946", "FALSE" = "#94d2bd"),
+    values = c("TRUE" = "#f4a261", "FALSE" = "#94d2bd"),
     guide  = "none"
   ) +
   scale_shape_manual(values = c("INGO" = 16, "NNGO" = 1), name = NULL) +
   labs(
     title    = "Median Grant Size: INGO vs NNGO per CBPF Fund (2014–2025)",
-    subtitle = "Sorted by INGO/NNGO ratio (right labels)  |  <b style='color:#e63946'>Ukraine highlighted</b>  |  filled = INGO, open = NNGO",
+    subtitle = "Sorted by INGO/NNGO ratio (right labels)  |  <b style='color:#f4a261'>Ukraine highlighted</b>  |  filled = INGO, open = NNGO",
     x = "Median grant size (USD thousands)", y = NULL,
     caption = "Funds with < 10 grants per org type excluded"
   ) +
@@ -1245,7 +1252,7 @@ ggplot() +
     axis.text.y        = element_text(
       size  = ifelse(levels(fund_wide$PooledFundName) == "Ukraine", 12, 10),
       face  = ifelse(levels(fund_wide$PooledFundName) == "Ukraine", "bold", "plain"),
-      color = ifelse(levels(fund_wide$PooledFundName) == "Ukraine", "#e63946", "grey30")
+      color = ifelse(levels(fund_wide$PooledFundName) == "Ukraine", "#f4a261", "grey30")
     )
   )
 ```
@@ -1439,6 +1446,361 @@ ggplot(sector_plot_df,
 ::: {.callout-note}
 **Health grants rank in the middle of the pack globally** (~\$422K median), well below sectors like Logistics, Multi-purpose Cash, and Shelter & NFI. The ◆ diamonds show that Ukraine's health grants are significantly larger than the global norm, consistent with the fund's overall pattern of larger, more consolidated grants.
 :::
+
+## Grant Size vs Number of Grants per Organisation {#sec-org-dotchart}
+
+Each dot is one implementing organisation. The x-axis shows how many grants that organisation received over 2022–2025; the y-axis shows their median grant size. Organisations in the top-left corner are high-value, low-frequency recipients; those in the bottom-right are high-frequency implementers of smaller grants.
+
+```{r org-dotchart}
+#| fig-width: 13
+#| fig-height: 7
+
+org_stats <- grants_cl %>%
+  filter(AllocationYear >= 2022, AllocationYear <= 2025,
+         !is.na(Budget), Budget > 0,
+         !is.na(OrganizationName)) %>%
+  group_by(Context, OrganizationName, OrganizationType) %>%
+  summarise(
+    n_grants    = n(),
+    median_size = median(Budget),
+    total_usd   = sum(Budget),
+    pct_health  = mean(Cluster == "Health"),
+    .groups     = "drop"
+  ) %>%
+  mutate(
+    dot_group = case_when(
+      pct_health >= 0.5               ~ "Health (≥50% health grants)",
+      Context   == "Ukraine UHF"      ~ "Ukraine UHF",
+      TRUE                            ~ "Global CBPF"
+    )
+  )
+
+# Dynamic ceilings: y = max Ukraine median + 4M, x = max Ukraine n_grants + 3
+ukr_max   <- org_stats %>% filter(Context == "Ukraine UHF") %>% pull(median_size) %>% max()
+ukr_xmax  <- org_stats %>% filter(Context == "Ukraine UHF") %>% pull(n_grants)    %>% max()
+y_ceiling <- ukr_max  + 4e6
+x_ceiling <- ukr_xmax + 3
+
+dot_colors <- c(
+  "Ukraine UHF"                  = "#f4a261",
+  "Global CBPF"                  = "#94d2bd",
+  "Health (≥50% health grants)"  = "#e63946"
+)
+
+# Parametric ellipse for annotation (log-y space)
+theta      <- seq(0, 2 * pi, length.out = 200)
+ellipse_df <- data.frame(
+  x = 9 + 4.2 * cos(theta),
+  y = 10^(6.45 + 0.55 * sin(theta))
+)
+
+ggplot(org_stats,
+       aes(x = n_grants, y = median_size,
+           color = dot_group, size = total_usd)) +
+  geom_path(data = ellipse_df, aes(x = x, y = y),
+            inherit.aes = FALSE,
+            color = "black", linewidth = 0.9, linetype = "solid") +
+  annotate("text", x = 9, y = 10^6.9,
+           label = "The UHF Exception",
+           hjust = 0.5, vjust = 1, size = 4.5, fontface = "bold.italic", color = "black") +
+  geom_point(alpha = 0.65, stroke = 0) +
+  scale_y_log10(
+    labels = scales::label_dollar(scale_cut = scales::cut_short_scale()),
+    breaks = c(1e4, 5e4, 1e5, 5e5, 1e6, 5e6, 1e7)
+  ) +
+  scale_x_continuous(labels = scales::label_comma(),
+                     breaks = c(1, 2, 3, 5, 7, 10, 15, 20)) +
+  scale_color_manual(values = dot_colors, name = NULL,
+                     guide  = guide_legend(override.aes = list(size = 4))) +
+  scale_size_continuous(
+    name   = "Total disbursed (2022–2025)",
+    range  = c(2, 16),
+    labels = scales::label_dollar(scale_cut = scales::cut_short_scale()),
+    breaks = c(1e6, 5e6, 1e7, 3e7, 5e7),
+    trans  = "sqrt"
+  ) +
+  coord_cartesian(xlim = c(NA, x_ceiling), ylim = c(NA, y_ceiling)) +
+  labs(
+    title    = "Grant Size vs Number of Grants per Organisation (2022–2025)",
+    subtitle = "Each dot = one organisation · Y-axis log-scaled · Dot size = total disbursed · Red = majority health grants",
+    x = "Number of grants received",
+    y = "Median grant size (USD, log scale)",
+    caption = "Source: CBPF ProjectSummary dataset, Feb 2026 extract. Axes clipped at max Ukraine values + buffer."
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title    = element_text(face = "bold", size = 14, color = "#005f73"),
+    plot.subtitle = element_text(size = 11, color = "#555555"),
+    legend.position = "bottom",
+    panel.grid.minor = element_blank()
+  )
+```
+
+```{r org-dotchart-table}
+# Who are the high-value Ukraine outliers?
+org_stats %>%
+  filter(Context == "Ukraine UHF") %>%
+  arrange(desc(total_usd)) %>%
+  mutate(
+    median_size = scales::dollar(median_size, scale_cut = scales::cut_short_scale(), accuracy = 0.01),
+    total_usd   = scales::dollar(total_usd,   scale_cut = scales::cut_short_scale(), accuracy = 0.01),
+    is_pure_health = pct_health == 1,
+    across(
+      c(OrganizationName, OrganizationType),
+      ~ ifelse(is_pure_health,
+               paste0("<span style='color:#e63946;font-weight:bold'>", .x, "</span>"),
+               .x)
+    ),
+    n_grants    = ifelse(is_pure_health,
+                         paste0("<span style='color:#e63946;font-weight:bold'>", n_grants, "</span>"),
+                         as.character(n_grants)),
+    median_size = ifelse(is_pure_health,
+                         paste0("<span style='color:#e63946;font-weight:bold'>", median_size, "</span>"),
+                         median_size),
+    total_usd   = ifelse(is_pure_health,
+                         paste0("<span style='color:#e63946;font-weight:bold'>", total_usd, "</span>"),
+                         total_usd),
+    pct_health  = ifelse(is_pure_health,
+                         "<span style='color:#e63946;font-weight:bold'>100%</span>",
+                         paste0(round(pct_health * 100), "%"))
+  ) %>%
+  select(
+    Organisation      = OrganizationName,
+    Type              = OrganizationType,
+    `Grants received` = n_grants,
+    `Median grant`    = median_size,
+    `Total disbursed` = total_usd,
+    `% Health grants` = pct_health
+  ) %>%
+  knitr::kable(caption = "Ukraine UHF organisations, 2022–2025 — ranked by total disbursed",
+               escape  = FALSE)
+```
+
+------------------------------------------------------------------------
+
+# Partners per Allocation
+
+Each CBPF allocation is a discrete funding round (e.g. "1st Standard Allocation 2023 — Ukraine"). The number of implementing partners selected per round is a direct signal of concentration: a fund that channels money through 10 partners per allocation is far more concentrated than one that routes it through 40. Ukraine's profile as a high-intensity conflict fund, combined with its relatively small NNGO ecosystem, raises the question of whether it selects fewer partners than comparable funds globally.
+
+## Distribution: Ukraine vs Global {#sec-partners-dist}
+
+```{r partners-per-alloc-data}
+#| message: false
+
+# Number of distinct partners per allocation round
+partners_per_alloc <- project_summary %>%
+  filter(AllocationYear >= 2014,
+         !is.na(AllocationSourceID),
+         !is.na(OrganizationName)) %>%
+  group_by(PooledFundName, AllocationSourceID, AllocationSourceName, AllocationYear) %>%
+  summarise(
+    n_partners   = n_distinct(OrganizationName),
+    total_budget = sum(Budget, na.rm = TRUE),
+    n_projects   = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(Context = if_else(PooledFundName == "Ukraine", "Ukraine UHF", "Global CBPF"))
+
+# Summary stats for callout
+ppa_summary <- partners_per_alloc %>%
+  group_by(Context) %>%
+  summarise(
+    n_allocs  = n(),
+    med       = median(n_partners),
+    q1        = quantile(n_partners, 0.25),
+    q3        = quantile(n_partners, 0.75),
+    mean_n    = round(mean(n_partners), 1),
+    .groups   = "drop"
+  )
+```
+
+```{r partners-per-alloc-plot}
+#| fig-width: 11
+#| fig-height: 5
+
+ctx_colors_ppa <- c("Ukraine UHF" = "#005f73", "Global CBPF" = "#94d2bd")
+
+med_labels <- partners_per_alloc %>%
+  group_by(Context) %>%
+  summarise(med = median(n_partners), .groups = "drop")
+
+ggplot(partners_per_alloc,
+       aes(x = n_partners, fill = Context, color = Context)) +
+  geom_density(alpha = 0.35, linewidth = 0.9, adjust = 0.9) +
+  geom_vline(data = med_labels,
+             aes(xintercept = med, color = Context),
+             linetype = "dashed", linewidth = 1.1) +
+  geom_label(data = med_labels,
+             aes(x = med, y = Inf,
+                 label = paste0("Median: ", round(med), " partners"),
+                 color = Context),
+             vjust = 1.3, hjust = -0.07, size = 3.5, fontface = "bold",
+             fill = "white", label.size = 0.3, show.legend = FALSE) +
+  scale_fill_manual(values  = ctx_colors_ppa, name = NULL) +
+  scale_color_manual(values = ctx_colors_ppa, name = NULL) +
+  scale_x_continuous(breaks = c(5, 10, 20, 30, 40, 50, 60, 80, 100)) +
+  labs(
+    title    = "Partners per Allocation Round: Global CBPF vs Ukraine UHF (2014–2025)",
+    subtitle = "Each observation is one allocation round; dashed lines mark medians",
+    x = "Number of distinct implementing partners",
+    y = "Density",
+    caption = "Source: CBPF ProjectSummary dataset, Feb 2026 extract"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title    = element_text(face = "bold", size = 14, color = "#005f73"),
+    plot.subtitle = element_text(size = 11, color = "#555555"),
+    legend.position = "top",
+    legend.text   = element_text(size = 11, face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+```{r partners-callout-vals, include=FALSE}
+ukr_med  <- ppa_summary$med[ppa_summary$Context == "Ukraine UHF"]
+glob_med <- ppa_summary$med[ppa_summary$Context == "Global CBPF"]
+ratio    <- round(glob_med / ukr_med, 1)
+```
+
+::: {.callout-note}
+**Ukraine allocations reach `r ukr_med` partners at the median** vs `r glob_med` globally — global rounds involve roughly `r ratio`× more partners. This means Ukraine concentrates its funding in far fewer organisations per round, reflecting both the smaller partner ecosystem and a deliberate strategy of larger, consolidated grants.
+:::
+
+## Partners per Allocation: Trend Over Time (Ukraine) {#sec-partners-trend}
+
+Ukraine's partner count per allocation has evolved markedly since the full-scale invasion in 2022.
+
+```{r partners-trend-ukraine}
+#| fig-width: 11
+#| fig-height: 5
+
+# Yearly median and IQR for Ukraine
+ukr_trend <- partners_per_alloc %>%
+  filter(Context == "Ukraine UHF") %>%
+  group_by(AllocationYear) %>%
+  summarise(
+    med    = median(n_partners),
+    q1     = quantile(n_partners, 0.25),
+    q3     = quantile(n_partners, 0.75),
+    n_obs  = n(),
+    .groups = "drop"
+  )
+
+# Global yearly median for comparison
+glob_trend <- partners_per_alloc %>%
+  filter(Context == "Global CBPF") %>%
+  group_by(AllocationYear) %>%
+  summarise(
+    med   = median(n_partners),
+    q1    = quantile(n_partners, 0.25),
+    q3    = quantile(n_partners, 0.75),
+    .groups = "drop"
+  )
+
+ggplot() +
+  # Global ribbon + line
+  geom_ribbon(data = glob_trend,
+              aes(x = AllocationYear, ymin = q1, ymax = q3),
+              fill = "#94d2bd", alpha = 0.25) +
+  geom_line(data = glob_trend,
+            aes(x = AllocationYear, y = med, color = "Global CBPF median"),
+            linewidth = 0.9, linetype = "dotted") +
+  # Ukraine ribbon + line
+  geom_ribbon(data = ukr_trend,
+              aes(x = AllocationYear, ymin = q1, ymax = q3),
+              fill = "#005f73", alpha = 0.20) +
+  geom_line(data = ukr_trend,
+            aes(x = AllocationYear, y = med, color = "Ukraine UHF median"),
+            linewidth = 1.2) +
+  geom_point(data = ukr_trend,
+             aes(x = AllocationYear, y = med, color = "Ukraine UHF median"),
+             size = 3) +
+  geom_text(data = ukr_trend,
+            aes(x = AllocationYear, y = med,
+                label = round(med)),
+            vjust = -0.9, size = 3.2, fontface = "bold", color = "#005f73") +
+  annotate("rect", xmin = 2021.5, xmax = Inf, ymin = -Inf, ymax = Inf,
+           fill = "#e63946", alpha = 0.04) +
+  annotate("text", x = 2022, y = Inf, label = "Full-scale\ninvasion",
+           vjust = 1.4, hjust = 0, size = 3, color = "#e63946", fontface = "italic") +
+  scale_color_manual(
+    values = c("Ukraine UHF median" = "#005f73", "Global CBPF median" = "#2ca58d"),
+    name   = NULL
+  ) +
+  scale_x_continuous(breaks = 2014:2025) +
+  labs(
+    title    = "Median Partners per Allocation Round by Year",
+    subtitle = "Shaded bands = IQR; dotted line = global median; solid = Ukraine",
+    x = "Allocation year", y = "Partners per allocation (median)",
+    caption = "Source: CBPF ProjectSummary dataset, Feb 2026 extract"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title    = element_text(face = "bold", size = 14, color = "#005f73"),
+    plot.subtitle = element_text(size = 11, color = "#555555"),
+    legend.position = "top",
+    legend.text   = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    axis.text.x   = element_text(angle = 45, hjust = 1)
+  )
+```
+
+## Where Does Ukraine Rank? Cross-Fund Comparison {#sec-partners-crossfund}
+
+The dot plot below ranks every CBPF fund by its median number of partners per allocation (2014–2025), positioning Ukraine in the global distribution.
+
+```{r partners-crossfund-dotplot}
+#| fig-width: 11
+#| fig-height: 9
+
+fund_medians <- partners_per_alloc %>%
+  filter(AllocationYear >= 2014) %>%
+  group_by(PooledFundName) %>%
+  summarise(
+    med      = median(n_partners),
+    n_allocs = n(),
+    .groups  = "drop"
+  ) %>%
+  mutate(is_ukraine = PooledFundName == "Ukraine") %>%
+  filter(n_allocs >= 3) %>%   # at least 3 allocation rounds
+  arrange(med) %>%
+  mutate(PooledFundName = factor(PooledFundName, levels = PooledFundName))
+
+ggplot(fund_medians,
+       aes(x = med, y = PooledFundName,
+           color = is_ukraine, size = is_ukraine)) +
+  geom_vline(xintercept = median(fund_medians$med),
+             linetype = "dashed", color = "grey60", linewidth = 0.8) +
+  geom_point() +
+  geom_text(aes(label = round(med)),
+            hjust = -0.5, size = 3,
+            fontface = ifelse(fund_medians$PooledFundName == "Ukraine", "bold", "plain"),
+            color = ifelse(fund_medians$PooledFundName == "Ukraine", "#005f73", "grey40")) +
+  scale_color_manual(values = c(`TRUE` = "#005f73", `FALSE` = "#94d2bd"),
+                     guide  = "none") +
+  scale_size_manual(values = c(`TRUE` = 5, `FALSE` = 3), guide = "none") +
+  annotate("text",
+           x = median(fund_medians$med), y = Inf,
+           label = paste0("Overall median: ", round(median(fund_medians$med))),
+           hjust = -0.05, vjust = 1.4, size = 3.2, color = "grey50", fontface = "italic") +
+  labs(
+    title    = "Median Partners per Allocation Round by CBPF Fund (2014–2025)",
+    subtitle = "Ukraine (teal) vs all other funds (green); dashed = cross-fund median",
+    x = "Median number of partners per allocation", y = NULL,
+    caption = "Source: CBPF ProjectSummary dataset, Feb 2026 extract. Funds with < 3 allocations excluded."
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title    = element_text(face = "bold", size = 14, color = "#005f73"),
+    plot.subtitle = element_text(size = 11, color = "#555555"),
+    panel.grid.minor = element_blank(),
+    axis.text.y    = element_text(
+      size  = ifelse(levels(fund_medians$PooledFundName) == "Ukraine", 12, 10),
+      face  = ifelse(levels(fund_medians$PooledFundName) == "Ukraine", "bold", "plain"),
+      color = ifelse(levels(fund_medians$PooledFundName) == "Ukraine", "#005f73", "grey30")
+    )
+  )
+```
 
 ------------------------------------------------------------------------
 

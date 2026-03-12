@@ -38,7 +38,7 @@ library(lubridate)
 library(stringr)
 
 # Set working directory
-setwd("/home/jbi-debian/Git/2026-analysis-ukraine-poolfund")
+setwd("/home/jbi/Git/2026-ukraine-poolfund-analysis")
 
 # CHUNK 1: Load All Data Files ----
 cat("Loading data files...\n")
