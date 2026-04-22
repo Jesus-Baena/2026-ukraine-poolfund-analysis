@@ -1,16 +1,58 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+/* ==========================================================================
+   Ukraine Humanitarian Pooled Fund Report — Custom Stylesheet
+   Complements the Quarto YAML (yeti theme + title-block-banner + simple callouts)
+   ========================================================================== */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* --- Design tokens --- */
+:root {
+    --color-primary:        #003d4c;  /* deep teal — banner + accents */
+    --color-primary-soft:   #0a5a6e;
+    --color-accent:         #2B638B;  /* mid blue — links, callouts */
+    --color-accent-soft:    #e6f0f6;
+    --color-text:           #2d3748;
+    --color-text-muted:     #4a5568;
+    --color-heading:        #1a202c;
+    --color-border:         #e2e8f0;
+    --color-border-soft:    #edf2f7;
+    --color-bg:             #ffffff;
+    --color-bg-soft:        #f7fafc;
+    --color-code-bg:        #f7fafc;
+    --color-code-inline-bg: #edf2f7;
+    --color-code-inline-fg: #c53030;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+}
 
 /* --- Global Styles & Typography --- */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 16px;
-    line-height: 1.8;
-    color: #2d3748;
-    background-color: #ffffff;
+    line-height: 1.75;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Increase container width */
+p {
+    margin-bottom: 1.1em;
+}
+
+strong {
+    color: var(--color-heading);
+    font-weight: 600;
+}
+
+/* Container width */
 .quarto-container {
     max-width: 1600px !important;
     width: 100% !important;
@@ -21,70 +63,191 @@ main.content,
 .page-columns .column-body {
     max-width: 100% !important;
     width: 100% !important;
-    padding: 4rem 2rem 2rem 2rem;
+    padding: 2rem 2rem 3rem 2rem;
 }
 
-/* Wider table of contents */
-#TOC {
-    width: 300px !important;
-    padding-top: 3rem !important;
-    padding-right: 2rem !important;
+/* Slightly reduce top padding since banner now provides visual weight */
+#quarto-document-content {
+    padding-top: 1rem;
 }
 
-/* TOC sidebar container spacing */
+/* ==========================================================================
+   Title Block Banner
+   Works with:  title-block-banner: "#003d4c"
+   ========================================================================== */
+.quarto-title-block.banner,
+.quarto-title-block .quarto-title-banner,
+header#title-block-header.quarto-title-block.default {
+    background: linear-gradient(135deg, #003d4c 0%, #0a5a6e 60%, #115e70 100%) !important;
+    color: #ffffff !important;
+    padding: 4rem 3rem 3rem 3rem !important;
+    margin-bottom: 2.5rem !important;
+    border-bottom: 4px solid #94d2bd;
+    box-shadow: var(--shadow-md);
+    position: relative;
+}
+
+.quarto-title-block.banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 20% 10%, rgba(148, 210, 189, 0.08) 0%, transparent 45%),
+                      radial-gradient(circle at 85% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 55%);
+    pointer-events: none;
+}
+
+.quarto-title-block.banner .title,
+.quarto-title-block .title {
+    color: #ffffff !important;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 2.75em !important;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    margin: 0 0 0.4em 0;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.quarto-title-block.banner .subtitle,
+.quarto-title-block .subtitle {
+    color: rgba(255, 255, 255, 0.88) !important;
+    font-size: 1.25em;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+    max-width: 58em;
+}
+
+.quarto-title-block.banner .quarto-title-meta,
+.quarto-title-block .quarto-title-meta {
+    color: rgba(255, 255, 255, 0.82) !important;
+    font-size: 0.92em;
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.quarto-title-block .quarto-title-meta-heading {
+    color: #94d2bd !important;
+    font-size: 0.75em;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.25em;
+}
+
+.quarto-title-block .quarto-title-meta-contents {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+/* TOC */
+#TOC,
 #quarto-sidebar,
 .sidebar.toc-left,
 nav[role="doc-toc"] {
-    padding-top: 3rem !important;
+    padding-top: 2rem !important;
     padding-right: 2rem !important;
+    font-size: 0.92em;
+}
+
+#TOC {
+    width: 300px !important;
 }
 
 /* --- Headers --- */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter', sans-serif;
-    color: #1a202c;
+    color: var(--color-heading);
     font-weight: 700;
     letter-spacing: -0.02em;
+    scroll-margin-top: 1.5rem;
 }
 
 h1 {
-    margin-top: 1em;
+    margin-top: 3.5em;
     margin-bottom: 1em;
+    padding-top: 1em;
     padding-bottom: 0.5em;
-    border-bottom: 3px solid #005f73;
-    font-size: 2.5em;
+    border-top: 1px solid var(--color-border-soft);
+    border-bottom: 3px solid var(--color-primary);
+    font-size: 2.2em;
+    line-height: 1.2;
 }
 
-/* First h1 - Executive Summary - gets extra spacing below */
 h1:first-of-type {
-    margin-top: 0;
-    margin-bottom: 1em;
+    margin-top: 0.5em;
+    padding-top: 0;
+    border-top: none;
 }
 
 h2 {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 2.2em;
+    margin-bottom: 0.8em;
     padding-bottom: 0.3em;
-    border-bottom: 1px solid #e2e8f0;
-    font-size: 2em;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 1.65em;
+    line-height: 1.25;
 }
 
 h3 {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+    font-size: 1.3em;
+    color: var(--color-primary);
+}
+
+h4 {
+    margin-top: 1.3em;
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+}
+
+/* Anchor links on headings */
+.header-section-number {
+    color: var(--color-accent);
+    opacity: 0.75;
+    font-weight: 600;
+    margin-right: 0.4em;
+}
+
+a.anchorjs-link {
+    color: var(--color-accent);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+h1:hover a.anchorjs-link,
+h2:hover a.anchorjs-link,
+h3:hover a.anchorjs-link,
+h4:hover a.anchorjs-link {
+    opacity: 0.6;
 }
 
 /* --- Links --- */
 a {
-    color: #2b6cb0;
+    color: var(--color-accent);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: all 0.2s ease-in-out;
 }
 
 a:hover {
-    color: #2c5282;
-    border-bottom: 1px solid #2c5282;
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
+}
+
+/* Quarto's external link icon */
+a.external::after {
+    opacity: 0.5;
+    margin-left: 0.15em;
 }
 
 /* --- Code Blocks --- */
@@ -93,21 +256,24 @@ pre, code {
 }
 
 pre {
-    background-color: #f7fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    font-size: 14px;
-    padding: 1.5em;
-    margin-bottom: 2em;
+    background-color: var(--color-code-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 13.5px;
+    line-height: 1.6;
+    padding: 1.25em 1.5em;
+    margin-bottom: 1.5em;
     overflow-x: auto;
+    box-shadow: var(--shadow-sm);
 }
 
 code {
-    background-color: #edf2f7;
-    color: #c53030;
-    padding: .2em .5em;
-    border-radius: 4px;
-    font-size: 0.9em;
+    background-color: var(--color-code-inline-bg);
+    color: var(--color-code-inline-fg);
+    padding: .15em .45em;
+    border-radius: var(--radius-sm);
+    font-size: 0.88em;
+    font-weight: 500;
 }
 
 pre code {
@@ -116,55 +282,189 @@ pre code {
     padding: 0;
     border-radius: 0;
     font-size: inherit;
+    font-weight: 400;
+}
+
+/* Code fold button (Quarto's "Show code" <details>) */
+details.code-fold > summary,
+.quarto-code-fold summary {
+    color: var(--color-accent);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85em;
+    font-weight: 500;
+    padding: 0.35em 0.8em;
+    background-color: var(--color-bg-soft);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin-bottom: 0.5em;
+    display: inline-block;
+}
+
+details.code-fold > summary:hover {
+    background-color: var(--color-accent-soft);
+    color: var(--color-primary);
+    border-color: var(--color-accent);
+}
+
+details[open].code-fold > summary {
+    margin-bottom: 0.75em;
+}
+
+/* Code tools button (right-aligned copy/source buttons) */
+.quarto-code-tools-button,
+.code-copy-button {
+    color: var(--color-text-muted);
+    opacity: 0.6;
+    transition: opacity 0.15s ease;
+}
+
+.quarto-code-tools-button:hover,
+.code-copy-button:hover {
+    opacity: 1;
+    color: var(--color-accent);
 }
 
 /* --- Horizontal Rules --- */
 hr {
     border: 0;
     height: 1px;
-    background-color: #e2e8f0;
+    background: linear-gradient(to right, transparent, var(--color-border) 20%, var(--color-border) 80%, transparent);
     margin: 3em 0;
 }
 
-/* --- Info Boxes / Callouts --- */
+/* ==========================================================================
+   Callouts — for callout-appearance: simple
+   Quarto "simple" callouts use thinner markup; style both legacy and simple.
+   ========================================================================== */
+div.callout,
 .callout {
-    padding: 1.5em 2em;
-    margin: 2em 0;
-    background-color: #f0f9ff;
-    border-left: 4px solid #2B638B;
-    border-radius: 8px;
+    padding: 1.1em 1.4em;
+    margin: 1.75em 0;
+    background-color: var(--color-accent-soft);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    box-shadow: var(--shadow-sm);
 }
 
-.callout-note {
-    background-color: #f0f9ff;
-    border-left-color: #2B638B;
+div.callout-simple,
+.callout.callout-style-simple {
+    padding: 0.9em 1.25em;
+    background-color: rgba(43, 99, 139, 0.04);
+    border-left-width: 3px;
+    box-shadow: none;
 }
 
-.callout p:last-child {
+.callout-header,
+.callout-title {
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.35em;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+}
+
+.callout-icon-container,
+.callout-icon {
+    color: var(--color-accent);
+    font-size: 1.1em;
+}
+
+.callout-body {
+    color: var(--color-text);
+}
+
+.callout p:last-child,
+.callout-body p:last-child {
     margin-bottom: 0;
 }
 
-/* --- Table of Contents Styling --- */
+/* Callout variants (note / tip / warning / important / caution) */
+.callout-note,
+.callout.callout-style-simple.callout-note {
+    background-color: rgba(43, 99, 139, 0.05);
+    border-left-color: var(--color-accent);
+}
+.callout-note .callout-title,
+.callout-note .callout-header { color: var(--color-accent); }
+
+.callout-tip,
+.callout.callout-style-simple.callout-tip {
+    background-color: rgba(56, 161, 105, 0.06);
+    border-left-color: #38a169;
+}
+.callout-tip .callout-title,
+.callout-tip .callout-header { color: #2f855a; }
+
+.callout-warning,
+.callout.callout-style-simple.callout-warning {
+    background-color: rgba(221, 107, 32, 0.06);
+    border-left-color: #dd6b20;
+}
+.callout-warning .callout-title,
+.callout-warning .callout-header { color: #c05621; }
+
+.callout-important,
+.callout.callout-style-simple.callout-important {
+    background-color: rgba(229, 62, 62, 0.06);
+    border-left-color: #e53e3e;
+}
+.callout-important .callout-title,
+.callout-important .callout-header { color: #c53030; }
+
+.callout-caution,
+.callout.callout-style-simple.callout-caution {
+    background-color: rgba(214, 158, 46, 0.06);
+    border-left-color: #d69e2e;
+}
+.callout-caution .callout-title,
+.callout-caution .callout-header { color: #b7791f; }
+
+/* ==========================================================================
+   Table of Contents
+   ========================================================================== */
 #TOC .nav > .active > a,
 #TOC .nav > .active > a:hover,
-#TOC .nav > .active > a:focus {
-    color: #ffffff;
-    background-color: #2d3748;
-    border-left: 3px solid #2b6cb0;
+#TOC .nav > .active > a:focus,
+nav[role="doc-toc"] ul > li > a.active {
+    color: var(--color-primary) !important;
+    background-color: var(--color-accent-soft);
+    border-left: 3px solid var(--color-primary);
+    border-bottom: none;
+    font-weight: 600;
+}
+
+#TOC .nav > li > a:hover,
+nav[role="doc-toc"] ul > li > a:hover {
+    color: var(--color-primary);
+    background-color: var(--color-bg-soft);
+    border-left: 3px solid var(--color-accent);
     border-bottom: none;
 }
 
-#TOC .nav > li > a:hover {
-    color: #2d3748;
-    background-color: #f7fafc;
-    border-left: 3px solid #2b6cb0;
-    border-bottom: none;
-}
-
-#TOC .nav > li > a {
-    color: #4a5568;
+#TOC .nav > li > a,
+nav[role="doc-toc"] ul > li > a {
+    color: var(--color-text-muted);
     border-left: 3px solid transparent;
     border-bottom: none;
+    padding: 0.35em 0.75em;
+    line-height: 1.4;
+    transition: all 0.15s ease;
+}
+
+nav[role="doc-toc"] > h2,
+.sidebar-title,
+#quarto-margin-sidebar .margin-sidebar > *:first-child {
+    color: var(--color-primary);
+    font-size: 0.78em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid var(--color-primary);
 }
 
 /* --- Tables --- */
@@ -172,41 +472,169 @@ table {
     margin: 2em auto;
     border-collapse: collapse;
     width: 100%;
+    font-size: 0.95em;
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-md);
+    overflow: hidden;
 }
 
 table thead th {
-    background-color: #1a202c;
-    color: white;
+    background-color: var(--color-primary);
+    color: #ffffff;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    padding: 1em;
+    padding: 0.85em 1em;
     text-align: left;
     border: none;
+    letter-spacing: 0.01em;
 }
 
 table tbody tr:nth-child(odd) {
-    background-color: #f7fafc;
+    background-color: var(--color-bg-soft);
 }
 
 table tbody tr:hover {
-    background-color: #edf2f7;
-    transition: background-color 0.2s ease;
+    background-color: var(--color-accent-soft);
+    transition: background-color 0.15s ease;
 }
 
 table td {
-    padding: 0.8em 1em;
-    border-bottom: 1px solid #e2e8f0;
+    padding: 0.7em 1em;
+    border-bottom: 1px solid var(--color-border);
 }
 
-/* --- Plots and Figures --- */
-.cell-output-display {
-    margin: 3em 0;
+table tbody tr:last-child td {
+    border-bottom: none;
 }
 
-.figure-caption {
+/* Caption */
+caption,
+.table-caption,
+figcaption {
+    caption-side: top;
+    color: var(--color-text-muted);
+    font-size: 0.9em;
     font-style: italic;
-    color: #718096;
+    padding: 0.5em 0;
+    text-align: left;
+}
+
+/* --- Figures & Plots --- */
+.cell-output-display,
+figure {
+    margin: 2em 0;
+}
+
+figure img,
+.cell-output-display img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+figure.figure:hover img,
+.cell-output-display:hover img {
+    box-shadow: var(--shadow-md);
+}
+
+.figure-caption,
+figcaption.figure-caption {
+    font-style: italic;
+    color: var(--color-text-muted);
     text-align: center;
-    margin-top: 1em;
-    font-size: 0.95em;
+    margin-top: 0.8em;
+    font-size: 0.92em;
+    line-height: 1.5;
+}
+
+/* --- Blockquotes --- */
+blockquote {
+    border-left: 4px solid var(--color-primary);
+    background-color: var(--color-bg-soft);
+    padding: 1em 1.5em;
+    margin: 1.5em 0;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    color: var(--color-text-muted);
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-style: italic;
+    font-size: 1.02em;
+    line-height: 1.6;
+}
+
+blockquote p:last-child { margin-bottom: 0; }
+
+/* --- Lists --- */
+ul, ol {
+    padding-left: 1.5em;
+    margin-bottom: 1.1em;
+}
+
+li {
+    margin-bottom: 0.4em;
+}
+
+li::marker {
+    color: var(--color-accent);
+}
+
+/* --- Section numbers (number-sections: true) --- */
+.header-section-number {
+    display: inline-block;
+    min-width: 2em;
+    color: var(--color-primary);
+    opacity: 0.65;
+}
+
+/* --- Footer & in-text attributions --- */
+.quarto-appendix-contents,
+#quarto-appendix {
+    border-top: 1px solid var(--color-border);
+    margin-top: 4rem;
+    padding-top: 2rem;
+    color: var(--color-text-muted);
+    font-size: 0.92em;
+}
+
+/* --- Misc polish --- */
+::selection {
+    background-color: rgba(43, 99, 139, 0.25);
+    color: var(--color-heading);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive: tighten on smaller screens */
+@media (max-width: 1024px) {
+    .quarto-title-block.banner {
+        padding: 2.5rem 1.5rem 2rem 1.5rem !important;
+    }
+    .quarto-title-block.banner .title,
+    .quarto-title-block .title {
+        font-size: 2em !important;
+    }
+    main.content,
+    .column-body,
+    .page-columns .column-body {
+        padding: 1rem 1rem 2rem 1rem;
+    }
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.4em; }
+    table { font-size: 0.88em; }
+}
+
+/* Print-friendly adjustments */
+@media print {
+    .quarto-title-block.banner {
+        background: #003d4c !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    pre { box-shadow: none; }
+    a { color: var(--color-primary); }
+    .quarto-code-tools-button,
+    details.code-fold > summary { display: none; }
 }
