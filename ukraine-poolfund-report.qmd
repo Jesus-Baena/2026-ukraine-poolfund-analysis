@@ -3,7 +3,7 @@ title: "Ukraine Humanitarian Pooled Fund Analysis"
 subtitle: "Allocation patterns, partner concentration, grant scale and the health sector"
 author:
   - name: "Jesus Baena"
-date: "2026-02-13"
+date: "2026-04-24"
 date-format: "MMMM D, YYYY"
 format:
   html:
