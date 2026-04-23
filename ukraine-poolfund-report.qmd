@@ -58,7 +58,7 @@ knitr:
 
 This report analyses the Ukraine Humanitarian Pooled Fund (UHF) from its first allocation in **2019 through 2025**, and situates it within the broader CBPF system using comparative data from **28 country-based pooled funds over 2014–2025** (the mature operational period of the modality).
 
-Rather than focusing on the lineal logic of the project cycle (number of beneficiaries, project duration, funding executed, etc...) the report takes a step back to look at the overall funding flow and the characteristics of the grants, with a particular emphasis on the health sector. 
+Rather than focusing on the lineal logic of the project cycle (number of beneficiaries, project duration, funding executed, etc...) the report takes a step back to look at the overall funding flow and the characteristics of the grants, with a particular emphasis on the health sector.
 
 The analysis is structured around three key questions:
 
@@ -73,7 +73,7 @@ What is the profile of the organization receiving UHF funding? How does it compa
 -   **Ceiling-bound distribution**: UHF's P90 grant size is exactly \$5.00M (the standard cap) — unique among CBPFs. Peer funds show a long tail; UHF shows a flat top.
 -   **Visible capacity-volume mismatches**: Where 2021 revenue is public, the Estonian Refugee Council has managed UHF volumes **4.3× its pre-war annual revenue** (\$9.4M against €1.9M). Seven of the eight core Ukrainian NNGOs have no publicly available 2021 revenue — an independent-assessment gap rather than a finding.
 -   **Structural UN exit**: UN-Agency funding collapsed from \$66M (2022) to \$41M (2023) to **\$5M (2024)**; the 2024 Annual Report makes this explicit (*"UN would no longer be funded unless absolutely necessary"*). Redistributed volume flowed primarily to DRC, ICF Caritas Ukraine and a broadened NNGO tier.
--   **UHF-in-context**: AR-reported, Ukraine = **20% of global CBPF allocations (2024)** and **>10% of the 2024 HNRP** — the largest CBPF for the third consecutive year.
+-   **UHF-in-context**: AR-reported, Ukraine = **20% of global CBPF allocations (2024)** and **\>10% of the 2024 HNRP** — the largest CBPF for the third consecutive year.
 -   **Data Sources**: Official UHF allocation and project data (CBPF Feb 2026 extract); UHF Annual Reports 2022, 2023, 2024.
 
 # Data Overview
@@ -1067,7 +1067,6 @@ ggplot(grants, aes(x = Budget, fill = Context, color = Context)) +
 **Ukraine grants are 2.6× larger at the median** — \$1.13M vs \$440K globally. This reflects both the scale of needs and Ukraine's profile as a large, well-funded conflict response where donors consolidate resources into fewer, larger grants.
 :::
 
-
 ### INGO vs NNGO Grant Size: A Deeper Look
 
 Globally (excluding Ukraine), INGOs receive grants about **25 % larger** than NNGOs at the median (ratio ≈ 1.25×). Ukraine's ratio (1.40×) is mid-table but masks a striking post-2022 shift.
@@ -1654,14 +1653,13 @@ ggplot() +
 
 ------------------------------------------------------------------------
 
-
 # Concentration, Scale, and the Core-20
 
 If UHF involves more partners per round than peer funds and grants larger amounts per grant, a natural question follows: **is the resulting portfolio more concentrated than peer CBPFs, and who sits at the top?** This chapter answers both questions quantitatively. The headline is counterintuitive: UHF is **not** more concentrated than comparable CBPFs — it is simply **larger**. The appearance of concentration is produced by the interaction of envelope size with the \$5M per-grant cap, and by a stable 20-organisation core that has recurred in every allocation round since 2022.
 
 ## Ukraine vs Peer CBPFs: Concentration Benchmark
 
-Peer set: the seven other largest CBPFs by 2022–2024 envelope (Afghanistan, Syria Cross-border, Sudan, Yemen, Ethiopia, Somalia, oPt). Two natural classes emerge — **mega-concentrated access funds** (Sudan, Syria XB, with only 3–4 partners per year and HHI > 0.3) and **broad partner funds** (Afghanistan, Yemen, Ethiopia, Somalia, oPt, Ukraine). Ukraine sits in the second class.
+Peer set: the seven other largest CBPFs by 2022–2024 envelope (Afghanistan, Syria Cross-border, Sudan, Yemen, Ethiopia, Somalia, oPt). Two natural classes emerge — **mega-concentrated access funds** (Sudan, Syria XB, with only 3–4 partners per year and HHI \> 0.3) and **broad partner funds** (Afghanistan, Yemen, Ethiopia, Somalia, oPt, Ukraine). Ukraine sits in the second class.
 
 ```{r concentration-benchmark}
 #| fig-width: 11
@@ -1800,7 +1798,7 @@ ggplot(conc_year,
 ```
 
 ::: callout-tip
-**The trajectory is toward more partners and smaller top-tier shares**, not fewer. Top-5 share fell from 40% in 2022 to 28% in 2024; top-10 from 62% to 45%. Consistent with the localisation push documented in the 2024 Annual Report (NNGO share rising from 30% in 2023 to ~60% in 2024) and with the UN Agency exit (see below).
+**The trajectory is toward more partners and smaller top-tier shares**, not fewer. Top-5 share fell from 40% in 2022 to 28% in 2024; top-10 from 62% to 45%. Consistent with the localisation push documented in the 2024 Annual Report (NNGO share rising from 30% in 2023 to \~60% in 2024) and with the UN Agency exit (see below).
 :::
 
 ## Why UHF Grants Are Bigger: An Arithmetic Identity
@@ -1922,7 +1920,7 @@ knitr::kable(core20,
 ```
 
 ::: callout-important
-**Seven partners are "cap-binders"**: ACTED, UNHCR, DRC, People in Need, ICF Caritas Ukraine, NRC and Proliska all average grants of \$3.4M–\$4.8M — every grant at or near the \$5M ceiling. Six of them received at least one **exceptional-cap grant ≥ \$6M** (UNHCR \$9.4M, NRC \$7.5M, ACTED \$6.3M, PIN \$6.1M, Caritas \$6.0M, Proliska \$5.2M). This is where the "repetition at large scale" pattern concentrates — not across the fund, but in a ~7-organisation inner tier.
+**Seven partners are "cap-binders"**: ACTED, UNHCR, DRC, People in Need, ICF Caritas Ukraine, NRC and Proliska all average grants of \$3.4M–\$4.8M — every grant at or near the \$5M ceiling. Six of them received at least one **exceptional-cap grant ≥ \$6M** (UNHCR \$9.4M, NRC \$7.5M, ACTED \$6.3M, PIN \$6.1M, Caritas \$6.0M, Proliska \$5.2M). This is where the "repetition at large scale" pattern concentrates — not across the fund, but in a \~7-organisation inner tier.
 :::
 
 ::: callout-note
@@ -2035,7 +2033,6 @@ ggplot(dep_plot,
 :::
 
 ------------------------------------------------------------------------
-
 
 # The Ideal UHF Candidate Profile
 
@@ -2270,7 +2267,6 @@ knitr::kable(
 
 ------------------------------------------------------------------------
 
-
 # Health Funding Recipients in Ukraine (2019–2025)
 
 Since the Ukraine Humanitarian Fund was established in 2019, the Health cluster has received a significant share of total allocations. This section identifies every organisation that has received health-earmarked funding and tracks how the recipient landscape has evolved over time.
@@ -2451,7 +2447,6 @@ The heatmap makes the temporal fragmentation of health delivery visible: organis
 
 ------------------------------------------------------------------------
 
-
 # Cross-Check: UHF Annual Reports vs. Data
 
 A dataset-based analysis is only useful if it agrees with — or carefully disagrees with — the fund's own published narrative. This chapter reconciles the figures in this report against the UHF Annual Reports for 2022, 2023 and 2024. The exercise serves three purposes: (i) validate the data pipeline; (ii) surface reporting inconsistencies the reader should know about; (iii) highlight structural shifts the ARs document that are easy to miss in a year-by-year view.
@@ -2475,7 +2470,7 @@ knitr::kable(ar_rec,
 ```
 
 ::: callout-important
-**The 2023 org-type breakdown does not reconcile.** The 2023 AR reports $56.8M to NNGOs (≈30% of the envelope); the raw CBPF extract shows $38.3M direct to National NGO entities. The most plausible reconciliation is that the AR definition includes sub-granted funding flowing from INGO prime recipients to Ukrainian NNGO sub-implementers, and possibly bundles Red Cross / partially-national entities into the NNGO category. When quoting either figure in discussion with external audiences, it is advisable to cite the definition used (direct-partner classification vs end-beneficiary-entity classification).
+**The 2023 org-type breakdown does not reconcile.** The 2023 AR reports \$56.8M to NNGOs (≈30% of the envelope); the raw CBPF extract shows \$38.3M direct to National NGO entities. The most plausible reconciliation is that the AR definition includes sub-granted funding flowing from INGO prime recipients to Ukrainian NNGO sub-implementers, and possibly bundles Red Cross / partially-national entities into the NNGO category. When quoting either figure in discussion with external audiences, it is advisable to cite the definition used (direct-partner classification vs end-beneficiary-entity classification).
 :::
 
 ## Structural Shifts the ARs Document
@@ -2537,7 +2532,7 @@ The 2024 Annual Report is explicit: *"UN would no longer be funded unless absolu
 Per the Annual Reports:
 
 -   **2023 AR**: UHF = **17%** of global CBPF allocations, 7% of the Ukraine HRP.
--   **2024 AR**: UHF = **20%** of global CBPF allocations, **>10%** of the Ukraine HNRP — *"largest CBPF for the third consecutive year."*
+-   **2024 AR**: UHF = **20%** of global CBPF allocations, **\>10%** of the Ukraine HNRP — *"largest CBPF for the third consecutive year."*
 
 One in every five CBPF dollars globally now flows through UHF. The "7th of 28" framing used in parts of this report for reserve-allocation share is accurate for that narrow metric, but understates UHF's overall systemic weight.
 

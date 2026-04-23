@@ -1,0 +1,21 @@
+# Nuxt
+.nuxt/
+.output/
+dist/
+
+# Node
+node_modules/
+.pnpm-store/
+
+# Lockfiles — keep one; ignore the others
+yarn.lock
+package-lock.json
+
+# Env
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
