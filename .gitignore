@@ -1,55 +1,22 @@
-# R and RStudio files
-.Rhistory
-.RData
-.Rproj.user
-*.Rproj
+# Ignore everything at root level
+/*
 
-# Data files (keep structure but not large data)
-# Uncomment to exclude large data files:
-# Raw-data/*.csv
-# Raw-data/*.xlsx
-# Raw-data/*.pdf
+# Keep git and version control
+!.git/
+!.gitignore
+!.github/
 
-# Output files (keep main report)
-output/
-# Keep the main report visible
+# Keep app-2 (grant-size-app-v2)
+!/shiny/
+/shiny/*
+!/shiny/grant-size-app-v2/
+
+# Keep main quarto report
 !ukraine-poolfund-report.html
+!ukraine-poolfund-report.qmd
 
-# Temporary files
-*~
-*.swp
-*.bak
+# Keep API report
+!API_FINDINGS.md
 
-# OS files
-.DS_Store
-Thumbs.db
-
-# VS Code
-.vscode/
-!.vscode/settings.json
-
-# Quarto
-/.quarto/
-_site/
-*_cache/
-*_files/
-
-# R package development
-*.tar.gz
-*.Rcheck/
-
-# knitr and R markdown
-*.utf8.md
-*.knit.md
-
-# pkgdown site
-docs/
-
-# Database files
-*.sql
-*.db
-*.sqlite
-
-# n8n workflow files
-n8n-*.js
-n8n-*.json
+# Keep raw data
+!/Raw-data/
