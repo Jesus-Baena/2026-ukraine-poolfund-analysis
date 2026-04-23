@@ -15,7 +15,7 @@ format:
     toc-location: left
     toc-title: "On this page"
     code-fold: true
-    code-tools: true
+    code-tools: false
     code-summary: "Show code"
     code-link: true
     code-overflow: wrap
@@ -58,11 +58,11 @@ knitr:
 
 This report analyses the Ukraine Humanitarian Pooled Fund (UHF) from its first allocation in **2019 through 2025**, and situates it within the broader CBPF system using comparative data from **28 country-based pooled funds over 2014–2025** (the mature operational period of the modality).
 
-Rather than focusing on the lineal logic of the project cycle (number of beneficiaries, project duration, funding executed, etc...) the report takes a step back to look at the overall funding flow and the characteristics of the grants, with a particular emphasis on the health sector. 
+Rather than following the linear logic of the project cycle (number of beneficiaries, project duration, funding executed, etc.), this report steps back to examine overall funding flows and grant characteristics, with particular attention to the health sector.
 
 The analysis is structured around three key questions:
 
-What is the profile of the organization receiving UHF funding? How does it compare to the rest of the CBPF system? What are the implications for the health sector?
+What is the profile of the organizations receiving UHF funding? How does it compare with the rest of the CBPF system? What are the implications for the health sector?
 
 ## Key Findings
 
@@ -71,14 +71,14 @@ What is the profile of the organization receiving UHF funding? How does it compa
 -   **UHF is not more concentrated than peer CBPFs — it's larger**: Across 2022–2024 Ukraine sits mid-pack among broad-partnership CBPFs on HHI (0.029), top-5 share (28%) and top-10 share (46%). What sets UHF apart is envelope size: \$541M spread across 94 partners produces a mean partner take of **\$5.75M over three years** — roughly 2× Yemen or Ethiopia and 4× Somalia. Same shape × bigger envelope = bigger grants.
 -   **A stable core-20 captures 55% of the envelope**: Twenty organisations appeared in every UHF allocation round 2022–2024 and absorbed **\$299M of the \$541M envelope**. Seven of them (ACTED, UNHCR, DRC, PIN, Caritas Ukraine, NRC, Proliska) hold mean grants of \$3.4M–\$4.8M — at or near the \$5M cap — with individual exceptional-cap grants up to \$9.4M.
 -   **Ceiling-bound distribution**: UHF's P90 grant size is exactly \$5.00M (the standard cap) — unique among CBPFs. Peer funds show a long tail; UHF shows a flat top.
--   **Visible capacity-volume mismatches**: Where 2021 revenue is public, the Estonian Refugee Council has managed UHF volumes **4.3× its pre-war annual revenue** (\$9.4M against €1.9M). Seven of the eight core Ukrainian NNGOs have no publicly available 2021 revenue — an independent-assessment gap rather than a finding.
+-   **Visible capacity-volume mismatches**: Where 2021 revenue is public, some organizations has managed UHF volumes **4.3× its pre-war annual revenue** (\$9.4M against €1.9M). Seven of the eight core Ukrainian NNGOs have no publicly available 2021 revenue — an independent-assessment gap rather than a finding.
 -   **Structural UN exit**: UN-Agency funding collapsed from \$66M (2022) to \$41M (2023) to **\$5M (2024)**; the 2024 Annual Report makes this explicit (*"UN would no longer be funded unless absolutely necessary"*). Redistributed volume flowed primarily to DRC, ICF Caritas Ukraine and a broadened NNGO tier.
--   **UHF-in-context**: AR-reported, Ukraine = **20% of global CBPF allocations (2024)** and **>10% of the 2024 HNRP** — the largest CBPF for the third consecutive year.
+-   **UHF-in-context**: AR-reported, Ukraine = **20% of global CBPF allocations (2024)** and **\>10% of the 2024 HNRP** — the largest CBPF for the third consecutive year.
 -   **Data Sources**: Official UHF allocation and project data (CBPF Feb 2026 extract); UHF Annual Reports 2022, 2023, 2024.
 
 # Data Overview
 
-Data is retrieved from the official repository [data explorer](https://cbpf.data.unocha.org/dataexplorer.html), it was downloaded on February 2026 and it is formed by raw .csv files. The raw data spans from 2010 onward, but **analysis focuses on 2014-2025** to ensure comparability (2010-2013 was the pilot phase with limited geographic coverage). Data was cut at the end of 2025 to use static data for this analysis.
+Data is retrieved from the official repository [data explorer](https://cbpf.data.unocha.org/dataexplorer.html), it was downloaded on February 2026 and it is formed by raw .csv files. The raw data spans from 2010 onward, but **analysis focuses on 2014-2025** to ensure comparability (2010-2013 was the pilot phase with limited geographic coverage). Data was cut at the end of 2025 to use static data for this analysis. As such, the recently announced top-up allocation for Ukraine from the US State Department in February 2026 is not included in this report. A posteriour update could be considered.
 
 In total the data comprises:
 
@@ -600,7 +600,12 @@ ggplot(comparison_data,
     legend.position = "top",
     legend.text = element_text(size = 11, face = "bold")
   )
+ 
 ```
+
+::: callout-note
+Some allocation rounds that partners perceived as reserved are recorded in the CBPF database as standard allocations. For example, the 2024 Kharkiv area-based allocation was treated by some partners as effectively reserved, as some eligible organizations were reportedly advised not to submit proposals. In the source data, however, these rounds are classified and counted as standard.
+:::
 
 ```{r allocation-source-by-year}
 #| fig-width: 10
@@ -1067,6 +1072,9 @@ ggplot(grants, aes(x = Budget, fill = Context, color = Context)) +
 **Ukraine grants are 2.6× larger at the median** — \$1.13M vs \$440K globally. This reflects both the scale of needs and Ukraine's profile as a large, well-funded conflict response where donors consolidate resources into fewer, larger grants.
 :::
 
+::: callout-note
+There is no available data on grant underspending. As a result, it is unclear how often partners do not fully meet their commitments while continuing to receive funding.
+:::
 
 ### INGO vs NNGO Grant Size: A Deeper Look
 
@@ -1654,14 +1662,13 @@ ggplot() +
 
 ------------------------------------------------------------------------
 
-
 # Concentration, Scale, and the Core-20
 
 If UHF involves more partners per round than peer funds and grants larger amounts per grant, a natural question follows: **is the resulting portfolio more concentrated than peer CBPFs, and who sits at the top?** This chapter answers both questions quantitatively. The headline is counterintuitive: UHF is **not** more concentrated than comparable CBPFs — it is simply **larger**. The appearance of concentration is produced by the interaction of envelope size with the \$5M per-grant cap, and by a stable 20-organisation core that has recurred in every allocation round since 2022.
 
 ## Ukraine vs Peer CBPFs: Concentration Benchmark
 
-Peer set: the seven other largest CBPFs by 2022–2024 envelope (Afghanistan, Syria Cross-border, Sudan, Yemen, Ethiopia, Somalia, oPt). Two natural classes emerge — **mega-concentrated access funds** (Sudan, Syria XB, with only 3–4 partners per year and HHI > 0.3) and **broad partner funds** (Afghanistan, Yemen, Ethiopia, Somalia, oPt, Ukraine). Ukraine sits in the second class.
+Peer set: the seven other largest CBPFs by 2022–2024 envelope (Afghanistan, Syria Cross-border, Sudan, Yemen, Ethiopia, Somalia, oPt). Two natural classes emerge — **mega-concentrated access funds** (Sudan, Syria XB, with only 3–4 partners per year and HHI \> 0.3) and **broad partner funds** (Afghanistan, Yemen, Ethiopia, Somalia, oPt, Ukraine). Ukraine sits in the second class.
 
 ```{r concentration-benchmark}
 #| fig-width: 11
@@ -1695,38 +1702,52 @@ conc_agg <- project_summary %>%
     is_ukraine = PooledFundName == "Ukraine"
   )
 
-ggplot(conc_agg,
-       aes(x = n_partners, y = HHI,
-           size = envelope / 1e6, colour = Class, shape = is_ukraine)) +
-  geom_point(alpha = 0.85, stroke = 1.2) +
-  ggrepel::geom_text_repel(
-    aes(label = PooledFundName,
-        fontface = if_else(is_ukraine, "bold", "plain")),
-    size = 3.6, box.padding = 0.45, seed = 7,
-    show.legend = FALSE
-  ) +
-  scale_size_area(max_size = 18, name = "Envelope (US$M)",
-                  breaks = c(150, 300, 500)) +
-  scale_colour_manual(values = c(
-    "Access-restricted (UN-dominant)" = "#e76f51",
-    "Broad partner fund"              = "#0a9396"
-  ), name = NULL) +
-  scale_shape_manual(values = c(`TRUE` = 18, `FALSE` = 16),
-                     guide = "none") +
-  scale_x_continuous(breaks = c(4, 10, 25, 50, 75, 100, 125)) +
-  labs(
-    title    = "CBPF Concentration Map: Partners vs HHI (2022–2024 aggregate)",
-    subtitle = "Bubble size = 3-year envelope. Ukraine is a broad fund with an outsized envelope — not an outlier in shape.",
-    x = "Distinct implementing partners (3-year count)",
-    y = "Herfindahl–Hirschman Index (partner-budget shares)",
-    caption = "Source: CBPF ProjectSummary dataset, Feb 2026 extract"
-  ) +
-  theme_minimal(base_size = 13) +
-  theme(
-    plot.title    = element_text(face = "bold", size = 14, colour = "#005f73"),
-    plot.subtitle = element_text(size = 11, colour = "#555555"),
-    legend.position = "top",
-    panel.grid.minor = element_blank()
+# Two aligned horizontal-bar panels, funds sorted by HHI.
+# Ukraine highlighted in red. The visual punchline: mid-row on HHI,
+# near-top row on envelope -> "same shape, bigger envelope."
+conc_plot <- conc_agg %>%
+  mutate(Fund = forcats::fct_reorder(PooledFundName, HHI))
+
+bar_fill <- c(`TRUE` = "#c9184a", `FALSE` = "#8aa9b0")
+
+p_hhi <- ggplot(conc_plot, aes(x = HHI, y = Fund, fill = is_ukraine)) +
+  geom_col(width = 0.7) +
+  geom_text(aes(label = sprintf("%.3f", HHI)),
+            hjust = -0.15, size = 3.5, colour = "#333333") +
+  scale_fill_manual(values = bar_fill, guide = "none") +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.18))) +
+  labs(title    = "Concentration (HHI)",
+       subtitle = "Lower = more evenly spread across partners",
+       x = NULL, y = NULL) +
+  theme_minimal(base_size = 12) +
+  theme(plot.title         = element_text(face = "bold", colour = "#005f73"),
+        plot.subtitle      = element_text(size = 10, colour = "#555555"),
+        panel.grid.major.y = element_blank(),
+        panel.grid.minor   = element_blank())
+
+p_env <- ggplot(conc_plot, aes(x = envelope / 1e6, y = Fund, fill = is_ukraine)) +
+  geom_col(width = 0.7) +
+  geom_text(aes(label = scales::dollar(envelope / 1e6, suffix = "M", accuracy = 1)),
+            hjust = -0.15, size = 3.5, colour = "#333333") +
+  scale_fill_manual(values = bar_fill, guide = "none") +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.22))) +
+  labs(title    = "Envelope 2022–2024",
+       subtitle = "Absolute USD disbursed",
+       x = NULL, y = NULL) +
+  theme_minimal(base_size = 12) +
+  theme(plot.title         = element_text(face = "bold", colour = "#005f73"),
+        plot.subtitle      = element_text(size = 10, colour = "#555555"),
+        axis.text.y        = element_blank(),
+        panel.grid.major.y = element_blank(),
+        panel.grid.minor   = element_blank())
+
+(p_hhi | p_env) +
+  plot_annotation(
+    title    = "Ukraine sits mid-pack on concentration — but tops the envelope ranking",
+    subtitle = "Same fund order in both panels (sorted by HHI). Ukraine highlighted in red.",
+    caption  = "Source: CBPF ProjectSummary dataset, Feb 2026 extract",
+    theme = theme(plot.title    = element_text(face = "bold", size = 14, colour = "#005f73"),
+                  plot.subtitle = element_text(size = 11, colour = "#555555"))
   )
 ```
 
@@ -1800,7 +1821,7 @@ ggplot(conc_year,
 ```
 
 ::: callout-tip
-**The trajectory is toward more partners and smaller top-tier shares**, not fewer. Top-5 share fell from 40% in 2022 to 28% in 2024; top-10 from 62% to 45%. Consistent with the localisation push documented in the 2024 Annual Report (NNGO share rising from 30% in 2023 to ~60% in 2024) and with the UN Agency exit (see below).
+**The trajectory is toward more partners and smaller top-tier shares**, not fewer. Top-5 share fell from 40% in 2022 to 28% in 2024; top-10 from 62% to 45%. Consistent with the localisation push documented in the 2024 Annual Report (NNGO share rising from 30% in 2023 to \~60% in 2024) and with the UN Agency exit (see below).
 :::
 
 ## Why UHF Grants Are Bigger: An Arithmetic Identity
@@ -1922,7 +1943,7 @@ knitr::kable(core20,
 ```
 
 ::: callout-important
-**Seven partners are "cap-binders"**: ACTED, UNHCR, DRC, People in Need, ICF Caritas Ukraine, NRC and Proliska all average grants of \$3.4M–\$4.8M — every grant at or near the \$5M ceiling. Six of them received at least one **exceptional-cap grant ≥ \$6M** (UNHCR \$9.4M, NRC \$7.5M, ACTED \$6.3M, PIN \$6.1M, Caritas \$6.0M, Proliska \$5.2M). This is where the "repetition at large scale" pattern concentrates — not across the fund, but in a ~7-organisation inner tier.
+**Seven partners are "cap-binders"**: ACTED, UNHCR, DRC, People in Need, ICF Caritas Ukraine, NRC and Proliska all average grants of \$3.4M–\$4.8M — every grant at or near the \$5M ceiling. Six of them received at least one **exceptional-cap grant ≥ \$6M** (UNHCR \$9.4M, NRC \$7.5M, ACTED \$6.3M, PIN \$6.1M, Caritas \$6.0M, Proliska \$5.2M). This is where the "repetition at large scale" pattern concentrates — not across the fund, but in a \~7-organisation inner tier.
 :::
 
 ::: callout-note
@@ -2035,7 +2056,6 @@ ggplot(dep_plot,
 :::
 
 ------------------------------------------------------------------------
-
 
 # The Ideal UHF Candidate Profile
 
@@ -2228,7 +2248,7 @@ knitr::kable(
 ::: callout-tip
 **Three readings emerge from the quadrant table:**
 
--   The **Full-coverage quadrant is mixed** — it is not exclusively INGO territory. NNGOs and UN agencies both appear in meaningful numbers, confirming that broad footprint is achievable across organisation types.
+-   The **Full-coverage quadrant is mixed** — it is not exclusively INGO territory. NNGOs and UN agencies both appear in meaningful numbers, confirming that broad footprint is achievable across organisation types. It is important to point that, in the case of Multipurpose Cash Asssistance (MPCA), UN agencies relied heavily on online registration, which means that no physical presence was actually achieved.
 -   **UN agencies cluster as Area generalists**: they cover many oblasts but relatively few clusters (they tend to specialise by mandate — UNHCR on protection/shelter, IOM on mobility, FAO on food security).
 -   **NNGOs split in two**: a small cohort joins the Full-coverage quadrant (e.g. ICF Caritas Ukraine, Proliska, Charity Fund "New Way"), while most remain Specialists with 1–2 oblasts and 1–3 clusters — a realistic starting point for first-time UHF applicants.
 :::
@@ -2269,7 +2289,6 @@ knitr::kable(
 :::
 
 ------------------------------------------------------------------------
-
 
 # Health Funding Recipients in Ukraine (2019–2025)
 
@@ -2445,12 +2464,13 @@ ggplot(heatmap_df,
   )
 ```
 
-::: callout-note
 The heatmap makes the temporal fragmentation of health delivery visible: organisations that carried health programming before the full-scale invasion are largely replaced post-2022 by a different set of partners with the absorptive capacity to deploy larger grants. Notably, WHO — historically the anchor UN agency for health coordination — drops out of the UHF partner list after 2023, a shift that coincides with the United States' announced withdrawal from the World Health Organization. This matters for continuity: UHF health funding is now concentrated in a handful of INGOs and a growing NNGO cohort, with no resident UN health convenor inside the fund. Monitoring whether this reconfiguration preserves technical standards, coordination, and last-mile reach will be an important diagnostic for the fund's health portfolio going forward.
-:::
+
+It is clear that the UHF's health funding strategy is based on absorcipon rather than field experience or technical expertise. The top health recipients are not specialised health actors but rather the largest, most trusted partners with the capacity to deploy large grants at speed. Moreover, the technical miscalculation of not considering Local Health facilities as partnership candidates makes this funding impact even more questioable: https://baena.blog/00.-STOCK/The-Mistake-of-Excluding-Local-Health-Facilities-from-Localization-Targets-in-Ukraine
+
+Furthermore, assessing the true cost-effectiveness of concentrating funding among a few 'official' partners remains impossible, given that 5W (Who, What, Where, When, and for Whom) operational data is frequently partial or unpublished. Despite these data constraints, a distinct profile emerges for the preferred health partners: they are predominantly Anglo-Saxon organizations—including some headquartered in non-WHO member states—that possessed no operational footprint in Ukraine prior to the 2022 escalation.
 
 ------------------------------------------------------------------------
-
 
 # Cross-Check: UHF Annual Reports vs. Data
 
@@ -2475,7 +2495,7 @@ knitr::kable(ar_rec,
 ```
 
 ::: callout-important
-**The 2023 org-type breakdown does not reconcile.** The 2023 AR reports $56.8M to NNGOs (≈30% of the envelope); the raw CBPF extract shows $38.3M direct to National NGO entities. The most plausible reconciliation is that the AR definition includes sub-granted funding flowing from INGO prime recipients to Ukrainian NNGO sub-implementers, and possibly bundles Red Cross / partially-national entities into the NNGO category. When quoting either figure in discussion with external audiences, it is advisable to cite the definition used (direct-partner classification vs end-beneficiary-entity classification).
+**The 2023 org-type breakdown does not reconcile.** The 2023 AR reports \$56.8M to NNGOs (≈30% of the envelope); the raw CBPF extract shows \$38.3M direct to National NGO entities. The most plausible reconciliation is that the AR definition includes sub-granted funding flowing from INGO prime recipients to Ukrainian NNGO sub-implementers, and possibly bundles Red Cross / partially-national entities into the NNGO category. When quoting either figure in discussion with external audiences, it is advisable to cite the definition used (direct-partner classification vs end-beneficiary-entity classification).
 :::
 
 ## Structural Shifts the ARs Document
@@ -2537,7 +2557,7 @@ The 2024 Annual Report is explicit: *"UN would no longer be funded unless absolu
 Per the Annual Reports:
 
 -   **2023 AR**: UHF = **17%** of global CBPF allocations, 7% of the Ukraine HRP.
--   **2024 AR**: UHF = **20%** of global CBPF allocations, **>10%** of the Ukraine HNRP — *"largest CBPF for the third consecutive year."*
+-   **2024 AR**: UHF = **20%** of global CBPF allocations, **\>10%** of the Ukraine HNRP — *"largest CBPF for the third consecutive year."*
 
 One in every five CBPF dollars globally now flows through UHF. The "7th of 28" framing used in parts of this report for reserve-allocation share is accurate for that narrow metric, but understates UHF's overall systemic weight.
 
@@ -2579,6 +2599,28 @@ knitr::kable(cadence,
 ::: callout-tip
 **Implication for candidate partners.** An organisation able to sit in the UHF's core-20 needs to be able to respond to two Reserve triggers per calendar year and absorb a Standard allocation of \$70M–\$90M distributed across 30–50 partners. The cap-binding pattern documented in the Concentration chapter is the partner-level expression of this cadence.
 :::
+
+# Conclusions
+
+The Ukraine Humanitarian Pooled Fund (UHF) represents a unique operational model within the global CBPF system. Driven by an unprecedented financial envelope and an aggressive localization mandate, the fund has redefined how humanitarian financing is distributed in a high-intensity, sustained conflict.
+
+Several defining characteristics set the UHF apart from its global peers:
+
+**Scale Over Concentration:** While the UHF appears highly concentrated, metric analysis (HHI, top-5 share) proves it is a broad-partnership fund. The illusion of concentration is an arithmetic byproduct of its massive envelope interacting with the standard \$5M grant ceiling. Consequently, the UHF routinely issues max-sized grants to a wide array of partners, creating a flat-topped distribution unseen in any other country fund.
+
+**True Localization:** Globally, International NGOs consistently receive grants 25% larger than National NGOs. In Ukraine, this paradigm has been inverted. Following the full-scale invasion—and accelerated by a deliberate reduction in UN Agency funding (falling from \$66M in 2022 to \$5M in 2024)—NNGOs now receive larger median grants than INGOs.
+
+**The Core-20 and Fiduciary Reality:** The fund relies heavily on a stable core of 20 organizations capable of absorbing large-scale, repeated funding rounds. For several NNGOs, this has resulted in UHF volumes that dwarf their entire pre-war annual revenues. While this highlights successful capacity building, it also establishes deep structural dependencies that will require careful fiduciary and transitional management.
+
+**The "Full-Coverage" Premium:** The data reveals a clear "ideal candidate" profile. Organizations that operate across multiple oblasts and sectors (Full-coverage partners) capture the vast majority of the disbursed budget. For NNGOs looking to scale, the empirical path is to evolve from geographic or sector specialists into area or sector generalists via consortiums or geographic expansion.
+
+**Health Sector Fragmentation:** Despite large individual grant sizes, the health sector's implementing landscape has experienced significant churn. The exit of historical anchor agencies like the WHO from the direct recipient pool leaves the health portfolio increasingly reliant on a shifting mix of INGOs and NNGOs, raising questions about long-term technical continuity and coordination.
+
+**Maturing Allocation Strategies:** The UHF's historical over-reliance on Reserve Allocations (51.9% globally compared to a 40.2% baseline) is beginning to self-correct. This reflects a maturation of the response: acknowledging that while humanitarian needs in Ukraine remain incredibly high, the foundational operational environment is no longer defined by the extreme volatility of 2022.
+
+The positive: UHF has proven that it is possible to localize a massive humanitarian response without defaulting to a handful of UN mega-grants. However, sustaining this model requires ongoing vigilance regarding partner dependency, sector-specific technical leadership, and the careful balancing of emergency agility with predictable, standard funding cycles.
+
+Despite its scale, critical transparency gaps remain within the fund. The blurred distinction between standard and reserve allocations, the absence of published pipeline data, and limited visibility into partner underspending and audit results introduce structural biases into partner selection and retention. Ultimately, this opacity risks fostering a closed ecosystem of entrenched, de facto 'official' partners rather than maintaining a truly competitive and evidence-based allocation process.
 
 ------------------------------------------------------------------------
 
