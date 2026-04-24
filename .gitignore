@@ -5,6 +5,7 @@
 !.git/
 !.gitignore
 !.github/
+!README.md
 
 # Keep app-2 (grant-size-app-v2)
 !/shiny/
