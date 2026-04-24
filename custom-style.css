@@ -47,6 +47,10 @@ p {
     margin-bottom: 1.1em;
 }
 
+#key-findings li {
+    margin-bottom: 0.45rem;
+}
+
 strong {
     color: var(--color-heading);
     font-weight: 600;
