@@ -24,8 +24,6 @@
 !AVAILABLE_ENDPOINTS.md
 !CBPF_API_GUIDE.md
 !blog_post_cbpf_api_constraints.md
-!fetch_cbpf_data.R
-!fetch_cbpf_data.sh
 
 # Keep raw data
 !/Raw-data/
