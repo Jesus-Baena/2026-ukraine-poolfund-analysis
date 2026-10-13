@@ -12,6 +12,7 @@ for a in "$@"; do case "$a" in --rebuild) rm -f "$DB";; --no-browser) OPEN="";; 
 if [ ! -f "$DB" ] || [ -n "$(find "$ROOT/Raw-data" -newer "$DB" \( -name '*.csv' -o -name '*.json.gz' \) -print -quit)" ]; then
   python3 "$ROOT/tools/explorer/build_db.py" --out "$DB"
 fi
-exec uvx datasette "$DB" -m "$ROOT/explorer/metadata.json" -p "$PORT" $OPEN \
+exec uvx datasette "$DB" -m "$ROOT/explorer/metadata.json" -p "$PORT" $OPEN --static static:"$ROOT/explorer/static" \
+  --setting truncate_cells_html 400 \
   --setting sql_time_limit_ms 30000 --setting max_returned_rows 10000 --setting facet_time_limit_ms 5000 \
   --setting default_page_size 50 --setting allow_download on

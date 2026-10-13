@@ -167,6 +167,7 @@ def main():
     meta = {
         "title": "CBPF data explorer (internal)",
         "description": "Everything held in Raw-data/: the February 2026 extract, the 1 September 2026 vintage, daily pipeline vintages, vo2 pulls, and the newest synced archive day (vo1 + vo2 + LogicalFrameworkIndicator). Start with the _datasets table.",
+        "extra_css_urls": ["/static/explorer.css"],
         "databases": {"cbpf-explorer": {"tables": {t: {"facets": f} for t, f in facets.items()}}},
     }
     meta["databases"]["cbpf-explorer"]["tables"]["_datasets"] = {"facets": ["kind", "vintage"], "sort_desc": "rows"}
