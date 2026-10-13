@@ -106,9 +106,10 @@ def main():
     con.execute("PRAGMA journal_mode=OFF"); con.execute("PRAGMA synchronous=OFF")
     catalog = []
     facets = {}
+    base_url = os.environ.get("EXPLORER_BASE", f"http://localhost:{os.environ.get('PORT', '8001')}/cbpf-explorer")
 
     def register(table, source, kind, vintage, header, cols, nrows, note=""):
-        catalog.append((table, os.path.relpath(source, ROOT), kind, vintage, nrows, len(cols), note))
+        catalog.append((table, f"{base_url}/{table}", os.path.relpath(source, ROOT), kind, vintage, nrows, len(cols), note))
         fc = [c for c in cols if c in FACET_CANDIDATES][:6]
         if fc:
             facets[table] = fc
@@ -144,8 +145,8 @@ def main():
 
     # 3) Catalog + metadata
     con.execute("DROP TABLE IF EXISTS _datasets")
-    con.execute("CREATE TABLE _datasets (table_name TEXT PRIMARY KEY, source_file TEXT, kind TEXT, vintage TEXT, rows INTEGER, columns INTEGER, note TEXT)")
-    con.executemany("INSERT INTO _datasets VALUES (?,?,?,?,?,?,?)", catalog)
+    con.execute("CREATE TABLE _datasets (table_name TEXT PRIMARY KEY, open TEXT, source_file TEXT, kind TEXT, vintage TEXT, rows INTEGER, columns INTEGER, note TEXT)")
+    con.executemany("INSERT INTO _datasets VALUES (?,?,?,?,?,?,?,?)", catalog)
     # Convenience views on the newest archive day, if present
     if days and args.archive_days:
         d = days[0].replace("-", "")
