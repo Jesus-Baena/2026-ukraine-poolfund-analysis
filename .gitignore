@@ -34,5 +34,12 @@
 !CBPF_API_GUIDE.md
 !blog_post_cbpf_api_constraints.md
 
-# Keep raw data
+# Keep raw data, but not the synced archive days (≈40 MB each; see tools/explorer/sync_archive.sh)
 !/Raw-data/
+/Raw-data/archive/
+
+# Internal data explorer: scripts tracked, built SQLite not
+!/tools/
+!/explorer/
+/explorer/*.sqlite
+/explorer/*.sqlite-*
