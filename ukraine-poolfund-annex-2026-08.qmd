@@ -443,7 +443,7 @@ p26 %>%
         align = c("l","l","c","r","r","c","c"))
 ```
 
-Concentration, measured the way the main report measured it, rose with the envelope: the top-5 share is `r percent(top5_26, accuracy = 1)` for 2026 against `r percent(conc_prior$top5, accuracy = 1)` for 2022–2024, and the Herfindahl index `r round(hhi26, 3)` against `r round(conc_prior$hhi, 3)`. A ten-grant round of \$150M will do that: with so few tickets, each is necessarily large. Four organisations received their first ever UHF grant in 2026 (Save Ukraine, Perspektyva, Pluriton and the Ukrainian Red Cross Society), all for \$300K or less and all in the standard allocation, which is in line with the traditional pattern of the CBPF
+Concentration, measured the way the main report measured it, rose with the envelope: the top-5 share is `r percent(top5_26, accuracy = 1)` for 2026 against `r percent(conc_prior$top5, accuracy = 1)` for 2022–2024, and the Herfindahl index `r round(hhi26, 3)` against `r round(conc_prior$hhi, 3)`. A ten-grant round of \$150M will do that: with so few tickets, each is necessarily large. Four organisations received their first ever UHF grant in 2026 (Save Ukraine, Perspektyva, Pluriton and the Ukrainian Red Cross Society), all for \$300K or less and all in the standard allocation, which is in line with the traditional pattern of the CBPF.
 
 ## The UN came back
 
@@ -473,7 +473,7 @@ ggplot(un, aes(x = AllocationYear, y = usd / 1e6, colour = OrgType, group = OrgT
        caption = "Source: CBPF ProjectSummary, 1 Sept 2026 vintage.")
 ```
 
-The 2024 Annual Report's statement that the UN *"would no longer be funded unless absolutely necessary"* held through 2025, when UN agencies received nothing. In 2026 UNHCR, WFP and IOM received `r fmt_m(sum(ukr26$Budget[ukr26$OrgType == "UN Agency"]))` between them, all inside the US-funded round, where UN agencies were `r percent(sum(ukr26$Budget[ukr26$OrgType == "UN Agency"]) / us_round$usd, accuracy = 1)` of the money. National NGOs still received more than international NGOs in the standard allocation when counted per grant, but in dollar terms INGOs (`r fmt_m(sum(ukr26$Budget[ukr26$OrgType == "INGO"]))`) edged NNGOs (`r fmt_m(sum(ukr26$Budget[ukr26$OrgType == "NNGO"]))`) for the first time since 2024.
+The 2024 Annual Report stated that the UN *"would no longer be funded unless absolutely necessary"*. In 2026 UNHCR, WFP and IOM received `r fmt_m(sum(ukr26$Budget[ukr26$OrgType == "UN Agency"]))` between them, all inside the US-funded round, where UN agencies were `r percent(sum(ukr26$Budget[ukr26$OrgType == "UN Agency"]) / us_round$usd, accuracy = 1)` of the money. National NGOs still received more than international NGOs in the standard allocation when counted per grant, but in dollar terms INGOs (`r fmt_m(sum(ukr26$Budget[ukr26$OrgType == "INGO"]))`) edged NNGOs (`r fmt_m(sum(ukr26$Budget[ukr26$OrgType == "NNGO"]))`) for the first time since 2024.
 
 ## The four partner types, revisited {#sec-typology}
 
@@ -568,19 +568,6 @@ The main report described a steady slide away from the hyperscalers: Type D fell
 
 ### The report's three "Type A" partners: stable, funded, and sidelined
 
-```{r type-a-table}
-#| echo: false
-
-a_year %>%
-  left_join(a_pipe %>% select(OrganizationName, winter_txt), by = "OrganizationName") %>%
-  transmute(Organisation = short_org(OrganizationName),
-            `2022` = fmt_m(`2022`, 0.1), `2023` = fmt_m(`2023`, 0.1), `2024` = fmt_m(`2024`, 0.1),
-            `2025` = fmt_m(`2025`, 0.1), `2026 Jan–Aug` = fmt_m(`2026`, 0.1),
-            `Winter round (post cut-off)` = coalesce(winter_txt, "—")) %>%
-  kable(caption = "The three Type A partners named in the main report, UHF approved budget by year. The last column uses the daily pipeline vintages after the 31 August cut-off.",
-        align = c("l","r","r","r","r","r","l"))
-```
-
 Through 2025 the three partners the main report labelled Type A were the clearest growth story in the fund: from `r fmt_m(a_total$usd[a_total$AllocationYear == 2022])` (`r sh("A", 2022)`) in 2022 to `r fmt_m(a_total$usd[a_total$AllocationYear == 2025])` (`r sh("A", 2025)`) in 2025, with Posmishka UA reaching cap-sized grants. In 2026 they are stable but sidelined: all three were funded again, but only in the standard allocation at roughly \$3M each, none of them received anything from the \$150.7M US-funded round`r if (a_us_round > 0) paste0(" (", fmt_m(a_us_round, 0.1), " between them)") else ""`, and their share fell to `r sh("A", 2026)`. The daily archive shows all three submitting to the Winter Response reserve round in August and being approved in September, again at \$2.8M–\$3.3M. The ceiling that lifted for the hyperscalers did not lift for them. As the registry records below show, none of the three was in fact born of the war; they belong with the localisation cohort, which makes their 2026 trajectory a Type C story.
 
 ### The born-of-the-war partners the report could not yet see
@@ -594,7 +581,7 @@ Reclassified, Type A consists of these two organisations alone and holds `r fmt_
 
 ### What the registry says
 
-The main report flagged that seven of the eight core Ukrainian NNGOs had no public pre-war revenue figure. That gap is smaller than it looked: every Ukrainian charity files annual financial statements with the state registry (ЄДРПОУ), the Ukrainian Charity Forum publishes a "TOP-100+" ranking of the largest funds compiled from those filings, and two of the organisations discussed here publish their own reports. The records, with revenue in UAH millions, are summarised below [@edr_team4ua; @edr_angels; @vboabu_top100_2026; @vboabu_top100_2025; @team4ua_transparency; @aos_reports; @posmishka_about; @unity_registry].
+The main report flagged that seven of the eight core Ukrainian NNGOs had no public pre-war revenue figure: every Ukrainian charity files annual financial statements with the state registry (ЄДРПОУ), the Ukrainian Charity Forum publishes a "TOP-100+" ranking of the largest funds compiled from those filings, and two of the organisations discussed here publish their own reports. The records, with revenue in UAH millions, are summarised below [@edr_team4ua; @edr_angels; @vboabu_top100_2026; @vboabu_top100_2025; @team4ua_transparency; @aos_reports; @posmishka_about; @unity_registry].
 
 ```{r registry-table}
 #| echo: false
@@ -610,11 +597,9 @@ tribble(
         align = c("l","l","l","r","r","r","r","c","l"))
 ```
 
-Three things follow. First, the main report's three Type A partners were not born of the war: Posmishka UA has operated since 2013 and worked in Donetsk and Luhansk from 2014, Unity for the Future was registered in 2004, and New Way received UHF grants in 2019, 2020 and 2021 (`r fmt_m(new_way_pre, 1)` in total). All three belong in Type C under the report's own rule. The report's hard-coded names ("NEW WAY", "POSMISHKA UA", "Unity for the Future") also never matched the legal names the API returns, so its typology join silently fell through to the rules; this annex matches them by pattern. The genuine born-of-the-war partners are Angels of Salvation and Team4UA, registered seven and eight weeks after the invasion.
+The dependency ratio the main report could not compute is now measurable. Angels of Salvation's \$25M of 2026 UHF grants is roughly its entire 2025 revenue (≈ \$23M), and its own report puts 2025 expenditure at ₴978M with operating costs of about 5.5%. Team4UA's \$32M is about eight times its 2025 revenue (≈ \$4M) and thirty times its 2024 revenue; an organisation with 36 staff is the fund's largest partner of the year, as lead of an eleven-member consortium. For comparison, Right to Protection filed ₴1.46B (≈ \$35M) for 2025 with 376 staff and Proliska ₴727M with 104 staff, so their UHF grants are a fraction of turnover.
 
-Second, the dependency ratio the main report could not compute is now measurable. Angels of Salvation's \$25M of 2026 UHF grants is roughly its entire 2025 revenue (≈ \$23M), and its own report puts 2025 expenditure at ₴978M with operating costs of about 5.5%. Team4UA's \$32M is about eight times its 2025 revenue (≈ \$4M) and thirty times its 2024 revenue; an organisation with 36 staff is the fund's largest partner of the year, as lead of an eleven-member consortium. For comparison, Right to Protection filed ₴1.46B (≈ \$35M) for 2025 with 376 staff and Proliska ₴727M with 104 staff, so their UHF grants are a fraction of turnover.
-
-Third, the records are filings, not audits. The ranking and the registry mirror derive from the same state statements, Angels of Salvation reports expenditure (₴813M for 2024) on a different basis from the ₴737M revenue in its filing, Team4UA's Polish parent foundation (registered March 2022) has no financial filings I could locate, and "11 external audits passed" in a donor-project sense is not a published audited account. None of the four posts one.
+The records are filings, not audits. The ranking and the registry mirror derive from the same state statements, Angels of Salvation reports expenditure (₴813M for 2024) on a different basis from the ₴737M revenue in its filing, Team4UA's Polish parent foundation (registered March 2022) has no financial filings I could locate, and "11 external audits passed" in a donor-project sense is not a published audited account. **None of the four posts one.**
 
 # Sectors: cash first {#sec-sectors}
 
@@ -674,13 +659,13 @@ For the health sector, the focus of the main report, 2026 is the best year in ab
 
 ## Cash and the health specialists: what the allocation papers say {#sec-cash-health}
 
-Two features of the 2026 sector picture deserve a closer look, because the fund's own allocation strategies explain them.
+Two features of the 2026 sector picture deserve a closer look.
 
 ### The cash detour
 
 The return of multi-purpose cash runs against the direction the response had agreed on. The Cash Working Group replaced the blanket coverage of 2022 with a vulnerability-based targeting framework in July 2025, and the 2026 response plan reframes humanitarian cash as "Unified Cash Transfers" meant to complement the government's social-protection system, with the government taking over household winter cash in the 0–20 km frontline zone [@cwg_targeting_2025; @uhf_ra2_2026]. The UHF had followed that path: MPCA fell from 17% of its cluster budget in 2022 to 3–5% in 2023–2025 (@sec-sectors).
 
-The US-funded round reversed it by design. Its strategy paper opens by citing the December 2025 US contribution "with conditions for reform", funds "lifesaving projects of no longer than 6 months duration" in "joint severity 4 and 5 only", and states that "cash modalities will be prioritized where market functionality and access allow"; the accompanying US-award guidance defines fundable work as "direct" lifesaving activities reaching individuals and lists cash transfers first among them [@uhf_us_strategy_2026; @uhf_us_guidance_2026]. The result is `r fmt_m(mpca26$usd)` of cash in six-month grants, under the new UCT labels, in the year the sector was handing the modality over. The timing, duration, modality preference, minimum grant size and partner list of that round were all set by the terms of the contribution rather than by the needs analysis in the response plan.
+The US-funded round reversed it. Its strategy paper opens by citing the December 2025 US contribution "with conditions for reform", funds "lifesaving projects of no longer than 6 months duration" in "joint severity 4 and 5 only", and states that "cash modalities will be prioritized where market functionality and access allow"; the accompanying US-award guidance defines fundable work as "direct" lifesaving activities reaching individuals and lists cash transfers first among them [@uhf_us_strategy_2026; @uhf_us_guidance_2026]. The result is `r fmt_m(mpca26$usd)` of cash in six-month grants, under the new UCT labels, in the year the sector was handing the modality over. **The timing, duration, modality preference, minimum grant size and partner list of that round were all set by the terms of the contribution rather than by the needs analysis in the response plan.**
 
 ### The health specialists
 
@@ -842,7 +827,7 @@ ggplot(res_sys, aes(x = factor(AllocationYear), y = share)) +
 
 The consequence for the reserve/standard balance is system-wide: the reserve share of approved CBPF budget was `r rs(2024)` in 2024 and `r rs(2025)` in 2025, and is `r rs(2026)` for January–August 2026. The UHF's return to reserve dependence, which @sec-findings records as a reversal of the main report's finding, is therefore not a Ukraine-specific choice but the local expression of a donor-driven shift in the whole modality.
 
-Two further points from the reporting matter for how this annex should be read. First, who received the money differs by fund: Devex's analysis of the first tranche found about 98% going to UN agencies and INGOs, with WFP alone at \$473M, and The New Humanitarian put the international share at roughly 87% across 11 funds, against nearly half of CBPF money reaching local and national organisations in 2024 [@devex_bet_2026; @tnh_inklings_2026]. Ukraine is an outlier in that respect: national NGOs took `r percent(sum(ukr26$Budget[ukr26$OrgType == "NNGO" & str_detect(ukr26$AllocationType, "lifesaving")]) / us_round$usd, accuracy = 1)` of the US-funded round, because the UHF already had a local partner tier operating at cap-sized grants. Second, the headline results circulated for the arrangement (22 million people targeted, allocation processes twice as fast, \$1.9 billion in savings) are State Department and OCHA self-reporting with no independent evaluation yet [@state_pres_2026]; ALNAP argues the concentration of one donor's money turns OCHA from coordinator into fund manager and gatekeeper, and IARAN notes that a local-share percentage says nothing about who decides [@alnap_gha_2026; @iaran_2026]. None of these claims is tested here.
+Two further points from the reporting matter for how this annex should be read. First, who received the money differs by fund: Devex's analysis of the first tranche found about 98% going to UN agencies and INGOs, with WFP alone at \$473M, and The New Humanitarian put the international share at roughly 87% across 11 funds, against nearly half of CBPF money reaching local and national organisations in 2024 [@devex_bet_2026; @tnh_inklings_2026]. Ukraine is an outlier in that respect: national NGOs took `r percent(sum(ukr26$Budget[ukr26$OrgType == "NNGO" & str_detect(ukr26$AllocationType, "lifesaving")]) / us_round$usd, accuracy = 1)` of the US-funded round, because the UHF already had a local partner tier operating at cap-sized grants. Second, the headline results circulated for the arrangement (22 million people targeted, allocation processes twice as fast, \$1.9 billion in savings) are State Department and OCHA self-reporting with no independent evaluation yet [@state_pres_2026]; ALNAP argues the concentration of one donor's money turns OCHA from coordinator into fund manager and gatekeeper, and IARAN notes that a local-share percentage says nothing about who decides [@alnap_gha_2026; @iaran_2026].
 
 # After the cut-off: what was in motion on 31 August {#sec-after}
 
