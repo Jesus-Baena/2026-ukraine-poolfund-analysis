@@ -43,3 +43,4 @@
 !/explorer/
 /explorer/*.sqlite
 /explorer/*.sqlite-*
+/explorer/metadata.json
