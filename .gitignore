@@ -7,14 +7,22 @@
 !.github/
 !README.md
 
-# Keep app-2 (grant-size-app-v2)
+# Keep app-2 (grant-size-app-v2, R Shiny) and app-3 (grant-size-app-v3, Nuxt)
 !/shiny/
 /shiny/*
 !/shiny/grant-size-app-v2/
+!/shiny/grant-size-app-v3/
+/shiny/grant-size-app-v3/node_modules/
+/shiny/grant-size-app-v3/.nuxt/
+/shiny/grant-size-app-v3/.output/
+/shiny/grant-size-app-v3/.data/
+/shiny/grant-size-app-v3/worktrees/
 
-# Keep main quarto report
+# Keep main quarto report and the 2026 annex
 !ukraine-poolfund-report.html
 !ukraine-poolfund-report.qmd
+!ukraine-poolfund-annex-2026-08.html
+!ukraine-poolfund-annex-2026-08.qmd
 !references.bib
 !custom-style.css
 !uhf_article_draft.md

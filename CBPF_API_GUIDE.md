@@ -58,7 +58,7 @@ AllocationFlow_ALL_20260213_153045_UTC.csv
 https://cbpfapi.unocha.org/vo1/odata/ProjectSummary?$format=csv
 ```
 
-**Get specific country (e.g., Ukraine):**
+**Get specific country (e.g., Ukraine):** — *no longer works (October 2026): every vo1 endpoint returns an empty set with this parameter; fetch all funds and filter on `PooledFundName`.*
 ```
 https://cbpfapi.unocha.org/vo1/odata/ProjectSummary?poolfundAbbrv=UKR&$format=csv
 ```

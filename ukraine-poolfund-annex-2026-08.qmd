@@ -1,0 +1,790 @@
+---
+title: "Ukraine Humanitarian Fund — Annex"
+subtitle: "What changed between January and August 2026"
+author:
+  - name: "Jesus Baena"
+date: "2026-10-06"
+date-format: "MMMM D, YYYY"
+format:
+  html:
+    theme:
+      light: yeti
+    css: custom-style.css
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    toc-title: "On this page"
+    code-fold: true
+    code-tools: false
+    code-summary: "Show code"
+    code-overflow: wrap
+    embed-resources: true
+    smooth-scroll: true
+    number-sections: true
+    anchor-sections: true
+    fig-cap-location: bottom
+    tbl-cap-location: top
+    link-external-icon: true
+    link-external-newwindow: true
+    callout-appearance: simple
+    callout-icon: true
+    title-block-banner: "#003d4c"
+    title-block-banner-color: "#ffffff"
+    grid:
+      sidebar-width: 280px
+      body-width: 1120px
+      margin-width: 40px
+      gutter-width: 1.5rem
+editor: visual
+bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+execute:
+  warning: false
+  message: false
+  echo: true
+  fig-align: center
+  fig-width: 8
+  fig-height: 5
+  fig-dpi: 150
+knitr:
+  opts_chunk:
+    dev: "png"
+    dev.args:
+      bg: "transparent"
+---
+
+# Purpose and scope
+
+The [main report](https://baena.ai/demos/ukraine-poolfund-report) analysed the Ukraine Humanitarian Fund (UHF) from its first allocation in 2019 through the end of 2025, using a one-off extract of the CBPF OData API taken in February 2026. This annex extends the picture to **31 August 2026** and records how the data collection behind it has changed.
+
+Two things make the first eight months of 2026 worth a dedicated annex rather than a footnote. First, the fund approved more money in eight months than in any full calendar year of its existence, almost two thirds of it in a single reserve round financed by one donor, under a new arrangement by which the United States now channels its UN humanitarian funding through OCHA's pooled funds (@sec-global). Second, several of the structural findings of the main report — the \$5M ceiling, the exit of UN agencies, the reserve/standard rebalancing — moved in 2026, some of them sharply. The annex tests each of the main report's key findings against the new data in @sec-findings.
+
+::: {.callout-note appearance="simple"}
+**Data vintage.** All figures are computed from the daily archive snapshot of the CBPF API taken at 04:00 UTC on **1 September 2026**, which captures the state of the fund through 31 August. Where a later vintage (6 October 2026) is used to show what happened after the cut-off, this is stated explicitly. Figures for 2026 are year-to-date, not full-year.
+:::
+
+```{r setup}
+#| include: false
+
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(readr)
+library(lubridate)
+library(stringr)
+library(knitr)
+library(scales)
+library(patchwork)
+library(ggrepel)
+
+theme_set(
+  theme_minimal(base_size = 14, base_family = "") +
+  theme(
+    plot.title = element_text(face = "bold", color = "#005f73", hjust = 0.5, size = 16),
+    plot.subtitle = element_text(color = "#343a40", hjust = 0.5, margin = margin(b = 10)),
+    plot.caption = element_text(color = "grey50", face = "italic", size = 9),
+    axis.title = element_text(face = "bold", size = 12),
+    axis.text = element_text(color = "grey30", size = 10),
+    legend.position = "top",
+    legend.title = element_text(face = "bold", size = 11),
+    panel.grid.minor = element_blank()
+  )
+)
+
+pal_org <- c("INGO" = "#005f73", "NNGO" = "#2a9d8f", "UN Agency" = "#e63946", "Other" = "#adb5bd")
+pal_src <- c("Standard" = "#005f73", "Reserve" = "#94d2bd")
+ukr_col <- "#e76f51"
+
+fmt_m <- function(x, acc = 0.1) scales::dollar(x / 1e6, suffix = "M", accuracy = acc)
+
+# Shorten the verbose legal names of Ukrainian partners for charts and tables.
+short_org <- function(x) {
+  case_when(
+    str_detect(x, "Team4UA")                         ~ "Team4UA",
+    str_detect(x, "NGELS OF SALVATION")              ~ "Angels of Salvation",
+    str_detect(x, "Right to Protection")             ~ "Right to Protection (R2P)",
+    str_detect(x, "United Nations High Commissioner") ~ "UNHCR",
+    str_detect(x, "World Food Programme")            ~ "WFP",
+    str_detect(x, "International Organization for Migration") ~ "IOM",
+    str_detect(x, "Agency for Technical Cooperation") ~ "ACTED",
+    str_detect(x, "Norwegian Refugee Council")       ~ "NRC",
+    str_detect(x, "Danish Refugee Council")          ~ "DRC",
+    str_detect(x, "Première Urgence")                ~ "PUI",
+    str_detect(x, "Handicap International")          ~ "Humanity & Inclusion",
+    str_detect(x, "Alliance for Public Health")      ~ "Alliance for Public Health",
+    str_detect(x, "POSMISHKA")                       ~ "Posmishka UA",
+    str_detect(x, "Unity\" for the Future")          ~ "Unity for the Future",
+    str_detect(x, "Volontariato Internazionale")     ~ "FOCSIV",
+    str_detect(x, "Cesvi")                           ~ "Cesvi",
+    str_detect(x, "Adventist Development")           ~ "ADRA Ukraine",
+    str_detect(x, "GOODWILL")                        ~ "Goodwill",
+    str_detect(x, "“GIRLS”|\"GIRLS\"")               ~ "Girls",
+    str_detect(x, "NEW WAY")                         ~ "New Way",
+    str_detect(x, "SAVE UKRAINE")                    ~ "Save Ukraine",
+    str_detect(x, "PERSPEKTYVA")                     ~ "Perspektyva",
+    str_detect(x, "Pluriton")                        ~ "Pluriton",
+    str_detect(x, "Global Emergency Relief")         ~ "GER3",
+    str_detect(x, "Nonviolent Peaceforce")           ~ "Nonviolent Peaceforce",
+    str_detect(x, "Stichting ZOA")                   ~ "ZOA",
+    str_detect(x, "Caritas Czech")                   ~ "Caritas Czech Republic",
+    str_detect(x, "Estonian Refugee")                ~ "Estonian Refugee Council",
+    str_detect(x, "Charity Foundation “NEW WAY”")    ~ "New Way",
+    TRUE ~ str_squish(str_remove_all(x, "Charitable Organization|CHARITABLE ORGANIZATION|Charity Fund|CHARITY FUND|CHARITABLE FOUNDATION|Charitable Foundation|NON-GOVERNMENTAL ORGANIZATION|Public Organization|[\"“”«»]"))
+  )
+}
+
+org_type4 <- function(x) {
+  case_when(
+    x == "International NGO" ~ "INGO",
+    x == "National NGO"      ~ "NNGO",
+    x == "UN Agency"         ~ "UN Agency",
+    TRUE                     ~ "Other"
+  )
+}
+```
+
+```{r load-data}
+#| include: false
+
+# --- 1 September 2026 vintage (state of the API through 31 August) ---
+ps  <- read_csv("Raw-data/ProjectSummary_ALL_20260901_snapshot.csv",
+                show_col_types = FALSE, guess_max = 20000)
+cl  <- read_csv("Raw-data/Cluster_ALL_20260901_snapshot.csv", show_col_types = FALSE)
+co  <- read_csv("Raw-data/Contribution_ALL_20260901_snapshot.csv", show_col_types = FALSE)
+
+# --- February 2026 extract used by the main report (for revision checks) ---
+ps_feb <- read_csv("Raw-data/ProjectSummary_ALL_20260219_100323_UTC.csv",
+                   show_col_types = FALSE, guess_max = 20000)
+
+# --- Daily pipeline vintages (29 Aug – 6 Oct 2026) ---
+pv  <- read_csv("Raw-data/pipeline-vintages/PipelineProjectSummary_daily_20260829_20261006.csv",
+                show_col_types = FALSE, guess_max = 30000)
+
+# --- vo2 allocation-round register (fetched 6 Oct 2026) ---
+at  <- read_csv("Raw-data/vo2/AllocationTypes_ALL_20261006.csv", show_col_types = FALSE)
+
+# Dates in the snapshot CSVs are ISO 8601 and readr parses them natively.
+# The February extract used the API's CSV writer (m/d/Y h:m:s AM/PM).
+
+grants <- ps %>%
+  filter(AllocationYear >= 2014, !is.na(Budget), Budget > 0, !is.na(OrganizationName)) %>%
+  mutate(OrgType = org_type4(OrganizationType),
+         is_ukr  = PooledFundName == "Ukraine")
+
+ukr   <- grants %>% filter(is_ukr)
+ukr26 <- ukr %>% filter(AllocationYear == 2026)
+
+cutoff <- as_date("2026-08-31")
+```
+
+# The year so far in numbers {#sec-numbers}
+
+```{r headline-numbers}
+#| include: false
+
+yr <- ukr %>%
+  group_by(AllocationYear) %>%
+  summarise(n = n(), partners = n_distinct(OrganizationName), usd = sum(Budget),
+            med = median(Budget), p90 = quantile(Budget, 0.9), max = max(Budget),
+            over5 = sum(Budget > 5e6), .groups = "drop")
+
+y26 <- yr %>% filter(AllocationYear == 2026)
+y25 <- yr %>% filter(AllocationYear == 2025)
+best_prior <- yr %>% filter(AllocationYear < 2026) %>% slice_max(usd, n = 1)
+
+rounds26 <- ukr26 %>%
+  group_by(AllocationType, AllocationSourceName) %>%
+  summarise(n = n(), partners = n_distinct(OrganizationName), usd = sum(Budget),
+            med = median(Budget), max = max(Budget),
+            first_approved = as_date(min(ApprovedDate, na.rm = TRUE)),
+            last_approved  = as_date(max(ApprovedDate, na.rm = TRUE)),
+            .groups = "drop") %>%
+  arrange(first_approved)
+
+us_round <- rounds26 %>% filter(str_detect(AllocationType, "lifesaving"))
+sa1      <- rounds26 %>% filter(str_detect(AllocationType, "First Standard"))
+```
+
+By 31 August 2026 the UHF had approved **`r nrow(ukr26)` grants worth `r fmt_m(y26$usd)`** to **`r y26$partners` partners**. That is already `r percent(y26$usd / y25$usd - 1, accuracy = 1)` more than the whole of 2025 (`r fmt_m(y25$usd)`), which was itself the fund's record year. All of it came from two allocation rounds:
+
+```{r rounds-table}
+#| echo: false
+
+at_ukr26 <- at %>%
+  filter(PooledFundName == "Ukraine", AllocationYear == 2026) %>%
+  transmute(AllocationType = AllocationTitle,
+            planned = TotalUSDPlanned,
+            launched = as_date(PlannedStartDate),
+            closing  = as_date(PlannedEndDate))
+
+rounds26 %>%
+  left_join(at_ukr26, by = "AllocationType") %>%
+  transmute(
+    Round = AllocationType,
+    Source = AllocationSourceName,
+    Launched = format(launched, "%e %b"),
+    `Planned` = fmt_m(planned, 1),
+    `Approved` = fmt_m(usd),
+    Grants = n,
+    `Median grant` = fmt_m(med, 0.01),
+    `Largest grant` = fmt_m(max),
+    `Approvals` = paste(format(first_approved, "%e %b"), "–", format(last_approved, "%e %b"))
+  ) %>%
+  kable(caption = "UHF allocation rounds approved by 31 August 2026. Planned envelope and launch date from the vo2 AllocationTypes register; approved figures from ProjectSummary.",
+        align = c("l","l","l","r","r","c","r","r","l"))
+```
+
+The round titled *"Supporting immediate lifesaving needs of the 2026 HNRP"* is the story of the year. It is not a numbered UHF round, it is recorded in the API against a plan label that reads *"Temp HRP for US allocations only"*, and it distributed **`r fmt_m(us_round$usd)` across just `r us_round$n` grants** in one month (`r format(us_round$first_approved, "%e %B")` to `r format(us_round$last_approved, "%e %B")`). The regular First Standard Allocation, by comparison, took `r sa1$n` grants and more than three months to place `r fmt_m(sa1$usd)`.
+
+```{r alloc-by-year}
+#| fig-width: 10
+#| fig-height: 5
+#| fig-cap: "UHF approved budget by allocation year and organisation type. 2026 covers January–August only."
+
+by_type <- ukr %>%
+  filter(AllocationYear >= 2019) %>%
+  group_by(AllocationYear, OrgType) %>%
+  summarise(usd = sum(Budget), .groups = "drop") %>%
+  mutate(OrgType = factor(OrgType, levels = c("UN Agency", "INGO", "NNGO", "Other")))
+
+totals <- by_type %>% group_by(AllocationYear) %>% summarise(usd = sum(usd))
+
+ggplot(by_type, aes(x = factor(AllocationYear), y = usd / 1e6, fill = OrgType)) +
+  geom_col(width = 0.72) +
+  geom_text(data = totals, aes(x = factor(AllocationYear), y = usd / 1e6,
+                               label = dollar(usd / 1e6, suffix = "M", accuracy = 1)),
+            inherit.aes = FALSE, vjust = -0.5, size = 3.4, fontface = "bold") +
+  annotate("text", x = 8, y = 262, label = "Jan–Aug only", size = 3.2, colour = "grey40", fontface = "italic") +
+  scale_fill_manual(values = pal_org, name = NULL) +
+  scale_y_continuous(labels = dollar_format(suffix = "M"), expand = expansion(mult = c(0, 0.12))) +
+  labs(title = "Eight months of 2026 already exceed every previous UHF year",
+       subtitle = "Approved budget by allocation year, USD millions",
+       x = NULL, y = "Approved budget",
+       caption = "Source: CBPF ProjectSummary, 1 Sept 2026 vintage.")
+```
+
+# Where the money came from {#sec-contributions}
+
+```{r contrib-prep}
+#| include: false
+
+cu <- co %>%
+  filter(PooledFundName == "Ukraine") %>%
+  mutate(pledge_date = as_date(PledgeDate),
+         paid_date   = as_date(PaidDate),
+         paid_date   = if_else(year(paid_date) < 1900, as_date(NA), paid_date),
+         is_us       = str_detect(DonorName, "United States"),
+         donor_group = if_else(is_us, "United States", "All other donors"))
+
+fy <- cu %>%
+  filter(FiscalYear >= 2019) %>%
+  group_by(FiscalYear, donor_group) %>%
+  summarise(pledged = sum(PledgeAmt), paid = sum(PaidAmt), .groups = "drop")
+
+fy26 <- cu %>% filter(FiscalYear == 2026)
+us26 <- fy26 %>% filter(is_us) %>% arrange(pledge_date)
+us_prior <- cu %>% filter(is_us, FiscalYear < 2026) %>% summarise(paid = sum(PaidAmt)) %>% pull(paid)
+tot26_pledged <- sum(fy26$PledgeAmt); tot26_paid <- sum(fy26$PaidAmt)
+us_share26 <- sum(us26$PledgeAmt) / tot26_pledged
+n_donors26 <- n_distinct(fy26$DonorName)
+peak_fy <- fy %>% group_by(FiscalYear) %>% summarise(p = sum(pledged)) %>% filter(FiscalYear < 2026) %>% slice_max(p, n = 1)
+```
+
+The allocation surge is explained on the contribution side by a single donor. The United States, which had contributed `r fmt_m(us_prior, 1)` to the UHF in total between 2019 and 2024 and nothing in 2025, pledged **`r fmt_m(us26$PledgeAmt[1], 1)` on `r format(us26$pledge_date[1], "%e %B %Y")`** (paid `r format(us26$paid_date[1], "%e %B")`) and a further **`r fmt_m(us26$PledgeAmt[2], 1)` on `r format(us26$pledge_date[2], "%e %B")`**, still unpaid at the cut-off. Together these two pledges are `r percent(us_share26, accuracy = 1)` of all 2026 pledges to the fund.
+
+```{r contrib-chart}
+#| fig-width: 10
+#| fig-height: 5
+#| fig-cap: "Pledged contributions to the UHF by fiscal year, United States vs all other donors. The 2022 peak was 31 donors; 2026 is one donor plus twenty."
+
+ggplot(fy, aes(x = factor(FiscalYear), y = pledged / 1e6, fill = donor_group)) +
+  geom_col(width = 0.72) +
+  geom_text(data = fy %>% group_by(FiscalYear) %>% summarise(p = sum(pledged)),
+            aes(x = factor(FiscalYear), y = p / 1e6, label = dollar(p / 1e6, suffix = "M", accuracy = 1)),
+            inherit.aes = FALSE, vjust = -0.5, size = 3.4, fontface = "bold") +
+  scale_fill_manual(values = c("United States" = ukr_col, "All other donors" = "#005f73"), name = NULL) +
+  scale_y_continuous(labels = dollar_format(suffix = "M"), expand = expansion(mult = c(0, 0.12))) +
+  labs(title = "One donor rebuilt the UHF's funding base in 2026",
+       subtitle = "Pledged contributions by fiscal year, USD millions (2026 to 31 August)",
+       x = "Fiscal year", y = "Pledged",
+       caption = "Source: CBPF Contribution, 1 Sept 2026 vintage. Fiscal-year attribution is the API's.")
+```
+
+Total 2026 pledges stand at **`r fmt_m(tot26_pledged, 1)` from `r n_donors26` donors**, of which `r fmt_m(tot26_paid, 1)` had been paid in. This is `r round(tot26_pledged / peak_fy$p, 1)`× the previous record year (`r peak_fy$FiscalYear`, `r fmt_m(peak_fy$p, 1)`) and `r round(tot26_pledged / sum(fy$pledged[fy$FiscalYear == 2025]), 1)`× the 2025 total. Excluding the United States, the other twenty donors pledged `r fmt_m(tot26_pledged - sum(us26$PledgeAmt), 1)`, which is in line with 2025 rather than a recovery: the Netherlands, the United Kingdom, Germany, Norway and the European Union each gave between \$8M and \$15M.
+
+::: callout-important
+**A multi-donor fund with a single-donor balance sheet.** The main report described a contribution base that was shrinking in absolute terms while the fund's weight in the CBPF system grew. In 2026 the base is larger than ever but structurally different: `r percent(us_share26, accuracy = 1)` of pledged money comes from one government, and the round it financed was run under its own temporary plan label. The 2026 Annual Report will be the first in the fund's history in which donor concentration is a more pressing governance question than partner concentration.
+:::
+
+# The ceiling that moved {#sec-ceiling}
+
+The main report's most distinctive empirical finding was the *flat top*: the 90th percentile of UHF grant size sat exactly at the \$5M standard cap, and seven core partners received grants at or near the cap round after round. In 2026 the distribution no longer looks like that.
+
+```{r size-dist}
+#| include: false
+
+dist <- grants %>%
+  mutate(ctx = if_else(is_ukr, "Ukraine UHF", "Other CBPFs"),
+         period = case_when(AllocationYear %in% 2022:2025 ~ "2022–2025",
+                            AllocationYear == 2026 ~ "2026 (Jan–Aug)")) %>%
+  filter(!is.na(period)) %>%
+  group_by(ctx, period) %>%
+  summarise(n = n(), median = median(Budget), p90 = quantile(Budget, 0.9),
+            max = max(Budget), share_over5 = mean(Budget > 5e6), .groups = "drop")
+
+ukr_dist <- dist %>% filter(ctx == "Ukraine UHF")
+n_over5_26 <- sum(ukr26$Budget > 5e6)
+usd_over5_26 <- sum(ukr26$Budget[ukr26$Budget > 5e6])
+n_at20 <- sum(ukr26$Budget >= 2e7)
+```
+
+```{r size-table}
+#| echo: false
+
+dist %>%
+  transmute(Context = ctx, Period = period, Grants = n,
+            Median = fmt_m(median, 0.01), `P90` = fmt_m(p90, 0.01),
+            Largest = fmt_m(max), `Share above $5M` = percent(share_over5, accuracy = 0.1)) %>%
+  kable(caption = "Grant size distribution, Ukraine vs all other CBPFs, 2022–2025 baseline against 2026 year-to-date.",
+        align = c("l","l","c","r","r","r","r"))
+```
+
+Thirteen of the 39 grants approved in 2026 exceed \$5M; together they account for **`r fmt_m(usd_over5_26)`, or `r percent(usd_over5_26 / y26$usd, accuracy = 1)` of the year's envelope**. Four grants were approved at exactly \$20M, to UNHCR, WFP, ACTED and the Ukrainian NGO Team4UA, each for six months of implementation. The 90th percentile has moved from \$5.0M to `r fmt_m(ukr_dist$p90[ukr_dist$period != "2022–2025"])`.
+
+```{r grant-strip}
+#| fig-width: 10
+#| fig-height: 5.5
+#| fig-cap: "Every UHF grant approved in 2026, by round and organisation type. Dashed line: the $5M standard cap that bounded the 2022–2025 distribution."
+
+strip <- ukr26 %>%
+  mutate(round = if_else(str_detect(AllocationType, "lifesaving"),
+                         "US-funded reserve round\n(Mar–Apr 2026)",
+                         "First Standard Allocation\n(Jan–Jun 2026)"),
+         OrgType = factor(OrgType, levels = c("UN Agency", "INGO", "NNGO", "Other")),
+         label = if_else(Budget >= 1e7 & Budget < 2e7, short_org(OrganizationName), NA_character_))
+
+lab_usd <- function(x) if_else(x >= 1e6, dollar(x / 1e6, suffix = "M", accuracy = 1), dollar(x / 1e3, suffix = "K", accuracy = 1))
+
+ggplot(strip, aes(x = round, y = Budget, colour = OrgType)) +
+  geom_jitter(width = 0.18, height = 0, size = 3.4, alpha = 0.85) +
+  geom_hline(yintercept = 5e6, linetype = "dashed", colour = "grey45") +
+  annotate("text", x = 0.5, y = 5.4e6, label = "$5M standard cap", hjust = 0, size = 3.2, colour = "grey40") +
+  geom_text_repel(aes(label = label), size = 3, show.legend = FALSE,
+                  max.overlaps = Inf, box.padding = 0.5, point.padding = 0.3, force = 3, seed = 1) +
+  annotate("label", x = 2, y = 2.75e7, label = "4 × $20M: UNHCR, WFP, ACTED, Team4UA",
+           size = 3.1, colour = "grey20", fill = "white", label.size = 0) +
+  scale_colour_manual(values = pal_org, name = NULL) +
+  scale_x_discrete(expand = expansion(add = 0.75)) +
+  scale_y_log10(labels = lab_usd, breaks = c(2.5e5, 5e5, 1e6, 2e6, 5e6, 1e7, 2e7),
+                expand = expansion(mult = c(0.05, 0.12))) +
+  labs(title = "The $5M cap stopped binding in 2026",
+       subtitle = "Approved budget per grant (log scale)",
+       x = NULL, y = "Grant size",
+       caption = "Source: CBPF ProjectSummary, 1 Sept 2026 vintage.")
+```
+
+The step-change is not confined to the US-funded round. The First Standard Allocation also placed three grants above \$10M (NRC `r fmt_m(12.5e6)`, Team4UA `r fmt_m(12e6)`, Angels of Salvation `r fmt_m(11e6)`), so even the regular cycle operated above the historical ceiling. Whether this is a permanent change in the fund's grant-size policy or a one-off response to a sudden inflow is the open question of 2026; the pipeline for the second half of the year (@sec-after) suggests the reserve rounds launched in July and August returned to grants in the \$2M–\$5M range.
+
+# Partners: who absorbed the surge {#sec-partners}
+
+```{r partners-prep}
+#| include: false
+
+core20 <- ukr %>%
+  filter(AllocationYear %in% 2022:2024) %>%
+  group_by(OrganizationName) %>%
+  summarise(n_years = n_distinct(AllocationYear), .groups = "drop") %>%
+  filter(n_years == 3) %>%
+  pull(OrganizationName)
+
+first_year <- ukr %>% group_by(OrganizationName) %>% summarise(first = min(AllocationYear), .groups = "drop")
+
+p26 <- ukr26 %>%
+  group_by(OrganizationName, OrgType) %>%
+  summarise(n = n(), usd = sum(Budget), .groups = "drop") %>%
+  left_join(first_year, by = "OrganizationName") %>%
+  mutate(core = OrganizationName %in% core20,
+         new_2026 = first == 2026,
+         share = usd / sum(usd)) %>%
+  arrange(desc(usd))
+
+core_share26 <- sum(p26$usd[p26$core]) / sum(p26$usd)
+n_core26 <- sum(p26$core)
+top5_26 <- sum(sort(p26$share, decreasing = TRUE)[1:5])
+hhi26 <- sum(p26$share^2)
+
+conc_prior <- ukr %>%
+  filter(AllocationYear %in% 2022:2024) %>%
+  group_by(OrganizationName) %>% summarise(usd = sum(Budget), .groups = "drop") %>%
+  mutate(share = usd / sum(usd)) %>%
+  summarise(top5 = sum(sort(share, decreasing = TRUE)[1:5]), hhi = sum(share^2))
+```
+
+Thirty-six organisations received UHF money in the first eight months of 2026. Of these, `r n_core26` belong to the Core-20 identified in the main report (partners active in every year 2022–2024), and that group took `r percent(core_share26, accuracy = 1)` of the 2026 envelope. The incumbency pattern therefore survived, but the top of the table has new names: the three largest 2026 recipients are **Team4UA** (`r fmt_m(p26$usd[1])`), **NRC** (`r fmt_m(p26$usd[2])`) and **Angels of Salvation** (`r fmt_m(p26$usd[3])`). Two of the three are Ukrainian NGOs whose first UHF grant dates from 2024.
+
+```{r partners-table}
+#| echo: false
+
+p26 %>%
+  slice_head(n = 15) %>%
+  transmute(Organisation = short_org(OrganizationName), Type = OrgType,
+            Grants = n, `2026 total` = fmt_m(usd, 0.01), Share = percent(share, accuracy = 0.1),
+            `First UHF grant` = first, `Core-20` = if_else(core, "yes", "")) %>%
+  kable(caption = "The fifteen largest UHF recipients, January–August 2026. Core-20 = active in every year 2022–2024 (main report definition).",
+        align = c("l","l","c","r","r","c","c"))
+```
+
+Concentration, measured the way the main report measured it, rose with the envelope: the top-5 share is `r percent(top5_26, accuracy = 1)` for 2026 against `r percent(conc_prior$top5, accuracy = 1)` for 2022–2024, and the Herfindahl index `r round(hhi26, 3)` against `r round(conc_prior$hhi, 3)`. A ten-grant round of \$150M will do that: with so few tickets, each is necessarily large. Four organisations received their first ever UHF grant in 2026 (Save Ukraine, Perspektyva, Pluriton and the Ukrainian Red Cross Society), all for \$300K or less and all in the standard allocation.
+
+## The UN came back
+
+```{r un-return}
+#| fig-width: 10
+#| fig-height: 4.5
+#| fig-cap: "UHF approved budget by organisation type, 2022–2026. The main report documented the UN exit; the 2026 US-funded round reversed it."
+
+un <- ukr %>%
+  filter(AllocationYear >= 2022, OrgType != "Other") %>%
+  group_by(AllocationYear, OrgType) %>%
+  summarise(usd = sum(Budget), .groups = "drop") %>%
+  complete(AllocationYear, OrgType, fill = list(usd = 0))
+
+ggplot(un, aes(x = AllocationYear, y = usd / 1e6, colour = OrgType, group = OrgType)) +
+  geom_line(linewidth = 1.3) +
+  geom_point(size = 3.5) +
+  geom_text(aes(label = dollar(usd / 1e6, suffix = "M", accuracy = 1),
+                vjust = if_else(OrgType == "NNGO", 2, -1)),
+            size = 3.1, fontface = "bold", show.legend = FALSE) +
+  scale_colour_manual(values = pal_org, name = NULL) +
+  scale_x_continuous(breaks = 2022:2026, labels = c("2022", "2023", "2024", "2025", "2026\n(Jan–Aug)")) +
+  scale_y_continuous(labels = dollar_format(suffix = "M"), expand = expansion(mult = c(0.05, 0.2))) +
+  labs(title = "UN agencies went from $0 in 2025 to $51M in 2026",
+       subtitle = "Approved budget by organisation type, USD millions",
+       x = NULL, y = NULL,
+       caption = "Source: CBPF ProjectSummary, 1 Sept 2026 vintage.")
+```
+
+The 2024 Annual Report's statement that the UN *"would no longer be funded unless absolutely necessary"* held through 2025, when UN agencies received nothing. In 2026 UNHCR, WFP and IOM received `r fmt_m(sum(ukr26$Budget[ukr26$OrgType == "UN Agency"]))` between them, all inside the US-funded round, where UN agencies were `r percent(sum(ukr26$Budget[ukr26$OrgType == "UN Agency"]) / us_round$usd, accuracy = 1)` of the money. National NGOs still received more than international NGOs in the standard allocation when counted per grant, but in dollar terms INGOs (`r fmt_m(sum(ukr26$Budget[ukr26$OrgType == "INGO"]))`) edged NNGOs (`r fmt_m(sum(ukr26$Budget[ukr26$OrgType == "NNGO"]))`) for the first time since 2024.
+
+# Sectors: cash first {#sec-sectors}
+
+```{r sectors}
+#| fig-width: 10
+#| fig-height: 5.5
+#| fig-cap: "Share of UHF cluster budget by sector and year. Clusters below 2% in every year are grouped as Other."
+
+clu <- cl %>%
+  filter(PooledFundName == "Ukraine", AllocationYear >= 2022) %>%
+  mutate(Cluster = case_when(
+    Cluster == "Water, Sanitation and Hygiene"     ~ "WASH",
+    Cluster == "Emergency Shelter and NFI"         ~ "Shelter & NFI",
+    Cluster == "Multi-purpose CASH"                ~ "Multi-purpose cash",
+    Cluster == "Camp Coordination / Management"    ~ "CCCM",
+    Cluster == "Coordination and Support Services" ~ "Coordination",
+    TRUE ~ Cluster)) %>%
+  group_by(AllocationYear, Cluster) %>%
+  summarise(usd = sum(ClusterBudget, na.rm = TRUE), .groups = "drop") %>%
+  group_by(AllocationYear) %>% mutate(share = usd / sum(usd)) %>% ungroup()
+
+keep <- clu %>% group_by(Cluster) %>% summarise(mx = max(share)) %>% filter(mx >= 0.02) %>% pull(Cluster)
+clu2 <- clu %>% mutate(Cluster = if_else(Cluster %in% keep, Cluster, "Other")) %>%
+  group_by(AllocationYear, Cluster) %>% summarise(usd = sum(usd), share = sum(share), .groups = "drop")
+
+ord <- clu2 %>% filter(AllocationYear == 2026) %>% arrange(desc(share)) %>% pull(Cluster)
+ord <- c(setdiff(ord, "Other"), setdiff(unique(clu2$Cluster), c(ord, "Other")), "Other")
+clu2$Cluster <- factor(clu2$Cluster, levels = rev(ord))
+
+pal_cl <- c("Multi-purpose cash" = "#e76f51", "Protection" = "#005f73", "Shelter & NFI" = "#0a9396",
+            "Health" = "#e63946", "WASH" = "#94d2bd", "Food Security" = "#ee9b00",
+            "CCCM" = "#bb3e03", "Coordination" = "#6c757d", "Education" = "#9b2226", "Other" = "#adb5bd")
+
+ggplot(clu2, aes(x = factor(AllocationYear), y = share, fill = Cluster)) +
+  geom_col(width = 0.72) +
+  geom_text(aes(label = if_else(share >= 0.06, percent(share, accuracy = 1), "")),
+            position = position_stack(vjust = 0.5), size = 3, colour = "white", fontface = "bold") +
+  scale_fill_manual(values = pal_cl, name = NULL, breaks = ord) +
+  scale_y_continuous(labels = percent_format(), expand = c(0, 0)) +
+  scale_x_discrete(labels = c("2022", "2023", "2024", "2025", "2026\n(Jan–Aug)")) +
+  labs(title = "Multi-purpose cash went from 5% to half of the UHF portfolio",
+       subtitle = "Share of cluster budget by allocation year",
+       x = NULL, y = NULL,
+       caption = "Source: CBPF Cluster, 1 Sept 2026 vintage.") +
+  theme(legend.position = "right")
+```
+
+```{r health-numbers}
+#| include: false
+h <- clu %>% filter(Cluster == "Health") %>% arrange(AllocationYear)
+mpca26 <- clu %>% filter(Cluster == "Multi-purpose cash", AllocationYear == 2026)
+```
+
+Multi-purpose cash absorbed `r fmt_m(mpca26$usd)` in 2026, `r percent(mpca26$share, accuracy = 1)` of the cluster budget, after running at 3–5% in 2023–2025. That is the signature of the US-funded round: large, fast, six-month cash grants to partners with existing distribution capacity. Shelter, the dominant sector of 2023–2024, fell to `r percent(clu$share[clu$Cluster == "Shelter & NFI" & clu$AllocationYear == 2026], accuracy = 1)`.
+
+For the health sector, the focus of the main report, 2026 is the best year in absolute terms since 2022: `r fmt_m(h$usd[h$AllocationYear == 2026])` (`r percent(h$share[h$AllocationYear == 2026], accuracy = 1)` of the portfolio), against `r fmt_m(h$usd[h$AllocationYear == 2025])` in 2025 and `r fmt_m(h$usd[h$AllocationYear == 2024])` in 2024. The fund also launched a dedicated \$10M health reserve round for Khersonska oblast on 10 August (@sec-after), the first sector-specific UHF reserve allocation in the dataset.
+
+# Ukraine in the 2026 CBPF system {#sec-global}
+
+```{r global}
+#| fig-width: 10
+#| fig-height: 6
+#| fig-cap: "Approved budget by pooled fund, January–August 2026. Ukraine highlighted."
+
+g26 <- grants %>%
+  filter(AllocationYear == 2026) %>%
+  group_by(PooledFundName) %>%
+  summarise(n = n(), usd = sum(Budget), .groups = "drop") %>%
+  mutate(share = usd / sum(usd), is_ukr = PooledFundName == "Ukraine") %>%
+  arrange(desc(usd))
+
+share_hist <- grants %>%
+  filter(AllocationYear >= 2022) %>%
+  group_by(AllocationYear) %>%
+  summarise(total = sum(Budget), ukr = sum(Budget[is_ukr]), share = ukr / total,
+            rank = rank(-tapply(Budget, PooledFundName, sum))["Ukraine"], .groups = "drop")
+
+ggplot(g26 %>% slice_head(n = 15),
+       aes(x = reorder(PooledFundName, usd), y = usd / 1e6, fill = is_ukr)) +
+  geom_col(width = 0.72) +
+  geom_text(aes(label = paste0(dollar(usd / 1e6, suffix = "M", accuracy = 1), "  (", n, " grants)")),
+            hjust = -0.08, size = 3.1) +
+  coord_flip() +
+  scale_fill_manual(values = c(`TRUE` = ukr_col, `FALSE` = "#94d2bd"), guide = "none") +
+  scale_y_continuous(labels = dollar_format(suffix = "M"), expand = expansion(mult = c(0, 0.25))) +
+  labs(title = "Second-largest CBPF in 2026, behind Sudan",
+       subtitle = paste0("Approved budget, Jan–Aug 2026, top 15 of ", nrow(g26), " funds"),
+       x = NULL, y = NULL,
+       caption = "Source: CBPF ProjectSummary, 1 Sept 2026 vintage.")
+```
+
+```{r us-system}
+#| include: false
+us_sys <- co %>%
+  filter(FiscalYear == 2026, str_detect(DonorName, "United States")) %>%
+  group_by(PooledFundName) %>% summarise(pledged = sum(PledgeAmt), .groups = "drop") %>%
+  arrange(desc(pledged))
+us_total_sys <- sum(us_sys$pledged)
+us_sys_prior <- co %>% filter(FiscalYear == 2025, str_detect(DonorName, "United States")) %>% summarise(p = sum(PledgeAmt, na.rm = TRUE)) %>% pull(p) %>% coalesce(0)
+
+# Rounds the API itself files under the US-only temporary plan label
+us_rounds <- at %>%
+  filter(AllocationYear == 2026, str_detect(coalesce(HRPPlans, ""), "US allocations")) %>%
+  mutate(launched = as_date(PlannedStartDate))
+us_rounds_n     <- nrow(us_rounds)
+us_rounds_funds <- n_distinct(us_rounds$PooledFundName)
+us_rounds_res   <- sum(us_rounds$AllocationSource == "Reserve")
+us_rounds_usd   <- sum(us_rounds$TotalApprovedBudget, na.rm = TRUE)
+us_launch_window <- us_rounds %>% filter(launched >= as_date("2026-03-01"), launched <= as_date("2026-03-31")) %>% nrow()
+
+# System-wide reserve share by year
+res_sys <- grants %>%
+  filter(AllocationYear >= 2019) %>%
+  group_by(AllocationYear) %>%
+  summarise(total = sum(Budget), reserve = sum(Budget[AllocationSourceName == "Reserve"]),
+            share = reserve / total, .groups = "drop")
+rs <- function(y) percent(res_sys$share[res_sys$AllocationYear == y], accuracy = 1)
+```
+
+The 2026 surge is not unique to Ukraine. Across the system, approved CBPF budget for January–August 2026 reached `r dollar(sum(g26$usd) / 1e9, suffix = "B", accuracy = 0.1)`, more than double the full-year 2025 figure, and the United States pledged `r dollar(us_total_sys / 1e9, suffix = "B", accuracy = 0.1)` to `r nrow(us_sys)` pooled funds in fiscal 2026, against `r if (us_sys_prior == 0) "nothing" else fmt_m(us_sys_prior, 0)` in fiscal 2025. Ukraine's `r fmt_m(sum(us_sys$pledged[us_sys$PooledFundName == "Ukraine"]), 1)` is the largest single-fund share of that money, but because the whole system grew, **Ukraine's share of global CBPF allocations fell to `r percent(share_hist$share[share_hist$AllocationYear == 2026], accuracy = 1)`** from `r percent(share_hist$share[share_hist$AllocationYear == 2025], accuracy = 1)` in 2025. The main report's "one in five CBPF dollars" line is no longer true, not because Ukraine shrank but because everyone else grew faster.
+
+## A new US modus operandi, visible in the data
+
+The cause is a change in how the United States funds UN humanitarian work. On 29 December 2025 the State Department and OCHA signed a memorandum of understanding under OCHA's "Humanitarian Reset", with an initial US pledge of \$2 billion to 18 country and crisis pooled funds; the stated intent is to replace project grants to individual agencies with "consolidated and flexible pooled fund vehicles" focused on "hyper-prioritized life-saving activities", and, over time, to channel all US support to UN humanitarian programmes through OCHA-administered pooled funds [@state_mou_2025; @usmission_geneva_2026]. A further \$1.8 billion followed on 14 May 2026, taking the commitment to \$3.8 billion across 21 countries [@state_1p8_2026]. Devex reports that the money is held in US sub-accounts within each fund and released through reserve allocations, the mechanism normally used for time-critical gaps, with strategy papers requiring delivery within six months and "direct" lifesaving activities only [@devex_bet_2026; @tnh_inklings_2026].
+
+The allocation register in the API shows the mechanism directly. Under the plan label *"Temp HRP for US allocations only"* it files `r us_rounds_n` rounds across `r us_rounds_funds` funds; `r if (us_rounds_res == us_rounds_n) "every one of them is a reserve allocation" else paste(us_rounds_res, "of them are reserve allocations")`, `r us_launch_window` were launched in March 2026 alone, and their titles repeat the same vocabulary ("fast-tracked", "hyper-prioritized", "life-saving"). Together they had approved `r dollar(us_rounds_usd / 1e9, suffix = "B", accuracy = 0.01)` by 6 October. Their envelopes also cluster at identical amounts across very different crises, which points to centrally set allocations rather than country-level needs assessments.
+
+```{r us-rounds-table}
+#| echo: false
+
+us_rounds %>%
+  arrange(desc(TotalApprovedBudget)) %>%
+  slice_head(n = 12) %>%
+  transmute(Fund = PooledFundName, Launched = format(launched, "%e %b %Y"),
+            Source = AllocationSource, Approved = fmt_m(TotalApprovedBudget),
+            Round = str_trunc(AllocationTitle, 70)) %>%
+  kable(caption = "The twelve largest rounds filed under the US-only plan label, vo2 AllocationTypes register, 6 October 2026.",
+        align = c("l","l","l","r","l"))
+```
+
+```{r reserve-share-system}
+#| fig-width: 10
+#| fig-height: 4.5
+#| fig-cap: "Share of approved CBPF budget allocated through reserve allocations, all funds. 2026 covers January–August."
+
+ggplot(res_sys, aes(x = factor(AllocationYear), y = share)) +
+  geom_col(width = 0.7, fill = "#005f73") +
+  geom_text(aes(label = percent(share, accuracy = 1)), vjust = -0.5, size = 3.6, fontface = "bold") +
+  scale_y_continuous(labels = percent_format(), limits = c(0, 1.08), expand = c(0, 0)) +
+  scale_x_discrete(labels = c(as.character(2019:2025), "2026\n(Jan–Aug)")) +
+  labs(title = "Reserve allocations became the system's default channel in 2026",
+       subtitle = "Reserve share of approved CBPF budget, all pooled funds",
+       x = NULL, y = NULL,
+       caption = "Source: CBPF ProjectSummary, 1 Sept 2026 vintage.")
+```
+
+The consequence for the reserve/standard balance is system-wide: the reserve share of approved CBPF budget was `r rs(2024)` in 2024 and `r rs(2025)` in 2025, and is `r rs(2026)` for January–August 2026. The UHF's return to reserve dependence, which @sec-findings records as a reversal of the main report's finding, is therefore not a Ukraine-specific choice but the local expression of a donor-driven shift in the whole modality.
+
+Two further points from the reporting matter for how this annex should be read. First, who received the money differs by fund: Devex's analysis of the first tranche found about 98% going to UN agencies and INGOs, with WFP alone at \$473M, and The New Humanitarian put the international share at roughly 87% across 11 funds, against nearly half of CBPF money reaching local and national organisations in 2024 [@devex_bet_2026; @tnh_inklings_2026]. Ukraine is an outlier in that respect: national NGOs took `r percent(sum(ukr26$Budget[ukr26$OrgType == "NNGO" & str_detect(ukr26$AllocationType, "lifesaving")]) / us_round$usd, accuracy = 1)` of the US-funded round, because the UHF already had a local partner tier operating at cap-sized grants. Second, the headline results circulated for the arrangement (22 million people targeted, allocation processes twice as fast, \$1.9 billion in savings) are State Department and OCHA self-reporting with no independent evaluation yet [@state_pres_2026]; ALNAP argues the concentration of one donor's money turns OCHA from coordinator into fund manager and gatekeeper, and IARAN notes that a local-share percentage says nothing about who decides [@alnap_gha_2026; @iaran_2026]. None of these claims is tested here.
+
+# After the cut-off: what was in motion on 31 August {#sec-after}
+
+The approved-project view understates what the fund was doing in the summer. Two reserve rounds had been launched and had closed for proposals by 31 August without a single approval:
+
+```{r after-table}
+#| echo: false
+
+at %>%
+  filter(PooledFundName == "Ukraine", AllocationYear == 2026,
+         !AllocationTitle %in% rounds26$AllocationType) %>%
+  transmute(Round = AllocationTitle, Source = AllocationSource,
+            launched_d = as_date(PlannedStartDate),
+            Launched = format(launched_d, "%e %b %Y"),
+            `Proposal deadline` = format(as_date(PlannedEndDate), "%e %b %Y"),
+            Planned = fmt_m(TotalUSDPlanned, 1),
+            `Approved by 6 Oct` = paste0(TotalProjectsApproved, if_else(TotalProjectsApproved == 1, " grant, ", " grants, "), fmt_m(TotalApprovedBudget)),
+            `Still under approval 6 Oct` = paste0(TotalProjectsunderApproval, if_else(TotalProjectsunderApproval == 1, " grant, ", " grants, "), fmt_m(TotalUnderApprovalBudget))) %>%
+  arrange(launched_d) %>%
+  select(-launched_d) %>%
+  kable(caption = "UHF rounds launched after the two approved rounds. Status columns reflect the 6 October 2026 vo2 register, i.e. after the annex cut-off.",
+        align = c("l","l","l","l","r","l","l"))
+```
+
+```{r pipeline-vintages}
+#| fig-width: 10
+#| fig-height: 5
+#| fig-cap: "Ukraine projects visible in the CBPF pipeline endpoint, by process stage, one observation per daily snapshot. Projects leave the pipeline when they are approved and move to ProjectSummary."
+
+pv_ukr <- pv %>%
+  filter(PooledFundName == "Ukraine") %>%
+  mutate(stage = factor(ProcessStatus,
+                        levels = c("Technical Review", "HC Final Approval", "Disbursement"))) %>%
+  count(snapshot_date, stage, name = "n") %>%
+  complete(snapshot_date = seq(min(snapshot_date), max(snapshot_date), by = "day"),
+           stage, fill = list(n = 0))
+
+ggplot(pv_ukr, aes(x = snapshot_date, y = n, fill = stage)) +
+  geom_area(alpha = 0.9, colour = "white", linewidth = 0.3) +
+  geom_vline(xintercept = cutoff, linetype = "dotted", colour = "grey30") +
+  annotate("text", x = cutoff, y = 27, label = "annex cut-off", hjust = 1.05, size = 3.1, colour = "grey30") +
+  scale_fill_manual(values = c("Technical Review" = "#94d2bd", "HC Final Approval" = "#0a9396", "Disbursement" = "#005f73"), name = NULL) +
+  scale_x_date(date_breaks = "1 week", date_labels = "%d %b") +
+  labs(title = "The summer reserve rounds moved through approval in September",
+       subtitle = "Ukraine projects in the pipeline endpoint, by stage, daily snapshots 29 Aug – 6 Oct 2026",
+       x = NULL, y = "Projects in pipeline",
+       caption = "Source: daily CBPF archive, PipelineProjectSummary vintages.")
+```
+
+```{r after-numbers}
+#| include: false
+pv_first <- pv %>% filter(PooledFundName == "Ukraine") %>%
+  group_by(ChfProjectCode) %>% summarise(first_seen = min(snapshot_date), submitted = as_date(min(DateSubmitted)), .groups = "drop")
+n_sept2 <- sum(pv_first$first_seen == as_date("2026-09-02"))
+sub_range <- range(pv_first$submitted[pv_first$first_seen == as_date("2026-09-02")])
+oct6 <- at %>% filter(PooledFundName == "Ukraine", AllocationYear == 2026) %>%
+  summarise(n = sum(TotalProjectsApproved), usd = sum(TotalApprovedBudget))
+```
+
+The daily archive shows how the pipeline endpoint behaves. On 1 September it listed a single Ukraine project; on 2 September `r n_sept2` appeared at once, all submitted between `r format(sub_range[1], "%e %B")` and `r format(sub_range[2], "%e %B")`, i.e. the Winter Response and Kherson health proposals became visible only once they entered technical review, roughly four weeks after submission. Over the following month they moved through HC approval and disbursement and dropped out of the pipeline as they were approved. By 6 October the fund had **`r oct6$n` approved 2026 grants worth `r fmt_m(oct6$usd)`**, a fourth reserve round (agriculture, \$20M) had opened, and the winter round had settled at grants of \$2M–\$5M, back inside the historical range.
+
+::: {.callout-tip appearance="simple"}
+Nothing in this section could be reconstructed from a single API extract. The pipeline endpoint only shows the present; the February extract that fed the main report contained one 2026 Ukraine project. This is the concrete payoff of the daily archive described in @sec-data.
+:::
+
+# Revisions to the main report's data {#sec-revisions}
+
+The main report cut its analysis at the end of 2025 using the 19 February 2026 extract. Comparing that extract with the 1 September vintage shows how much the API rewrote in between.
+
+```{r revisions}
+#| echo: false
+
+feb_ukr <- ps_feb %>% filter(PooledFundName == "Ukraine")
+sep_ukr <- ps %>% filter(PooledFundName == "Ukraine")
+
+rev_tbl <- full_join(
+  feb_ukr %>% group_by(AllocationYear) %>% summarise(n_feb = n(), usd_feb = sum(Budget, na.rm = TRUE), .groups = "drop"),
+  sep_ukr %>% group_by(AllocationYear) %>% summarise(n_sep = n(), usd_sep = sum(Budget, na.rm = TRUE), .groups = "drop"),
+  by = "AllocationYear") %>%
+  filter(AllocationYear >= 2022) %>%
+  transmute(Year = AllocationYear,
+            `Projects (Feb)` = n_feb, `Projects (Sep)` = n_sep,
+            `Budget (Feb)` = fmt_m(usd_feb, 0.01), `Budget (Sep)` = fmt_m(usd_sep, 0.01),
+            Delta = fmt_m(usd_sep - usd_feb, 0.01))
+kable(rev_tbl, caption = "Ukraine projects and approved budget by allocation year: February 2026 extract vs 1 September 2026 vintage.",
+      align = c("l","c","c","r","r","r"))
+
+j <- inner_join(feb_ukr %>% select(ChfProjectCode, b_feb = Budget, s_feb = ProjectStatus, d_feb = ProjectDuration),
+                sep_ukr %>% select(ChfProjectCode, b_sep = Budget, s_sep = ProjectStatus, d_sep = ProjectDuration),
+                by = "ChfProjectCode")
+n_budget_chg <- sum(abs(j$b_feb - j$b_sep) > 1)
+n_status_chg <- sum(j$s_feb != j$s_sep)
+n_dur_chg    <- sum(j$d_feb != j$d_sep)
+```
+
+For 2019–2024 nothing changed. For 2025, the project count is identical but `r n_budget_chg` grants were revised upwards by a combined `r fmt_m(sum(j$b_sep - j$b_feb), 0.01)`, both with duration extensions; the 2025 total in the main report (\$201.2M) should now read **\$202.6M**. Across all Ukraine projects, `r n_status_chg` changed status and `r n_dur_chg` changed duration between the two extracts. None of this alters a conclusion of the main report, but it illustrates why a dated vintage, not "the API", is the citable source.
+
+::: callout-note
+**Two things to know when reusing the files.** The snapshot CSVs in `Raw-data/` are exported from the API's JSON and carry ISO 8601 dates; the February CSVs came from the API's CSV writer and use `m/d/Y h:m:s AM` strings, so date parsing differs between the two generations. And the Ukraine-only filter documented in the original API guide (`poolfundAbbrv=UKR`) now returns empty sets on every vo1 endpoint; the archive fetches all funds and filters locally.
+:::
+
+# The main report's findings, revisited {#sec-findings}
+
+```{r findings-table}
+#| echo: false
+
+res_share26 <- ukr26 %>% summarise(s = sum(Budget[AllocationSourceName == "Reserve"]) / sum(Budget)) %>% pull(s)
+res_share25 <- ukr %>% filter(AllocationYear == 2025) %>% summarise(s = sum(Budget[AllocationSourceName == "Reserve"]) / sum(Budget)) %>% pull(s)
+
+tribble(
+  ~Finding, ~`Status at 31 Aug 2026`,
+  "Heavy reliance on the reserve allocation, correcting in 2025",
+    paste0("Reversed. Reserve share ", percent(res_share26, accuracy = 1), " in 2026 after ", percent(res_share25, accuracy = 1), " in 2025, driven entirely by the US-funded reserve round; system-wide the reserve share is ", rs(2026), " (@sec-global)."),
+  "Larger grants, not fewer partners (median 2.6× the CBPF median)",
+    paste0("Amplified. UHF median ", fmt_m(ukr_dist$median[2], 0.01), " vs ", fmt_m(dist$median[dist$ctx == "Other CBPFs" & dist$period != "2022–2025"], 0.01), " elsewhere in 2026; partner count per round unchanged."),
+  "Ceiling-bound distribution: P90 exactly at the $5M cap",
+    paste0("No longer holds. P90 ", fmt_m(ukr_dist$p90[2]), "; 13 grants above $5M including four at $20M."),
+  "Stable Core-20 captures 55% of the envelope",
+    paste0("Weakened. ", n_core26, " Core-20 members active in 2026 with ", percent(core_share26, accuracy = 1), " of the envelope; the two largest recipients joined the fund in 2024."),
+  "Structural UN exit ($66M → $5M → $0)",
+    "Reversed. UNHCR, WFP and IOM received $50.7M, all in the US-funded round.",
+  "Ukraine = 20% of global CBPF allocations",
+    paste0("Diluted. ", percent(share_hist$share[share_hist$AllocationYear == 2026], accuracy = 1), " of a system that doubled; still the second-largest fund."),
+  "Shrinking contribution base",
+    paste0("Reversed in volume (", fmt_m(tot26_pledged, 1), " pledged), concentrated in source (one donor, ", percent(us_share26, accuracy = 1), ").")
+) %>%
+  kable(caption = "Each key finding of the main report against the January–August 2026 data.", align = c("l", "l"))
+```
+
+The through-line is that the 2026 UHF is a fund responding to a sudden, large, single-source inflow, delivered through a mechanism (reserve allocations under a US-only plan label, six-month lifesaving grants) that the donor, not the fund, defined. Almost every structural characteristic the main report attributed to the fund's own choices (the cap, the UN exit, the reserve correction, the stable core) bent under it. The characteristics that did survive, the breadth of the partner base and the localisation of the standard allocation, are the ones embedded in the regular allocation cycle rather than in the reserve mechanism. How much of the 2026 shape persists will depend on whether the second US pledge of \$180M is programmed through the regular cycle or through another bespoke round.
+
+# Data collection since the main report {#sec-data}
+
+The main report relied on a single manual extract. Since 29 August 2026 the CBPF API is snapshotted automatically every day, and this annex is the first product built on that archive.
+
+```{r data-inventory}
+#| echo: false
+
+tribble(
+  ~Layer, ~What, ~Where,
+  "Daily vintages", "Every working vo1 endpoint (8) as gzipped JSON, append-only, since 29 Aug 2026; from 6 Oct 2026 also the vo2 endpoints (24), the vo1 fund master and a weekly logframe-indicator pull", "`archive/cbpf/YYYY-MM-DD/` on the swarm NFS share",
+  "Latest-state database", "The same seven core tables refreshed transactionally from the day's archive", "Postgres `CBPF.raw_data`",
+  "Project snapshot used here", "1 Sept 2026 vintage exported to CSV (`*_ALL_20260901_snapshot.csv`), daily pipeline vintages 29 Aug – 6 Oct (`pipeline-vintages/`), vo2 pulls of 6 Oct (`vo2/`)", "`Raw-data/` in the project repository"
+) %>% kable(caption = "Where the data behind this annex lives.", align = c("l", "l", "l"))
+```
+
+Two discoveries during this update widen what can be analysed in future:
+
+-   **A second API version.** `cbpfapi.unocha.org/vo2/odata` exposes 28 endpoints, 24 of them working, that the vo1 catalogue does not. They include `AllocationFlowByOrgType` (the working replacement for the `AllocationFlow` endpoint that has returned HTTP 500 since February), `AllocationTypes` (one row per allocation round with planned envelope, launch and closing dates, approval status and links to the strategy documents, which is what populated the round tables above), `ExtendedAllocationDetails`, `HFUManagementCost`, `PoolFundBeneficiarySummary` and a `LastModified` stamp. The vo2 register also carries CERF allocations, which opens a pooled-funds-wide view.
+-   **The logframe layer is partly back.** `LogicalFrameworkIndicator` on vo1, dead in February, now returns 212,000 indicator rows across all projects. The narrative-report and financial-report endpoints remain dead (404/501).
+
+The full endpoint sweep, with status codes, is recorded in `API_FINDINGS.md`.
+
+------------------------------------------------------------------------
+
+::: {.callout-note icon="false" appearance="minimal"}
+I specialize in task-based consulting services for data analytics. You can contact me at [baena.ai/contact](https://baena.ai/contact)
+:::
+
+Author: Jesus Baena
+
+*Annex generated on `r Sys.Date()` using Quarto. Main report: [baena.ai/demos/ukraine-poolfund-report](https://baena.ai/demos/ukraine-poolfund-report).*
+
+# References

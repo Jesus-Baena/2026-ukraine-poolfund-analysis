@@ -1,0 +1,24 @@
+# Re-imagine the CBPF grant-size explorer
+
+Start by reading this whole file, then `README.md` in this folder, then the two repos named below. Do not deploy anything; the deliverable is a working local build I can review.
+
+## What exists and why it is not good enough
+
+`shiny/grant-size-app-v3/` in `/home/jbi/Git/2026-ukraine-poolfund-analysis/` is a Nuxt 4 static app that reproduces one chart from the published report "Ukraine Humanitarian Pooled Fund Analysis" (https://baena.ai/demos/ukraine-poolfund-report, companion article https://baena.ai/articles/uhf-twin-tiers): a scatter where each dot is one organisation within one CBPF pooled fund, x = number of grants received, y = median grant size (log), dot size = total USD, Ukraine in orange vs every other fund in teal. It was an early attempt: a dense dark dashboard with 9–10 px monospace labels, a wall of 1,200 overlapping dots, a sidebar of raw controls, and no narrative. It is functional but not legible, and it does not tell a reader why the chart matters.
+
+The point the chart is meant to make, from the report: the Ukraine fund is not more *concentrated* than its peers, it is simply *larger*; its grants are about 2.6× the CBPF median, its 90th percentile sat exactly at the $5M cap through 2025 ("flat top"), and a stable core of about 20 partners absorbed 55% of the 2022–2024 envelope. In 2026 the cap stopped binding (four $20M grants in a US-funded round). See `ukraine-poolfund-annex-2026-08.qmd` in the same repo for the 2026 update.
+
+## What I want
+
+A data story, not a control panel. Re-imagine the app so that a humanitarian-finance reader (donor, fund manager, NGO grants officer) understands the point in the first screen and can then explore. Think "scrollytelling into an explorer": a short guided sequence of views (global vs Ukraine, the $5M ceiling, the Core-20, 2026) that end in the free explorer, with the explorer itself redesigned for legibility: readable type at normal sizes, light theme or a properly contrasted dark theme, restrained colour (one accent for Ukraine), sensible defaults (Ukraine vs peers, 2022–2025), progressive disclosure of filters, annotations instead of a legend where possible, and a mobile layout that works rather than a shrunken desktop. Hover/click should give a partner card with name, fund, grants, median, total, health share, and years active.
+
+Decide, and tell me why, whether this should be (a) a page inside the portfolio site, or (b) stay a standalone static build embedded via the portfolio's demo iframe mechanism. Option (a) is my preference if it is not disproportionate work.
+
+## Constraints and references
+
+- **Design system**: the portfolio at `/home/jbi/Git/2025-portfolio-professional-website/` (Nuxt 4, @nuxt/ui-pro, Tailwind 4, ECharts via vue-echarts, i18n). Tokens are in `theme.config.ts` (teal `primary`/`unteal`, `terra` accent, warm `neutral`). The closest existing precedent is `app/pages/demos/reliefjobs-dashboard.vue` (fullscreen layout, `useReliefChartTheme()`, Intl formatting). Demo cards and the iframe route live in `app/pages/demos/index.vue` and `app/pages/demos/[...slug].vue` with content in `content/*/demos/`. Match that look and those conventions; do not reuse the current app's charcoal/JetBrains Mono styling.
+- **Data**: `scripts/build_data.py` in this folder produces `public/data/cbpf_grants.json` (16.5k rows of `{allocation_year, fund, org_name, org_type, budget, cluster, source}`) and `cbpf_meta.json` (`snapshot_date` etc.) from a CBPF archive snapshot. Keep that script as the data contract; extend its output if the story needs more fields (e.g. project code, allocation round title, per-year partner activity). The latest raw vintage is in `Raw-data/*_20260901_snapshot.csv` in the analysis repo, and the archive is refreshed daily on the swarm (`archive/cbpf/YYYY-MM-DD/`). Aggregation rules that must not change: years ≥ 2014, Budget > 0, primary cluster = highest `Percentage` per `ChfProjectCode`, org-type mapping as in the README.
+- **Keep from v3**: shareable URL state, CSV export of the current view, the About/methodology text, data-vintage display, attribution to Jesus Baena / baena.ai with links to the report and article.
+- **Charts**: ECharts (already in the portfolio) rather than Plotly. Log y-axis, label collision handling, and a clear empty state are required. Some funds anonymise partners as "International NGO"; handle that explicitly (group, flag, or exclude with a note) rather than letting them appear as giant dots.
+- **Quality bar**: lint and typecheck clean in whichever repo it lands in, `pnpm generate`/`pnpm build` succeeds, verified in the browser at desktop and 375 px, console error-free, keyboard reachable controls, and `prefers-reduced-motion` respected if you animate transitions.
+- Do not commit, push, or deploy. Report what you built, what you decided on (a) vs (b), screenshots, and anything left undone.

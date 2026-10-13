@@ -1,5 +1,7 @@
 # CBPF API Available Endpoints Analysis
 
+> **Superseded on 6 October 2026** by the sweep recorded at the end of `API_FINDINGS.md`, which also covers the second API version (`vo2`). Kept for the February 2026 baseline.
+
 **Research Date:** February 19, 2026  
 **API Base:** https://cbpfapi.unocha.org/vo1/odata
 

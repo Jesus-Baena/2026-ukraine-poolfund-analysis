@@ -1,5 +1,7 @@
 # CBPF API Data Availability - Research Findings
 
+> **Update, 6 October 2026** — see the dated section at the end of this file. Headlines: a second API version (`vo2`) with 24 working endpoints exists; `LogicalFrameworkIndicator` (vo1) works again; `AllocationFlow` is still dead; the `poolfundAbbrv=UKR` filter no longer works on any vo1 endpoint; data is now archived daily by the swarm `harvest` stack instead of fetched by hand.
+
 **Date:** February 19, 2026  
 **Research Question:** Can we retrieve more complete rejected/cancelled project data?
 
@@ -138,3 +140,50 @@ According to the OData metadata:
 - Some endpoints currently return HTTP 500 errors
 - Filter syntax for string comparisons may be limited
 - Large datasets download successfully without pagination
+
+
+---
+
+## Update: endpoint sweep of 6 October 2026
+
+Every collection declared by the vo1 service document (50) and the vo2 service document (28) was requested with `$top=5&$format=json`. Results, with the February 2026 status for comparison:
+
+### vo1 (`https://cbpfapi.unocha.org/vo1/odata`)
+
+| Status | Endpoints |
+|---|---|
+| **200, data** | ProjectSummary, ProjectSummaryWithLocation, ProjectSummaryWithLocationAndCluster, PipelineProjectSummary, PipelineProjectCluster, Cluster, Contribution, Poolfund, **LogicalFrameworkIndicator (new: 212,351 rows, ~113 MB raw)** |
+| 200, always empty `[]` | CBPFInstanceProcessLogs, DirectCosting |
+| 404 | Budget, CBPFInstanceStatus, CBPFPartnerScorecard, CBPFProjectScorecard, FinancialReportSection, FinancialReportSummary, FocalPoint, GmsProjectByYear, Location, LogicalFramework, LogicalFrameworkActivity, LogicalFrameworkOutcome, LogicalFrameworkOutput, NarrativeReportLogicalFramework, NarrativeReportMonitoring, NarrativeReportSummary, OtherBeneficiary, OtherFunding, OtherInfoOrganization, PartnerCA, PartnerDueDiligence, Project, ProjectAllLocationsByActivity, ProjectLocation, ProjectLocationActivities, ProjectLocationLevel, SRP, SubGrant, Workplan, AllocationFlow (was 500 in Feb) |
+| 501 Not Implemented | CostEffectiveAnalysis, CostTracking, DisbursementMilestone, FinancialReportMilestone, FirstDisbursementMilestone, NarrativeReportMilestone, RevisionRequestMilestone, SubmissionOfProposalMilestone, TechnicalReviewMilestone |
+| timeout / empty | NarrativeReportBeneficiary |
+
+The `poolfundAbbrv=UKR` query parameter documented in `CBPF_API_GUIDE.md` returns an empty `value` array on every vo1 endpoint (it only works on `Poolfund`, where it is ignored). Fetch all funds and filter on `PooledFundName`.
+
+### vo2 (`https://cbpfapi.unocha.org/vo2/odata`) — previously unknown
+
+| Status | Endpoints | Notes |
+|---|---|---|
+| **200, data** | Poolfund, MstPooledFund, MstClusters, MstOrgType, MstAllocationSource, MstPFAdminLocationType, DonorMaster, SubIPType, GenderMarker | reference / master tables |
+| **200, data** | **AllocationTypes** (931 rows) | one row per allocation round, CBPF *and CERF*: planned USD, planned start/end, HC last approval date, projects approved / under approval with budgets, HRP plan, and `Documents` (strategy papers, `##`/`|||`-delimited) |
+| **200, data** | **ExtendedAllocationDetails** (257) | allocation-level themes, target amounts, targeted people by group |
+| **200, data** | **AllocationFlowByOrgType** (1,840) | fund → org-type flows by year; the working replacement for vo1 `AllocationFlow` |
+| **200, data** | AllocationCountByYearAndFund (267), AllocationBudgetTotalsByYearAndFund (805) | official approved/pipeline counts and budgets, reserve vs standard split per org type |
+| **200, data** | ContributionTotal (3,138), HFUManagementCost (945), PoolFundBeneficiarySummary (5,866), ProjectGAMSummary, ProjectSummaryBeneficiaryDetail | |
+| **200, data** | ProjectSummary, ProjectSummaryV2, ProjectSummaryAggV2, PipelineProjectSummary | vo1-like project tables with different field sets (V2 uses abbreviated column names) |
+| **200, data** | **LastModified** | `{"last_updated_date": "2026-10-06T01:02:38"}` — the API's own refresh stamp |
+| 500 | NarrativeReportLogicalFramework | |
+| 404 | LocationMaster, HRPCBPFFundingSummary | |
+| 400 | CBPFSummary | needs parameters (undocumented) |
+
+Row counts are as fetched on 6 October 2026. Full pulls of the small vo2 endpoints are in `Raw-data/vo2/`.
+
+### What is now collected automatically
+
+The swarm `harvest` stack (`2025-swarm-infrastructure-deployment/harvest/cbpf-snapshot.sh`, config `harvest_cbpf_snapshot_v2`) archives, every day at 04:00 UTC:
+
+- vo1: the 8 working endpoints + Poolfund (required), AllocationFlow (optional, still dead), LogicalFrameworkIndicator (weekly, Sundays);
+- vo2: the 20 small working endpoints (required) and the 4 large project tables (optional);
+- a `manifest.txt` with row counts and a `.complete` marker; the 7 core vo1 tables are also loaded into Postgres `CBPF.raw_data`.
+
+Vintages exist since 29 August 2026 (vo1) and from the v2 deployment onwards (vo2).

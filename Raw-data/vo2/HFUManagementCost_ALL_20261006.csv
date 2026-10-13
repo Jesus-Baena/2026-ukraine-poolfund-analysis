@@ -1,0 +1,981 @@
+Id,PooledFundId,PooledFundName,Title,Year,StatusId,StatusName,StatusCode,Budget,Expenditure,Source
+7,23,Afghanistan,2017 Afghanistan Management Module,2017,3,Approved,APPR,1621510.41000,0,HMC
+28,23,Afghanistan,2018  Afghanistan Direct Cost & CPF Module,2018,3,Approved,APPR,1851466.00000,0,HMC
+74,23,Afghanistan,2020  Afghanistan Direct Cost & CPF Module,2020,3,Approved,APPR,2386319.20000,0,HMC
+86,23,Afghanistan,2019  Afghanistan Direct Cost & CPF Module,2019,3,Approved,APPR,1962719.17000,0,HMC
+94,23,Afghanistan,2021  Afghanistan Direct Cost & CPF Module,2021,3,Approved,APPR,2386319.20000,0,HMC
+119,23,Afghanistan,2022  Afghanistan Direct Cost & CPF Module,2022,3,Approved,APPR,3707489.41000,0,HMC
+151,23,Afghanistan,2023  Afghanistan Direct Cost & CPF Module,2023,3,Approved,APPR,4574035.90000,0,HMC
+185,23,Afghanistan,2025  Afghanistan Direct Cost & CPF Module,2025,3,Approved,APPR,3848599.34000,0,HMC
+186,23,Afghanistan,2024  Afghanistan Direct Cost & CPF Module,2024,3,Approved,APPR,3929699.29000,0,HMC
+213,23,Afghanistan,Afghanistan CHF - 2014 Humanitarian Financing Unit (HFU) Proposal,2014,249,Project Closed,PRJ_PRJ_CLS,1535993.56000,928208.95,PRJ
+224,23,Afghanistan,2026  Afghanistan Direct Cost & CPF Module,2026,3,Approved,APPR,2733289.00000,0,HMC
+312,23,Afghanistan,CHF Afghanistan - 2015 Humanitarian Financing Unit (HFU),2015,308,Under Final Reporting,PRJ_UND_FINAL_RPT,1611841.58000,1262750.87,PRJ
+478,23,Afghanistan,2016 Afghanistan Humanitarian Fund - Humanitarian Financing Unit (HFU),2016,122,Project Closed,PRJ_PRJ_CLS,1270516.93000,0,PRJ
+35109,23,Afghanistan,"Emergency Food Assistance and Agriculture Support for most Vulnerable People in Atghar, Daychopan, Kakar, and Nawbahar Districts of Zabul Province, Afghanistan",2025,308,Under Final Reporting,PRJ_UND_FINAL_RPT,593118.90000,320676.15,PRJ
+21711,85,Burkina Faso (RhPF-WCA),Appui au relèvement des populations affectées par la crise à l'Est du Burkina Faso (ARPACE),2022,7380,Sous Audit,PRJ_UND_AUD,960673.09000,939681.84,PRJ
+25735,85,Burkina Faso (RhPF-WCA),Projet intégré d’assistance humanitaire aux Personnes Affectées par la crise sécuritaire et alimentaire dans les communes de Kongoussi et Bourzanga ( Région du Centre Nord ),2023,7380,Sous Audit,PRJ_UND_AUD,517121.91000,462083.39,PRJ
+25743,85,Burkina Faso (RhPF-WCA),Projet d'Assistance Multisectorielle aux PDIs et aux populations hotes des ZAD et SAT de la Boucle du Mouhoun (PAMP/BMh),2023,7380,Sous Audit,PRJ_UND_AUD,413782.95000,386483.52,PRJ
+25747,85,Burkina Faso (RhPF-WCA),"Projet d’assistance humanitaire multisectorielle aux PDI et ménages hôtes dans les communes de Dédougou, Nouna, et Tougan (PAMU 2)",2023,7380,Sous Audit,PRJ_UND_AUD,928336.84000,878679.08,PRJ
+25750,85,Burkina Faso (RhPF-WCA),Assistance multisectorielle intégrée d’urgence au bénéfice des personnes nouvellement déplacés et leurs hôtes vulnérables,2023,7380,Sous Audit,PRJ_UND_AUD,825530.85000,730037.07,PRJ
+33025,85,Burkina Faso (RhPF-WCA),Projet d'ugence multisectoriel et intégré Abris et Wash dans les zones de concentration de PDI dans la région du Nord,2024,7391,Sous rapportage final,PRJ_UND_FINAL_RPT,516468.17000,178722.23,PRJ
+14,17,CAR,2017 CAR Management Module,2017,3,Approved,APPR,961457.06000,0,HMC
+14,17,CAR,2017 CAR Management Module,2017,3,Approved,APPR,961457.06000,0,HMC
+36,17,CAR,2018  CAR Direct Cost & CPF Module,2018,3,Approved,APPR,997194.00000,0,HMC
+36,17,CAR,2018  CAR Direct Cost & CPF Module,2018,3,Approved,APPR,997194.00000,0,HMC
+69,17,CAR,2019  CAR Direct Cost & CPF Module,2019,3,Approved,APPR,1261136.00000,0,HMC
+69,17,CAR,2019  CAR Direct Cost & CPF Module,2019,3,Approved,APPR,1261136.00000,0,HMC
+140,17,CAR,2023  CAR Direct Cost & CPF Module,2023,3,Approved,APPR,1990286.00000,0,HMC
+140,17,CAR,2023  CAR Direct Cost & CPF Module,2023,3,Approved,APPR,1990286.00000,0,HMC
+194,17,CAR,2024  CAR Direct Cost & CPF Module,2024,3,Approved,APPR,2075605.00000,0,HMC
+194,17,CAR,2024  CAR Direct Cost & CPF Module,2024,3,Approved,APPR,2075605.00000,0,HMC
+195,17,CAR,2025  CAR Direct Cost & CPF Module,2025,3,Approved,APPR,1790938.00000,0,HMC
+195,17,CAR,2025  CAR Direct Cost & CPF Module,2025,3,Approved,APPR,1790938.00000,0,HMC
+7331,17,CAR,"Projet de gestion de quatre sites à Bambari (CCCM) : Notre Dame des Victoires, Élevage, PK8 et Aviation",2017,344,Projet clôturé,PRJ_PRJ_CLS,143853.49000,133197.17,PRJ
+7331,17,CAR,"Projet de gestion de quatre sites à Bambari (CCCM) : Notre Dame des Victoires, Élevage, PK8 et Aviation",2017,344,Projet clôturé,PRJ_PRJ_CLS,143853.49000,133197.17,PRJ
+7370,17,CAR,Appui à la prise en charge sante/nutrition en clinique mobile sur l’axe Kembe – Pombolo – Gambo et l’axe Gambo - Ouango (préfecture de la Mbomou),2017,346,Projet clôturé,PRJ_PRJ_CLS,345565.14000,314993.48,PRJ
+7370,17,CAR,Appui à la prise en charge sante/nutrition en clinique mobile sur l’axe Kembe – Pombolo – Gambo et l’axe Gambo - Ouango (préfecture de la Mbomou),2017,346,Projet clôturé,PRJ_PRJ_CLS,345565.14000,314993.48,PRJ
+8010,17,CAR,Emergency Shelter Assistance to Conflict Affected Individuals in Paoua,2018,344,Projet clôturé,PRJ_PRJ_CLS,100000.17000,100000.17,PRJ
+8010,17,CAR,Emergency Shelter Assistance to Conflict Affected Individuals in Paoua,2018,344,Projet clôturé,PRJ_PRJ_CLS,100000.17000,100000.17,PRJ
+9548,17,CAR,"Co-facilitation du cluster protection au niveau national en République centrafricaine (RCA), à Bangui",2018,346,Projet clôturé,PRJ_PRJ_CLS,129600.00000,92651.03,PRJ
+9548,17,CAR,"Co-facilitation du cluster protection au niveau national en République centrafricaine (RCA), à Bangui",2018,346,Projet clôturé,PRJ_PRJ_CLS,129600.00000,92651.03,PRJ
+10522,17,CAR,Amélioration de la réponse humanitaire en santé et en nutrition par la création d'une plateforme de stockage dédiée en République Centrafricaine,2018,346,Projet clôturé,PRJ_PRJ_CLS,688500.00000,637500.00,PRJ
+10522,17,CAR,Amélioration de la réponse humanitaire en santé et en nutrition par la création d'une plateforme de stockage dédiée en République Centrafricaine,2018,346,Projet clôturé,PRJ_PRJ_CLS,688500.00000,637500.00,PRJ
+11740,17,CAR,Projet de réponse à l'Épidémie d’Hépatite E à Bocaranga par l'amélioration de l'accès à l'eau potable pour les populations affectées,2019,344,Projet clôturé,PRJ_PRJ_CLS,299160.58000,176336.00,PRJ
+11740,17,CAR,Projet de réponse à l'Épidémie d’Hépatite E à Bocaranga par l'amélioration de l'accès à l'eau potable pour les populations affectées,2019,344,Projet clôturé,PRJ_PRJ_CLS,299160.58000,176336.00,PRJ
+12649,17,CAR,Améliorer la protection des populations civiles et apporter une réponse à leurs besoins humanitaires dans les zones affectées par les conflits en République Centrafricaine,2019,346,Projet clôturé,PRJ_PRJ_CLS,171414.00000,158716.66,PRJ
+12649,17,CAR,Améliorer la protection des populations civiles et apporter une réponse à leurs besoins humanitaires dans les zones affectées par les conflits en République Centrafricaine,2019,346,Projet clôturé,PRJ_PRJ_CLS,171414.00000,158716.66,PRJ
+12666,17,CAR,"Assurer l'accès à une Éducation d’urgence de qualité dans un environnement d’apprentissage sûr et protecteur aux enfants, filles et garçons avec une attention particulière sur les filles, affectés par le conflit dans la préfecture de Ouaka a Ippy et sur l axe Bakala Ndassima",2019,346,Projet clôturé,PRJ_PRJ_CLS,324024.47000,300022.64,PRJ
+12666,17,CAR,"Assurer l'accès à une Éducation d’urgence de qualité dans un environnement d’apprentissage sûr et protecteur aux enfants, filles et garçons avec une attention particulière sur les filles, affectés par le conflit dans la préfecture de Ouaka a Ippy et sur l axe Bakala Ndassima",2019,346,Projet clôturé,PRJ_PRJ_CLS,324024.47000,300022.64,PRJ
+12672,17,CAR,"Appui à l’offre de soins de santé primaire,à  la prise en charge et à prévention de la malnutrition en faveur des populations vulnérables, hôtes et déplacés des sous-préfectures de Rafai et Ouango dans le Mbomou en République Centrafricaine.",2019,346,Projet clôturé,PRJ_PRJ_CLS,216000.13000,200000.12,PRJ
+12672,17,CAR,"Appui à l’offre de soins de santé primaire,à  la prise en charge et à prévention de la malnutrition en faveur des populations vulnérables, hôtes et déplacés des sous-préfectures de Rafai et Ouango dans le Mbomou en République Centrafricaine.",2019,346,Projet clôturé,PRJ_PRJ_CLS,216000.13000,200000.12,PRJ
+12674,17,CAR,"Approvisionner les structures de santé et équipes médicales mobiles en kits sanitaires d’urgence et en médicaments pour la santé mentale dans les localités de Amadagaza, Kouango, Bakala, Ippy, Kembé, Satéma, Djema, Obo, Rafai, Gambo et Ouango en 2019",2019,346,Projet clôturé,PRJ_PRJ_CLS,500000.94000,487351.94,PRJ
+12674,17,CAR,"Approvisionner les structures de santé et équipes médicales mobiles en kits sanitaires d’urgence et en médicaments pour la santé mentale dans les localités de Amadagaza, Kouango, Bakala, Ippy, Kembé, Satéma, Djema, Obo, Rafai, Gambo et Ouango en 2019",2019,346,Projet clôturé,PRJ_PRJ_CLS,500000.94000,487351.94,PRJ
+12678,17,CAR,"Réponse d'urgence en eau, hygiène et assainissement en faveur des personnes les plus vulnérables affectées par les crises et forcées à quitter les sites des déplacés internes et à vivre dans les quartiers de retour d'Ippy",2019,346,Projet clôturé,PRJ_PRJ_CLS,130680.00000,121000.00,PRJ
+12678,17,CAR,"Réponse d'urgence en eau, hygiène et assainissement en faveur des personnes les plus vulnérables affectées par les crises et forcées à quitter les sites des déplacés internes et à vivre dans les quartiers de retour d'Ippy",2019,346,Projet clôturé,PRJ_PRJ_CLS,130680.00000,121000.00,PRJ
+12691,17,CAR,Service Collectif Interagence pour l’engagement communautaire et la redevabilité envers les communautés affectées.,2019,346,Projet clôturé,PRJ_PRJ_CLS,299197.36000,299197.36,PRJ
+12691,17,CAR,Service Collectif Interagence pour l’engagement communautaire et la redevabilité envers les communautés affectées.,2019,346,Projet clôturé,PRJ_PRJ_CLS,299197.36000,299197.36,PRJ
+12712,17,CAR,Projet d’assistance humanitaire aux besoins des populations vulnérables affectées par la crise dans la préfecture de la ouaka dans les domaines de l’éducation,2019,346,Projet clôturé,PRJ_PRJ_CLS,54017.37000,49909.22,PRJ
+12712,17,CAR,Projet d’assistance humanitaire aux besoins des populations vulnérables affectées par la crise dans la préfecture de la ouaka dans les domaines de l’éducation,2019,346,Projet clôturé,PRJ_PRJ_CLS,54017.37000,49909.22,PRJ
+12718,17,CAR,"Projet de prise en charge et prévention de la détérioration la situation nutritionnelle  en faveur des populations hôtes , déplacées et retournées  des sous-préfectures de Kaga-bandoro et Mbrès  dans la Nana  Gribizi  et Paoua dans l’Ouham Pende en RCA.",2019,346,Projet clôturé,PRJ_PRJ_CLS,270000.16000,250000.15,PRJ
+12718,17,CAR,"Projet de prise en charge et prévention de la détérioration la situation nutritionnelle  en faveur des populations hôtes , déplacées et retournées  des sous-préfectures de Kaga-bandoro et Mbrès  dans la Nana  Gribizi  et Paoua dans l’Ouham Pende en RCA.",2019,346,Projet clôturé,PRJ_PRJ_CLS,270000.16000,250000.15,PRJ
+12734,17,CAR,APPUI AUX MOYENS DE SUBSISTANCES ET À LA  RÉSILIENCE LOCALE DES POPULATIONS AFFECTÉES PAR LES CRISES DE LA VILLE DE BOUAR ET SES ENVIRONS,2019,346,Projet clôturé,PRJ_PRJ_CLS,54023.40000,50021.66,PRJ
+12734,17,CAR,APPUI AUX MOYENS DE SUBSISTANCES ET À LA  RÉSILIENCE LOCALE DES POPULATIONS AFFECTÉES PAR LES CRISES DE LA VILLE DE BOUAR ET SES ENVIRONS,2019,346,Projet clôturé,PRJ_PRJ_CLS,54023.40000,50021.66,PRJ
+12735,17,CAR,REACH Initiative : Renforcer l’évaluation des besoins pour soutenir la coordination et la réponse humanitaire en République Centrafricaine,2019,346,Projet clôturé,PRJ_PRJ_CLS,323967.61000,299970.01,PRJ
+12735,17,CAR,REACH Initiative : Renforcer l’évaluation des besoins pour soutenir la coordination et la réponse humanitaire en République Centrafricaine,2019,346,Projet clôturé,PRJ_PRJ_CLS,323967.61000,299970.01,PRJ
+12737,17,CAR,"Appui à l’offre des services de santé de base prenant en compte les soins de santé de l’enfant, les soins de santé de la reproduction, les soins de santé mentale, la collecte et la transmission des données du système d’alerte précoce ainsi que la référence et contre référence sur l’axe Kouango Grimari, Kouango Centre et l’axe fleuve de Kouango",2019,346,Projet clôturé,PRJ_PRJ_CLS,215998.97000,199999.05,PRJ
+12737,17,CAR,"Appui à l’offre des services de santé de base prenant en compte les soins de santé de l’enfant, les soins de santé de la reproduction, les soins de santé mentale, la collecte et la transmission des données du système d’alerte précoce ainsi que la référence et contre référence sur l’axe Kouango Grimari, Kouango Centre et l’axe fleuve de Kouango",2019,346,Projet clôturé,PRJ_PRJ_CLS,215998.97000,199999.05,PRJ
+12738,17,CAR,PROJET D’APPUI A LA PRISE EN CHARGE DE LA MALNUTRITION AIGUE SEVERE SANS COMPLICATION SUR LES AXES AUTOUR D’ALINDAO ET AVEC COMPLICATIONS MEDICALES A L’HOPITAL DU DISTRICT ALINDAO-MINGALA,2019,346,Projet clôturé,PRJ_PRJ_CLS,248399.69000,110513.00,PRJ
+12738,17,CAR,PROJET D’APPUI A LA PRISE EN CHARGE DE LA MALNUTRITION AIGUE SEVERE SANS COMPLICATION SUR LES AXES AUTOUR D’ALINDAO ET AVEC COMPLICATIONS MEDICALES A L’HOPITAL DU DISTRICT ALINDAO-MINGALA,2019,346,Projet clôturé,PRJ_PRJ_CLS,248399.69000,110513.00,PRJ
+12741,17,CAR,Establish Services for Communities (S4C) in the Central African Republic (CAR)  through Emergency Telecommunications Cluster (ETC),2019,346,Projet clôturé,PRJ_PRJ_CLS,306713.40000,306713.40,PRJ
+12741,17,CAR,Establish Services for Communities (S4C) in the Central African Republic (CAR)  through Emergency Telecommunications Cluster (ETC),2019,346,Projet clôturé,PRJ_PRJ_CLS,306713.40000,306713.40,PRJ
+12770,17,CAR,Implementation of the interagency Telecommunications Security Standards (TESS) project in the Central African Republic (C.A.R),2019,346,Projet clôturé,PRJ_PRJ_CLS,299192.58000,299192.58,PRJ
+12770,17,CAR,Implementation of the interagency Telecommunications Security Standards (TESS) project in the Central African Republic (C.A.R),2019,346,Projet clôturé,PRJ_PRJ_CLS,299192.58000,299192.58,PRJ
+12930,17,CAR,"Projet d’appui à la Co-facilitation des Clusters nationaux Santé et Nutrition, en RCA.",2019,346,Projet clôturé,PRJ_PRJ_CLS,129600.07000,120450.46,PRJ
+12930,17,CAR,"Projet d’appui à la Co-facilitation des Clusters nationaux Santé et Nutrition, en RCA.",2019,346,Projet clôturé,PRJ_PRJ_CLS,129600.07000,120450.46,PRJ
+13681,17,CAR,Gestion efficace des vaccins Mvpo2 avant pendant et après la riposte dans 14 Districts de Santé de la RCA,2019,344,Projet clôturé,PRJ_PRJ_CLS,336923.48000,311966.00,PRJ
+13681,17,CAR,Gestion efficace des vaccins Mvpo2 avant pendant et après la riposte dans 14 Districts de Santé de la RCA,2019,344,Projet clôturé,PRJ_PRJ_CLS,336923.48000,311966.00,PRJ
+14144,17,CAR,UNHAS emergency services for Birao response,2019,344,Projet clôturé,PRJ_PRJ_CLS,400362.00000,400362.00,PRJ
+14144,17,CAR,UNHAS emergency services for Birao response,2019,344,Projet clôturé,PRJ_PRJ_CLS,400362.00000,400362.00,PRJ
+14186,17,CAR,"Réduire les complications physiques et psychologiques des femmes, hommes, filles et garçons victimes du conflit et améliorer l’inclusion des personnes vivant avec un handicap en RCA",2019,345,Sous Audit,PRJ_UND_AUD,340200.00000,0.00,PRJ
+14186,17,CAR,"Réduire les complications physiques et psychologiques des femmes, hommes, filles et garçons victimes du conflit et améliorer l’inclusion des personnes vivant avec un handicap en RCA",2019,345,Sous Audit,PRJ_UND_AUD,340200.00000,0.00,PRJ
+14199,17,CAR,"Assurer à des enfants en rupture scolaire, filles et garçons, de 3 à 18 ans avec une attention particulière sur les filles, l’accès à des opportunités d’éducation d’urgence de qualité dans un environnement d’apprentissage sûr et protecteur à Ouadda et Yalinga",2019,346,Projet clôturé,PRJ_PRJ_CLS,162000.03000,150000.00,PRJ
+14199,17,CAR,"Assurer à des enfants en rupture scolaire, filles et garçons, de 3 à 18 ans avec une attention particulière sur les filles, l’accès à des opportunités d’éducation d’urgence de qualité dans un environnement d’apprentissage sûr et protecteur à Ouadda et Yalinga",2019,346,Projet clôturé,PRJ_PRJ_CLS,162000.03000,150000.00,PRJ
+14230,17,CAR,Renforcement de la résilience aux crises alimentaires par le soutien à la restauration des moyens de subsistance et à la production agricole d’urgence dans la sous-préfecture de Markounda,2019,346,Projet clôturé,PRJ_PRJ_CLS,221400.22000,205000.21,PRJ
+14230,17,CAR,Renforcement de la résilience aux crises alimentaires par le soutien à la restauration des moyens de subsistance et à la production agricole d’urgence dans la sous-préfecture de Markounda,2019,346,Projet clôturé,PRJ_PRJ_CLS,221400.22000,205000.21,PRJ
+14249,17,CAR,Appui à la réouverture des écoles non fonctionnelles dans la sous-préfecture de Zangba,2019,346,Projet clôturé,PRJ_PRJ_CLS,108002.37000,100002.20,PRJ
+14249,17,CAR,Appui à la réouverture des écoles non fonctionnelles dans la sous-préfecture de Zangba,2019,346,Projet clôturé,PRJ_PRJ_CLS,108002.37000,100002.20,PRJ
+14277,17,CAR,Appui d’urgence en intrants Agricole (Maraîchers) et renforcement des capacités pour la relance de la production agricole et l’autonomisation des groupements des ménages vulnérables dans la sous - préfecture d’OBO et ses axes.,2019,346,Projet clôturé,PRJ_PRJ_CLS,91754.66000,84958.02,PRJ
+14277,17,CAR,Appui d’urgence en intrants Agricole (Maraîchers) et renforcement des capacités pour la relance de la production agricole et l’autonomisation des groupements des ménages vulnérables dans la sous - préfecture d’OBO et ses axes.,2019,346,Projet clôturé,PRJ_PRJ_CLS,91754.66000,84958.02,PRJ
+14338,17,CAR,"Renforcer la protection des enfants affectés par le conflit armé dans les sous prefectures de Kaga Bandoro, Mbrès (Nana Grebizi) et Mala (Kemo) en  Centrafrique",2019,346,Projet clôturé,PRJ_PRJ_CLS,263546.04000,233761.48,PRJ
+14338,17,CAR,"Renforcer la protection des enfants affectés par le conflit armé dans les sous prefectures de Kaga Bandoro, Mbrès (Nana Grebizi) et Mala (Kemo) en  Centrafrique",2019,346,Projet clôturé,PRJ_PRJ_CLS,263546.04000,233761.48,PRJ
+14344,17,CAR,"Appui à l’offre des soins curatifsde qualité  dans les sous-préfectures d’Amadagaza, Ippy, Bambari Mobaye, Zangba,  Kembé, Satéma, Rafai, Bakouma et Birao à travers  l’approvisionnement en kits sanitaires d’urgence et médicaments pour la santé mentale et une supervision/suivi renforcée des activités.",2019,346,Projet clôturé,PRJ_PRJ_CLS,399987.40000,399987.40,PRJ
+14344,17,CAR,"Appui à l’offre des soins curatifsde qualité  dans les sous-préfectures d’Amadagaza, Ippy, Bambari Mobaye, Zangba,  Kembé, Satéma, Rafai, Bakouma et Birao à travers  l’approvisionnement en kits sanitaires d’urgence et médicaments pour la santé mentale et une supervision/suivi renforcée des activités.",2019,346,Projet clôturé,PRJ_PRJ_CLS,399987.40000,399987.40,PRJ
+14360,17,CAR,Renforcement de la Coordination Sectorielle WASH au travers la Co-facilitation du Cluster National WASH,2019,346,Projet clôturé,PRJ_PRJ_CLS,103680.00000,80879.85,PRJ
+14360,17,CAR,Renforcement de la Coordination Sectorielle WASH au travers la Co-facilitation du Cluster National WASH,2019,346,Projet clôturé,PRJ_PRJ_CLS,103680.00000,80879.85,PRJ
+16758,17,CAR,Renforcement de la Coordination Sectorielle WASH au travers la Co-facilitation du Cluster National WASH,2020,5812,Sous remboursement final,PRJ_UND_REF,58778.36000,37556.70,PRJ
+16758,17,CAR,Renforcement de la Coordination Sectorielle WASH au travers la Co-facilitation du Cluster National WASH,2020,5812,Sous remboursement final,PRJ_UND_REF,58778.36000,37556.70,PRJ
+17725,17,CAR,"Environnement protecteur pour les enfants, adolescents et les jeunes adultes (filles et garçons) victimes/survivants des différentes formes de violences, y compris les VBG à Bangui, en RCA",2020,5809,Projet clôturé,PRJ_PRJ_CLS,467506.86000,449348.16,PRJ
+17725,17,CAR,"Environnement protecteur pour les enfants, adolescents et les jeunes adultes (filles et garçons) victimes/survivants des différentes formes de violences, y compris les VBG à Bangui, en RCA",2020,5809,Projet clôturé,PRJ_PRJ_CLS,467506.86000,449348.16,PRJ
+17728,17,CAR,Service Collectif Interagence pour l’engagement communautaire et la redevabilité envers les communautés affectées.,2020,5809,Projet clôturé,PRJ_PRJ_CLS,149907.00000,148407.43,PRJ
+17728,17,CAR,Service Collectif Interagence pour l’engagement communautaire et la redevabilité envers les communautés affectées.,2020,5809,Projet clôturé,PRJ_PRJ_CLS,149907.00000,148407.43,PRJ
+17737,17,CAR,Réponse pilote aux besoins multisectoriels des ménages plus vulnérables dans la Préfecture de la Nana Gribizi,2020,5809,Projet clôturé,PRJ_PRJ_CLS,365637.06000,321941.91,PRJ
+17737,17,CAR,Réponse pilote aux besoins multisectoriels des ménages plus vulnérables dans la Préfecture de la Nana Gribizi,2020,5809,Projet clôturé,PRJ_PRJ_CLS,365637.06000,321941.91,PRJ
+18954,17,CAR,"Réponse d’urgence, multisectorielle et intégrée (en Eau, Hygiène et Assainissement, et Sécurité Alimentaire) aux besoins des ménages plus vulnérables dans les Sous Préfectures de Alindao et Kembé dans la Basse Kotto et appui à la coordination du Cluster Protection en RCA",2021,5809,Projet clôturé,PRJ_PRJ_CLS,585190.75000,528659.32,PRJ
+18954,17,CAR,"Réponse d’urgence, multisectorielle et intégrée (en Eau, Hygiène et Assainissement, et Sécurité Alimentaire) aux besoins des ménages plus vulnérables dans les Sous Préfectures de Alindao et Kembé dans la Basse Kotto et appui à la coordination du Cluster Protection en RCA",2021,5809,Projet clôturé,PRJ_PRJ_CLS,585190.75000,528659.32,PRJ
+20949,17,CAR,"Réponse d’urgence en Eau, Hygiène et Assainissement pour les déplacés de la ville d’Alindao (Basse Kotto)",2021,5807,Projet clôturé,PRJ_PRJ_CLS,416571.64000,400000.00,PRJ
+20949,17,CAR,"Réponse d’urgence en Eau, Hygiène et Assainissement pour les déplacés de la ville d’Alindao (Basse Kotto)",2021,5807,Projet clôturé,PRJ_PRJ_CLS,416571.64000,400000.00,PRJ
+21410,17,CAR,"Réponse en WASH aux populations vulnérables affectées par les chocs, dans la sous-préfecture de Bocaranga",2022,5809,Projet clôturé,PRJ_PRJ_CLS,293359.16000,263312.81,PRJ
+21410,17,CAR,"Réponse en WASH aux populations vulnérables affectées par les chocs, dans la sous-préfecture de Bocaranga",2022,5809,Projet clôturé,PRJ_PRJ_CLS,293359.16000,263312.81,PRJ
+24205,17,CAR,Projet d'amelioration de l’acces aux services intégrés de protection de l’enfant et des violences basées sur le genre par  les communautés affectées par les conflicts armees a Koui,2022,5807,Projet clôturé,PRJ_PRJ_CLS,557469.94000,537785.48,PRJ
+24205,17,CAR,Projet d'amelioration de l’acces aux services intégrés de protection de l’enfant et des violences basées sur le genre par  les communautés affectées par les conflicts armees a Koui,2022,5807,Projet clôturé,PRJ_PRJ_CLS,557469.94000,537785.48,PRJ
+24210,17,CAR,"« Assistance humanitaire en prévention et réponse contre les violences basées sur le genre (VBG) en faveur des PDI retournés et communautés hôtes affectées par les récentes crises humanitaires dans la région de Koui, dans les villages Bossoro, Baria, Boyawantounou et Goe Diferme Sarki), en République Centrafricaine ».",2022,5812,Sous remboursement final,PRJ_UND_REF,108085.86000,81934.60,PRJ
+24210,17,CAR,"« Assistance humanitaire en prévention et réponse contre les violences basées sur le genre (VBG) en faveur des PDI retournés et communautés hôtes affectées par les récentes crises humanitaires dans la région de Koui, dans les villages Bossoro, Baria, Boyawantounou et Goe Diferme Sarki), en République Centrafricaine ».",2022,5812,Sous remboursement final,PRJ_UND_REF,108085.86000,81934.60,PRJ
+26202,17,CAR,"Renforcement d'un environnement protecteur pour les enfants, adolescentes dans la sous-préfecture de Yalinga, Région de la Haute-Kotto",2023,5808,Sous audit,PRJ_UND_AUD,677855.29000,570484.44,PRJ
+26202,17,CAR,"Renforcement d'un environnement protecteur pour les enfants, adolescentes dans la sous-préfecture de Yalinga, Région de la Haute-Kotto",2023,5808,Sous audit,PRJ_UND_AUD,677855.29000,570484.44,PRJ
+26222,17,CAR,Soutien inclusif aux enfants vulnérables à travers une réponse d'urgence multisectorielle en Protection de l’enfant (PE) et Eau Hygiène Assainissement (EHA/WASH),2023,5808,Sous audit,PRJ_UND_AUD,109023.64000,83142.36,PRJ
+26222,17,CAR,Soutien inclusif aux enfants vulnérables à travers une réponse d'urgence multisectorielle en Protection de l’enfant (PE) et Eau Hygiène Assainissement (EHA/WASH),2023,5808,Sous audit,PRJ_UND_AUD,109023.64000,83142.36,PRJ
+26233,17,CAR,Renforcement des capacités partenariales des acteurs humanitaires nationaux sur l'éducation aux risques d'engins explosifs à l’avantage des populations les plus affectées par les conflits en RCA,2023,5808,Sous audit,PRJ_UND_AUD,626452.43000,582328.04,PRJ
+26233,17,CAR,Renforcement des capacités partenariales des acteurs humanitaires nationaux sur l'éducation aux risques d'engins explosifs à l’avantage des populations les plus affectées par les conflits en RCA,2023,5808,Sous audit,PRJ_UND_AUD,626452.43000,582328.04,PRJ
+26238,17,CAR,Appui à la localisation en éducation inclusive et de qualité à 1800 enfants de 3 à 17 ans affectés par le conflit dans la sous-préfecture de Baoro en République Centrafricaine,2023,5808,Sous audit,PRJ_UND_AUD,109023.65000,99953.47,PRJ
+26238,17,CAR,Appui à la localisation en éducation inclusive et de qualité à 1800 enfants de 3 à 17 ans affectés par le conflit dans la sous-préfecture de Baoro en République Centrafricaine,2023,5808,Sous audit,PRJ_UND_AUD,109023.65000,99953.47,PRJ
+26271,17,CAR,Renforcement de l’engagement communautaire et  redevabilité envers les populations affectées,2023,5808,Sous audit,PRJ_UND_AUD,265041.84000,249272.45,PRJ
+26271,17,CAR,Renforcement de l’engagement communautaire et  redevabilité envers les populations affectées,2023,5808,Sous audit,PRJ_UND_AUD,265041.84000,249272.45,PRJ
+26272,17,CAR,Service pour la communauté : Digitalisation des mécanismes de feedback et plainte.,2023,5851,Sous rapportage final,PRJ_UND_FINAL_RPT,100000.00000,0,PRJ
+26272,17,CAR,Service pour la communauté : Digitalisation des mécanismes de feedback et plainte.,2023,5851,Sous rapportage final,PRJ_UND_FINAL_RPT,100000.00000,0,PRJ
+26277,17,CAR,Intervention Intégrée de sécurité alimentaire et de protection de l’enfant pour renforcer la résilience des personnes vulnérables et en particulier des enfants dans la Préfecture de VAKAGA (Birao),2023,5808,Sous audit,PRJ_UND_AUD,110836.51000,65829.11,PRJ
+26277,17,CAR,Intervention Intégrée de sécurité alimentaire et de protection de l’enfant pour renforcer la résilience des personnes vulnérables et en particulier des enfants dans la Préfecture de VAKAGA (Birao),2023,5808,Sous audit,PRJ_UND_AUD,110836.51000,65829.11,PRJ
+27567,17,CAR,Prévention et réponse holistique aux violences basées sur le genre des populations affectées par les conflits dans la préfecture de l'Ouham et Ouham-P,2024,5810,Sous audit,PRJ_UND_AUD,780658.04000,747889.45,PRJ
+27567,17,CAR,Prévention et réponse holistique aux violences basées sur le genre des populations affectées par les conflits dans la préfecture de l'Ouham et Ouham-P,2024,5810,Sous audit,PRJ_UND_AUD,780658.04000,747889.45,PRJ
+32989,17,CAR,"Réponse d’urgence en VBG, en protection de l’enfance et en abris/NFI en faveur des personnes affectées par la crise dans la commune de Moyenne Sido (sous-préfecture de Kabo)",2024,5808,Sous audit,PRJ_UND_AUD,626452.43000,598408.55,PRJ
+32989,17,CAR,"Réponse d’urgence en VBG, en protection de l’enfance et en abris/NFI en faveur des personnes affectées par la crise dans la commune de Moyenne Sido (sous-préfecture de Kabo)",2024,5808,Sous audit,PRJ_UND_AUD,626452.43000,598408.55,PRJ
+38632,17,CAR,Projet d’assistance alimentaire des 5064 personnes en situation d’urgence et leurs bien être à Paoua dans Lim-Péndé en République Centrafricaine.,2025,5667,Mise en oeuvre & rapportage,PRJ_IMPL_RPT,265041.84000,99340.49,PRJ
+38632,17,CAR,Projet d’assistance alimentaire des 5064 personnes en situation d’urgence et leurs bien être à Paoua dans Lim-Péndé en République Centrafricaine.,2025,5667,Mise en oeuvre & rapportage,PRJ_IMPL_RPT,265041.84000,99340.49,PRJ
+38775,17,CAR,Projet de suivi de la situation de protection et de la protection de l'enfant pour les populations affectées des sous préfectures de Kabo et Batangafo,2025,5667,Mise en oeuvre & rapportage,PRJ_IMPL_RPT,420309.95000,0,PRJ
+38775,17,CAR,Projet de suivi de la situation de protection et de la protection de l'enfant pour les populations affectées des sous préfectures de Kabo et Batangafo,2025,5667,Mise en oeuvre & rapportage,PRJ_IMPL_RPT,420309.95000,0,PRJ
+39600,17,CAR,Assistance alimentaire aux populations vulnérables en phase d'urgence dans la sous-préfecture d’Alindao,2026,5667,Mise en oeuvre & rapportage,PRJ_IMPL_RPT,265041.84000,0,PRJ
+39600,17,CAR,Assistance alimentaire aux populations vulnérables en phase d'urgence dans la sous-préfecture d’Alindao,2026,5667,Mise en oeuvre & rapportage,PRJ_IMPL_RPT,265041.84000,0,PRJ
+36194,90,Chad (RhPF-WCA),Appui à l'accès aux soins de sante d'urgence des réfugiés  soudanais et populations hôtes dans la Province de l'Ennedi Est camp de Ouré Cassoni.,2025,10187,Sous Audit,PRJ_UND_AUD,310978.63000,288637.85,PRJ
+36278,90,Chad (RhPF-WCA),"Réponse d'urgence en Eau, Hygiène et Assainissement aux communautés les plus affectées par les déplacements forcés dans la Préfecture de Ennedi EST",2025,10197,Sous rapportage final,PRJ_UND_FINAL_RPT,1031140.38000,40011.47,PRJ
+8,52,Colombia,2017 Colombia Management Module,2017,3,Approved,APPR,100000.00000,0,HMC
+30,52,Colombia,2018  Colombia Direct Cost & CPF Module,2018,3,Approved,APPR,143855.34000,0,HMC
+32,52,Colombia,2016  Colombia Direct Cost & CPF Module,2016,3,Approved,APPR,20430.00000,0,HMC
+215,87,Colombia (RhPF-LAC),2024  Colombia (RhPF) Direct Cost & CPF Module,2024,3,Approved,APPR,227369.00000,0,HMC
+218,87,Colombia (RhPF-LAC),2025  Colombia (RhPF) Direct Cost & CPF Module,2025,3,Approved,APPR,230763.30000,0,HMC
+31,24,DRC,2018  DRC Direct Cost & CPF Module,2018,3,Approved,APPR,3080431.00000,0,HMC
+31,24,DRC,2018  DRC Direct Cost & CPF Module,2018,3,Approved,APPR,3080431.00000,0,HMC
+106,24,DRC,2022  DRC Direct Cost & CPF Module,2022,3,Approved,APPR,4520035.00000,0,HMC
+106,24,DRC,2022  DRC Direct Cost & CPF Module,2022,3,Approved,APPR,4520035.00000,0,HMC
+124,24,DRC,2023  DRC Direct Cost & CPF Module,2023,3,Approved,APPR,4123177.00000,0,HMC
+124,24,DRC,2023  DRC Direct Cost & CPF Module,2023,3,Approved,APPR,4123177.00000,0,HMC
+151,24,DRC,Unité Conjointe Fonds Humanitaire 2016 - Entité OCHA,2016,417,Sous Rapportage Final,PRJ_UND_FINAL_RPT,1768977.50000,0.00,PRJ
+151,24,DRC,Unité Conjointe Fonds Humanitaire 2016 - Entité OCHA,2016,417,Sous Rapportage Final,PRJ_UND_FINAL_RPT,1768977.50000,0.00,PRJ
+152,24,DRC,Unité Conjointe Fonds Humanitaire 2016 - Entité PNUD,2016,417,Sous Rapportage Final,PRJ_UND_FINAL_RPT,1399919.52000,0.00,PRJ
+152,24,DRC,Unité Conjointe Fonds Humanitaire 2016 - Entité PNUD,2016,417,Sous Rapportage Final,PRJ_UND_FINAL_RPT,1399919.52000,0.00,PRJ
+6881,24,DRC,Monitoring actif des incidents de protection dans les provinces du Grand Kasaï,2017,345,Projet Clôturé,PRJ_PRJ_CLS,315787.69000,300000.00,PRJ
+6881,24,DRC,Monitoring actif des incidents de protection dans les provinces du Grand Kasaï,2017,345,Projet Clôturé,PRJ_PRJ_CLS,315787.69000,300000.00,PRJ
+7432,24,DRC,"Réponse d'urgence en AME et abris aux populations déplacées, retournées et à la population autochtone au Haut Katanga",2017,345,Projet Clôturé,PRJ_PRJ_CLS,1470558.48000,1328578.93,PRJ
+7432,24,DRC,"Réponse d'urgence en AME et abris aux populations déplacées, retournées et à la population autochtone au Haut Katanga",2017,345,Projet Clôturé,PRJ_PRJ_CLS,1470558.48000,1328578.93,PRJ
+7462,24,DRC,"Amélioration de l'accès à l'eau, hygiène et  assainissement pour les populations  déplacées, retournées et hôtes  dans le territoire  de Pweto, province du Haut Katanga.",2017,350,Sous Remboursement,PRJ_UND_REF,378449.87000,359529.63,PRJ
+7462,24,DRC,"Amélioration de l'accès à l'eau, hygiène et  assainissement pour les populations  déplacées, retournées et hôtes  dans le territoire  de Pweto, province du Haut Katanga.",2017,350,Sous Remboursement,PRJ_UND_REF,378449.87000,359529.63,PRJ
+7498,24,DRC,Projet de réponse d’urgence en sécurité alimentaire et intrants agricoles au bénéfice de 4 850 ménages vulnérables affectés par les mouvements des populations suite aux conflits armés sur l’axe Lubondja-Lulimba-Ngalula et Kasanga à  Fizi au Sud-Kivu en République Démocratique du Congo.,2017,279,Processus de clôture,PRJ_UND_CLSR,842100.03000,783376.00,PRJ
+7498,24,DRC,Projet de réponse d’urgence en sécurité alimentaire et intrants agricoles au bénéfice de 4 850 ménages vulnérables affectés par les mouvements des populations suite aux conflits armés sur l’axe Lubondja-Lulimba-Ngalula et Kasanga à  Fizi au Sud-Kivu en République Démocratique du Congo.,2017,279,Processus de clôture,PRJ_UND_CLSR,842100.03000,783376.00,PRJ
+7508,24,DRC,"Appui à la prise en charge nutritionnelle d'urgence dans les zones de santé de Bambu et Kibirizi en Territoire de Rutshuru, Province du Nord-Kivu",2017,345,Projet Clôturé,PRJ_PRJ_CLS,291303.99000,276214.79,PRJ
+7508,24,DRC,"Appui à la prise en charge nutritionnelle d'urgence dans les zones de santé de Bambu et Kibirizi en Territoire de Rutshuru, Province du Nord-Kivu",2017,345,Projet Clôturé,PRJ_PRJ_CLS,291303.99000,276214.79,PRJ
+7526,24,DRC,Assistance d'urgence pour l'amélioration de la sécurité alimentaire au sein de 3000  ménages  des IDPs dans le territoire de FIZI.,2017,345,Projet Clôturé,PRJ_PRJ_CLS,1052625.24000,1000000.23,PRJ
+7526,24,DRC,Assistance d'urgence pour l'amélioration de la sécurité alimentaire au sein de 3000  ménages  des IDPs dans le territoire de FIZI.,2017,345,Projet Clôturé,PRJ_PRJ_CLS,1052625.24000,1000000.23,PRJ
+7542,24,DRC,Assistance alimentaire d’urgence en faveur des personnes affectées par des conflits armés dans le territoire de Pweto.,2017,345,Projet Clôturé,PRJ_PRJ_CLS,842100.08000,800000.08,PRJ
+7542,24,DRC,Assistance alimentaire d’urgence en faveur des personnes affectées par des conflits armés dans le territoire de Pweto.,2017,345,Projet Clôturé,PRJ_PRJ_CLS,842100.08000,800000.08,PRJ
+7559,24,DRC,"Assistance Alimentaire et Contribution à la Résilience des Populations Affectées par les Déplacements dans la crise du Kasaï, RDC",2017,279,Processus de clôture,PRJ_UND_CLSR,736837.50000,646109.58,PRJ
+7559,24,DRC,"Assistance Alimentaire et Contribution à la Résilience des Populations Affectées par les Déplacements dans la crise du Kasaï, RDC",2017,279,Processus de clôture,PRJ_UND_CLSR,736837.50000,646109.58,PRJ
+7568,24,DRC,"""AMANI SASA"": prévenir les violations des droits des personnes, soutenir la cohésion sociale et la résilience  dans les zones de déplacement, de retour et de réinstallation en  territoires de Rutshuru et Lubero (au NORD-KIVU)",2017,279,Processus de clôture,PRJ_UND_CLSR,498988.57000,80794.41,PRJ
+7568,24,DRC,"""AMANI SASA"": prévenir les violations des droits des personnes, soutenir la cohésion sociale et la résilience  dans les zones de déplacement, de retour et de réinstallation en  territoires de Rutshuru et Lubero (au NORD-KIVU)",2017,279,Processus de clôture,PRJ_UND_CLSR,498988.57000,80794.41,PRJ
+8771,24,DRC,Réponse  Urgente Intégrée  aux besoins des populations affectées par les conflits des zones de santé de Kalemie et de Kiyambi.,2018,345,Projet Clôturé,PRJ_PRJ_CLS,763676.75000,725497.45,PRJ
+8771,24,DRC,Réponse  Urgente Intégrée  aux besoins des populations affectées par les conflits des zones de santé de Kalemie et de Kiyambi.,2018,345,Projet Clôturé,PRJ_PRJ_CLS,763676.75000,725497.45,PRJ
+8777,24,DRC,"Distribution des vivres  d’urgence en faveur de 2675 ménages  déplacées  internes et communautés hôtes affectées par les conflits en province de l’Ituri.
+",2018,279,Processus de clôture,PRJ_UND_CLSR,753577.73000,707451.53,PRJ
+8777,24,DRC,"Distribution des vivres  d’urgence en faveur de 2675 ménages  déplacées  internes et communautés hôtes affectées par les conflits en province de l’Ituri.
+",2018,279,Processus de clôture,PRJ_UND_CLSR,753577.73000,707451.53,PRJ
+8780,24,DRC,Assistance Alimentaire  et contribution à la relance agricole des personnes en insécurité alimentaire dans les zones de santé de Mitwaba &amp; Mufunga Sampwe du territoire de Mitwaba,2018,345,Projet Clôturé,PRJ_PRJ_CLS,303942.99000,288747.64,PRJ
+8780,24,DRC,Assistance Alimentaire  et contribution à la relance agricole des personnes en insécurité alimentaire dans les zones de santé de Mitwaba &amp; Mufunga Sampwe du territoire de Mitwaba,2018,345,Projet Clôturé,PRJ_PRJ_CLS,303942.99000,288747.64,PRJ
+8782,24,DRC,"Improving the access and quality of primary health care and reproductive health services, including GBV, for populations affected by the crisis in Luambo Health Zone, Luiza Territory and Ndekesha Health Zone, Kazumba Territory, Kasai Central Province, DRC.",2018,345,Projet Clôturé,PRJ_PRJ_CLS,187690.68000,178307.26,PRJ
+8782,24,DRC,"Improving the access and quality of primary health care and reproductive health services, including GBV, for populations affected by the crisis in Luambo Health Zone, Luiza Territory and Ndekesha Health Zone, Kazumba Territory, Kasai Central Province, DRC.",2018,345,Projet Clôturé,PRJ_PRJ_CLS,187690.68000,178307.26,PRJ
+8783,24,DRC,"Projet de réhabilitation nutritionnelle d'urgence dans 7 Zones de Santé des provinces du Haut Katanga , Haut Lomami et Lualaba.",2018,345,Projet Clôturé,PRJ_PRJ_CLS,1344696.40000,1277469.41,PRJ
+8783,24,DRC,"Projet de réhabilitation nutritionnelle d'urgence dans 7 Zones de Santé des provinces du Haut Katanga , Haut Lomami et Lualaba.",2018,345,Projet Clôturé,PRJ_PRJ_CLS,1344696.40000,1277469.41,PRJ
+8788,24,DRC,"Appui à l'accès aux soins de santé primaire et secondaire des populations déplacées, retournées et hôtes, affectées par les conflits armés dans les zones de santé de Nyunzu et Kabalo",2018,345,Projet Clôturé,PRJ_PRJ_CLS,186774.62000,177437.00,PRJ
+8788,24,DRC,"Appui à l'accès aux soins de santé primaire et secondaire des populations déplacées, retournées et hôtes, affectées par les conflits armés dans les zones de santé de Nyunzu et Kabalo",2018,345,Projet Clôturé,PRJ_PRJ_CLS,186774.62000,177437.00,PRJ
+8792,24,DRC,Assistance alimentaire aux déplacés les plus vulnérables provenant du territoire de Djugu en Ituri,2018,345,Projet Clôturé,PRJ_PRJ_CLS,760163.80000,722159.56,PRJ
+8792,24,DRC,Assistance alimentaire aux déplacés les plus vulnérables provenant du territoire de Djugu en Ituri,2018,345,Projet Clôturé,PRJ_PRJ_CLS,760163.80000,722159.56,PRJ
+8799,24,DRC,Réponse d’assistance en santé d’urgence aux personnes affectées par les conflits  dans les zones de santé de Kamijii  et  Lusambo  dans les Provinces de la Lomamie et du Sankuru,2018,279,Processus de clôture,PRJ_UND_CLSR,168897.20000,147186.00,PRJ
+8799,24,DRC,Réponse d’assistance en santé d’urgence aux personnes affectées par les conflits  dans les zones de santé de Kamijii  et  Lusambo  dans les Provinces de la Lomamie et du Sankuru,2018,279,Processus de clôture,PRJ_UND_CLSR,168897.20000,147186.00,PRJ
+8809,24,DRC,Réponse rapide d’urgence de prévention du choléra et réduction pérenne des maladies hydriques aux populations des 3 aires de santé de la zone de santé de  KALAMBA dans le territoire de Kapanga .,2018,345,Projet Clôturé,PRJ_PRJ_CLS,48828.18000,46387.06,PRJ
+8809,24,DRC,Réponse rapide d’urgence de prévention du choléra et réduction pérenne des maladies hydriques aux populations des 3 aires de santé de la zone de santé de  KALAMBA dans le territoire de Kapanga .,2018,345,Projet Clôturé,PRJ_PRJ_CLS,48828.18000,46387.06,PRJ
+8819,24,DRC,Soutien alimentaire pour des populations vulnérables de Haut Katanga – Mitwaba et Mufunga Sapwe,2018,345,Projet Clôturé,PRJ_PRJ_CLS,653906.44000,574534.00,PRJ
+8819,24,DRC,Soutien alimentaire pour des populations vulnérables de Haut Katanga – Mitwaba et Mufunga Sapwe,2018,345,Projet Clôturé,PRJ_PRJ_CLS,653906.44000,574534.00,PRJ
+8871,24,DRC,Assistance d’urgence en faveur de 3.300 ménages affectés par les crises dans le Territoire de Masisi (ZS de Mweso),2018,345,Projet Clôturé,PRJ_PRJ_CLS,862591.64000,819466.00,PRJ
+8871,24,DRC,Assistance d’urgence en faveur de 3.300 ménages affectés par les crises dans le Territoire de Masisi (ZS de Mweso),2018,345,Projet Clôturé,PRJ_PRJ_CLS,862591.64000,819466.00,PRJ
+8887,24,DRC,Réponse Santé d’Urgence aux Populations Affectées par le Conflit dans les Zones de Santé de Mweso et Pinga au Nord Kivu,2018,345,Projet Clôturé,PRJ_PRJ_CLS,970398.51000,921884.35,PRJ
+8887,24,DRC,Réponse Santé d’Urgence aux Populations Affectées par le Conflit dans les Zones de Santé de Mweso et Pinga au Nord Kivu,2018,345,Projet Clôturé,PRJ_PRJ_CLS,970398.51000,921884.35,PRJ
+8890,24,DRC,"Intervention d’urgence de facilitation de l’accès humanitaire dans les territoires de Beni, Walikale, Lubero et Masisi au Nord-Kivu.",2018,345,Projet Clôturé,PRJ_PRJ_CLS,368418.75000,283426.95,PRJ
+8890,24,DRC,"Intervention d’urgence de facilitation de l’accès humanitaire dans les territoires de Beni, Walikale, Lubero et Masisi au Nord-Kivu.",2018,345,Projet Clôturé,PRJ_PRJ_CLS,368418.75000,283426.95,PRJ
+8956,24,DRC,Réponse Santé d’urgence en faveur des populations vulnérables du territoire de Djugu (Zone de Santé de Rethy) affectées par les conflits en Ituri.,2018,345,Projet Clôturé,PRJ_PRJ_CLS,585065.42000,555815.62,PRJ
+8956,24,DRC,Réponse Santé d’urgence en faveur des populations vulnérables du territoire de Djugu (Zone de Santé de Rethy) affectées par les conflits en Ituri.,2018,345,Projet Clôturé,PRJ_PRJ_CLS,585065.42000,555815.62,PRJ
+9198,24,DRC,"Prévention et Monitoring de Protection dans les zones affectées par les conflits armés en Territoires de Beni, Lubero et Walikale, dans la Province du Nord-Kivu - R.D. Congo.",2016,345,Projet Clôturé,PRJ_PRJ_CLS,210525.58000,200000.55,PRJ
+9198,24,DRC,"Prévention et Monitoring de Protection dans les zones affectées par les conflits armés en Territoires de Beni, Lubero et Walikale, dans la Province du Nord-Kivu - R.D. Congo.",2016,345,Projet Clôturé,PRJ_PRJ_CLS,210525.58000,200000.55,PRJ
+9230,24,DRC,Appui d’urgence Santé-Nutrition en faveurs des personnes déplacées  dans la zone de santé de Pweto.,2018,345,Projet Clôturé,PRJ_PRJ_CLS,165722.00000,157436.89,PRJ
+9230,24,DRC,Appui d’urgence Santé-Nutrition en faveurs des personnes déplacées  dans la zone de santé de Pweto.,2018,345,Projet Clôturé,PRJ_PRJ_CLS,165722.00000,157436.89,PRJ
+9232,24,DRC,"Assistance en vivres, AME et relance agricole d'urgence pour les populations vulnérables affectées par des crises dans la province du Tanganyika, RDC",2018,345,Projet Clôturé,PRJ_PRJ_CLS,631575.00000,600000.00,PRJ
+9232,24,DRC,"Assistance en vivres, AME et relance agricole d'urgence pour les populations vulnérables affectées par des crises dans la province du Tanganyika, RDC",2018,345,Projet Clôturé,PRJ_PRJ_CLS,631575.00000,600000.00,PRJ
+9253,24,DRC,"Appui multi sectorielle aux ménages affectés par les conflits armés dans la zone de santé de Kibua Territoire de Walikale,Province du Nord Kivu",2018,345,Projet Clôturé,PRJ_PRJ_CLS,962263.01000,903684.55,PRJ
+9253,24,DRC,"Appui multi sectorielle aux ménages affectés par les conflits armés dans la zone de santé de Kibua Territoire de Walikale,Province du Nord Kivu",2018,345,Projet Clôturé,PRJ_PRJ_CLS,962263.01000,903684.55,PRJ
+9260,24,DRC,"Assistance en soins de santé primaire et santé de la reproduction aux personnes déplacées internes, retournées victimes des conflits et les familles d’accueil dans la zone de santé de Kirotshe, Nord Kivu-RDC",2018,279,Processus de clôture,PRJ_UND_CLSR,339833.67000,316083.76,PRJ
+9260,24,DRC,"Assistance en soins de santé primaire et santé de la reproduction aux personnes déplacées internes, retournées victimes des conflits et les familles d’accueil dans la zone de santé de Kirotshe, Nord Kivu-RDC",2018,279,Processus de clôture,PRJ_UND_CLSR,339833.67000,316083.76,PRJ
+9280,24,DRC,"Réponse d’urgence à la crise de sécurité alimentaire dans la zone de santé de Kalole, territoire de Shabunda, Sud Kivu",2018,345,Projet Clôturé,PRJ_PRJ_CLS,358691.60000,340759.15,PRJ
+9280,24,DRC,"Réponse d’urgence à la crise de sécurité alimentaire dans la zone de santé de Kalole, territoire de Shabunda, Sud Kivu",2018,345,Projet Clôturé,PRJ_PRJ_CLS,358691.60000,340759.15,PRJ
+9337,24,DRC,"ASSISTANCE EN ARTICLES MENAGERS ESSENTIELS ET EN ABRIS D'URGENCE AUX POPULATIONS DEPLACEES, RETOURNEES ET LEURS COMMUNAUTES HOTES, AFFECTEES PAR LA CRISE (ZS SALAMABILA ET KALOLE) A TRAVERS LES FOIRES, ET LES DISTRIBUTIONS DIRECTES.",2018,345,Projet Clôturé,PRJ_PRJ_CLS,573795.90000,545093.31,PRJ
+9337,24,DRC,"ASSISTANCE EN ARTICLES MENAGERS ESSENTIELS ET EN ABRIS D'URGENCE AUX POPULATIONS DEPLACEES, RETOURNEES ET LEURS COMMUNAUTES HOTES, AFFECTEES PAR LA CRISE (ZS SALAMABILA ET KALOLE) A TRAVERS LES FOIRES, ET LES DISTRIBUTIONS DIRECTES.",2018,345,Projet Clôturé,PRJ_PRJ_CLS,573795.90000,545093.31,PRJ
+9347,24,DRC,"Projet d’appui au renforcement des mécanismes communautaires de prévention, prise en charge et réintégration communautaire des enfants affectés par la crise de Djugu et autres enfants affectés par les conflits Armés dans territoire de Djugu et Sud du territoire d’Irumu en Province de l’Ituri-RDC.",2018,345,Projet Clôturé,PRJ_PRJ_CLS,330591.63000,314064.01,PRJ
+9347,24,DRC,"Projet d’appui au renforcement des mécanismes communautaires de prévention, prise en charge et réintégration communautaire des enfants affectés par la crise de Djugu et autres enfants affectés par les conflits Armés dans territoire de Djugu et Sud du territoire d’Irumu en Province de l’Ituri-RDC.",2018,345,Projet Clôturé,PRJ_PRJ_CLS,330591.63000,314064.01,PRJ
+10124,24,DRC,"Réponse d'urgence en eau, hygiène et assainissement pour la lutte contre l'épidémie du choléra dans les zones de santé affectées d'ILEBO, MIKOPE, MUSHENGE, DEKESE et BULAPE, dans la province du Kasai.",2018,348,En cours d'Audit,PRJ_UND_AUD,221051.25000,210000.00,PRJ
+10124,24,DRC,"Réponse d'urgence en eau, hygiène et assainissement pour la lutte contre l'épidémie du choléra dans les zones de santé affectées d'ILEBO, MIKOPE, MUSHENGE, DEKESE et BULAPE, dans la province du Kasai.",2018,348,En cours d'Audit,PRJ_UND_AUD,221051.25000,210000.00,PRJ
+10463,24,DRC,Appui multisectoriel à la résilience des populations vulnérables affectées par les conflits dans la zone de santé de Kamwesha,2018,31,Processus de clôture,PRJ_UND_CLSR,2526300.00000,2400000.00,PRJ
+10463,24,DRC,Appui multisectoriel à la résilience des populations vulnérables affectées par les conflits dans la zone de santé de Kamwesha,2018,31,Processus de clôture,PRJ_UND_CLSR,2526300.00000,2400000.00,PRJ
+10898,24,DRC,"Assistance en vivres, AME et abris d'urgence pour les populations vulnérables affectées par les crises dans la zone des hauts plateaux, Territoire d’Uvira, Sud Kivu, RDC",2018,345,Projet Clôturé,PRJ_PRJ_CLS,1149289.33000,1091831.61,PRJ
+10898,24,DRC,"Assistance en vivres, AME et abris d'urgence pour les populations vulnérables affectées par les crises dans la zone des hauts plateaux, Territoire d’Uvira, Sud Kivu, RDC",2018,345,Projet Clôturé,PRJ_PRJ_CLS,1149289.33000,1091831.61,PRJ
+10902,24,DRC,"Réponse d’urgence à la crise nutritionnelle et sanitaire dans la zone de santé de Hauts-Plateaux, territoire d’Uvira, province du Sud Kivu",2018,345,Projet Clôturé,PRJ_PRJ_CLS,459814.42000,436826.43,PRJ
+10902,24,DRC,"Réponse d’urgence à la crise nutritionnelle et sanitaire dans la zone de santé de Hauts-Plateaux, territoire d’Uvira, province du Sud Kivu",2018,345,Projet Clôturé,PRJ_PRJ_CLS,459814.42000,436826.43,PRJ
+10976,24,DRC,Soutien d'urgence en Education et relance agricole pour les populations vulnérables affectées par des crises sur l'axe Kalemie-Kyoko dans le territoire de Kalemie.,2018,345,Projet Clôturé,PRJ_PRJ_CLS,953678.25000,906000.00,PRJ
+10976,24,DRC,Soutien d'urgence en Education et relance agricole pour les populations vulnérables affectées par des crises sur l'axe Kalemie-Kyoko dans le territoire de Kalemie.,2018,345,Projet Clôturé,PRJ_PRJ_CLS,953678.25000,906000.00,PRJ
+11047,24,DRC,"Projet de réhabilitation nutritionnelle d’urgence dans les ZS de Kalamba et Kapanga, térritoire de Kapanga, province de Lualaba.",2018,348,En cours d'Audit,PRJ_UND_AUD,399996.03000,379859.60,PRJ
+11047,24,DRC,"Projet de réhabilitation nutritionnelle d’urgence dans les ZS de Kalamba et Kapanga, térritoire de Kapanga, province de Lualaba.",2018,348,En cours d'Audit,PRJ_UND_AUD,399996.03000,379859.60,PRJ
+11072,24,DRC,"Assistance en paquet minimum d’urgence de l’éducation pour la résilience aux populations plus vulnérables de la Zone de Santé de KALAMBA en territoire de KAPANGA, Province du LUALABA",2018,279,Processus de clôture,PRJ_UND_CLSR,315774.18000,299987.34,PRJ
+11072,24,DRC,"Assistance en paquet minimum d’urgence de l’éducation pour la résilience aux populations plus vulnérables de la Zone de Santé de KALAMBA en territoire de KAPANGA, Province du LUALABA",2018,279,Processus de clôture,PRJ_UND_CLSR,315774.18000,299987.34,PRJ
+11110,24,DRC,"Réponse multisectorielle aux violences basées sur le genre dans les zones de santé de Kamiji, Kapanga et Kalamba",2018,279,Processus de clôture,PRJ_UND_CLSR,500000.30000,500000.30,PRJ
+11110,24,DRC,"Réponse multisectorielle aux violences basées sur le genre dans les zones de santé de Kamiji, Kapanga et Kalamba",2018,279,Processus de clôture,PRJ_UND_CLSR,500000.30000,500000.30,PRJ
+11946,24,DRC,Projet d’amélioration des conditions de vie des personnes affectées par la crise à travers l’accès aux services de base et la restauration des moyens de subsistance en zone de santé d’Alimbongo.,2019,31,Processus de clôture,PRJ_UND_CLSR,595780.50000,565995.01,PRJ
+11946,24,DRC,Projet d’amélioration des conditions de vie des personnes affectées par la crise à travers l’accès aux services de base et la restauration des moyens de subsistance en zone de santé d’Alimbongo.,2019,31,Processus de clôture,PRJ_UND_CLSR,595780.50000,565995.01,PRJ
+12016,24,DRC,"Assistance multisectorielle en faveur des populations vulnérables déplacées, retournées et familles d’accueil affectées par les conflits en chefferie de Bwito/territoire de Rutshuru/province du Nord-Kivu/RD Congo",2019,346,En cours d'Audit,PRJ_UND_AUD,1055843.49000,998653.02,PRJ
+12016,24,DRC,"Assistance multisectorielle en faveur des populations vulnérables déplacées, retournées et familles d’accueil affectées par les conflits en chefferie de Bwito/territoire de Rutshuru/province du Nord-Kivu/RD Congo",2019,346,En cours d'Audit,PRJ_UND_AUD,1055843.49000,998653.02,PRJ
+12030,24,DRC,Réponse multisectorielle d’urgence et durable centrée sur la protection dans la Zone de de Santé de Kimbi-Lulenge,2019,346,En cours d'Audit,PRJ_UND_AUD,788321.33000,636155.78,PRJ
+12030,24,DRC,Réponse multisectorielle d’urgence et durable centrée sur la protection dans la Zone de de Santé de Kimbi-Lulenge,2019,346,En cours d'Audit,PRJ_UND_AUD,788321.33000,636155.78,PRJ
+12061,24,DRC,"Projet d’Education aux Risques de mines et Restes Explosifs de Guerre, Enquête Non Technique(NTS) et Assistance aux Victimes dans la zone de santé de Kimbi-Luleng dans le Territoire de Fizi,  Province du Sud-Kivu en RD Congo.",2019,347,Projet Clôturé,PRJ_PRJ_CLS,291576.56000,276999.46,PRJ
+12061,24,DRC,"Projet d’Education aux Risques de mines et Restes Explosifs de Guerre, Enquête Non Technique(NTS) et Assistance aux Victimes dans la zone de santé de Kimbi-Luleng dans le Territoire de Fizi,  Province du Sud-Kivu en RD Congo.",2019,347,Projet Clôturé,PRJ_PRJ_CLS,291576.56000,276999.46,PRJ
+12113,24,DRC,Soutien aux mécanismes communautaires de lutte contre l’épidémie de choléra dans les Zones de santé de KALEMIE et NYEMBA (Province de Tanganyika); BUKAMA (Province de Haut-Lomami) et LUBUMBASHI (Province de Haut Katanga),2019,346,En cours d'Audit,PRJ_UND_AUD,1043401.36000,988977.33,PRJ
+12113,24,DRC,Soutien aux mécanismes communautaires de lutte contre l’épidémie de choléra dans les Zones de santé de KALEMIE et NYEMBA (Province de Tanganyika); BUKAMA (Province de Haut-Lomami) et LUBUMBASHI (Province de Haut Katanga),2019,346,En cours d'Audit,PRJ_UND_AUD,1043401.36000,988977.33,PRJ
+12114,24,DRC,"Réponse multi-sectorielle d’urgence et durable centrée sur la protection dans la zone de de santé de Kimbi-Lulenge, Sud Kivu.",2019,346,En cours d'Audit,PRJ_UND_AUD,789468.75000,750000.00,PRJ
+12114,24,DRC,"Réponse multi-sectorielle d’urgence et durable centrée sur la protection dans la zone de de santé de Kimbi-Lulenge, Sud Kivu.",2019,346,En cours d'Audit,PRJ_UND_AUD,789468.75000,750000.00,PRJ
+12140,24,DRC,"Appui multisectoriel à la résilience des communautés les plus vulnérables, retournés, déplacées et hôtes dans la zone de santé de Mutena",2019,31,Processus de clôture,PRJ_UND_CLSR,1052625.00000,1000000.00,PRJ
+12140,24,DRC,"Appui multisectoriel à la résilience des communautés les plus vulnérables, retournés, déplacées et hôtes dans la zone de santé de Mutena",2019,31,Processus de clôture,PRJ_UND_CLSR,1052625.00000,1000000.00,PRJ
+12241,24,DRC,"Programme d'intervention d'urgence aux communautés touchées par le conflit dans le territoire de Yumbi, province de Maindombe en RDC.",2019,279,Processus de clôture,PRJ_UND_CLSR,237193.81000,224846.38,PRJ
+12241,24,DRC,"Programme d'intervention d'urgence aux communautés touchées par le conflit dans le territoire de Yumbi, province de Maindombe en RDC.",2019,279,Processus de clôture,PRJ_UND_CLSR,237193.81000,224846.38,PRJ
+13115,24,DRC,Appui à la coordination du Cluster Protection en RDC,2019,346,En cours d'Audit,PRJ_UND_AUD,269874.32000,256382.20,PRJ
+13115,24,DRC,Appui à la coordination du Cluster Protection en RDC,2019,346,En cours d'Audit,PRJ_UND_AUD,269874.32000,256382.20,PRJ
+13125,24,DRC,Projet d'appui à la co-coordination du cluster santé par Médecins D'Afrique en République Démocratique du Congo,2019,416,Sous Rapportage Final,PRJ_UND_FINAL_RPT,216523.20000,166867.94,PRJ
+13125,24,DRC,Projet d'appui à la co-coordination du cluster santé par Médecins D'Afrique en République Démocratique du Congo,2019,416,Sous Rapportage Final,PRJ_UND_FINAL_RPT,216523.20000,166867.94,PRJ
+13130,24,DRC,IM &amp; Co-facilitateur Cluster Nutrition RDC,2019,346,En cours d'Audit,PRJ_UND_AUD,257169.21000,240502.31,PRJ
+13130,24,DRC,IM &amp; Co-facilitateur Cluster Nutrition RDC,2019,346,En cours d'Audit,PRJ_UND_AUD,257169.21000,240502.31,PRJ
+13142,24,DRC,Renforcement de la Coordination Sectorielle WASH à travers la Co-facilitation du Cluster National WASH,2019,31,Processus de clôture,PRJ_UND_CLSR,320398.80000,192282.54,PRJ
+13142,24,DRC,Renforcement de la Coordination Sectorielle WASH à travers la Co-facilitation du Cluster National WASH,2019,31,Processus de clôture,PRJ_UND_CLSR,320398.80000,192282.54,PRJ
+13200,24,DRC,Cash Working Group National Co- Coordinator,2019,346,En cours d'Audit,PRJ_UND_AUD,208418.92000,147344.23,PRJ
+13200,24,DRC,Cash Working Group National Co- Coordinator,2019,346,En cours d'Audit,PRJ_UND_AUD,208418.92000,147344.23,PRJ
+13236,24,DRC,Réponse d'urgence à la crise de la maladie à la virus Ebola dans les provinces du Nord Kivu et de l'Ituri en RD Congo.,2019,345,Projet Clôturé,PRJ_PRJ_CLS,2103170.59000,1901297.60,PRJ
+13236,24,DRC,Réponse d'urgence à la crise de la maladie à la virus Ebola dans les provinces du Nord Kivu et de l'Ituri en RD Congo.,2019,345,Projet Clôturé,PRJ_PRJ_CLS,2103170.59000,1901297.60,PRJ
+13762,24,DRC,Réhabilitation et Aménagement de la Piste de Tshikapa (RAPT),2019,345,Projet Clôturé,PRJ_PRJ_CLS,157892.94000,149999.23,PRJ
+13762,24,DRC,Réhabilitation et Aménagement de la Piste de Tshikapa (RAPT),2019,345,Projet Clôturé,PRJ_PRJ_CLS,157892.94000,149999.23,PRJ
+13790,24,DRC,"Réponse urgente multisectorielle et amélioration de l'accès et de la qualité des soins de santé et des nutrition des populations affectées par la crise dans la zone de santé de Yumbi, province de Mai-Ndombe, RDCr...",2019,348,En cours d'Audit,PRJ_UND_AUD,2494721.25000,2370000.00,PRJ
+13790,24,DRC,"Réponse urgente multisectorielle et amélioration de l'accès et de la qualité des soins de santé et des nutrition des populations affectées par la crise dans la zone de santé de Yumbi, province de Mai-Ndombe, RDCr...",2019,348,En cours d'Audit,PRJ_UND_AUD,2494721.25000,2370000.00,PRJ
+13849,24,DRC,"Fournir une assistance vitale aux déplacés internes et familles hôtes en Territoire  de Fizi,  dans les zones de santé de Fizi, Nundu et Minembwe",2019,348,En cours d'Audit,PRJ_UND_AUD,556838.93000,529000.35,PRJ
+13849,24,DRC,"Fournir une assistance vitale aux déplacés internes et familles hôtes en Territoire  de Fizi,  dans les zones de santé de Fizi, Nundu et Minembwe",2019,348,En cours d'Audit,PRJ_UND_AUD,556838.93000,529000.35,PRJ
+13862,24,DRC,"Assisstance humanitaire d'urgence aux manages affectés par les conflits armés dans les zones de santé de Masisi, Mweso et Katoyi, Territoire de Masisi en Province du Nord - Kivu/RDC",2019,279,Processus de clôture,PRJ_UND_CLSR,150525.53000,142080.88,PRJ
+13862,24,DRC,"Assisstance humanitaire d'urgence aux manages affectés par les conflits armés dans les zones de santé de Masisi, Mweso et Katoyi, Territoire de Masisi en Province du Nord - Kivu/RDC",2019,279,Processus de clôture,PRJ_UND_CLSR,150525.53000,142080.88,PRJ
+13863,24,DRC,Projet urgence d’appui à la sécurité alimentaire et aux moyens d’existence en faveur des populations vulnérables affectées par les conflits dans la zone de santé de Mweso - Territoire de Masisi - Province du Nord Kivu (RDC),2019,279,Processus de clôture,PRJ_UND_CLSR,351576.75000,317275.39,PRJ
+13863,24,DRC,Projet urgence d’appui à la sécurité alimentaire et aux moyens d’existence en faveur des populations vulnérables affectées par les conflits dans la zone de santé de Mweso - Territoire de Masisi - Province du Nord Kivu (RDC),2019,279,Processus de clôture,PRJ_UND_CLSR,351576.75000,317275.39,PRJ
+13865,24,DRC,"Assistance d’Urgence aux Enfants en situation difficile et   aux   survivants des VBG dans les Zones de Santé de Mweso, Masisi et Katoy en Territoire de Masisi au Nord-Kivu",2019,279,Processus de clôture,PRJ_UND_CLSR,290523.20000,273777.96,PRJ
+13865,24,DRC,"Assistance d’Urgence aux Enfants en situation difficile et   aux   survivants des VBG dans les Zones de Santé de Mweso, Masisi et Katoy en Territoire de Masisi au Nord-Kivu",2019,279,Processus de clôture,PRJ_UND_CLSR,290523.20000,273777.96,PRJ
+13870,24,DRC,"Améliorer les conditions de vie des populations déplacées à travers à l’aménagement de site et la fourniture de services Eau, Hygiène et Assainissement",2019,279,Processus de clôture,PRJ_UND_CLSR,1450000.01000,1338123.98,PRJ
+13870,24,DRC,"Améliorer les conditions de vie des populations déplacées à travers à l’aménagement de site et la fourniture de services Eau, Hygiène et Assainissement",2019,279,Processus de clôture,PRJ_UND_CLSR,1450000.01000,1338123.98,PRJ
+13897,24,DRC,"Procurement of vaccines for measles outbreak response in 14 health zones in Kasai, Kasai Central, Kasai Oriental, Kwilu, Maindombe and South Kivu Provinces",2019,279,Processus de clôture,PRJ_UND_CLSR,173832.20000,173832.20,PRJ
+13897,24,DRC,"Procurement of vaccines for measles outbreak response in 14 health zones in Kasai, Kasai Central, Kasai Oriental, Kwilu, Maindombe and South Kivu Provinces",2019,279,Processus de clôture,PRJ_UND_CLSR,173832.20000,173832.20,PRJ
+13898,24,DRC,"Projet d’appui d’urgence à la lutte contre la rougeole dans 16 zones de santé des Provinces du Kasaï Oriental, Kwango, Kwilu et Mai Ndombe, en RDC",2019,279,Processus de clôture,PRJ_UND_CLSR,1563148.02000,1464886.02,PRJ
+13898,24,DRC,"Projet d’appui d’urgence à la lutte contre la rougeole dans 16 zones de santé des Provinces du Kasaï Oriental, Kwango, Kwilu et Mai Ndombe, en RDC",2019,279,Processus de clôture,PRJ_UND_CLSR,1563148.02000,1464886.02,PRJ
+14042,24,DRC,Appui à la riposte contre l’épidémie de rougeole dans les provinces du Kasaï et du Kasaï Central,2019,345,Projet Clôturé,PRJ_PRJ_CLS,663153.75000,630000.00,PRJ
+14042,24,DRC,Appui à la riposte contre l’épidémie de rougeole dans les provinces du Kasaï et du Kasaï Central,2019,345,Projet Clôturé,PRJ_PRJ_CLS,663153.75000,630000.00,PRJ
+14422,24,DRC,"Réponse nutritionnelle d’urgence à travers la prévention et le traitement de la malnutrition aigüe au niveau communautaire, primaire et secondaire dans le territoire de Djugu, Ituri.",2019,348,En cours d'Audit,PRJ_UND_AUD,842100.00000,800000.00,PRJ
+14422,24,DRC,"Réponse nutritionnelle d’urgence à travers la prévention et le traitement de la malnutrition aigüe au niveau communautaire, primaire et secondaire dans le territoire de Djugu, Ituri.",2019,348,En cours d'Audit,PRJ_UND_AUD,842100.00000,800000.00,PRJ
+14437,24,DRC,Projet d'urgence d'appui à la riposte contre la rougeole dans 2 zones de sante de la province de Kinshasa (Biyela et Kikimi) en République Démocratique du Congo,2019,348,En cours d'Audit,PRJ_UND_AUD,273722.94000,253557.90,PRJ
+14437,24,DRC,Projet d'urgence d'appui à la riposte contre la rougeole dans 2 zones de sante de la province de Kinshasa (Biyela et Kikimi) en République Démocratique du Congo,2019,348,En cours d'Audit,PRJ_UND_AUD,273722.94000,253557.90,PRJ
+14440,24,DRC,"Réponse urgente  à l’épidémie de rougeole affectant 6 Zone de santé (Bokoro, Ntandembelo, Mushi, Inongo, Kwamouth et Kiri) dans la province du Mai-Ndombe",2019,348,En cours d'Audit,PRJ_UND_AUD,396770.87000,376934.68,PRJ
+14440,24,DRC,"Réponse urgente  à l’épidémie de rougeole affectant 6 Zone de santé (Bokoro, Ntandembelo, Mushi, Inongo, Kwamouth et Kiri) dans la province du Mai-Ndombe",2019,348,En cours d'Audit,PRJ_UND_AUD,396770.87000,376934.68,PRJ
+14441,24,DRC,"Appui d’urgence à la lutte contre la rougeole dans 11 zones de santé reparties dans 2 Provinces, Kongo central et du Haut - Katanga, en RDC.",2019,279,Processus de clôture,PRJ_UND_CLSR,649295.26000,649295.26,PRJ
+14441,24,DRC,"Appui d’urgence à la lutte contre la rougeole dans 11 zones de santé reparties dans 2 Provinces, Kongo central et du Haut - Katanga, en RDC.",2019,279,Processus de clôture,PRJ_UND_CLSR,649295.26000,649295.26,PRJ
+14897,24,DRC,"Strengthening Gender-Based Violence within the Centrality of Protection in Humanitarian Action in the
+Democratic Republic of Congo
+",2019,417,Sous Rapportage Final,PRJ_UND_FINAL_RPT,423148.62000,0.00,PRJ
+14897,24,DRC,"Strengthening Gender-Based Violence within the Centrality of Protection in Humanitarian Action in the
+Democratic Republic of Congo
+",2019,417,Sous Rapportage Final,PRJ_UND_FINAL_RPT,423148.62000,0.00,PRJ
+16680,24,DRC,"Assistance multisectorielle aux communautés touchées par les conflits en Ituri, au Sud-Kivu et au Tanganyika",2020,6423,Sous remboursement final,PRJ_UND_REF,1558423.60000,1439936.33,PRJ
+16680,24,DRC,"Assistance multisectorielle aux communautés touchées par les conflits en Ituri, au Sud-Kivu et au Tanganyika",2020,6423,Sous remboursement final,PRJ_UND_REF,1558423.60000,1439936.33,PRJ
+16785,24,DRC,Protection des populations  vulnérables contre l'Exploitation et les Abus Sexuels dans la riposte à la Maladie à Virus Ebola dans la province de l'Equateur,2020,6419,Projet clôturé,PRJ_PRJ_CLS,399491.09000,382183.54,PRJ
+16785,24,DRC,Protection des populations  vulnérables contre l'Exploitation et les Abus Sexuels dans la riposte à la Maladie à Virus Ebola dans la province de l'Equateur,2020,6419,Projet clôturé,PRJ_PRJ_CLS,399491.09000,382183.54,PRJ
+16855,24,DRC,"Renforcement de l'accès aux Soins de Santé Primaires, de Santé Reproductive, aux services de prévention et prise en charge de Violences Basées sur le Genre dans les zones de santé de Ndekesha et Luambo au Kasaï Central , Kanzala au Kasaï, Kasansa au Kasaï Oriental et Bena Dibele au Sankuru.",2020,6463,Sous rapportage final,PRJ_UND_FINAL_RPT,2223331.60000,1311331.01,PRJ
+16855,24,DRC,"Renforcement de l'accès aux Soins de Santé Primaires, de Santé Reproductive, aux services de prévention et prise en charge de Violences Basées sur le Genre dans les zones de santé de Ndekesha et Luambo au Kasaï Central , Kanzala au Kasaï, Kasansa au Kasaï Oriental et Bena Dibele au Sankuru.",2020,6463,Sous rapportage final,PRJ_UND_FINAL_RPT,2223331.60000,1311331.01,PRJ
+17966,24,DRC,"Assistance en abris d’urgence , Eau, Hygiène et Assainissement au bénéfice des communautés affectées par les conflits intercommunautaires dans les moyens et hauts plateaux de Sud Kivu",2020,6419,Projet clôturé,PRJ_PRJ_CLS,722713.58000,688421.58,PRJ
+17966,24,DRC,"Assistance en abris d’urgence , Eau, Hygiène et Assainissement au bénéfice des communautés affectées par les conflits intercommunautaires dans les moyens et hauts plateaux de Sud Kivu",2020,6419,Projet clôturé,PRJ_PRJ_CLS,722713.58000,688421.58,PRJ
+17989,24,DRC,Cash Working Group National (CWGn) Co-Coordinator,2020,6419,Projet clôturé,PRJ_PRJ_CLS,199546.51000,170600.75,PRJ
+17989,24,DRC,Cash Working Group National (CWGn) Co-Coordinator,2020,6419,Projet clôturé,PRJ_PRJ_CLS,199546.51000,170600.75,PRJ
+18794,24,DRC,"Projet de prise en charge  de la malnutrition aiguë  et de promotion des bonnes Pratiques sur l’Alimentation du Nourrisson et du Jeune Enfant   en situation d’urgence dans les Zones de Santé de  Lulingu, Mulungu,Saramabila et Kabambare, Provinces du Sud Kivu et de Maniema, en République Démocratique du Congo.",2021,6420,Sous audit,PRJ_UND_AUD,590284.01000,569891.69,PRJ
+18794,24,DRC,"Projet de prise en charge  de la malnutrition aiguë  et de promotion des bonnes Pratiques sur l’Alimentation du Nourrisson et du Jeune Enfant   en situation d’urgence dans les Zones de Santé de  Lulingu, Mulungu,Saramabila et Kabambare, Provinces du Sud Kivu et de Maniema, en République Démocratique du Congo.",2021,6420,Sous audit,PRJ_UND_AUD,590284.01000,569891.69,PRJ
+19279,24,DRC,"Réponse sanitaire d’urgence en faveur des personnes vulnérables affectées par les mouvements des populations (IDPs, retournées et hôtes) et par les épidémies dans la ZS de Lulingu, province du Sud Kivu en RDC.",2021,6463,Sous rapportage final,PRJ_UND_FINAL_RPT,759524.09000,0,PRJ
+19279,24,DRC,"Réponse sanitaire d’urgence en faveur des personnes vulnérables affectées par les mouvements des populations (IDPs, retournées et hôtes) et par les épidémies dans la ZS de Lulingu, province du Sud Kivu en RDC.",2021,6463,Sous rapportage final,PRJ_UND_FINAL_RPT,759524.09000,0,PRJ
+22309,24,DRC,"Appui d’urgence en sécurité alimentaire et moyens de subsistance pour 2200 ménages victimes des conflits armés en Zones de Santé de LITA et FATAKI dans le Territoire de Djugu, Province de l’Ituri, en RD Congo",2022,6421,Projet clôturé,PRJ_PRJ_CLS,1389188.18000,1351314.17,PRJ
+22309,24,DRC,"Appui d’urgence en sécurité alimentaire et moyens de subsistance pour 2200 ménages victimes des conflits armés en Zones de Santé de LITA et FATAKI dans le Territoire de Djugu, Province de l’Ituri, en RD Congo",2022,6421,Projet clôturé,PRJ_PRJ_CLS,1389188.18000,1351314.17,PRJ
+25278,24,DRC,"Réponse Eau, Hygiène et Assainissement à la crise des inondations et glissements de terrain dans le territoire de Kalehe, Sud-Kivu",2023,6419,Projet clôturé,PRJ_PRJ_CLS,497412.76000,475000.01,PRJ
+25278,24,DRC,"Réponse Eau, Hygiène et Assainissement à la crise des inondations et glissements de terrain dans le territoire de Kalehe, Sud-Kivu",2023,6419,Projet clôturé,PRJ_PRJ_CLS,497412.76000,475000.01,PRJ
+26035,24,DRC,"Projet intersectoriel Abris transitionnels et AME, en réponse aux besoins des PDIs, Retournés et Communautés Hôtes, affectées par la crise dans la ZS de Kwamouth, Province du Maïndombe.",2023,6422,Sous audit,PRJ_UND_AUD,1037870.61000,1000000.00,PRJ
+26035,24,DRC,"Projet intersectoriel Abris transitionnels et AME, en réponse aux besoins des PDIs, Retournés et Communautés Hôtes, affectées par la crise dans la ZS de Kwamouth, Province du Maïndombe.",2023,6422,Sous audit,PRJ_UND_AUD,1037870.61000,1000000.00,PRJ
+26038,24,DRC,Renforcement de l'accès à l'éducation de qualité dans un environnement protecteur en faveur des enfants touchés par la crise des ADF dans les zones de santé de Mambasa et Mandima.,2023,6422,Sous audit,PRJ_UND_AUD,523113.69000,499999.12,PRJ
+26038,24,DRC,Renforcement de l'accès à l'éducation de qualité dans un environnement protecteur en faveur des enfants touchés par la crise des ADF dans les zones de santé de Mambasa et Mandima.,2023,6422,Sous audit,PRJ_UND_AUD,523113.69000,499999.12,PRJ
+26039,24,DRC,"Réponse nutritionnelle d'urgence à la crise ADF en faveur des déplacés, retournés et familles d’accueil dans 5 Aires de santé de Oicha  au Nord Kivu.",2023,6422,Sous audit,PRJ_UND_AUD,317506.21000,299921.95,PRJ
+26039,24,DRC,"Réponse nutritionnelle d'urgence à la crise ADF en faveur des déplacés, retournés et familles d’accueil dans 5 Aires de santé de Oicha  au Nord Kivu.",2023,6422,Sous audit,PRJ_UND_AUD,317506.21000,299921.95,PRJ
+26047,24,DRC,"Réponse à la crise M-23 en VBG dans la zone de santé de Masisi, territoire de Masisi, province du Nord-Kivu",2023,6422,Sous audit,PRJ_UND_AUD,832059.91000,800000.00,PRJ
+26047,24,DRC,"Réponse à la crise M-23 en VBG dans la zone de santé de Masisi, territoire de Masisi, province du Nord-Kivu",2023,6422,Sous audit,PRJ_UND_AUD,832059.91000,800000.00,PRJ
+26127,24,DRC,"Projet de protection et d'assistance humanitaire aux enfants affectés par la crise M23 dans les Territoires de Masisi, Lubero, Beni et Walikale dans la Province du Nord-Kivu - R.D. Congo ",2023,6422,Sous audit,PRJ_UND_AUD,1037667.38000,1000000.00,PRJ
+26127,24,DRC,"Projet de protection et d'assistance humanitaire aux enfants affectés par la crise M23 dans les Territoires de Masisi, Lubero, Beni et Walikale dans la Province du Nord-Kivu - R.D. Congo ",2023,6422,Sous audit,PRJ_UND_AUD,1037667.38000,1000000.00,PRJ
+26128,24,DRC,"Réponses d'urgence multisectorielles en santé et VBG en faveur des personnes affectées par la crise humanitaire dans la ZS de Oicha, Territoire de Beni en province du Nord – Kivu.",2023,6422,Sous audit,PRJ_UND_AUD,1141006.12000,1096623.96,PRJ
+26128,24,DRC,"Réponses d'urgence multisectorielles en santé et VBG en faveur des personnes affectées par la crise humanitaire dans la ZS de Oicha, Territoire de Beni en province du Nord – Kivu.",2023,6422,Sous audit,PRJ_UND_AUD,1141006.12000,1096623.96,PRJ
+26138,24,DRC,Prévention et réponse humanitaire holistiques aux besoins vitaux des personnes survivantes et à risque de violences basées sur le genre affectées par la crise ADF en Zone de Santé de Mandima en Ituri.,2023,6422,Sous audit,PRJ_UND_AUD,1141006.12000,1097235.23,PRJ
+26138,24,DRC,Prévention et réponse humanitaire holistiques aux besoins vitaux des personnes survivantes et à risque de violences basées sur le genre affectées par la crise ADF en Zone de Santé de Mandima en Ituri.,2023,6422,Sous audit,PRJ_UND_AUD,1141006.12000,1097235.23,PRJ
+27212,24,DRC,"Réponse multisectorielle immédiate en Abris/AME et Protection de l’enfance en faveur des populations affectées par le conflit dans la Zone de Santé de Fizi, Territoire de Fizi en Province du Sud-Kivu",2023,6422,Sous audit,PRJ_UND_AUD,530613.69000,500000.00,PRJ
+27212,24,DRC,"Réponse multisectorielle immédiate en Abris/AME et Protection de l’enfance en faveur des populations affectées par le conflit dans la Zone de Santé de Fizi, Territoire de Fizi en Province du Sud-Kivu",2023,6422,Sous audit,PRJ_UND_AUD,530613.69000,500000.00,PRJ
+27834,24,DRC,Réponse d'urgence en SECAL en faveurs des IDPs et Familles d'Accueil affectés par la crise M23 dans la zone de santé de Minova au Sud-Kivu,2024,6420,Sous audit,PRJ_UND_AUD,523113.69000,490150.13,PRJ
+27834,24,DRC,Réponse d'urgence en SECAL en faveurs des IDPs et Familles d'Accueil affectés par la crise M23 dans la zone de santé de Minova au Sud-Kivu,2024,6420,Sous audit,PRJ_UND_AUD,523113.69000,490150.13,PRJ
+27836,24,DRC,"Appui en sécurité alimentaire, moyens de subsistance  avec protection intégrée à 2000 ménages déplacés et leurs  familles d’accueil dans le secteur de Mutambala, zone de santé de Fizi au  Sud-Kivu",2024,6420,Sous audit,PRJ_UND_AUD,523113.69000,498891.77,PRJ
+27836,24,DRC,"Appui en sécurité alimentaire, moyens de subsistance  avec protection intégrée à 2000 ménages déplacés et leurs  familles d’accueil dans le secteur de Mutambala, zone de santé de Fizi au  Sud-Kivu",2024,6420,Sous audit,PRJ_UND_AUD,523113.69000,498891.77,PRJ
+27983,24,DRC,« INUKA » : Soutien vital en santé aux personnes vulnérables de Minova en RDC,2024,6420,Sous audit,PRJ_UND_AUD,780658.04000,734443.66,PRJ
+27983,24,DRC,« INUKA » : Soutien vital en santé aux personnes vulnérables de Minova en RDC,2024,6420,Sous audit,PRJ_UND_AUD,780658.04000,734443.66,PRJ
+34679,24,DRC,"Réponse intégrée aux besoins multi-sectorielles d’urgence en sécurité alimentaire et Nutrition en faveur des populations vulnérables affectées par la crise dans le territoire de Kongolo, ZS de kongolo et Mbulula dans la province du Tanganyika",2024,6422,Sous audit,PRJ_UND_AUD,729256.17000,699929.58,PRJ
+34679,24,DRC,"Réponse intégrée aux besoins multi-sectorielles d’urgence en sécurité alimentaire et Nutrition en faveur des populations vulnérables affectées par la crise dans le territoire de Kongolo, ZS de kongolo et Mbulula dans la province du Tanganyika",2024,6422,Sous audit,PRJ_UND_AUD,729256.17000,699929.58,PRJ
+35337,24,DRC,Renforcement des mécanismes de coordination de la Protection contre les abus et exploitation sexuels dans la réponse humanitaire en RDC,2025,6464,Sous rapportage final,PRJ_UND_FINAL_RPT,350000.00000,243946.10,PRJ
+35337,24,DRC,Renforcement des mécanismes de coordination de la Protection contre les abus et exploitation sexuels dans la réponse humanitaire en RDC,2025,6464,Sous rapportage final,PRJ_UND_FINAL_RPT,350000.00000,243946.10,PRJ
+35407,24,DRC,"Réponse Multisectorielle Intégrée en Cash, Relance agricole et Santé pour les retournés, déplacés et communauté hôte les plus vulnérables affectés par les crises humanitaires au Nord-Kivu et en Ituri ",2025,6279,Mise en oeuvre & rapportage,PRJ_IMPL_RPT,811299.68000,401696.98,PRJ
+35407,24,DRC,"Réponse Multisectorielle Intégrée en Cash, Relance agricole et Santé pour les retournés, déplacés et communauté hôte les plus vulnérables affectés par les crises humanitaires au Nord-Kivu et en Ituri ",2025,6279,Mise en oeuvre & rapportage,PRJ_IMPL_RPT,811299.68000,401696.98,PRJ
+35428,24,DRC," Soins vitaux  pour les personnes retournées, les déplacés internes et autres personnes vulnérables dans les zones de santé de Minova et Kaniola, Province du Sud Kivu 			",2025,6464,Sous rapportage final,PRJ_UND_FINAL_RPT,811499.16000,461486.84,PRJ
+35428,24,DRC," Soins vitaux  pour les personnes retournées, les déplacés internes et autres personnes vulnérables dans les zones de santé de Minova et Kaniola, Province du Sud Kivu 			",2025,6464,Sous rapportage final,PRJ_UND_FINAL_RPT,811499.16000,461486.84,PRJ
+35447,24,DRC,"Assistance en AME et Services Essentiels en faveur des PDI, Retournés et Familles hôtes les plus Vulnérables affectés par les conflits armés dans les ZS de Kalehe au Sud-Kivu.",2025,6464,Sous rapportage final,PRJ_UND_FINAL_RPT,420309.95000,316445.44,PRJ
+35447,24,DRC,"Assistance en AME et Services Essentiels en faveur des PDI, Retournés et Familles hôtes les plus Vulnérables affectés par les conflits armés dans les ZS de Kalehe au Sud-Kivu.",2025,6464,Sous rapportage final,PRJ_UND_FINAL_RPT,420309.95000,316445.44,PRJ
+35450,24,DRC,"REPRI – Réponse Rapide de Protection Intégrée pour réduire les Risques de Protection Aigus et Améliorer l’Accès aux Services et à l’Assistance Humanitaire dans les ZS de Kalehe, Minova et Nyiragongo",2025,6464,Sous rapportage final,PRJ_UND_FINAL_RPT,523113.69000,253193.94,PRJ
+35450,24,DRC,"REPRI – Réponse Rapide de Protection Intégrée pour réduire les Risques de Protection Aigus et Améliorer l’Accès aux Services et à l’Assistance Humanitaire dans les ZS de Kalehe, Minova et Nyiragongo",2025,6464,Sous rapportage final,PRJ_UND_FINAL_RPT,523113.69000,253193.94,PRJ
+35547,24,DRC,Assistance multisectoriel en Sécurité alimentaire et VBG aux survivantes de violences basées sur le genre parmi les déplacés retournées et communautés hôtes  dans la ZS de MASISI ,2025,6422,Sous audit,PRJ_UND_AUD,368908.08000,348354.38,PRJ
+35547,24,DRC,Assistance multisectoriel en Sécurité alimentaire et VBG aux survivantes de violences basées sur le genre parmi les déplacés retournées et communautés hôtes  dans la ZS de MASISI ,2025,6422,Sous audit,PRJ_UND_AUD,368908.08000,348354.38,PRJ
+38457,24,DRC,"Tuhimizane_Assistance Humanitaire  en santé aux vulnérables de la Zone de Santé Kaniola, Sud Kivu.",2025,6249,Mise en oeuvre & rapportage,PRJ_IMPL_RPT,626452.43000,0,PRJ
+38457,24,DRC,"Tuhimizane_Assistance Humanitaire  en santé aux vulnérables de la Zone de Santé Kaniola, Sud Kivu.",2025,6249,Mise en oeuvre & rapportage,PRJ_IMPL_RPT,626452.43000,0,PRJ
+38529,24,DRC,Réponse multisectorielle en urgence SECAL/VBG pour sauver les vies/alléger la souffrance des 1924 ménages des PDI/FAMAC affectés par les chocs dans la ZS de Kalole Province du Sud-Kivu.,2025,6249,Mise en oeuvre & rapportage,PRJ_IMPL_RPT,945144.02000,209339.54,PRJ
+38529,24,DRC,Réponse multisectorielle en urgence SECAL/VBG pour sauver les vies/alléger la souffrance des 1924 ménages des PDI/FAMAC affectés par les chocs dans la ZS de Kalole Province du Sud-Kivu.,2025,6249,Mise en oeuvre & rapportage,PRJ_IMPL_RPT,945144.02000,209339.54,PRJ
+38538,24,DRC,"Projet multisectoriel d'urgence en Abris/AME et protection de l'enfance en faveur des PDIs, retournées et FAMAC les plus vulnérables affectées par les conflits dans les ZS de Nundu et Fizi.",2025,6249,Mise en oeuvre & rapportage,PRJ_IMPL_RPT,955424.39000,411124.71,PRJ
+38538,24,DRC,"Projet multisectoriel d'urgence en Abris/AME et protection de l'enfance en faveur des PDIs, retournées et FAMAC les plus vulnérables affectées par les conflits dans les ZS de Nundu et Fizi.",2025,6249,Mise en oeuvre & rapportage,PRJ_IMPL_RPT,955424.39000,411124.71,PRJ
+38565,24,DRC,"Réponse multisectorielle EHA, et Logistique en faveur des populations affectées par la crise humanitaire dans les Zones de Santé de Kayna et Walikale en province du Nord-kivu",2025,6249,Mise en oeuvre & rapportage,PRJ_IMPL_RPT,568882.36000,0,PRJ
+38565,24,DRC,"Réponse multisectorielle EHA, et Logistique en faveur des populations affectées par la crise humanitaire dans les Zones de Santé de Kayna et Walikale en province du Nord-kivu",2025,6249,Mise en oeuvre & rapportage,PRJ_IMPL_RPT,568882.36000,0,PRJ
+39012,24,DRC,Appui à la réponse EHA par les activités CATI au profit des populations des entités affectées  par la crise de cholera dans la zone de santé de Ruzizi,2026,6278,Déboursement,PRJ_DISBURSEMENT,162213.99000,0,PRJ
+39012,24,DRC,Appui à la réponse EHA par les activités CATI au profit des populations des entités affectées  par la crise de cholera dans la zone de santé de Ruzizi,2026,6278,Déboursement,PRJ_DISBURSEMENT,162213.99000,0,PRJ
+19,53,Ethiopia,2017 Ethiopia Management Module,2017,3,Approved,APPR,863411.00000,0,HMC
+56,53,Ethiopia,2019  Ethiopia Direct Cost & CPF Module,2019,3,Approved,APPR,1065109.00000,0,HMC
+59,53,Ethiopia,2018  Ethiopia Direct Cost & CPF Module,2018,3,Approved,APPR,1067709.00000,0,HMC
+79,53,Ethiopia,2020  Ethiopia Direct Cost & CPF Module,2020,3,Approved,APPR,1356765.00000,0,HMC
+116,53,Ethiopia,2021  Ethiopia Direct Cost & CPF Module,2021,3,Approved,APPR,1379628.00000,0,HMC
+121,53,Ethiopia,2022  Ethiopia Direct Cost & CPF Module,2022,3,Approved,APPR,1749830.00000,0,HMC
+126,53,Ethiopia,2023  Ethiopia Direct Cost & CPF Module,2023,3,Approved,APPR,2577814.00000,0,HMC
+156,53,Ethiopia,2024  Ethiopia Direct Cost & CPF Module,2024,3,Approved,APPR,2708196.00000,0,HMC
+181,53,Ethiopia,2025  Ethiopia Direct Cost & CPF Module,2025,3,Approved,APPR,2665341.00000,0,HMC
+7329,53,Ethiopia,Strengthening Humanitarian Coordination Capacity of the Somali Disaster Prevention and Preparedness Bureau,2017,2735,Project Closed,PRJ_PRJ_CLS,507878.75000,490102.21,PRJ
+14779,53,Ethiopia,"Emergency WASH Response for Dollobay, Qoohle and Godgod Woredas IDPs and flood Affected areas in Afdher Zone Somali Regional State of Ethiopia",2019,2737,Project Closed,PRJ_PRJ_CLS,193982.42000,187800.35,PRJ
+15770,53,Ethiopia,"Emergency shelter / NFI and COVID-19 support in  Kumbi and Babile woredas of East Hararghe zone ,Oromia region",2020,2737,Project Closed,PRJ_PRJ_CLS,459877.59000,440265.53,PRJ
+15933,53,Ethiopia,"Emergency Nutrition, Health and WASH Response Integrated with IYCF in Six Woredas of Afdher and Liban Zones of Somali Region",2020,2737,Project Closed,PRJ_PRJ_CLS,901010.05000,860383.60,PRJ
+17476,53,Ethiopia,Emergency Health Response in Mieso and Guradamole woredas of Somali Region,2020,2737,Project Closed,PRJ_PRJ_CLS,114728.26000,106783.86,PRJ
+17480,53,Ethiopia,"Emergency WASH response for IDPs, IDP returnees and Hosting communities in Afar and Oromia regions and COVID-19 mitigation WASH response in Addis Ababa Treatment and Isolation centers",2020,2737,Project Closed,PRJ_PRJ_CLS,564848.62000,549998.93,PRJ
+17492,53,Ethiopia,"Emergency Shelter NFI and Shelter repairing kit response to IDPs and Returnee  Households in East and West Hararghe and  Borena zone Oromia region, Ethiopia",2020,2737,Project Closed,PRJ_PRJ_CLS,445166.67000,412538.76,PRJ
+17500,53,Ethiopia,"Emergency Multi-sectoral response to support vulnerable  communities in Yaso, Kamashi &amp; Guba woredas of Benishangul Gumuz Region",2020,2737,Project Closed,PRJ_PRJ_CLS,678888.49000,661866.56,PRJ
+17538,53,Ethiopia,Multi-sectoral IDP Response for Qohle two IDP sites,2020,2737,Project Closed,PRJ_PRJ_CLS,509725.53000,489360.22,PRJ
+17544,53,Ethiopia,"Emergency Health and Nutrition response for returnees and host communities of Oromia region, West Hararghe zone Hawi Gudina and Daro lebu Woredas in Health and East Hararghe Zone, Fedis and Chinakson Woredas with Nutrition support.",2020,2737,Project Closed,PRJ_PRJ_CLS,277718.52000,259155.57,PRJ
+17565,53,Ethiopia,"Mitigate food insecurity &amp; restore livelihoods of the most vulnerable in three districts in Oromia, Ethiopia",2020,2737,Project Closed,PRJ_PRJ_CLS,414265.60000,381936.71,PRJ
+17572,53,Ethiopia,Integrated multi sectoral response project in West Hararghe and Borena zones of Oromia Region,2020,2737,Project Closed,PRJ_PRJ_CLS,1100855.33000,1034498.18,PRJ
+20097,53,Ethiopia,Protection monitoring in areas of IDPs/returnees and host communities including COVID 19 Pandemic Response,2021,2735,Project Closed,PRJ_PRJ_CLS,321179.40000,315286.20,PRJ
+21809,53,Ethiopia,Emergency WASH Response Project for Drought Affected People in Five Districts of East Bale  Zone of Oromia Regional National State,2022,2735,Project Closed,PRJ_PRJ_CLS,615776.38000,585927.02,PRJ
+22035,53,Ethiopia,Provision of Repair kits for returnees and residents of Raya Alamata Wereda Southern Zone of Tigray Region,2022,2735,Project Closed,PRJ_PRJ_CLS,410170.77000,384272.95,PRJ
+22036,53,Ethiopia,"Emergency shelter and NFI support for conflict-affected IDPs and returnees in Sekota and Zequala Woredas in Wag Hamara zone, Amhara Region",2022,2735,Project Closed,PRJ_PRJ_CLS,819693.96000,800175.98,PRJ
+22057,53,Ethiopia,"Emergency WASH Response Project for IDPs  and Host Communities of Habru Woreda(Jara Re-allocation Site) of North Wallo, Amhara Region",2022,2735,Project Closed,PRJ_PRJ_CLS,359213.52000,342428.99,PRJ
+25519,53,Ethiopia,"Integrated multi-sector assistance to support vulnerable communities in drought-affected areas in Borena Zone, Moyale and debuluk woredas",2023,2740,Under Refund,PRJ_UND_REF,1291712.78000,1249999.95,PRJ
+26446,53,Ethiopia,"An Integrated multi-sectoral emergency support to returnees in Asgede and Selekleka woredas, Tigray Region",2023,2736,Under Audit,PRJ_UND_AUD,826991.33000,693088.66,PRJ
+26530,53,Ethiopia,"Integrated multi-sectoral emergency assistance to retuned IDPs in Sibu Sire woreda, East Wollega Zone of Oromia Region",2023,2736,Under Audit,PRJ_UND_AUD,1032598.79000,876874.72,PRJ
+27627,53,Ethiopia,"Integrated Multi-Sectorial Emergency Response Project for  Bugna  District of Amhara Region, Ethiopia",2024,2736,Under Audit,PRJ_UND_AUD,826991.28000,641677.97,PRJ
+27692,53,Ethiopia,"  Response to Integrated GBV case management, support in East and Horo Guduro 
+ Wollega zones Kiremu, Sasiga,  Gida Ayana ,Jarte Jardaga, Amuru &amp;amp; Horo Buluk districts  of Oromia Region.",2024,2736,Under Audit,PRJ_UND_AUD,1032598.75000,993955.23,PRJ
+34269,53,Ethiopia,Southern Tigray Emergency Response and Rehabilitation Project,2024,2738,Under Audit,PRJ_UND_AUD,724187.57000,699959.24,PRJ
+34592,53,Ethiopia,MSI hotline support for SEA reporting,2024,2738,Under Audit,PRJ_UND_AUD,25288.61000,2985.50,PRJ
+35349,53,Ethiopia,"Integrated Multi-Sectorial Cholera (WASH &amp; Health), Emergency Response for Amhara Region( Bahirdar Zuria, and Bahirdar Town), Ethiopia",2025,2738,Under Audit,PRJ_UND_AUD,413886.74000,400000.00,PRJ
+35350,53,Ethiopia,"Gender-Based Violence – Responding to Critical Gaps for Conflict-Affected Populations in East and Horo Guduru Wollega Zones, Kiremu, Guto Gida, and Jardega Jarte Districts",2025,2738,Under Audit,PRJ_UND_AUD,311083.00000,300000.00,PRJ
+35382,53,Ethiopia,Rapid Response for GBV survivors in selected West Gojjam woredas of Amhara Regional State,2025,2738,Under Audit,PRJ_UND_AUD,663260.53000,640734.60,PRJ
+35912,53,Ethiopia,Inclusive and Protective Education in Emergency Response for Conflict-Affected Children in North Shoa Zone of Amhara region.,2025,3515,Under Final Reporting,PRJ_UND_FINAL_RPT,516690.48000,83067.96,PRJ
+36076,53,Ethiopia,"Area based general protection and GBV Responses for Displacement Affected IDP, Host and Returnees in Northwestern Zone of Tigray - Asgede, Laelay Koraro, Shire Endaslasie town, and Tahtay Adiyabo.",2025,2738,Under Audit,PRJ_UND_AUD,516690.48000,498289.25,PRJ
+37848,53,Ethiopia,"Life-saving multi-sectoral humanitarian assistance to address the most critical needs of 
+internally displaced people in Mekelle IDP Camps, Tigray Regional State",2025,3514,Under Final Reporting,PRJ_UND_FINAL_RPT,413886.74000,0.00,PRJ
+39132,53,Ethiopia,"Integrated GBV  and Child Protection Case Management and MHPSS Response with Cash and Dignity Kit Support for Crisis Affected Communities in Haro Limu Ibentu Woredas, East Wollega  Oromia Region.",2026,683,Implementation & Reporting,PRJ_IMPL_RPT,724187.57000,0,PRJ
+216,88,Haiti (RhPF-LAC),2024  Haiti (RhPF) Direct Cost & CPF Module,2024,3,Approved,APPR,201630.00000,0,HMC
+217,88,Haiti (RhPF-LAC),2025  Haiti (RhPF) Direct Cost & CPF Module,2025,3,Approved,APPR,538447.70000,0,HMC
+37591,88,Haiti (RhPF-LAC),"Appui aux enfants stressés de quatre communes du Bas-Artibonite, suite a l'attaque des Groupes Criminels Organisés (GCO).",2025,9388,Mise en oeuvre et rapportage,PRJ_IMPL_RPT,259575.23000,0,PRJ
+52,72,Iraq,2018  Iraq Direct Cost & CPF Module,2018,3,Approved,APPR,1691170.00000,0,HMC
+55,72,Iraq,2019  Iraq Direct Cost & CPF Module,2019,3,Approved,APPR,1665180.00000,0,HMC
+81,72,Iraq,2020  Iraq Direct Cost & CPF Module,2020,3,Approved,APPR,1387455.00000,0,HMC
+98,72,Iraq,2021  Iraq Direct Cost & CPF Module,2021,3,Approved,APPR,1136471.00000,0,HMC
+111,72,Iraq,2022  Iraq Direct Cost & CPF Module,2022,3,Approved,APPR,1236432.00000,0,HMC
+8066,72,Iraq,WASH in School &amp; Hygiene Promotion for returnee students,2018,2601,Project Closed,PRJ_PRJ_CLS,270341.80000,265381.40,PRJ
+8098,72,Iraq,"Urgent  catch-up classes, psycho-social support , and teachers training in new retaken areas in Alzab  Hawija and Alabassy districts.",2018,2603,Under Refund,PRJ_UND_REF,121660.35000,119428.05,PRJ
+8183,72,Iraq,"Provision of Education in Emergencies to 12,130 conflict-affected IDP and host community girls and boys in Ninewa and Kirkuk governorates",2018,2601,Project Closed,PRJ_PRJ_CLS,674645.69000,656755.52,PRJ
+8235,72,Iraq,Urgent Cash distribution for the most vulnerable families in Shirqat,2018,2600,Under Audit,PRJ_UND_AUD,300780.00000,24184.32,PRJ
+13856,72,Iraq,Contribution to the improved protection of children and families in Salah al-Din,2019,2601,Project Closed,PRJ_PRJ_CLS,533882.36000,520200.00,PRJ
+37,73,Jordan,2018  Jordan Direct Cost & CPF Module,2018,3,Approved,APPR,418568.00000,0,HMC
+77,73,Jordan,2019  Jordan Direct Cost & CPF Module,2019,3,Approved,APPR,418890.00000,0,HMC
+78,73,Jordan,2020  Jordan Direct Cost & CPF Module,2020,3,Approved,APPR,498641.00000,0,HMC
+23,71,Lebanon,2018 Lebanon Management Module,2018,3,Approved,APPR,456050.05000,0,HMC
+24,71,Lebanon,2017 Lebanon Management Module,2017,4,Closed,CLSD,508175.00000,0,HMC
+44,71,Lebanon,2019  Lebanon Direct Cost & CPF Module,2019,3,Approved,APPR,459258.00000,0,HMC
+82,71,Lebanon,2020  Lebanon Direct Cost & CPF Module,2020,3,Approved,APPR,545313.00000,0,HMC
+113,71,Lebanon,2021  Lebanon Direct Cost & CPF Module,2021,3,Approved,APPR,723420.00000,0,HMC
+127,71,Lebanon,2022  Lebanon Direct Cost & CPF Module,2022,3,Approved,APPR,836978.00000,0,HMC
+141,71,Lebanon,2023  Lebanon Direct Cost & CPF Module,2023,3,Approved,APPR,999779.00000,0,HMC
+9669,71,Lebanon,Life skills support and well-being sessions for vulnerable Syrian refugee women and their children residing in underprivileged suburbs of Beirut through occupational trainings,2018,2815,Project Closed,PRJ_PRJ_CLS,106177.76000,98933.06,PRJ
+25449,71,Lebanon,"(Pillar 3: 90%) Protection of the Most Vulnerable Migrant Workers and Migrant Children through a multi-sectoral approach, and (Pillar 2: 10%) Strengthening the Co-Coordination the Migrant Sector",2023,2816,Under Audit,PRJ_UND_AUD,380656.70000,359204.92,PRJ
+27029,71,Lebanon,Pillar 1 - Health Preparedness and Immediate Response to Displaced Persons and Affected by the Clashes in South of Lebanon,2023,2818,Under Audit,PRJ_UND_AUD,413782.95000,399804.49,PRJ
+26049,86,Mali (RhPF-WCA),"Réponse Intégrée et Urgente aux besoins vitaux et renforcement de la résilience des populations les plus vulnérables dans les communes de Bankass, Kani-Bonzon  dans la région de Bandiagara",2023,8708,Sous Audit,PRJ_UND_AUD,516586.69000,463938.46,PRJ
+26073,86,Mali (RhPF-WCA),Réponse d’urgence multisectorielle aux populations vulnérables/affectés par l’insécurité alimentaire et nutritionnelle et aux VBG. (Jigi Tugu : Espoir rénoué) à Bandiagara (Bankass et Kani-Bonzon),2023,8708,Sous Audit,PRJ_UND_AUD,516586.69000,453339.56,PRJ
+36921,86,Mali (RhPF-WCA),"Réponse multisectorielle intégrée aux besoins urgents en sécurité alimentaire, santé et nutrition au profit des personnes touchées par les crises dans la région de Ségou (San, Benena, Mandiakuy)",2025,8720,Sous rapportage final,PRJ_UND_FINAL_RPT,705563.00000,428735.00,PRJ
+39143,89,Mozambique (RhPF),"Food assistance for displaced people in the province of Nampula, in the districts of Memba and Erati.",2026,9798,Implementation & Reporting,PRJ_IMPL_RPT,244098.68000,0,PRJ
+39193,89,Mozambique (RhPF),"Restore and promote human dignity in the province of Gaza in the districts of Massingir and Mabalane, responding to the emergency.",2026,9798,Implementation & Reporting,PRJ_IMPL_RPT,261232.64000,0,PRJ
+39244,89,Mozambique (RhPF),Post-disaster Response and Resilient Recovery Programs in Gaza Province,2026,9798,Implementation & Reporting,PRJ_IMPL_RPT,647081.98000,0,PRJ
+25,59,Myanmar,2018 Myanmar Humanitarian Fund (MHF) Management Module,2018,4,Closed,CLSD,399786.00000,0,HMC
+27,59,Myanmar,2017  Myanmar Humanitarian Fund (MHF) Direct Cost & CPF Module,2017,4,Closed,CLSD,338120.00000,0,HMC
+34,59,Myanmar,2016  Myanmar Humanitarian Fund (MHF) Direct Cost & CPF Module,2016,4,Closed,CLSD,269794.00000,0,HMC
+51,59,Myanmar,2019  Myanmar Humanitarian Fund (MHF) Direct Cost & CPF Module,2019,3,Approved,APPR,499506.00000,0,HMC
+83,59,Myanmar,2020  Myanmar Humanitarian Fund (MHF) Direct Cost & CPF Module,2020,3,Approved,APPR,581020.00000,0,HMC
+109,59,Myanmar,2021  Myanmar Humanitarian Fund (MHF) Direct Cost & CPF Module,2021,3,Approved,APPR,599649.00000,0,HMC
+110,59,Myanmar,2022  Myanmar Humanitarian Fund (MHF) Direct Cost & CPF Module,2022,3,Approved,APPR,775089.00000,0,HMC
+160,59,Myanmar,2023  Myanmar Humanitarian Fund (MHF) Direct Cost & CPF Module,2023,3,Approved,APPR,803425.00000,0,HMC
+161,59,Myanmar,2024  Myanmar Humanitarian Fund (MHF) Direct Cost & CPF Module,2024,3,Approved,APPR,984072.00000,0,HMC
+13490,59,Myanmar,"Comprehensive Emergency Response and Durable Solution for Prolong conflict affected between men, women, boys and girls who are living in Government Controlled Area and Non-Government Controlled Area in Kachin State",2019,2757,Project Closed,PRJ_PRJ_CLS,813666.89000,794074.58,PRJ
+18657,59,Myanmar,"Enhancing protection, rehabilitation and nutrition services in crises affected communities of Rakhine State",2021,2757,Project Closed,PRJ_PRJ_CLS,372635.72000,361913.72,PRJ
+23108,59,Myanmar,Multi-Sectoral Life Saving Support for Conflicted People in Myanmar’s South-East,2022,2758,Under Audit,PRJ_UND_AUD,734119.75000,688874.47,PRJ
+24150,59,Myanmar,Reducing the vulnerability of conflict-affected people through humanitarian assistance in Magway Region,2022,2759,Under Refund,PRJ_UND_REF,261417.72000,236194.34,PRJ
+25491,59,Myanmar,Community led multi-sectoral lifesaving assistance for IDPs and newly affected people in hard-to-reach and underserved areas in Kayah and Southern Shan State in Myanmar,2023,475,Under Closure,PRJ_UND_CLSR,1504311.59000,1370349.00,PRJ
+25650,59,Myanmar,Community-led multi-sectoral lifesaving assistance for IDPs and newly affected people in hard-to-reach and underserved areas in Kachin and Northern Shan State in Myanmar,2023,475,Under Closure,PRJ_UND_CLSR,1376315.34000,1258257.47,PRJ
+25693,59,Myanmar,Emergency Humanitarian Response to Multi-sectoral needs of Conflict-affected population in Shwegu Township,2023,2756,Under Audit,PRJ_UND_AUD,258621.16000,247567.79,PRJ
+27837,59,Myanmar,Reinforcing the humanitarian footprint to effectively pre-position and scale-up aid to new IDPs in Rakhine,2024,505,Under Closure,PRJ_UND_CLSR,888861.88000,854386.88,PRJ
+32656,59,Myanmar,"Lifesaving multi-sectoral assistance and services to newly and repeated displacement in Mansi, Momauk, Waingmaw, and Nawnghkio  Townships with the most severe needs in the Northeast Region",2024,2756,Under Audit,PRJ_UND_AUD,318249.00000,292231.80,PRJ
+32670,59,Myanmar,"Addressing Urgent Needs of IDPs in Camps, New Displacement Sites and Host Communities in Rakhine State through Shelter, WASH and Protection",2024,2756,Under Audit,PRJ_UND_AUD,199283.96000,183071.02,PRJ
+33456,59,Myanmar,Community led multi-sectoral lifesavings support to new or repeated IDPs and host-community of most severe needs community members in Kayah &amp; Southern Shan State ,2024,2756,Under Audit,PRJ_UND_AUD,815469.87000,774331.28,PRJ
+34463,59,Myanmar,"Provision of lifesaving health, WASH and Shelter/ NFI assistance in flood-affected communities in Mandalay and Magway regions.",2024,2758,Under Audit,PRJ_UND_AUD,929983.48000,884402.39,PRJ
+34988,59,Myanmar,Life-saving aid to crisis-affected people with severe needs in hard-to-reach and underserved areas in South Shan State,2025,2756,Under Audit,PRJ_UND_AUD,404891.44000,380134.94,PRJ
+34995,59,Myanmar,LEAD: Lifesaving Efforts to Ensure Access and Timely Delivery of Aid in Northeast Area. ,2025,2756,Under Audit,PRJ_UND_AUD,779889.99000,739270.44,PRJ
+38113,59,Myanmar,"Life-Saving Multi-Sectoral Response to Strengthen Resilience and Well-being of Conflict-Affected Populations in Hpakant Township, Kachin State ",2025,3512,Under Final Reporting,PRJ_UND_FINAL_RPT,209565.06000,0,PRJ
+24174,84,Niger (RhPF-WCA),Interventions d'urgence EHA pour  les  personnes victimes des inondations dans le département de Mirriah,2022,7705,Projet clôturé,PRJ_PRJ_CLS,267442.95000,251613.42,PRJ
+24178,84,Niger (RhPF-WCA),"Provision d'une assistance sanitaire d'urgence aux populations déplacées et hôtes, victimes de la crise sécuritaire dans le district sanitaire de Todori, Région de Tillabéry– Niger",2022,7705,Projet clôturé,PRJ_PRJ_CLS,593944.11000,579999.99,PRJ
+24214,84,Niger (RhPF-WCA),Accès aux soins et à la prise en charge médicale des populations affectées par le conflit au Nigéria dans les districts sanitaires de Guidan Roumdji et Madarounfa (Région de Maradi-Niger).,2022,7705,Projet clôturé,PRJ_PRJ_CLS,410044.30000,399941.07,PRJ
+25894,84,Niger (RhPF-WCA),"Réponse multisectorielle d’urgence aux populations (hommes, femmes, filles et garçons ) affectées par l'insécurité alimentaire et besoin EHA dans la Commune Guéskerou, Région de Diffa ",2023,7706,Sous Audit,PRJ_UND_AUD,670526.15000,633640.58,PRJ
+25895,84,Niger (RhPF-WCA),Réponse d'urgence multisectorielle et intégrée aux besoins en protection de l'enfance et éducation des populations PDIs et hôtes dans la région de Tillabéry.,2023,7706,Sous Audit,PRJ_UND_AUD,413783.20000,396077.58,PRJ
+32687,84,Niger (RhPF-WCA),"Projet de Sécurisation des Ressources des Ménages déplacés, réfugiés et communautés hôtes dans la commune de chétimari, Région de Diffa (PSRM)",2024,7708,Sous Audit,PRJ_UND_AUD,722729.93000,675891.66,PRJ
+34337,84,Niger (RhPF-WCA),Réponse d’urgence intégrée dans les secteurs de la sécurité alimentaire &amp; WASH au profit des personnes déplacées internes(PDI) de la commune urbaine de Téra région de Tillabéry.,2024,7655,Mise en oeuvre & Rapportage,PRJ_IMPL_RPT,839925.60000,611132.43,PRJ
+34370,84,Niger (RhPF-WCA),"Projet d’Appui Multisectoriel pour la Résilience des Communautés Déplacées et Hôtes dans les Villages de Digargo et Mattaou, Région de Diffa (PAMREC)",2024,7706,Sous Audit,PRJ_UND_AUD,643466.99000,607548.03,PRJ
+18,75,Nigeria,2017 Nigeria Management Module,2017,3,Approved,APPR,1178428.00000,0,HMC
+38,75,Nigeria,2018  Nigeria Direct Cost & CPF Module,2018,3,Approved,APPR,1529297.00000,0,HMC
+54,75,Nigeria,2019  Nigeria Direct Cost & CPF Module,2019,3,Approved,APPR,1851895.00000,0,HMC
+87,75,Nigeria,2020  Nigeria Direct Cost & CPF Module,2020,3,Approved,APPR,1823632.00000,0,HMC
+114,75,Nigeria,2021  Nigeria Direct Cost & CPF Module,2021,3,Approved,APPR,1519684.00000,0,HMC
+117,75,Nigeria,2022  Nigeria Direct Cost & CPF Module,2022,3,Approved,APPR,1661309.00000,0,HMC
+145,75,Nigeria,2023  Nigeria Direct Cost & CPF Module,2023,3,Approved,APPR,1737531.00000,0,HMC
+159,75,Nigeria,2024  Nigeria Direct Cost & CPF Module,2024,3,Approved,APPR,1834222.00000,0,HMC
+6925,75,Nigeria,Provision of Education in Emergency for Conflict-affected Girls and Boys in Bornoand        Yobe,2017,3188,Project Closed,PRJ_PRJ_CLS,513143.66000,503728.14,PRJ
+7148,75,Nigeria,An integrated Education intervention for Primary and Junior secondary schools in Monguno  Local Government Area of Borno state,2017,3188,Project Closed,PRJ_PRJ_CLS,118423.00000,115120.02,PRJ
+7157,75,Nigeria,Reinsertion and Reintegration Assistance provided to Children Associated with Armed Forces and Groups and other conflict affected children in Borno State,2017,3187,Under Audit,PRJ_UND_AUD,256867.22000,104182.85,PRJ
+7297,75,Nigeria,"Providing safe and equitable access to quality and inclusive education in a protective environment for children affected by the conflict in Konduga, Gwoza and Madagali.",2017,3188,Project Closed,PRJ_PRJ_CLS,411476.64000,372543.46,PRJ
+10709,75,Nigeria,"Provision of access to safe, protective and Quality  Education for Conflict Affected Boys and Girls (6-12years) in Nganzai LG",2018,3188,Project Closed,PRJ_PRJ_CLS,225440.97000,219153.12,PRJ
+10711,75,Nigeria,Provision of Integrated WASH Sustainability Services and Promotion of Hygiene Intervention to IDP Camps in Ran Town of Kala-Balge LGA.,2018,3190,Under Refund,PRJ_UND_REF,102814.71000,99732.56,PRJ
+10726,75,Nigeria,Holistic child protection for most affected children in Borno State - the Right to Care for all,2018,3190,Under Refund,PRJ_UND_REF,361477.37000,350680.87,PRJ
+10875,75,Nigeria,Improving Access to Lifesaving Quality Education for Most Vulnerable Boys and Girls in Borno,2018,3188,Project Closed,PRJ_PRJ_CLS,693220.25000,680500.61,PRJ
+12296,75,Nigeria,Scaling Up Emergency WASH Support to Internally Displaced People (IDPs- New Arrivals) in Monguno and Jere LGAs of Borno State,2019,3186,Project Closed,PRJ_PRJ_CLS,205875.21000,199917.91,PRJ
+16479,75,Nigeria,"Provision of life saving assistance to children under five years of age suffering from Severe Acute Malnutrition (SAM) amid the COVID-19 Pandemic in Borno and Yobe state, North east Nigeria",2020,3188,Project Closed,PRJ_PRJ_CLS,728246.37000,694694.80,PRJ
+16641,75,Nigeria,"Improving wellbeing and access to lifesaving protection of conflict affected children, adolescents and caregivers through comprehensive case management and psychosocial support mechanisms in NE state of Adamawa.",2020,3188,Project Closed,PRJ_PRJ_CLS,145251.17000,138126.86,PRJ
+20467,75,Nigeria,Strengthening community based multi sectorial assistance to conflict affected children and other vulnerable people in BAY States.,2021,3188,Project Closed,PRJ_PRJ_CLS,190472.52000,167012.16,PRJ
+27151,75,Nigeria,"Information management services for improved evidence-based humanitarian interventions in Borno, Yobe, and Adamawa States",2023,3187,Under Audit,PRJ_UND_AUD,105518.96000,98008.82,PRJ
+35858,75,Nigeria,Anticipatory Multipurpose Cash Assistance for Flood-Prone Households in Adamawa State,2025,3189,Under Audit,PRJ_UND_AUD,465251.16000,420850.31,PRJ
+35874,75,Nigeria,Provision of  Emergency  Multi-Purpose Cash Assistance (MPCA) to the Flood-Affected Vulnerable Population in Girei and Fufore LGAs of Adamawa State.,2025,3189,Under Audit,PRJ_UND_AUD,413849.29000,396173.63,PRJ
+5,67,oPt,2016 oPt Management Module,2016,4,Closed,CLSD,200287.00000,0,HMC
+16,67,oPt,2017 oPt Management Module,2017,4,Closed,CLSD,295764.05000,0,HMC
+26,67,oPt,2018 oPt Management Module,2018,4,Closed,CLSD,366142.00000,0,HMC
+46,67,oPt,2019  oPt Direct Cost & CPF Module,2019,4,Closed,CLSD,476548.00000,0,HMC
+68,67,oPt,2020  oPt Direct Cost & CPF Module,2020,4,Closed,CLSD,512005.00000,0,HMC
+90,67,oPt,2021  oPt Direct Cost & CPF Module,2021,4,Closed,CLSD,693213.00000,0,HMC
+104,67,oPt,2022  oPt Direct Cost & CPF Module,2022,4,Closed,CLSD,790561.00000,0,HMC
+120,67,oPt,2023  oPt Direct Cost & CPF Module,2023,4,Closed,CLSD,785530.00000,0,HMC
+150,67,oPt,2024  oPt Direct Cost & CPF Module,2024,4,Closed,CLSD,1666089.51000,0,HMC
+179,67,oPt,2025  oPt Direct Cost & CPF Module,2025,3,Approved,APPR,1699887.35000,0,HMC
+222,67,oPt,2026  oPt Direct Cost & CPF Module,2026,3,Approved,APPR,1859227.00000,0,HMC
+7614,67,oPt,Urgent support for the most vulnerable families in Gaza Strip,2017,2795,Project Closed,PRJ_PRJ_CLS,369301.43000,361735.14,PRJ
+9451,67,oPt,Provision of life saving drugs and disposables to respond to the emergency medical needs in Gaza.,2018,2795,Project Closed,PRJ_PRJ_CLS,998499.87000,979629.05,PRJ
+10652,67,oPt,"Continuing, Increasing and Enhancing The Free Supply of Blood Units to The Hospitals of Gaza Strip as Response to Great Return of March Events.",2018,2797,Project Closed,PRJ_PRJ_CLS,253904.08000,222049.68,PRJ
+12289,67,oPt,"Address the emergency and post-emergency rehabilitation gaps for the most vulnerable women, men, girls and boys with injuries and disabilities in the Gaza Strip.",2019,2797,Project Closed,PRJ_PRJ_CLS,661119.74000,645837.44,PRJ
+12318,67,oPt,Protection of Vulnerable Women and Girls Survivors of GBV in the Gaza Strip Through Coordinated and Multisectoral Responses,2019,2797,Project Closed,PRJ_PRJ_CLS,420747.94000,407123.14,PRJ
+12363,67,oPt,"Mitigating part of the Israeli occupation and its settlers' oppression in area C southwest of Bethlehem, by providing vulnerable communities the access to domestic water:  Al Khadr (Um Rukba &amp; Abu Soud) and Artas (Attan, She'b Salman and Abu Zaid) as target groups.",2019,2797,Project Closed,PRJ_PRJ_CLS,296601.96000,217093.96,PRJ
+13936,67,oPt,Strengthen WASH preparedness and response capacity of vulnerable communities to winter floods,2019,2797,Project Closed,PRJ_PRJ_CLS,696174.95000,674061.32,PRJ
+13938,67,oPt,Most vulnerable households exposed to impacts of harsh weather and protection concerns are supported to meet their basic shelter needs and enhance their coping capacity,2019,2797,Project Closed,PRJ_PRJ_CLS,361698.64000,352488.57,PRJ
+13998,67,oPt,Enhance the resilience and food security of vulnerable farmers in area c,2019,2797,Project Closed,PRJ_PRJ_CLS,398581.90000,373037.20,PRJ
+14022,67,oPt,Urgent support to vulnerable poor farmers in the ARA and poor vulnerable households in the Gaza Strip.,2019,2797,Project Closed,PRJ_PRJ_CLS,394274.85000,359798.56,PRJ
+14051,67,oPt,Protection and Support of Women and Girls With Disabilities and Survivors of Cancer Subjected to GBV Through Gender Responsive Multisectoral Responses,2019,2797,Project Closed,PRJ_PRJ_CLS,322519.59000,314004.61,PRJ
+14056,67,oPt,"MHPSS, Child Protection and educational intervention to prevent and mitigate the impact of conflict related violence in East Jerusalem, area C and H2 area of Hebron.",2019,2797,Project Closed,PRJ_PRJ_CLS,278553.56000,268310.23,PRJ
+14057,67,oPt,"Emergency response to improve access to safe, sufficient and affordable water for the vulnerable population in area C, West Bank",2019,2797,Project Closed,PRJ_PRJ_CLS,306626.81000,251467.81,PRJ
+15247,67,oPt,Safe Surgical Management for Gaza's Vulnerable People,2020,2797,Project Closed,PRJ_PRJ_CLS,431915.56000,421269.87,PRJ
+15303,67,oPt,"Protection of Most Vulnerable Women and Girls including GBV Survivors with Disabilities, Chronically Ill, and Women With Breast Cancer Through Coordinated and Multisectoral Specialized Responses.",2020,2797,Project Closed,PRJ_PRJ_CLS,206395.10000,199270.54,PRJ
+15466,67,oPt,Enhance Farmers' resilience through Improving food security for most vulnerable Households in Jordan Valley,2020,2797,Project Closed,PRJ_PRJ_CLS,155420.97000,135516.55,PRJ
+17457,67,oPt,"Provide emergency response to agricultural communities in the Izbat Shufa area and its environs of villages to alleviate the effect of struggles and suffering resulting from the occupation practices
+",2020,2797,Project Closed,PRJ_PRJ_CLS,206377.99000,199992.09,PRJ
+17462,67,oPt,Enhance Farmers' resilience through Improving food security for most vulnerable Households in area C,2020,2796,Under Audit,PRJ_UND_AUD,308239.29000,299354.90,PRJ
+18547,67,oPt,Strengthening of Public health Capacity and Service Delivery during COVID-19 outbreak in the Gaza Strip,2021,2795,Project Closed,PRJ_PRJ_CLS,1018691.59000,235410.21,PRJ
+19021,67,oPt,Improving accessibility to dignified and safe multi-sectoral protection and prevention services for acutely vulnerable women and girls survivors of sexual and gender-based violence in high priority areas in the Gaza Strip,2021,2795,Project Closed,PRJ_PRJ_CLS,336034.82000,327292.84,PRJ
+19065,67,oPt,Mental Health  Integration   at Primary Health Care  level,2021,2795,Project Closed,PRJ_PRJ_CLS,270182.73000,260075.27,PRJ
+19079,67,oPt,"Providing WASH repairs in the Gaza Strip and Mental Health and Psychosocial Services for the most vulnerable children and caregivers in the Gaza Strip and the West Bank, including East Jerusalem",2021,2795,Project Closed,PRJ_PRJ_CLS,814680.15000,794979.62,PRJ
+19136,67,oPt,Improving access to mental health care and psycho-social support services for the acutely vulnerable women and children impacted by covid-19 and recent escalation in the Gaza Strip,2021,2795,Project Closed,PRJ_PRJ_CLS,308144.33000,299906.60,PRJ
+20964,67,oPt,"Improving accessibility to dignified and safe protection responses for acutely vulnerable women SGBV survivors, and children and adults and youth affected by conflict related violence in the Gaza Strip",2021,2799,Under Refund,PRJ_UND_REF,359199.80000,349998.76,PRJ
+20969,67,oPt,Enhance Farmers' resilience through Improving food security for most vulnerable Households in Eastern &amp; Southern Nablus,2021,2797,Project Closed,PRJ_PRJ_CLS,369092.76000,359747.02,PRJ
+20987,67,oPt,Emergency Shelter Rehabilitation for Vulnerable Families in East Jerusalem,2021,2797,Project Closed,PRJ_PRJ_CLS,294165.66000,286194.62,PRJ
+21037,67,oPt,"MHPSS, Protection and Child Protection intervention to prevent and mitigate the impact of conflict related violence on Palestinian southern communities of the West Bank",2021,2797,Project Closed,PRJ_PRJ_CLS,84468.54000,77391.86,PRJ
+21582,67,oPt,Support to the operationalization of the Prevention of Sexual Exploitation and Abuse System,2022,2795,Project Closed,PRJ_PRJ_CLS,387560.40000,376323.98,PRJ
+22490,67,oPt,Enhance Farmers' resilience through Improving food security for most vulnerable Households in the north west bank- Area C,2022,2796,Under Audit,PRJ_UND_AUD,453531.63000,442635.96,PRJ
+22522,67,oPt,Urgent repair and rehabilitation for affected shelters with partially damaged in Gaza and North-Gaza,2022,2796,Under Audit,PRJ_UND_AUD,406388.23000,393512.98,PRJ
+23986,67,oPt,Improving accessibility to safe and dignified multi-sectoral prevention and response services for acutely vulnerable women and girls GBV survivors including with disabilities and cancer patients across Gaza Strip,2022,2796,Under Audit,PRJ_UND_AUD,358670.19000,347894.12,PRJ
+24057,67,oPt,Urgent shelter winterization interventions for vulnerable households exposed to harsh weather in Gaza strip,2022,2796,Under Audit,PRJ_UND_AUD,443114.04000,430253.96,PRJ
+24583,67,oPt,Women Aid Women: Humanitarian response in the West Bank  ,2023,2797,Project Closed,PRJ_PRJ_CLS,413836.45000,397673.01,PRJ
+24654,67,oPt,"Improving access to safe, inclusive and coordinated multi-sectoral GBV 
+services for most vulnerable women and girls GBV survivors including with disabilities and cancer patients in Gaza Strip",2023,2796,Under Audit,PRJ_UND_AUD,331583.29000,319905.19,PRJ
+24689,67,oPt,"Vulnerable children with disabilities in Gaza, enjoy their right to education in a safe, integrated, and well-nourished environment, Education bridges.",2023,2796,Under Audit,PRJ_UND_AUD,259630.89000,249458.89,PRJ
+24691,67,oPt,Enhancing vulnerable farmers access to essential lifesaving basic services through cash support and assistance for agriculture workers through CfW modality in southern area of Gaza Strip,2023,2796,Under Audit,PRJ_UND_AUD,408209.59000,394526.60,PRJ
+26799,67,oPt,TBD: Food Security Response to Gaza emergency,2023,2798,Under Audit,PRJ_UND_AUD,774238.04000,737210.99,PRJ
+26812,67,oPt,Enhancing Women's and Girls' Resilience including their Families during Emergency Situations.,2023,2798,Under Audit,PRJ_UND_AUD,311032.71000,300000.00,PRJ
+27374,67,oPt,Provision of food parcels to affected IDPs in the Gaza Strip ,2023,2798,Under Audit,PRJ_UND_AUD,1545986.54000,1499660.00,PRJ
+27375,67,oPt,Provision of life-saving WASH supplies and services to children and their families affected by the crisis in the Gaza Strip,2023,2795,Project Closed,PRJ_PRJ_CLS,1336448.60000,1280511.10,PRJ
+27377,67,oPt,Provision of nutrition and health care services to the most vulnerable children and women affected by the current escalation in the Gaza Strip.,2023,2795,Project Closed,PRJ_PRJ_CLS,3426817.84000,3333359.17,PRJ
+27659,67,oPt,"Repositioning 48-Hours Response Mechanism in the West Bank (PARC $500,000)
+
+
+
+
+
+
+
+
+
+
+",2024,2798,Under Audit,PRJ_UND_AUD,516640.19000,497265.59,PRJ
+27774,67,oPt,Improving access to safe and inclusive life-saving GBV specialized services  for most vulnerable conflict-affected women and girls GBV survivors in hotspots of KhanYounis and Middle Area Governorates ,2024,2798,Under Audit,PRJ_UND_AUD,257809.17000,248228.01,PRJ
+27850,67,oPt,The Urgent Response to NFIs and Shelter needs for IDPs in Khanyounis and Diralbalah,2024,2798,Under Audit,PRJ_UND_AUD,259678.72000,250046.57,PRJ
+33667,67,oPt,"Integrated WASH Response for Enhancing Safe Water, Sanitation, and Hygiene Promotion in Gaza's UNRWA Designated Emergency Shelters including Temporary Learning Spaces",2024,2799,Under Refund,PRJ_UND_REF,308001.50000,174972.82,PRJ
+33678,67,oPt,Improving the management of the most vulnerable displacement sites in the Mawasi Khan Yunis Area,2024,2796,Under Audit,PRJ_UND_AUD,259630.72000,249185.12,PRJ
+33688,67,oPt,Urgent response to shelter and NFIs winterization needs of the most vulnerable IDPs in the Gaza strip,2024,276,Implementation & Reporting,PRJ_IMPL_RPT,1031247.38000,565435.48,PRJ
+33752,67,oPt,Integrated emergency shelter assistance through the provision of winterization NFIs in the Gaza Strip,2024,2799,Under Refund,PRJ_UND_REF,873835.60000,849995.16,PRJ
+33794,67,oPt,"Establishing Temporary Learning Spaces for Conflict-Affected School-Aged Children in Gaza, Featuring the Procurement and Installation of Tents in UNRWA DESs.",2024,2799,Under Refund,PRJ_UND_REF,668224.26000,649999.96,PRJ
+33818,67,oPt,Scaling Up the Treatment of Acute Malnutrition for Children Under 5 years and Pregnant and Breastfeeding Women,2024,2796,Under Audit,PRJ_UND_AUD,413781.70000,399946.74,PRJ
+33916,67,oPt,Health and protection in Gaza,2024,3508,Under Final Reporting,PRJ_UND_FINAL_RPT,259665.30000,208153.69,PRJ
+34480,67,oPt,Enhance the Centrality of Protection in the Gaza Strip: Improve Prevention and Response against SEA.,2024,2795,Project Closed,PRJ_PRJ_CLS,515852.57000,501783.86,PRJ
+34837,67,oPt,"Emergency WASH services to conflict affected communities, returnees and new IDPs in North Gaza Governorate ",2025,2798,Under Audit,PRJ_UND_AUD,413836.45000,317378.91,PRJ
+34859,67,oPt,Enhance access to essential health services for IDPs and returnees in the Gaza Strip,2025,3509,Under Final Reporting,PRJ_UND_FINAL_RPT,514018.69000,500000.00,PRJ
+34895,67,oPt,"Enhancing accessibility to safe, dignified, inclusive and specialized protection services and MHPSS response to most acute needs of women and girls GBV survivors in Gaza Strip",2025,2798,Under Audit,PRJ_UND_AUD,259630.85000,249229.65,PRJ
+34937,67,oPt,Seasonal Clothing Assistance through Restricted Voucher Modality for Vulnerable IDPs and Returnees in Gaza,2025,3509,Under Final Reporting,PRJ_UND_FINAL_RPT,774209.38000,114265.89,PRJ
+35255,67,oPt,Emergency Food Assistance in Northern West Bank: E-Vouchers and Fresh Vegetables from Small-Scale Farmers.,2025,2798,Under Audit,PRJ_UND_AUD,517230.10000,497913.24,PRJ
+35358,67,oPt,Back to School – Leaving No One Behind,2025,2798,Under Audit,PRJ_UND_AUD,516616.96000,499977.40,PRJ
+37625,67,oPt,"Enhancing Access to Safe Water, Sanitation, and Hygiene Practices for Vulnerable communities affected by conflicts.",2025,2798,Under Audit,PRJ_UND_AUD,259630.84000,249074.01,PRJ
+37636,67,oPt,Enhancing the Resilience of Livestock Herders Affected by Settler Violence in Central and Northern West Bank,2025,2798,Under Audit,PRJ_UND_AUD,382855.21000,361794.60,PRJ
+37637,67,oPt,"Restoring Shelter Safety and Dignity: Integrated Emergency Shelter, NFI, and Technical Support for Displaced and Returning Households in Gaza City and Khan Younis",2025,538,Implementation & Reporting,PRJ_IMPL_RPT,620032.43000,0,PRJ
+37660,67,oPt,Area-Based Site Management and Infrastructure Support for IDPs sites Ahead of Winter in Mawasi-Khan Younis,2025,2798,Under Audit,PRJ_UND_AUD,259630.85000,250000.00,PRJ
+37680,67,oPt,Improving accessibility to safe and inclusive GBV services for most vulnerable women and girls in Gaza Strip,2025,538,Implementation & Reporting,PRJ_IMPL_RPT,482371.59000,26768.12,PRJ
+37697,67,oPt,Gaza Emergency Health Response ,2025,3509,Under Final Reporting,PRJ_UND_FINAL_RPT,311028.50000,164326.50,PRJ
+38740,67,oPt,Address Multiple Needs of IDPs in Gaza Through Providing Multi-Purpose Cash Assistance (MPCA),2025,3509,Under Final Reporting,PRJ_UND_FINAL_RPT,345142.80000,142417.58,PRJ
+72,60,Pakistan,2020  Pakistan Direct Cost & CPF Module,2020,3,Approved,APPR,228174.00000,0,HMC
+88,60,Pakistan,2019  Pakistan Direct Cost & CPF Module,2019,3,Approved,APPR,260181.00000,0,HMC
+96,60,Pakistan,2021  Pakistan Direct Cost & CPF Module,2021,3,Approved,APPR,228278.00000,0,HMC
+107,60,Pakistan,2022  Pakistan Direct Cost & CPF Module,2022,3,Approved,APPR,143904.00000,0,HMC
+13693,60,Pakistan,"Institutional WASH Assistance through access to safe and clean drinking water, improved sanitation and hygiene behavior in newly merged district Kurram",2019,2765,Project Closed,PRJ_PRJ_CLS,241734.04000,223495.18,PRJ
+37437,97,Pakistan (AP-RHPF),"Emergency WASH, Health Facility Support, and Resilience Building for Flood Affected Communities in Shangla",2025,14547,Under Final Reporting,PRJ_UND_FINAL_RPT,131072.60000,59888.66,PRJ
+37437,97,Pakistan (AP-RHPF),"Emergency WASH, Health Facility Support, and Resilience Building for Flood Affected Communities in Shangla",2025,14547,Under Final Reporting,PRJ_UND_FINAL_RPT,131072.60000,59888.66,PRJ
+37437,97,Pakistan (AP-RHPF),"Emergency WASH, Health Facility Support, and Resilience Building for Flood Affected Communities in Shangla",2025,14547,Under Final Reporting,PRJ_UND_FINAL_RPT,131072.60000,59888.66,PRJ
+37437,97,Pakistan (AP-RHPF),"Emergency WASH, Health Facility Support, and Resilience Building for Flood Affected Communities in Shangla",2025,14547,Under Final Reporting,PRJ_UND_FINAL_RPT,131072.60000,59888.66,PRJ
+37437,97,Pakistan (AP-RHPF),"Emergency WASH, Health Facility Support, and Resilience Building for Flood Affected Communities in Shangla",2025,14547,Under Final Reporting,PRJ_UND_FINAL_RPT,131072.60000,59888.66,PRJ
+37437,97,Pakistan (AP-RHPF),"Emergency WASH, Health Facility Support, and Resilience Building for Flood Affected Communities in Shangla",2025,14547,Under Final Reporting,PRJ_UND_FINAL_RPT,131072.60000,59888.66,PRJ
+37437,97,Pakistan (AP-RHPF),"Emergency WASH, Health Facility Support, and Resilience Building for Flood Affected Communities in Shangla",2025,14547,Under Final Reporting,PRJ_UND_FINAL_RPT,131072.60000,59888.66,PRJ
+37437,97,Pakistan (AP-RHPF),"Emergency WASH, Health Facility Support, and Resilience Building for Flood Affected Communities in Shangla",2025,14547,Under Final Reporting,PRJ_UND_FINAL_RPT,131072.60000,59888.66,PRJ
+37437,97,Pakistan (AP-RHPF),"Emergency WASH, Health Facility Support, and Resilience Building for Flood Affected Communities in Shangla",2025,14547,Under Final Reporting,PRJ_UND_FINAL_RPT,131072.60000,59888.66,PRJ
+37437,97,Pakistan (AP-RHPF),"Emergency WASH, Health Facility Support, and Resilience Building for Flood Affected Communities in Shangla",2025,14547,Under Final Reporting,PRJ_UND_FINAL_RPT,131072.60000,59888.66,PRJ
+37437,97,Pakistan (AP-RHPF),"Emergency WASH, Health Facility Support, and Resilience Building for Flood Affected Communities in Shangla",2025,14547,Under Final Reporting,PRJ_UND_FINAL_RPT,131072.60000,59888.66,PRJ
+37437,97,Pakistan (AP-RHPF),"Emergency WASH, Health Facility Support, and Resilience Building for Flood Affected Communities in Shangla",2025,14547,Under Final Reporting,PRJ_UND_FINAL_RPT,131072.60000,59888.66,PRJ
+37437,97,Pakistan (AP-RHPF),"Emergency WASH, Health Facility Support, and Resilience Building for Flood Affected Communities in Shangla",2025,14547,Under Final Reporting,PRJ_UND_FINAL_RPT,131072.60000,59888.66,PRJ
+38161,97,Pakistan (AP-RHPF),"“Winterization and NFI Assistance for Flood-Affected Communities of Tehsil Kabirwala, District Khanewal.”",2025,14535,Under Audit,PRJ_UND_AUD,131073.51000,125000.79,PRJ
+38161,97,Pakistan (AP-RHPF),"“Winterization and NFI Assistance for Flood-Affected Communities of Tehsil Kabirwala, District Khanewal.”",2025,14535,Under Audit,PRJ_UND_AUD,131073.51000,125000.79,PRJ
+38161,97,Pakistan (AP-RHPF),"“Winterization and NFI Assistance for Flood-Affected Communities of Tehsil Kabirwala, District Khanewal.”",2025,14535,Under Audit,PRJ_UND_AUD,131073.51000,125000.79,PRJ
+38161,97,Pakistan (AP-RHPF),"“Winterization and NFI Assistance for Flood-Affected Communities of Tehsil Kabirwala, District Khanewal.”",2025,14535,Under Audit,PRJ_UND_AUD,131073.51000,125000.79,PRJ
+38161,97,Pakistan (AP-RHPF),"“Winterization and NFI Assistance for Flood-Affected Communities of Tehsil Kabirwala, District Khanewal.”",2025,14535,Under Audit,PRJ_UND_AUD,131073.51000,125000.79,PRJ
+38161,97,Pakistan (AP-RHPF),"“Winterization and NFI Assistance for Flood-Affected Communities of Tehsil Kabirwala, District Khanewal.”",2025,14535,Under Audit,PRJ_UND_AUD,131073.51000,125000.79,PRJ
+38161,97,Pakistan (AP-RHPF),"“Winterization and NFI Assistance for Flood-Affected Communities of Tehsil Kabirwala, District Khanewal.”",2025,14535,Under Audit,PRJ_UND_AUD,131073.51000,125000.79,PRJ
+38161,97,Pakistan (AP-RHPF),"“Winterization and NFI Assistance for Flood-Affected Communities of Tehsil Kabirwala, District Khanewal.”",2025,14535,Under Audit,PRJ_UND_AUD,131073.51000,125000.79,PRJ
+38161,97,Pakistan (AP-RHPF),"“Winterization and NFI Assistance for Flood-Affected Communities of Tehsil Kabirwala, District Khanewal.”",2025,14535,Under Audit,PRJ_UND_AUD,131073.51000,125000.79,PRJ
+38161,97,Pakistan (AP-RHPF),"“Winterization and NFI Assistance for Flood-Affected Communities of Tehsil Kabirwala, District Khanewal.”",2025,14535,Under Audit,PRJ_UND_AUD,131073.51000,125000.79,PRJ
+38161,97,Pakistan (AP-RHPF),"“Winterization and NFI Assistance for Flood-Affected Communities of Tehsil Kabirwala, District Khanewal.”",2025,14535,Under Audit,PRJ_UND_AUD,131073.51000,125000.79,PRJ
+38161,97,Pakistan (AP-RHPF),"“Winterization and NFI Assistance for Flood-Affected Communities of Tehsil Kabirwala, District Khanewal.”",2025,14535,Under Audit,PRJ_UND_AUD,131073.51000,125000.79,PRJ
+38161,97,Pakistan (AP-RHPF),"“Winterization and NFI Assistance for Flood-Affected Communities of Tehsil Kabirwala, District Khanewal.”",2025,14535,Under Audit,PRJ_UND_AUD,131073.51000,125000.79,PRJ
+11,21,Somalia,2016 Somalia Management Module,2016,4,Closed,CLSD,1986044.12000,0,HMC
+12,21,Somalia,2017 Somalia Management Module,2017,3,Approved,APPR,1675139.57000,0,HMC
+29,21,Somalia,2018  Somalia Direct Cost & CPF Module,2018,3,Approved,APPR,1999696.00000,0,HMC
+48,21,Somalia,2019  Somalia Direct Cost & CPF Module,2019,3,Approved,APPR,1996619.00000,0,HMC
+75,21,Somalia,2020  Somalia Direct Cost & CPF Module,2020,3,Approved,APPR,2043643.00000,0,HMC
+93,21,Somalia,2021  Somalia Direct Cost & CPF Module,2021,3,Approved,APPR,2152548.00000,0,HMC
+108,21,Somalia,2022  Somalia Direct Cost & CPF Module,2022,3,Approved,APPR,2403622.00000,0,HMC
+143,21,Somalia,2023  Somalia Direct Cost & CPF Module,2023,3,Approved,APPR,2573972.00000,0,HMC
+177,21,Somalia,2024  Somalia Direct Cost & CPF Module,2024,3,Approved,APPR,2924097.00000,0,HMC
+178,21,Somalia,2025  Somalia Direct Cost & CPF Module,2025,3,Approved,APPR,2563391.00000,0,HMC
+225,21,Somalia,2026  Somalia Direct Cost & CPF Module,2026,3,Approved,APPR,2488064.00000,0,HMC
+2477,21,Somalia,Provision of Third Party Monitoring Services for CHF Projects in Somalia,2015,351,Under Final Reporting,PRJ_UND_FINAL_RPT,388700.00000,0,PRJ
+2510,21,Somalia,Capacity assessments of 35 NGOs for Somalia Humanitarian Fund (SHF),2016,351,Under Final Reporting,PRJ_UND_FINAL_RPT,280424.53000,0,PRJ
+2515,21,Somalia,Somalia Humanitarian Financing Unit,2016,351,Under Final Reporting,PRJ_UND_FINAL_RPT,1705619.59000,0,PRJ
+5906,21,Somalia,Provision of Call Centre Operator Services inside Somalia on behalf of SHF Somalia,2017,351,Under Final Reporting,PRJ_UND_FINAL_RPT,106004.90000,0,PRJ
+6631,21,Somalia,Promoting Dignity to drought affected  women and girls through GBV Risk Mitigation and Provision of GBV Services in Afgoi and Afgoi corridor of  lower Shabelle regions,2017,292,Project Closed,PRJ_PRJ_CLS,246587.17000,236810.80,PRJ
+6837,21,Somalia,Humanitarian Financing Unit,2017,351,Under Final Reporting,PRJ_UND_FINAL_RPT,1569134.67000,0,PRJ
+8758,21,Somalia,"Integrated response and life-saving intervention of Food Security, Education, Emergency Health, Nutrition and WASH component to drought-affected rural areas in Baidoa District of Bay Region.",2018,294,Project Closed,PRJ_PRJ_CLS,496846.00000,483265.50,PRJ
+9214,21,Somalia,Integrated Emergency support Project for flood affected children in Luuq and Bardera Districts of Gedo Region CSZ.,2018,292,Project Closed,PRJ_PRJ_CLS,213642.20000,205258.10,PRJ
+9590,21,Somalia,"Provision of Shelter Repair and Reconstruction Kits, Gender Based Violence (GBV) and Child Protection Services to Sagar Affected Households in Baki and Lughaya Districts in Awdal Region",2018,292,Project Closed,PRJ_PRJ_CLS,515736.58000,263239.79,PRJ
+9973,21,Somalia,Improve food access to reduce acute humanitarian needs through restocking of families among the most vulnerable Peri-urban and IDPs in food crisis in Qardo district of Bari region,2018,292,Project Closed,PRJ_PRJ_CLS,374959.42000,363134.37,PRJ
+10991,21,Somalia,Improving access food through unconditional cash transfer to vulnerable IDPs in Baidoa District of Bay region.,2018,294,Project Closed,PRJ_PRJ_CLS,616021.60000,599975.75,PRJ
+10992,21,Somalia,"Improving the education system towards sustainable delivery of equitable, quality and protective education services for most vulnerable learners/children in Baidoa IDP settlements.",2018,294,Project Closed,PRJ_PRJ_CLS,462916.59000,449912.10,PRJ
+12430,21,Somalia,"Supporting the immediate access to food, protect and restore livelihood-related food and income sources, and improve the resilience of acutely food insecure people (urban and rural IDPs) against shocks in Galkacyo and Galdogob districts in Mudug region",2019,294,Project Closed,PRJ_PRJ_CLS,616029.24000,587994.24,PRJ
+12478,21,Somalia,"Integrated lifesaving Nutrition Project aimed at reducing morbidity and related mortality, with a strong community component to vulnerable communities in Hobyo district, Mudug Region of Somalia.",2019,294,Project Closed,PRJ_PRJ_CLS,577006.14000,332758.62,PRJ
+12516,21,Somalia,Provision of emergency life-saving nutrition interventions to internally displaced persons  IDPs and host communities in Ceelwaaq district Gedo region,2019,294,Project Closed,PRJ_PRJ_CLS,509832.17000,491329.56,PRJ
+12522,21,Somalia,"Improved  Food Security  for IDP and Host Communities in Abudwak, Galgadud",2019,294,Project Closed,PRJ_PRJ_CLS,310145.20000,297910.37,PRJ
+12533,21,Somalia,"Support drought affected populations in Iskushuban district of  Bari region to protect their livelihoods, support local food production and prevent adoption of crisis strategies",2019,294,Project Closed,PRJ_PRJ_CLS,309641.56000,300000.18,PRJ
+12547,21,Somalia,"Provision of Emergency Primary health care services to marginalized and host communities in Hobyo, Mudug region, South Central Somalia.",2019,294,Project Closed,PRJ_PRJ_CLS,419335.89000,395488.38,PRJ
+12558,21,Somalia,Emergency Food Security and Livelihood Project for Vulnerable IDPs and Destitute Pastoralist Households in Hobyo District,2019,294,Project Closed,PRJ_PRJ_CLS,412024.14000,393521.58,PRJ
+12581,21,Somalia,"Protect and Restore Livelihoods of Cyclone -Affected communities in Awdal Region , Somaliland(Up-scaling)",2019,296,Under Refund,PRJ_UND_REF,308242.25000,297898.72,PRJ
+14509,21,Somalia,"Providing emergency access to safe clean water, sanitation and hygiene to flood-affected IDPs in Baidoa, Bay region",2019,292,Project Closed,PRJ_PRJ_CLS,514160.79000,497245.34,PRJ
+14510,21,Somalia,Provision of  life-saving emergency WASH assistance to flood-affected communities Jowhar district of Middle Shabelle Somalia,2019,292,Project Closed,PRJ_PRJ_CLS,489963.38000,436675.17,PRJ
+14524,21,Somalia,"Access to life-saving WASH services for vulnerable, women, men, girls, boys and affected by floods in Mahaday district of the Middle Shabelle region.",2019,292,Project Closed,PRJ_PRJ_CLS,412024.29000,400000.15,PRJ
+14582,21,Somalia,"Provide life-saving and sustainable integrated Health, Nutrition and WASH interventions for flood affected populations in Beletweyne",2019,292,Project Closed,PRJ_PRJ_CLS,1229198.22000,1185456.40,PRJ
+15127,21,Somalia,"Strengthening GBV prevention and life-saving services in Kahda, Daynile and Afgoye corridor in Banadir region.",2020,294,Project Closed,PRJ_PRJ_CLS,302005.44000,292000.00,PRJ
+15147,21,Somalia,Support to food and nutritional security of drought affected vulnerable households(IDPs) in Kismayu District,2020,294,Project Closed,PRJ_PRJ_CLS,410110.98000,366802.60,PRJ
+15157,21,Somalia,Improved food security of vulnerable communities in  Abudwak through increased access to food and protection of agricultural and livestock assets.,2020,294,Project Closed,PRJ_PRJ_CLS,412024.14000,399154.26,PRJ
+15161,21,Somalia,Improving access to food and livelihood support to vulnerable IDPs in Baidoa District of Bay region.,2020,294,Project Closed,PRJ_PRJ_CLS,308241.82000,298415.60,PRJ
+15230,21,Somalia,"Provision of  integrated emergency GBV services in Bardalle and Xudur, Bardalle districts.",2020,294,Project Closed,PRJ_PRJ_CLS,328615.59000,294913.54,PRJ
+15255,21,Somalia,Lifesaving Assistance to disaster Affected Communities in Baidoa - Somalia,2020,294,Project Closed,PRJ_PRJ_CLS,310154.98000,300000.00,PRJ
+15308,21,Somalia,Continued Life-saving Emergency response for reducing food consumption gaps and increasing immediate access to food in ten(10) villages of Lughaya district of Awdal Region,2020,294,Project Closed,PRJ_PRJ_CLS,386423.34000,374735.40,PRJ
+15332,21,Somalia,Provision of emergency and sustained lifesaving WASH services to most vulnerable crisis communities living In under served areas in Bardhera district of Gedo Region,2020,294,Project Closed,PRJ_PRJ_CLS,412026.45000,400002.27,PRJ
+15384,21,Somalia,Sustaining Life-Saving Support for Identified Vulnerable Households in Adado District,2020,296,Under Refund,PRJ_UND_REF,412024.14000,399997.29,PRJ
+15396,21,Somalia,"WASH response for drought affected communities in Eyl district Nugaal region, Somalia.",2020,294,Project Closed,PRJ_PRJ_CLS,490974.20000,479379.50,PRJ
+15440,21,Somalia,Provide lifesaving WASH services to most vulnerable IDPs members in Kaxda and Deynile district of Banadir region of Somalia,2020,294,Project Closed,PRJ_PRJ_CLS,866180.61000,845755.05,PRJ
+17051,21,Somalia,CCCM Response for IDP Settlements in Qardho and Bosaso IDPS  of Bari  Region- Somalia,2020,294,Project Closed,PRJ_PRJ_CLS,301112.12000,293001.12,PRJ
+17324,21,Somalia,"Provision of Emergency NFI ands Shelter to the newly displaced people affected by Floods in Merka , Wenlaweyn  and Jowhar district, Lower Shabelle region",2020,292,Project Closed,PRJ_PRJ_CLS,1177346.11000,1149094.61,PRJ
+17396,21,Somalia,"Explosive Ordinance Risk Education Training for returnees, IDPs, and host communities in the Afgooye district of Lower Shabelle and Danyiile district of the Banadir region.",2020,292,Project Closed,PRJ_PRJ_CLS,208058.72000,199707.27,PRJ
+18101,21,Somalia,Access to lifesaving education in emergencies for drought and environmental shocks affected girls and boys in Bari Region of Puntland Somalia,2021,294,Project Closed,PRJ_PRJ_CLS,392053.68000,380395.97,PRJ
+18125,21,Somalia,"Deliver life-saving WASH assistance to reduce acute needs among most vulnerable settlements and communities (including men, women, boys and girls) in Burhakaba a dignified manner",2021,294,Project Closed,PRJ_PRJ_CLS,361151.27000,349763.58,PRJ
+18133,21,Somalia,Emergency life-saving WASH assistance to reduce acute needs among most vulnerable settlements and communities in Jalalaqsi district of Hiran Region.,2021,294,Project Closed,PRJ_PRJ_CLS,310217.84000,299635.52,PRJ
+18135,21,Somalia,"Improved, well-coordinated gender sensitive and quality child protection services for Boys and girls including adolescents, children with disabilities facing life-threatening risks of abuse, neglect, violence, exploitation, and severe distress in Luuq.",2021,294,Project Closed,PRJ_PRJ_CLS,206372.69000,200000.00,PRJ
+18176,21,Somalia,"Support for Improved Immediate Access to Food for Vulnerable Households in Galkayo South, Mudug Region.",2021,294,Project Closed,PRJ_PRJ_CLS,208285.82000,197758.95,PRJ
+18180,21,Somalia,"Provision of Emergency Shelter Kits, NFIs and Transitional Shelters in Baidoa",2021,294,Project Closed,PRJ_PRJ_CLS,410110.98000,400000.00,PRJ
+18201,21,Somalia,"Provision of Emergency NFI ands Shelter to the newly displaced people affected by Conflict  and natural disasters in Merka  district, Lower Shabelle region, Somalia",2021,294,Project Closed,PRJ_PRJ_CLS,411497.40000,399482.93,PRJ
+18205,21,Somalia,Increased Access to Sustainable Education Services for IDPs and Children from Vulnerable Host Communities in Gedo Region,2021,294,Project Closed,PRJ_PRJ_CLS,268459.01000,259069.10,PRJ
+18244,21,Somalia,Support immediate access to food while restoring livelihoods related to food and income sources to the affected communities in Belet Weyne district of Hiran region.,2021,293,Under Audit,PRJ_UND_AUD,206372.66000,183822.67,PRJ
+18262,21,Somalia,"Provision of protection monitoring services in Addado district, Galgaduud region of Somalia.",2021,293,Under Audit,PRJ_UND_AUD,208375.75000,199856.64,PRJ
+18301,21,Somalia,"Integrated Support in WASH, Protection, Shelter/NFI and CCCM by DRC, HAPEN, NoFYL and SEDHURO in Belet Xaawo District, Gedo Region.",2021,294,Project Closed,PRJ_PRJ_CLS,703439.49000,574727.39,PRJ
+19772,21,Somalia,"Increase the accessibility of lifesaving safe WASH services to the flood and drought-affected host communities and displaced IDPs in the Belet Weyne district of Hiran region, Hirshabelle State of Somalia.",2021,292,Project Closed,PRJ_PRJ_CLS,412024.14000,394534.44,PRJ
+19778,21,Somalia,"Drought affected/displaced IDPs and host communities have improved access to safe water through rehabilitation/ construction of strategic water points, sanitation facilities, and hygiene promotion and kits distribution to prevent WASH related diseases and reduce protection risks against women girls and PWDs in kaxda and Deynile district of Banadir region, Somalia.",2021,292,Project Closed,PRJ_PRJ_CLS,615048.95000,599037.00,PRJ
+19792,21,Somalia,Restoration of livelihoods related to food and income sources to the affected communities in Belet Weyne district of Hiran region.,2021,292,Project Closed,PRJ_PRJ_CLS,513893.29000,500000.00,PRJ
+19819,21,Somalia,Increased  Household Food Security for   IDPs and  Non- IDP Vulnerable Communities In Garbaharey District,2021,292,Project Closed,PRJ_PRJ_CLS,259052.63000,249809.39,PRJ
+19820,21,Somalia,Enhanced Emergency WASH Services for Vulnerable Tafta Tag and Hashiwer IDPs  and Suriyo Village Non-IDPs in Garbaharey District.,2021,292,Project Closed,PRJ_PRJ_CLS,428880.80000,416528.71,PRJ
+19829,21,Somalia,"Providing Agro inputs and Restore Livelihood for Drought affected agro-pastoral Communities in Rural Bardhere, Gedo Region of Somalia.",2021,292,Project Closed,PRJ_PRJ_CLS,513828.75000,494459.09,PRJ
+19842,21,Somalia,Life-saving support and enhanced resilience of the vulnerable and food insecure drought  and floods affected populace of Jawhar district Middle shabelle  Region.,2021,292,Project Closed,PRJ_PRJ_CLS,513893.29000,499999.77,PRJ
+19852,21,Somalia,"Improved access to food and protection of livelihoods for drought affected host communities in Beletweyne, Hiiran region of  Somalia.",2021,297,Under Refund,PRJ_UND_REF,513962.84000,499988.39,PRJ
+19854,21,Somalia,Strengthening access to Child Protection prevention response Service for internally displaced persons (IDPs) and host communities in Daynille and Kaxda Districts in Mogadishu,2021,292,Project Closed,PRJ_PRJ_CLS,309915.36000,299534.98,PRJ
+19862,21,Somalia,"Improved Immediate Access to Food for Vulnerable IDPs in Dayniile District, Mogadishu in Banadir Region
+
+
+
+",2021,292,Project Closed,PRJ_PRJ_CLS,513893.29000,499117.55,PRJ
+19868,21,Somalia,"Improved access to prevention and treatment of acute malnutrition of children under 5 and PLW from IDPs, and vulnerable host communities in Bardaale district in Bay region",2021,292,Project Closed,PRJ_PRJ_CLS,357156.30000,348016.97,PRJ
+20859,21,Somalia,Integrated Education and Child Protection lifesaving services to drought affected children in Guricel in Galmudug State of Somalia.,2021,292,Project Closed,PRJ_PRJ_CLS,646211.76000,624016.70,PRJ
+20860,21,Somalia,"Providing GBV, Protection Monitoring and CCCM services to enhance the protective  environment for vulnerable and drought affected communities in North Galkacyo.",2021,292,Project Closed,PRJ_PRJ_CLS,435827.70000,424982.40,PRJ
+20917,21,Somalia,"Responding to drought affected people  through an integrated Nutrition, WASH and Camp management within IDPs and rural villages in Galkacyo South District",2021,292,Project Closed,PRJ_PRJ_CLS,1229634.22000,1200000.00,PRJ
+21431,21,Somalia,"Strengthened and improved equitable access to quality lifesaving, curative and preventative nutrition and emergency lifesaving health services for vulnerable and crisis affected groups in Burtinle District of Nugal Region of Puntland State",2022,294,Project Closed,PRJ_PRJ_CLS,564897.42000,534720.75,PRJ
+21434,21,Somalia,"Lifesaving and life-sustaining emergency food security and livelihood support to drought-affected communities in Galdogob District, Mudug region",2022,293,Under Audit,PRJ_UND_AUD,206412.51000,198658.34,PRJ
+21463,21,Somalia,Providing Quality Education Access to Drought affected Children in a Safe and Protective Learning Environment,2022,293,Under Audit,PRJ_UND_AUD,921818.67000,899114.37,PRJ
+21502,21,Somalia,"Integrated emergency lifesaving health and nutrition project aimed at reducing mobility and related mortality to vulnerable rural communities in Kismayo district, Lower Juba region Somalia.",2022,294,Project Closed,PRJ_PRJ_CLS,631789.97000,563120.21,PRJ
+21552,21,Somalia,Providing Life Saving Treatment Nutrition Services to Somali Vulnerable Communities most severely affected by the drought,2022,350,Under Final Reporting,PRJ_UND_FINAL_RPT,1999798.25000,0,PRJ
+21970,21,Somalia,"Provision of NFIs kits  to drought affected and displaced communities in Galgaduud region ( Cabudwaq, Dhusamreeb and Cadado districts).",2022,292,Project Closed,PRJ_PRJ_CLS,615832.37000,599048.06,PRJ
+21975,21,Somalia,Improving the Protective Environment &amp; Access to Child Protection and GBV services for Drought affected populations in Daynile and Kahda,2022,292,Project Closed,PRJ_PRJ_CLS,310609.73000,300000.00,PRJ
+21978,21,Somalia,Integrated emergency Health and Nutrition intervention in Lascaanood and Odaweine Districts of Sool and Togdheer Regions,2022,292,Project Closed,PRJ_PRJ_CLS,483915.49000,472450.30,PRJ
+21981,21,Somalia,Provision of Protection Monitoring &amp; Support for Acute at-risk populations in Lascanood and Buhoodle Districts,2022,295,Under Audit,PRJ_UND_AUD,259304.38000,249458.28,PRJ
+21984,21,Somalia,"Improved Access to lifesaving WASH services to most vulnerable drought-affected people In Jowhar of Middle Shabelle Region, Hirshaballe State of Somalia.",2022,295,Under Audit,PRJ_UND_AUD,615832.00000,590755.20,PRJ
+21985,21,Somalia,"Ensure CCCM basic service provision to drought-affected vulnerable IDPs in Kahda settlements of Banadir Region, Somalia.",2022,292,Project Closed,PRJ_PRJ_CLS,257307.24000,249958.27,PRJ
+21990,21,Somalia,"Addressing the Emergency Shelter &amp; NFIs needs for 25,476 of drought affected persons (4,246hhs) in Daynile district - Banadir region",2022,292,Project Closed,PRJ_PRJ_CLS,717690.09000,699989.13,PRJ
+21998,21,Somalia,Provision of  sustained access to emergency  WASH services for the  drought-affected IDP and Non-IDP households in Abudwak District,2022,292,Project Closed,PRJ_PRJ_CLS,615832.00000,592539.71,PRJ
+22006,21,Somalia,"Emergency supply of safe water, sanitation, and hygiene services among drought-affected households in Buudhoole district of Togdheel region",2022,292,Project Closed,PRJ_PRJ_CLS,715400.90000,695305.50,PRJ
+22007,21,Somalia,"Provide lifesaving WASH services to most vulnerable drought/AWD/Cholera-affected rural communities and unserved populations in hard-to-reach areas including IDPs to prevent loss of lives and drought induced in Cadaado  district, Galgadud region, Somalia.",2022,292,Project Closed,PRJ_PRJ_CLS,564897.42000,550000.00,PRJ
+22027,21,Somalia,"Increased life-saving and sustainable access to water, sanitation and hygiene for disaster Affected Communities in Erigavo district – Sanaag Region",2022,295,Under Audit,PRJ_UND_AUD,662188.61000,645505.57,PRJ
+22039,21,Somalia,Emergency WASH services for drought affected displaced communities in Adado District,2022,292,Project Closed,PRJ_PRJ_CLS,616511.45000,592228.05,PRJ
+22720,21,Somalia,"Emergency Life-saving WASH Services for Drought Affected IDPs and Host Communities in Xudur District, Bakool Region of Somalia (ELIWAS)",2022,292,Project Closed,PRJ_PRJ_CLS,359432.73000,350004.20,PRJ
+22722,21,Somalia,"Provision of Integrated Life-saving Protection Response to Drought -Affected Population in Baidoa;Berdale, Burhakaba and Qansax Dheere.",2022,292,Project Closed,PRJ_PRJ_CLS,308039.53000,295916.64,PRJ
+22737,21,Somalia,"Provision of lifesaving and life-sustaining emergency livelihoods through unconditional cash transfer for 1200HHs (7,200 people) in Buurhakaba district, Bay region.",2022,292,Project Closed,PRJ_PRJ_CLS,494002.76000,479962.90,PRJ
+22742,21,Somalia,"Deliver life-saving WASH assistance to reduce acute needs among drought affected communities (including men, women, boys and girls) in Burhakaba in a dignified manner",2022,292,Project Closed,PRJ_PRJ_CLS,308546.78000,298940.11,PRJ
+23864,21,Somalia,improving community life-saving through camp coordination and camp management in the Kaxda district of Banadir Region of Somalia.,2022,292,Project Closed,PRJ_PRJ_CLS,308656.98000,300000.00,PRJ
+23885,21,Somalia,"Provision of water, sanitation and hygiene response to the drought affected IDP and rural host populations to contribute towards famine prevention in Galkacyo South District.",2022,292,Project Closed,PRJ_PRJ_CLS,410111.01000,400000.00,PRJ
+23909,21,Somalia,"Deliver life-saving WASH assistance to reduce acute needs among most vulnerable settlements and communities (including men, women, boys and girls) in a dignified manner",2022,292,Project Closed,PRJ_PRJ_CLS,410526.14000,399985.43,PRJ
+23917,21,Somalia,Providing assistance and protection services to displaced and affected populations in South Gaalkacyo through enhanced site management and coordination.,2022,292,Project Closed,PRJ_PRJ_CLS,410508.88000,399982.82,PRJ
+23938,21,Somalia,"Provision of emergency Life-saving  water, sanitation and hygiene responses to most affected communities at risk of famine in Galkayo North in Mudug Region",2022,292,Project Closed,PRJ_PRJ_CLS,410463.62000,399931.77,PRJ
+23939,21,Somalia,"Emergency life-saving WASH services for drought-affected communities in Hobyo District, Galmudug Region.",2022,292,Project Closed,PRJ_PRJ_CLS,410660.57000,394701.39,PRJ
+25013,21,Somalia,Strengthening access to quality life-saving GBV services to vulnerable women and girls including GBV survivors in Afgoye district.,2023,293,Under Audit,PRJ_UND_AUD,465657.47000,449969.99,PRJ
+25014,21,Somalia,Provision of integrated lifesaving emergency health care services in Qansaxdhera district in Bay region of SWS Somalia,2023,294,Project Closed,PRJ_PRJ_CLS,622966.90000,600044.23,PRJ
+25017,21,Somalia,"Providing emergency life-saving access to safe, clean water, sanitation, and hygiene to drought-affected communities in the rural areas  Baidoa district",2023,293,Under Audit,PRJ_UND_AUD,517068.19000,499180.69,PRJ
+25029,21,Somalia,"Provision of lifesaving CCCM activities in secondary hubs to further minimize displacement into larger urban areas in Kahda and Deynile targeting 30 IDP camps within the earmarked catchment areas.
+",2023,293,Under Audit,PRJ_UND_AUD,408271.66000,390808.35,PRJ
+25044,21,Somalia,"Provision of Essential Camp Coordinator and Camp Management to the drought and Conflict-affected population in Afgoye districts Lower Shabelle, Somalia",2023,293,Under Audit,PRJ_UND_AUD,414161.14000,399899.50,PRJ
+25060,21,Somalia,Provision of emergency life- saving WASH response packages to drought affected people and or at risk of famine in Qansaxdhere district.,2023,294,Project Closed,PRJ_PRJ_CLS,622921.43000,600000.00,PRJ
+25067,21,Somalia,"Promoting GBV Response and Prevention for Emergency affected Persons of  21600 (16200 women and 5400  girls) in Kaxda district of Banadir region, Somalia",2023,293,Under Audit,PRJ_UND_AUD,275140.00000,264669.85,PRJ
+25083,21,Somalia,"Provision of emergency lifesaving WASH assistance for drought-affected populations at risk of famine in Kahda District, Banadir region.
+",2023,293,Under Audit,PRJ_UND_AUD,517068.19000,500000.00,PRJ
+25153,21,Somalia,"Provision of Emergency life-saving WASH services to worst drought affected populations in Jowhar District, Middle Shabelle Region, Somalia",2023,294,Project Closed,PRJ_PRJ_CLS,362437.20000,342392.44,PRJ
+25156,21,Somalia,"Provide vulnerable women and girls, including GBV survivors and persons living with disabilities, access to quality, safe, timely and confidential GBV services in rural Jowhar Rural - Middle Shabelle.",2023,293,Under Audit,PRJ_UND_AUD,414266.90000,399345.79,PRJ
+25206,21,Somalia,provide emergency WASH life saving intervention to floods and cholera affected populations in Luug district Gedo region,2023,297,Under Refund,PRJ_UND_REF,311458.37000,299993.76,PRJ
+25207,21,Somalia,Lifesaving response to the populations most affected by flooding and cholera in Bardheere Gedo region through emergency WASH interventions.,2023,292,Project Closed,PRJ_PRJ_CLS,414264.45000,400000.00,PRJ
+26536,21,Somalia,"WASH in Emergency Early Lifesaving Response to Communities Projected to be Most Affected by El Nino-induced Riverine Flooding in Baardheere, District of Gedo region.",2023,292,Project Closed,PRJ_PRJ_CLS,570041.08000,550003.37,PRJ
+26553,21,Somalia,"Integrated GBV and CP response to communities projected to face protection-related risk from the effects of El Nino-induced riverine flooding in Jowhar District, Middle Shebellle Region.",2023,292,Project Closed,PRJ_PRJ_CLS,331036.09000,319445.13,PRJ
+26554,21,Somalia,"A Comprehensive Response and Prevention to child protection challenges and Gender Based Violence in Elnino's awake in Kabasa, Qansaxleey, Ladan and Kaharey IDPs in Dollow, Somalia.",2023,292,Project Closed,PRJ_PRJ_CLS,330876.54000,319290.14,PRJ
+26572,21,Somalia,Early lifesaving emergency WASH services to communities projected to be most affected by El Nino induced riverine flooding in Jowhar.,2023,292,Project Closed,PRJ_PRJ_CLS,413849.29000,400000.00,PRJ
+26613,21,Somalia,Enhancing Access to WASH Services for At-Risk and  El Niño-Impacted IDP and Host Community Households in Dollow District,2023,292,Project Closed,PRJ_PRJ_CLS,511703.03000,495185.00,PRJ
+26618,21,Somalia,Strengthening emergency protection services through prevention and response to Gender based violence and Child protection risks to communities,2023,292,Project Closed,PRJ_PRJ_CLS,334525.90000,322839.97,PRJ
+27148,21,Somalia,"SHF El Nino Flood Health Response Project in North Galkacyo, Puntland, Somalia",2023,292,Project Closed,PRJ_PRJ_CLS,516653.03000,499998.63,PRJ
+27164,21,Somalia,"Provision of emergency lifesaving WASH response packages to flood-affected IDPs in South Galkayo District of Mudug region, Somalia",2023,292,Project Closed,PRJ_PRJ_CLS,518636.03000,498573.77,PRJ
+27992,21,Somalia,"Provision of sustainable and emergency lifesaving WASH services for 12,300 vulnerable populations in Kismayu district for 10 months.",2024,293,Under Audit,PRJ_UND_AUD,414105.59000,382913.46,PRJ
+28005,21,Somalia,Provision of life-saving WASH services for climatic shocks affected IDP households in the Deynille district of Banadir region,2024,293,Under Audit,PRJ_UND_AUD,383829.97000,370731.05,PRJ
+28006,21,Somalia,"Provision of lifesaving WASH services support to communities with high intersectoral severity of needs, that have experienced climatic shocks to mitigate further displacement in Galkayo district.",2024,293,Under Audit,PRJ_UND_AUD,413849.29000,399995.49,PRJ
+28037,21,Somalia,Providing sustainable and lifesaving WASH services to drought and floods-affected rural and displaced populations in Wajid district.,2024,296,Under Refund,PRJ_UND_REF,414424.95000,399999.79,PRJ
+28043,21,Somalia,"Providing emergency life-saving access to safe, clean water, sanitation, and hygiene to climate shock affected communities in the rural areas of  Baidoa district",2024,293,Under Audit,PRJ_UND_AUD,413849.29000,399771.88,PRJ
+28076,21,Somalia,"Provision of lifesaving nutrition intervention to the communities affected by climatic shocks in Kismayo district, Lower Juba region -Somalia.",2024,293,Under Audit,PRJ_UND_AUD,354058.82000,341839.69,PRJ
+28088,21,Somalia,"Provision of Life-Saving and Sustainable WASH Services for Climate Shock-Affected Communities in Wajid district, Bakool region",2024,293,Under Audit,PRJ_UND_AUD,311045.55000,299992.91,PRJ
+28091,21,Somalia,"Provision of lifesaving WASH services support to communities with high intersectoral severity of needs, that have experienced climatic shocks to mitigate further displacement of Baidoa rural",2024,294,Project Closed,PRJ_PRJ_CLS,413849.29000,400000.00,PRJ
+28133,21,Somalia,"Provision of  Water, Sanitation and Hygiene Services for Communities Affected by Climatic Shocks and Displacement in Kismayo  District.",2024,293,Under Audit,PRJ_UND_AUD,413831.11000,399980.98,PRJ
+28221,21,Somalia,Lifesaving and Sustainable WASH Services to Crisis-affected Communities in Galkayo district (LISS) Project,2024,294,Project Closed,PRJ_PRJ_CLS,414204.43000,400074.31,PRJ
+28227,21,Somalia,"Provision of emergency life- saving WASH response packages to climate shocks affected communities in Kismayo district, Lower Jubba region",2024,294,Project Closed,PRJ_PRJ_CLS,407722.14000,394039.95,PRJ
+28252,21,Somalia,Provision of quality essential lifesaving primary health services to vulnerable communities affected by climatic shocks in Baidoa rural areas.,2024,293,Under Audit,PRJ_UND_AUD,341886.24000,327885.45,PRJ
+28311,21,Somalia,"Provision of Life-Saving, Inclusive, and Sustainable WASH Services for Climate Shock-Affected Communities in Galkacyo District, Mudug region",2024,293,Under Audit,PRJ_UND_AUD,413849.29000,400000.00,PRJ
+34114,21,Somalia,"Provision of live-saving WASH intervention to reduce the humanitarian impact of the predicted La Nina on the most affected communities in Wanlaweyn district of lower Shabelle region, southwest state.",2024,295,Under Audit,PRJ_UND_AUD,413849.29000,399961.48,PRJ
+34131,21,Somalia,Provision of emergency life-saving WASH response packages to respond to the anticipated La-nina and current WASH gaps in Diinsoor district,2024,295,Under Audit,PRJ_UND_AUD,388147.29000,374965.96,PRJ
+36443,21,Somalia,Provision of integrated lifesaving nutrition services in hard-to-reach areas of Qansaxdheere District through community-based preventive nutrition interventions.,2025,126,Implementation & Reporting,PRJ_IMPL_RPT,311045.20000,215343.28,PRJ
+36458,21,Somalia,"Providing emergency life-saving access to safe, clean water, sanitation, and hygiene to climate shock affected IDP and host communities in Dinsoor district. ",2025,350,Under Final Reporting,PRJ_UND_FINAL_RPT,413849.29000,295889.86,PRJ
+36473,21,Somalia,Provision of Emergency Life-Saving WASH Assistance to the Most Vulnerable IDP and Rural Communities in Qansaxdhere District to Address the Impact of Dry Conditions and Mitigate Displacement Risks.,2025,293,Under Audit,PRJ_UND_AUD,413847.25000,399998.01,PRJ
+36497,21,Somalia,"Provision of live-saving WASH assistance to the most vulnerable communities in 
+Dinsoor to address impacts of dry conditions and mitigate displacement",2025,293,Under Audit,PRJ_UND_AUD,413849.50000,399848.26,PRJ
+36507,21,Somalia,Cash Plus support for small holder farmers in Beletweyne-Enhancing lifesaving food security through cash and sustainable farming.,2025,293,Under Audit,PRJ_UND_AUD,788923.22000,762500.65,PRJ
+36522,21,Somalia,"Provision of lifesaving and sustainable WASH assistance to vulnerable communities in Beletweyne district, Hiran region",2025,350,Under Final Reporting,PRJ_UND_FINAL_RPT,413849.33000,301890.41,PRJ
+36546,21,Somalia,Provision of  life-saving WASH assistance to the most vulnerable communities in Baladweyn district to address the impact,2025,293,Under Audit,PRJ_UND_AUD,311045.20000,299999.65,PRJ
+36548,21,Somalia,Provision of life-saving WASH assistance to affected rural communities in Qansaxdheere to mitigate the impact of dry conditions and displacements.,2025,350,Under Final Reporting,PRJ_UND_FINAL_RPT,420469.65000,295421.95,PRJ
+36552,21,Somalia,Provision of lifesaving WASH assistance to vulnerable communities affected by climate related shocks in Buaale District.,2025,293,Under Audit,PRJ_UND_AUD,413849.29000,160.50,PRJ
+37184,21,Somalia,Provision of emergency life-saving WASH assistance to the most vulnerable communities in Jowhar flagship pilot project to address the impact of deteriorating dry conditions,2025,126,Implementation & Reporting,PRJ_IMPL_RPT,549476.86000,252052.39,PRJ
+38179,21,Somalia,Emergency WASH response to drought affected populations in Zeylac District,2025,351,Under Final Reporting,PRJ_UND_FINAL_RPT,208241.82000,9357.15,PRJ
+38186,21,Somalia,"Enhancing and sustaining access to safe water, sanitation, &amp; hygiene practices for women, men, girls, &amp; boys in drought-affected people of Lasqoray .",2025,295,Under Audit,PRJ_UND_AUD,315157.54000,303999.84,PRJ
+38662,21,Somalia,"Provision of life-saving WASH assistance to the most severely drought affected communities in Xudur district, Bakool region, Somalia",2025,156,Implementation & Reporting,PRJ_IMPL_RPT,413849.29000,0,PRJ
+38695,21,Somalia,"Provision of Life-Saving WASH interventions to Mitigate the impact of drought on the most vulnerable communities in Afgooye District, Lower Shabelle Region, Southwest State, Somalia",2025,156,Implementation & Reporting,PRJ_IMPL_RPT,465250.65000,320107.06,PRJ
+38732,21,Somalia,Provision of lifesaving WASH assistance to drought-affected rural communities in Baidoa,2025,156,Implementation & Reporting,PRJ_IMPL_RPT,465251.16000,327446.20,PRJ
+39810,21,Somalia,Life-Saving WASH Response to Combat Drought-Related Famine in Burhakaba,2026,156,Implementation & Reporting,PRJ_IMPL_RPT,516653.03000,0,PRJ
+40453,21,Somalia,Provision of integrated life-saving Health services to underserved communities impacted by climatic shocks in Sablale district,2026,125,Disbursement,PRJ_DISBURSEMENT,311045.55000,0,PRJ
+13,19,South Sudan,2016 South Sudan Management Module,2016,3,Approved,APPR,183481.00000,0,HMC
+13,19,South Sudan,2016 South Sudan Management Module,2016,3,Approved,APPR,183481.00000,0,HMC
+39,19,South Sudan,2018  South Sudan Direct Cost & CPF Module,2018,3,Approved,APPR,2166310.00000,0,HMC
+39,19,South Sudan,2018  South Sudan Direct Cost & CPF Module,2018,3,Approved,APPR,2166310.00000,0,HMC
+50,19,South Sudan,2019  South Sudan Direct Cost & CPF Module,2019,3,Approved,APPR,2002272.00000,0,HMC
+50,19,South Sudan,2019  South Sudan Direct Cost & CPF Module,2019,3,Approved,APPR,2002272.00000,0,HMC
+71,19,South Sudan,2020  South Sudan Direct Cost & CPF Module,2020,3,Approved,APPR,2421483.30000,0,HMC
+71,19,South Sudan,2020  South Sudan Direct Cost & CPF Module,2020,3,Approved,APPR,2421483.30000,0,HMC
+102,19,South Sudan,2021  South Sudan Direct Cost & CPF Module,2021,3,Approved,APPR,2572275.00000,0,HMC
+102,19,South Sudan,2021  South Sudan Direct Cost & CPF Module,2021,3,Approved,APPR,2572275.00000,0,HMC
+112,19,South Sudan,2022  South Sudan Direct Cost & CPF Module,2022,3,Approved,APPR,2378209.00000,0,HMC
+112,19,South Sudan,2022  South Sudan Direct Cost & CPF Module,2022,3,Approved,APPR,2378209.00000,0,HMC
+122,19,South Sudan,2023  South Sudan Direct Cost & CPF Module,2023,3,Approved,APPR,2882780.05000,0,HMC
+122,19,South Sudan,2023  South Sudan Direct Cost & CPF Module,2023,3,Approved,APPR,2882780.05000,0,HMC
+155,19,South Sudan,2024  South Sudan Direct Cost & CPF Module,2024,3,Approved,APPR,2705179.00000,0,HMC
+155,19,South Sudan,2024  South Sudan Direct Cost & CPF Module,2024,3,Approved,APPR,2705179.00000,0,HMC
+7122,19,South Sudan,South Sudan Humanitarian Financing Unit Cost Plan for 2017 - second tranche,2017,264,Project Closed,PRJ_PRJ_CLS,263067.90000,191364.90,PRJ
+7122,19,South Sudan,South Sudan Humanitarian Financing Unit Cost Plan for 2017 - second tranche,2017,264,Project Closed,PRJ_PRJ_CLS,263067.90000,191364.90,PRJ
+15226,19,South Sudan,Provision of Shelter and non-food items to conflict affected IDPs and forced Returnees and Host Communities in Luakpiny/Nasir County of Upper Nile State,2020,6115,Project Closed,PRJ_PRJ_CLS,303915.86000,273581.35,PRJ
+15226,19,South Sudan,Provision of Shelter and non-food items to conflict affected IDPs and forced Returnees and Host Communities in Luakpiny/Nasir County of Upper Nile State,2020,6115,Project Closed,PRJ_PRJ_CLS,303915.86000,273581.35,PRJ
+15298,19,South Sudan,"Provision of emergency protection and child protection, and youth-centred resilience building in conflict-affected Wau and Raga counties of Western Bahr El Ghazal State",2020,6114,Under Audit,PRJ_UND_AUD,412428.84000,400000.24,PRJ
+15298,19,South Sudan,"Provision of emergency protection and child protection, and youth-centred resilience building in conflict-affected Wau and Raga counties of Western Bahr El Ghazal State",2020,6114,Under Audit,PRJ_UND_AUD,412428.84000,400000.24,PRJ
+15390,19,South Sudan,"Preventing Violence Against  Women and Girls through Engaging Men through Accountable Practices (EMAP) in Rubkona and Aweil East counties, South Sudan",2020,6114,Under Audit,PRJ_UND_AUD,351307.26000,279500.46,PRJ
+15390,19,South Sudan,"Preventing Violence Against  Women and Girls through Engaging Men through Accountable Practices (EMAP) in Rubkona and Aweil East counties, South Sudan",2020,6114,Under Audit,PRJ_UND_AUD,351307.26000,279500.46,PRJ
+27537,19,South Sudan,Lifesaving Response to Returnees and Refugees from Sudan,2024,6116,Under Audit,PRJ_UND_AUD,362447.42000,312356.88,PRJ
+27537,19,South Sudan,Lifesaving Response to Returnees and Refugees from Sudan,2024,6116,Under Audit,PRJ_UND_AUD,362447.42000,312356.88,PRJ
+17,15,Sudan,2017 Sudan Management Module,2017,4,Closed,CLSD,1428321.00000,0,HMC
+17,15,Sudan,2017 Sudan Management Module,2017,4,Closed,CLSD,1428321.00000,0,HMC
+35,15,Sudan,2018  Sudan Direct Cost & CPF Module,2018,3,Approved,APPR,1509780.63000,0,HMC
+35,15,Sudan,2018  Sudan Direct Cost & CPF Module,2018,3,Approved,APPR,1509780.63000,0,HMC
+49,15,Sudan,2019  Sudan Direct Cost & CPF Module,2019,3,Approved,APPR,1660831.53000,0,HMC
+49,15,Sudan,2019  Sudan Direct Cost & CPF Module,2019,3,Approved,APPR,1660831.53000,0,HMC
+89,15,Sudan,2020  Sudan Direct Cost & CPF Module,2020,3,Approved,APPR,2282534.00000,0,HMC
+89,15,Sudan,2020  Sudan Direct Cost & CPF Module,2020,3,Approved,APPR,2282534.00000,0,HMC
+97,15,Sudan,2021  Sudan Direct Cost & CPF Module,2021,3,Approved,APPR,2481871.00000,0,HMC
+97,15,Sudan,2021  Sudan Direct Cost & CPF Module,2021,3,Approved,APPR,2481871.00000,0,HMC
+118,15,Sudan,2022  Sudan Direct Cost & CPF Module,2022,3,Approved,APPR,2661327.00000,0,HMC
+118,15,Sudan,2022  Sudan Direct Cost & CPF Module,2022,3,Approved,APPR,2661327.00000,0,HMC
+157,15,Sudan,2023  Sudan Direct Cost & CPF Module,2023,3,Approved,APPR,2626685.00000,0,HMC
+157,15,Sudan,2023  Sudan Direct Cost & CPF Module,2023,3,Approved,APPR,2626685.00000,0,HMC
+16060,15,Sudan,"Strengthen agriculture and livestock provision for Returnees, Vulnerable communities and protracted IDPs in South Darfur State",2020,5502,Under Audit,PRJ_UND_AUD,412166.26000,399527.30,PRJ
+16060,15,Sudan,"Strengthen agriculture and livestock provision for Returnees, Vulnerable communities and protracted IDPs in South Darfur State",2020,5502,Under Audit,PRJ_UND_AUD,412166.26000,399527.30,PRJ
+16129,15,Sudan,improve access to sanitation services and increase hygiene awareness among vulnerable people including south Sudanese refugees in Alsalam and Aljabalain localities in White Nile state,2020,5502,Under Audit,PRJ_UND_AUD,457514.72000,413329.06,PRJ
+16129,15,Sudan,improve access to sanitation services and increase hygiene awareness among vulnerable people including south Sudanese refugees in Alsalam and Aljabalain localities in White Nile state,2020,5502,Under Audit,PRJ_UND_AUD,457514.72000,413329.06,PRJ
+26024,15,Sudan,Response to the urgent needs of vulnerable food insecure people in Kordofan and Darfur regions through provision of emergency agriculture support to enhance stable crop production and improve access to food.,2023,5506,Under Refund,PRJ_UND_REF,1579391.70000,0,PRJ
+26024,15,Sudan,Response to the urgent needs of vulnerable food insecure people in Kordofan and Darfur regions through provision of emergency agriculture support to enhance stable crop production and improve access to food.,2023,5506,Under Refund,PRJ_UND_REF,1579391.70000,0,PRJ
+27213,15,Sudan,"2024– Emergency WASH Response for 214,028 Cholera affected people in Localities of Kosti, Guli, AD Diwaim and AL Gatina, White Nile state",2023,5504,Under Audit,PRJ_UND_AUD,622934.27000,542833.03,PRJ
+27213,15,Sudan,"2024– Emergency WASH Response for 214,028 Cholera affected people in Localities of Kosti, Guli, AD Diwaim and AL Gatina, White Nile state",2023,5504,Under Audit,PRJ_UND_AUD,622934.27000,542833.03,PRJ
+27610,15,Sudan,Multi-Sector Food Crisis Response for Conflict-Affected Populations in North Darfur State,2024,5504,Under Audit,PRJ_UND_AUD,858611.50000,672648.19,PRJ
+27610,15,Sudan,Multi-Sector Food Crisis Response for Conflict-Affected Populations in North Darfur State,2024,5504,Under Audit,PRJ_UND_AUD,858611.50000,672648.19,PRJ
+39913,15,Sudan,Lifesaving Health and WASH Support for Vulnerable Conflict‑Affected People in North Kordofan,2026,5331,Implementation & Reporting,PRJ_IMPL_RPT,751406.40000,0,PRJ
+39913,15,Sudan,Lifesaving Health and WASH Support for Vulnerable Conflict‑Affected People in North Kordofan,2026,5331,Implementation & Reporting,PRJ_IMPL_RPT,751406.40000,0,PRJ
+39941,15,Sudan,Provision of Integrated Life-Saving Primary Health Care and Nutrition Services to Conflict-Affected and Vulnerable Populations in Khartoum State.,2026,5331,Implementation & Reporting,PRJ_IMPL_RPT,1034149.22000,0,PRJ
+39941,15,Sudan,Provision of Integrated Life-Saving Primary Health Care and Nutrition Services to Conflict-Affected and Vulnerable Populations in Khartoum State.,2026,5331,Implementation & Reporting,PRJ_IMPL_RPT,1034149.22000,0,PRJ
+39987,15,Sudan,Provision of Lifesaving Integrated Health and WASH Response for Vulnerable Populations in South and East Darfur States.,2026,5331,Implementation & Reporting,PRJ_IMPL_RPT,694500.55000,0,PRJ
+39987,15,Sudan,Provision of Lifesaving Integrated Health and WASH Response for Vulnerable Populations in South and East Darfur States.,2026,5331,Implementation & Reporting,PRJ_IMPL_RPT,694500.55000,0,PRJ
+10,62,Syria,2017 Syria Management Module,2017,3,Approved,APPR,907518.00000,0,HMC
+57,62,Syria,2018  Syria Direct Cost & CPF Module,2018,3,Approved,APPR,909739.00000,0,HMC
+58,62,Syria,2019  Syria Direct Cost & CPF Module,2019,3,Approved,APPR,1285625.00000,0,HMC
+154,62,Syria,2024  Syria Direct Cost & CPF Module,2024,3,Approved,APPR,2323504.00000,0,HMC
+180,62,Syria,2025  Syria Direct Cost & CPF Module,2025,3,Approved,APPR,2327523.00000,0,HMC
+7398,62,Syria,GOPA/DERD Emergency response to distribute NFIs in north-eastern Syria,2017,2777,Project Closed,PRJ_PRJ_CLS,1265396.40000,1218762.68,PRJ
+8840,62,Syria,WASH Emergency Response - East Ghouta and Afrin displacement,2018,2775,Project Closed,PRJ_PRJ_CLS,2037383.31000,2000000.13,PRJ
+10543,62,Syria,Supporting Conflict-affected  Population in Syria with Better Access to Quality Education,2018,2776,Under Audit,PRJ_UND_AUD,509241.29000,480716.60,PRJ
+10637,62,Syria,WASH in the most vulnerable communities.,2018,2777,Project Closed,PRJ_PRJ_CLS,509128.54000,499786.73,PRJ
+12593,62,Syria,"Child Protection Emergency Response for IDPs, refugees and host communities in Deir Ez Zor and Al Hasakeh-  North-Eastern Syria",2019,2775,Project Closed,PRJ_PRJ_CLS,1090533.22000,1070523.44,PRJ
+13286,62,Syria,Educational Rehabilitation Project,2019,2777,Project Closed,PRJ_PRJ_CLS,255227.77000,247288.55,PRJ
+14003,62,Syria,Provision of Essential Winter Clothing Packages to Children 0-14 Years Old in Prioritized Communities in Dar'a,2019,2777,Project Closed,PRJ_PRJ_CLS,779298.77000,764999.71,PRJ
+14045,62,Syria,Solid waste Management  for affected communities in East Ghouta and Dar'a,2019,2777,Project Closed,PRJ_PRJ_CLS,406903.56000,389960.94,PRJ
+14557,62,Syria,Improving hygiene conditions through solid waste management in Hassakeh,2019,2775,Project Closed,PRJ_PRJ_CLS,305275.21000,299651.31,PRJ
+14683,62,Syria,Rehabilitation of Water Supply in Al-Hassakeh Governorate,2019,2775,Project Closed,PRJ_PRJ_CLS,662144.37000,648594.48,PRJ
+16904,62,Syria,"Promote safe access to housing in Harasta city, Rural Damascus",2020,2779,Under Refund,PRJ_UND_REF,509132.46000,499730.42,PRJ
+16934,62,Syria,"Provision of NFIs assistance to affected people in Al Mayadin and Khasham  eastern countryside of Deir Ez Zor province.
+",2020,2777,Project Closed,PRJ_PRJ_CLS,409778.00000,399003.00,PRJ
+17071,62,Syria,Support emergency referrals for secondary health care services.,2020,2779,Under Refund,PRJ_UND_REF,255870.00000,247919.00,PRJ
+19492,62,Syria,Surgical Operation Services for IDPs and host community in Hassakeh city,2021,2776,Under Audit,PRJ_UND_AUD,257930.10000,249593.25,PRJ
+19508,62,Syria,"Phase II - Promote safe access to housing in Harasta city, Rural Damascus",2021,2777,Project Closed,PRJ_PRJ_CLS,508668.06000,499246.11,PRJ
+24677,62,Syria,"Support Residential Structural Assessments in Aleppo, Lattakia, and Hama Governorates.",2023,3511,Under Final Reporting,PRJ_UND_FINAL_RPT,1511756.40000,1440590.48,PRJ
+26491,62,Syria,Sub-objective 2: Mitigating the impact of winter conditions in underserved areas through a multisectoral approach in Syria,2023,2776,Under Audit,PRJ_UND_AUD,1160395.93000,1123960.95,PRJ
+26555,62,Syria,Enhance affected and underserved communities resilience to harsh condition in Dar'a and Deir-ez-Zor ( sub-objective 2),2023,2776,Under Audit,PRJ_UND_AUD,1130267.38000,1063306.14,PRJ
+26617,62,Syria,"“Providing NFIs items and winter materials items people to returnees and IDPs, and Residents in Maadan (sub-objective 1)”
+
+",2023,2776,Under Audit,PRJ_UND_AUD,404191.32000,389941.38,PRJ
+26633,62,Syria,Catalyzing Empowerment: Strengthening Livelihoods and Well-being for Vulnerable Communities,2023,2776,Under Audit,PRJ_UND_AUD,410111.30000,390960.62,PRJ
+33366,62,Syria,Enhancing Education and Shelter for Vulnerable Communities in Meidaa and Shafuniyeh through Integrated Resilience and Recovery approach,2024,2776,Under Audit,PRJ_UND_AUD,675990.33000,650177.65,PRJ
+35737,62,Syria,Life Saving Emergency Support in NES &amp; Der-Ez-Zor,2025,2778,Under Audit,PRJ_UND_AUD,378550.60000,364999.96,PRJ
+21,70,Syria Cross border,2017 Turkey Cross Border Management Module,2017,3,Approved,APPR,2076178.00000,0,HMC
+42,70,Syria Cross border,2018  Turkey Cross Border Direct Cost & CPF Module,2018,3,Approved,APPR,2186138.00000,0,HMC
+43,70,Syria Cross border,2016  Turkey Cross Border Direct Cost & CPF Module,2016,3,Approved,APPR,801808.98000,0,HMC
+63,70,Syria Cross border,2019  Turkey Cross Border Direct Cost & CPF Module,2019,3,Approved,APPR,2441738.90000,0,HMC
+76,70,Syria Cross border,2020  Syria Cross border Humanitarian Fund Direct Cost & CPF Module,2020,3,Approved,APPR,3789741.00000,0,HMC
+7071,70,Syria Cross border,Warm Schools for Better Education,2017,2807,Project Closed,PRJ_PRJ_CLS,278078.57000,269825.11,PRJ
+7193,70,Syria Cross border,Winter agriculture vouchers,2017,2807,Project Closed,PRJ_PRJ_CLS,257772.09000,232975.38,PRJ
+7197,70,Syria Cross border,Student winter clothing kit,2017,2809,Under Refund,PRJ_UND_REF,250256.23000,231330.65,PRJ
+7219,70,Syria Cross border,"Community-based winterization intervention in 16 camps in (Sarmada &amp; Deir Hassan)-Dana, Idelb",2017,2807,Project Closed,PRJ_PRJ_CLS,276740.74000,257972.36,PRJ
+7237,70,Syria Cross border,Minimize the negative effects associated with the winter season on the IDPs camps in northern Idleb.,2017,2809,Under Refund,PRJ_UND_REF,463472.31000,451817.13,PRJ
+9021,70,Syria Cross border,Emergency Response Among New Arrivals in Idelb Governorate,2018,2805,Project Closed,PRJ_PRJ_CLS,548456.34000,535241.82,PRJ
+9485,70,Syria Cross border,Support education and health systems in Afrin District.,2018,2807,Project Closed,PRJ_PRJ_CLS,733504.55000,716883.95,PRJ
+10202,70,Syria Cross border,Supporting small farmers in Aleppo and Idleb (Green land),2018,2807,Project Closed,PRJ_PRJ_CLS,256817.20000,239179.45,PRJ
+10220,70,Syria Cross border,Support to host- and IDP communities by providing access to basic WASH services,2018,2807,Project Closed,PRJ_PRJ_CLS,551570.20000,538298.54,PRJ
+10230,70,Syria Cross border,"Distribution of fuel vouchers to meet the essential NFI needs for the affected girls, boy, women and men in Idleb sub-district during winter 2018-2019",2018,2807,Project Closed,PRJ_PRJ_CLS,309216.60000,296296.91,PRJ
+11368,70,Syria Cross border,Supporting the most vulnerable 1250 families in Jandairis Sub-district in Afrin district with 1250 Food baskets for 4 months.,2018,2805,Project Closed,PRJ_PRJ_CLS,280315.25000,269137.55,PRJ
+12681,70,Syria Cross border,Support Farmers and Livestock Breeders in Al-Bab District.,2019,2807,Project Closed,PRJ_PRJ_CLS,410989.43000,341183.37,PRJ
+12841,70,Syria Cross border,Providing Life-Saving Assistance and Protection to Vulnerable Communities in Northwest Syria,2019,2807,Project Closed,PRJ_PRJ_CLS,430102.74000,418954.81,PRJ
+12853,70,Syria Cross border,"Support Resilience through Humanitarian Assistance and Income Generating Livelihood in North-West Syria
+
+",2019,2807,Project Closed,PRJ_PRJ_CLS,614665.29000,425307.90,PRJ
+12923,70,Syria Cross border,Supporting Participatory Irrigation projects in NW of Syria,2019,2807,Project Closed,PRJ_PRJ_CLS,499952.06000,361028.91,PRJ
+13733,70,Syria Cross border,Protection integrated activities provision through mobile emergency response teams in Jebel Semaan.,2019,2805,Project Closed,PRJ_PRJ_CLS,347825.67000,280332.00,PRJ
+13769,70,Syria Cross border,Provision of dignity kits and post rape kits in northwest Syria,2019,2805,Project Closed,PRJ_PRJ_CLS,718731.31000,697424.83,PRJ
+13801,70,Syria Cross border,Improve access to water and sanitation services for newly IDPs affected by the current conflict and promote hygiene awareness,2019,2805,Project Closed,PRJ_PRJ_CLS,506162.86000,490626.80,PRJ
+14436,70,Syria Cross border,"Rapid Response Team for provision of life-saving field integrated emergency nutrition programme response for the most vulnerable individuals both Host communities and IDPs (mainly children under 5 and PLWs)  to create a safe, accessible and more secure environment for them in North West Syria",2019,2807,Project Closed,PRJ_PRJ_CLS,156024.86000,120564.84,PRJ
+14452,70,Syria Cross border,Supporting the vulnerable IDPs living in Aljabel camp in NW Syria on resilience through providing life-saving WASH activities.,2019,2807,Project Closed,PRJ_PRJ_CLS,772893.85000,678502.61,PRJ
+14528,70,Syria Cross border,"Enhancing the Access to Clean Water for People in Deir Hassan and Nearest Camps Through a Sustainable and Cost-effective Intervention, Link with ASO2",2019,2807,Project Closed,PRJ_PRJ_CLS,714642.09000,615338.52,PRJ
+14902,70,Syria Cross border,Emergency response project for the displaced people of Ma`rat al-Numan and its countryside,2019,2805,Project Closed,PRJ_PRJ_CLS,604798.51000,572040.03,PRJ
+14977,70,Syria Cross border,Provision of dignity kits for women and girls affected by the ongoing emergency in northwest Syria,2020,2805,Project Closed,PRJ_PRJ_CLS,4859426.66000,4770223.43,PRJ
+14979,70,Syria Cross border,"Providing secure shelter for the most vulnerable people through emergency rehabilitation of houses in Afrin, Bazagha, Qabasin and Al-Bab communities.",2020,2805,Project Closed,PRJ_PRJ_CLS,571233.15000,554213.46,PRJ
+14991,70,Syria Cross border,Enhancing food security for the newly IDPs from southern Idlib.,2020,2805,Project Closed,PRJ_PRJ_CLS,1111523.41000,1079331.07,PRJ
+15003,70,Syria Cross border,"Emergency Shelter/NFI Assistance &amp; WASH Services to Vulnerable Populations in Salqin, Maaret Tamsrin, Sarmada, Deir Hassan, Harim and Kafr Yahmoul",2020,2805,Project Closed,PRJ_PRJ_CLS,512084.67000,499432.48,PRJ
+15034,70,Syria Cross border,Ensure continuity of care and increase access to life-saving health services through implementation of standardized referral system and provision of primary health care services in response to the most vulnerable people both IDPs and Host communities affected by the ongoing conflict in Idleb and Aleppo governorates.,2020,2805,Project Closed,PRJ_PRJ_CLS,649175.58000,619800.66,PRJ
+16217,70,Syria Cross border,"Providing secure shelter for the most vulnerable people through houses rehabilitation in Afrin, Jandairis, and Mare communities and construction of infrastructure in Mukaveme camp.",2020,2807,Project Closed,PRJ_PRJ_CLS,894078.62000,866755.42,PRJ
+16245,70,Syria Cross border,"Support livestock breeders and farmers, both male and females in Idleb governorate",2020,2807,Project Closed,PRJ_PRJ_CLS,604069.29000,528943.61,PRJ
+16246,70,Syria Cross border,Providing livelihood opportunities and improve access to social services to conflict-affected populations in Aleppo governorate,2020,2807,Project Closed,PRJ_PRJ_CLS,458128.39000,415207.52,PRJ
+18387,70,Syria Cross border,Promote the resilience of the most vulnerable people in Jarablus and IDP camps affected by the Syrian crisis through live-saving activities in the WASH sector.,2021,2807,Project Closed,PRJ_PRJ_CLS,814966.85000,752944.28,PRJ
+18502,70,Syria Cross border,Provision of dignity kits for women and girls affected by the ongoing emergency in northwest Syria,2021,2805,Project Closed,PRJ_PRJ_CLS,2030600.19000,1978591.36,PRJ
+24397,70,Syria Cross border,Envelope 2: Support the Gaps in Primary and Secondary Health Care in Dana Sub-district.,2022,2807,Project Closed,PRJ_PRJ_CLS,471503.94000,422337.46,PRJ
+24562,70,Syria Cross border,Improving the access of earthquake-affected children to education services in northwest Syria,2023,2805,Project Closed,PRJ_PRJ_CLS,336433.30000,304069.23,PRJ
+25348,70,Syria Cross border,Envelope 1: Support the conflict-affected communities by the earthquake in NW Syria by providing WASH's life-saving and life-sustaining activities.,2023,2805,Project Closed,PRJ_PRJ_CLS,807459.12000,649567.79,PRJ
+26788,70,Syria Cross border,Ensuring uninterrupted access to formal education by providing operational support and winterization to schools in NWS.,2023,2807,Project Closed,PRJ_PRJ_CLS,376262.21000,304670.20,PRJ
+36279,70,Syria Cross border,FSL initiatives for Wheat Farmers and Livestock Herders via Irrigation Rehabilitation and Agricultural Assistance in NW Syria - Envelope-1,2025,3500,Under Final Reporting,PRJ_UND_FINAL_RPT,931439.23000,384734.76,PRJ
+36281,70,Syria Cross border,"Building Resilience and Supporting Safe Return: Integrated Multisectoral Support (ERL , FSL, MPCA) for IDPs, Returnees, and Vulnerable Host Communities (Envelop 1 &amp; Envelop 2)",2025,3500,Under Final Reporting,PRJ_UND_FINAL_RPT,695841.57000,404378.15,PRJ
+61,81,Ukraine,2019  Ukraine Direct Cost & CPF Module,2019,3,Approved,APPR,474000.00000,0,HMC
+84,81,Ukraine,2020  Ukraine Direct Cost & CPF Module,2020,3,Approved,APPR,521035.00000,0,HMC
+92,81,Ukraine,2021  Ukraine Direct Cost & CPF Module,2021,3,Approved,APPR,592735.00000,0,HMC
+105,81,Ukraine,2022  Ukraine Direct Cost & CPF Module,2022,3,Approved,APPR,2090657.12000,0,HMC
+149,81,Ukraine,2023  Ukraine Direct Cost & CPF Module,2023,3,Approved,APPR,2941274.00000,0,HMC
+193,81,Ukraine,2024  Ukraine Direct Cost & CPF Module,2024,3,Approved,APPR,4534051.00000,0,HMC
+13680,81,Ukraine,“Emergency multi-sectoral support to conflict affected vulnerable and disabled older women and men in settlements located in the 5km zone in the GCAs locations of Donetsk and Luhansk Oblasts”,2019,4220,Under Audit,PRJ_UND_AUD,281028.94000,271942.39,PRJ
+13722,81,Ukraine,Addressing immediate needs of  people with disabilities living in isolated settlements in GCA,2019,4220,Under Audit,PRJ_UND_AUD,219374.23000,215022.92,PRJ
+13737,81,Ukraine,Provision of multi-sectoral market-based and community based assistance to the most vulnerable elderly people living along contact line to ensure their overcoming the effects of protracted crises in Ukraine,2019,4223,Under Refund,PRJ_UND_REF,229785.18000,222694.51,PRJ
+21718,81,Ukraine,Emergency multi-sectoral response to the urgent needs of vulnerable populations affected by the Ukraine Crisis,2022,4222,Under Audit,PRJ_UND_AUD,1533845.34000,1120356.90,PRJ
+21731,81,Ukraine,Life-saving multi-sectoral assistance for displaced and non-displaced persons affected by the conflict,2022,4222,Under Audit,PRJ_UND_AUD,1228237.87000,1200000.00,PRJ
+23000,81,Ukraine,Provision of emergency assistance in preparation for winter to the population of Donetsk NGCA and Donetsk GCA affected by the military conflict,2022,4222,Under Audit,PRJ_UND_AUD,380103.44000,368088.20,PRJ
+23513,81,Ukraine,Creation of decent living conditions for an inclusive group of IDPs in the Rivne region as a rear region: preparation of a center for compact living and repair of heating infrastructure in preparation for winter.,2022,4220,Under Audit,PRJ_UND_AUD,257358.95000,245875.59,PRJ
+34713,81,Ukraine,"Provision of resources and organized multi-sectoral interventions to support Emergency Assistance to vulnerable communities in Eastern, Northern, and Southern Ukraine (priority 1 and 2) ",2025,4220,Under Audit,PRJ_UND_AUD,1032634.10000,1000000.00,PRJ
+103,83,Venezuela,2021  Venezuela Direct Cost & CPF Module,2021,3,Approved,APPR,596937.00000,0,HMC
+115,83,Venezuela,2022  Venezuela Direct Cost & CPF Module,2022,3,Approved,APPR,912445.00000,0,HMC
+123,83,Venezuela,2023  Venezuela Direct Cost & CPF Module,2023,3,Approved,APPR,825822.00000,0,HMC
+152,83,Venezuela,2024  Venezuela Direct Cost & CPF Module,2024,3,Approved,APPR,694763.00000,0,HMC
+188,83,Venezuela,2025  Venezuela Direct Cost & CPF Module,2025,3,Approved,APPR,777358.00000,0,HMC
+18073,83,Venezuela,"Consolidar e incrementar los servicios de la atención alimentaria, nutricional y del ambiente protector a los niños, niñas, adolescentes, mujeres embarazadas y/o en periodo de lactancia, jóvenes, adult@s mayores vulnerables y en situación de riesgo por desnutrición en los Estados Anzoátegui, Bolívar, Distrito Capital y Miranda,  en las zonas de influencia en los cuales los Salesianos de Don Bosco están presentes mediante casas hogares, Centros de Capacitación, Centros Juveniles y Parroquias.",2021,6981,Proyecto Cerrado,PRJ_PRJ_CLS,461098.81000,450000.00,PRJ
+53,64,Yemen,2018  Yemen Direct Cost & CPF Module,2018,3,Approved,APPR,2699356.88000,0,HMC
+62,64,Yemen,2019  Yemen Direct Cost & CPF Module,2019,3,Approved,APPR,3296221.67000,0,HMC
+73,64,Yemen,2020  Yemen Direct Cost & CPF Module,2020,3,Approved,APPR,3122553.25000,0,HMC
+101,64,Yemen,2021  Yemen Direct Cost & CPF Module,2021,3,Approved,APPR,3502688.00000,0,HMC
+125,64,Yemen,2022  Yemen Direct Cost & CPF Module,2022,3,Approved,APPR,3746399.00000,0,HMC
+153,64,Yemen,2023  Yemen Direct Cost & CPF Module,2023,3,Approved,APPR,4112074.00000,0,HMC
+183,64,Yemen,2024  Yemen Direct Cost & CPF Module,2024,3,Approved,APPR,4166739.00000,0,HMC
+184,64,Yemen,2025  Yemen Direct Cost & CPF Module,2025,3,Approved,APPR,3115409.00000,0,HMC
+7076,64,Yemen,Improving Water &amp; Hygiene Practice and Raising Awareness Promotion Among Community in two Districts (Al-Jarrahi and Al-Mansoriah) in Hodiedah in 2018. Envelope 1,2017,2787,Project Closed,PRJ_PRJ_CLS,510621.59000,484328.72,PRJ
+7098,64,Yemen,Emergency Health and Nutrition integrated intervention to the most vulnerable people in Al-Mudhaffar and Al Qahirah districts of Taiz Governorate.(Envelope 1 ),2017,2787,Project Closed,PRJ_PRJ_CLS,2018992.02000,1955997.63,PRJ
+9514,64,Yemen,WFP response to preparedness: FSAC,2018,2785,Project Closed,PRJ_PRJ_CLS,20069850.57000,19699899.27,PRJ
+9515,64,Yemen,Preparedness Plan: Emergency Nutrition Assistance to those affected by an escalation of conflict in Western Yemen,2018,2785,Project Closed,PRJ_PRJ_CLS,3872091.92000,3800716.62,PRJ
+9516,64,Yemen,WFP Preparedness: Logistics Cluster,2018,2785,Project Closed,PRJ_PRJ_CLS,4041627.17000,3967127.13,PRJ
+9517,64,Yemen,ETC Preparedness: IT and telecommunication services for emergency operations across Yemen (WFP),2018,2785,Project Closed,PRJ_PRJ_CLS,680262.18000,667722.78,PRJ
+9534,64,Yemen,Approach to Nutrition Scale Up in Yemen in coordination with the Nutrition Cluster,2018,2785,Project Closed,PRJ_PRJ_CLS,20354362.25000,19979166.14,PRJ
+9558,64,Yemen,Provision of primary health care Minimum Service Package and emergency medical and surgical care in 2 rural hospitals and 3 health centers in Al-Hudaydah governorate.,2018,2785,Project Closed,PRJ_PRJ_CLS,716965.22000,690526.57,PRJ
+10342,64,Yemen,"Emergency and Transitional Shelter, NFI, CCCM &amp; Livelihoods Supporting for IDPs in Al Mukha District, Governorate of Taiz",2018,2787,Project Closed,PRJ_PRJ_CLS,1189727.60000,1159445.67,PRJ
+10351,64,Yemen,Protection for conflict-affected communities in Sa'ada,2018,2786,Under Audit,PRJ_UND_AUD,717955.20000,690359.86,PRJ
+10367,64,Yemen,"WASH Live-Saving and Services for IDPs and Host Community in Al Mukha, At Taiziyah, Dimnat Khadir and Maqbanah Districts, Taiz Governorate",2018,2787,Project Closed,PRJ_PRJ_CLS,733015.93000,703544.59,PRJ
+10387,64,Yemen,"Improving food access and livelihoods of conflict affected, food insecure population in Hajjah, Amran, Sana’a Lahj and Taizz governorates.",2018,2787,Project Closed,PRJ_PRJ_CLS,4080116.35000,3782746.55,PRJ
+10388,64,Yemen,"Shelter assistance to vulnerable conflict affected households in Hajjah, Amran and Taizz governorates",2018,2787,Project Closed,PRJ_PRJ_CLS,2042733.18000,1999265.51,PRJ
+10395,64,Yemen,"Improving water, sanitation and hygiene promotion Services in Al-Sukhnah and Al-Zaydiyah Districts in Hodeida",2018,2787,Project Closed,PRJ_PRJ_CLS,1024041.64000,992605.49,PRJ
+10421,64,Yemen,"""Providing life-saving medical assistance to the most vulnerable among host community and internally displaced people in Boraa District, Hodeidah Governorate""
+
+",2018,2786,Under Audit,PRJ_UND_AUD,512628.00000,427066.46,PRJ
+11798,64,Yemen,Parameter 1: Provision of life-saving food emergency food assistance for the most affected IDPs and Host Communities in Al-Hali district at Hodeida governorate,2019,2787,Project Closed,PRJ_PRJ_CLS,491860.98000,471786.73,PRJ
+11815,64,Yemen,"SMC and Shelter Upgrade for IDPs in Hosting Sites in Al Mukha District, Governorate of Taiz - Parameter 2",2019,2787,Project Closed,PRJ_PRJ_CLS,250730.48000,235001.37,PRJ
+11817,64,Yemen,"Provision of comprehensive health assistance to displaced and vulnerable communities in Ibb, Marib and Dhamar Governorates (Parameter 2)",2019,2787,Project Closed,PRJ_PRJ_CLS,1528037.65000,1500000.26,PRJ
+11833,64,Yemen,"Health care Services (MSP ) for vulnerable people and IDPs in Al-Mina district of Al-Hudaydah governorate and in Ash Shamayatayn , and Al Ma'afer districts of Taiz governorate (Parameters 1,2 )",2019,2787,Project Closed,PRJ_PRJ_CLS,1302838.78000,1271675.70,PRJ
+11855,64,Yemen,Parameter (1): Quality education for the most affected students  in Al Wazi'iyah district and Emergency food assistance for highly vulnerable households in Al Mukha district of Taiz Governorate.,2019,2787,Project Closed,PRJ_PRJ_CLS,918647.59000,896562.36,PRJ
+11864,64,Yemen,Protection Services for IDPs in Collective Sites / Parameter 2 - Marib  &amp; Aljawf,2019,2786,Under Audit,PRJ_UND_AUD,732168.94000,627539.00,PRJ
+11974,64,Yemen,Emergency nutrition community-based assistant to most affected population (SA1 Parameter 1&amp;2) in 1 district (Qatabah) in Al Dhale'e and 2 districts (Mukha &amp; Dhoubab) in Taiz Governorates.,2019,2787,Project Closed,PRJ_PRJ_CLS,970088.82000,478828.35,PRJ
+12780,64,Yemen,Emergency cholera rapid response for the affected populations in Sana'a and Taiz governorate,2019,2785,Project Closed,PRJ_PRJ_CLS,734798.70000,616745.25,PRJ
+13161,64,Yemen,United Nations ’Flights of Mercy’ in Yemen,2019,2785,Project Closed,PRJ_PRJ_CLS,5025477.70000,4933267.10,PRJ
+14548,64,Yemen,Access to education  in Al Wazi'iyah  and livelihood for  highly vulnerable fishery dependent households in Al Mukha,2019,2787,Project Closed,PRJ_PRJ_CLS,1231443.78000,1203694.33,PRJ
+14574,64,Yemen,"Site Management and Coordination to Ensure Basic Service Provision for IDPs in Hosting Sites in Al Mukha District, Governorate of Taiz – Line 1",2019,2786,Under Audit,PRJ_UND_AUD,259413.64000,242476.98,PRJ
+14588,64,Yemen,"Provision of Minimum Health Services Package interventions for IDPs and most vulnerable groups at districts of Ataq in Shabwah Governorate, Jehaf in Aldhalee Governorate and Al Qabbaytah in Lahj Governorate",2019,2787,Project Closed,PRJ_PRJ_CLS,700274.26000,678616.68,PRJ
+14589,64,Yemen,"Provision of Integrated WASH and Shelter assistance to IDPs and their most vulnerable hosting communities at Jehaf , Juban, Damt and Al-Hushaa districts of Al-Dhale Gov.",2019,2787,Project Closed,PRJ_PRJ_CLS,1939613.08000,1896487.45,PRJ
+14592,64,Yemen,Provision of cash + Agricultural Livelihood interventions to the most vulnerable households  at Jabal Ash Sharq district of Dhamar Governorate,2019,2787,Project Closed,PRJ_PRJ_CLS,903395.97000,877600.77,PRJ
+14596,64,Yemen,"Provision Shelter and NFIs for the most vulnerable IDPs in (Al Hashwah, Razih) in Sa'adah Governorate, (Dhi As Sufal, Al Uden) Ibb governorate, and (At Ta’izyah, Maqbanah) Taizz Governorate.",2019,2787,Project Closed,PRJ_PRJ_CLS,2177854.81000,2124617.65,PRJ
+14597,64,Yemen,"Provision Emergency NIFs/Rental subsidies for conflict-affected people in Qa'atbah, Al Hussein and Jahaf districts in Al Dhale'e Governorate.",2019,2786,Under Audit,PRJ_UND_AUD,902893.46000,879016.53,PRJ
+14636,64,Yemen,"Food Access &amp; Livelihood Assistance for severely food insecure families in Al Zariq, Al Dhale'e governorate.",2019,2786,Under Audit,PRJ_UND_AUD,815392.27000,786249.31,PRJ
+14677,64,Yemen,"Improve living conditions by provision of NFIs, Emergency Shelter, Rental Subsidies for the most vulnerable people in Hamdan &amp; Bani Hushaysh of Sana'a governorate.",2019,2787,Project Closed,PRJ_PRJ_CLS,1191546.51000,1163504.70,PRJ
+17908,64,Yemen,Prrority 2: Provision of immediate life-saving emergency food assistance to the most vulnerable acutely food insecure IDPs living in deplorable conditions with host families in Ad Dhale'e District of Al Dhale’e governorate,2020,2787,Project Closed,PRJ_PRJ_CLS,321997.29000,300960.95,PRJ
+19174,64,Yemen,"Proposal 2: Integrated Response of Shelter, LFS, Education, and WASH  for the conflict-affected communities in the most affected areas in Al-Hudaydah and Hajjah governorates/ Priority1, Priority2,Priority3, and Priority4",2021,2787,Project Closed,PRJ_PRJ_CLS,3160672.64000,3074778.64,PRJ
+19540,64,Yemen,"Education Humanitarian Response Interventions among the Most Affected Host Communities, IDPs, Refugees in Hays District (Priority 2,3- Education) in Al Hudaydah Governorate, 1st Standard Allocation 2021.",2021,2786,Under Audit,PRJ_UND_AUD,256431.51000,248647.53,PRJ
+19548,64,Yemen,Priority 4: Life-sustaining food security support to the most vulnerable people in need in Maqbanah district of Taiz governorate to improve their resilience –YHF 1st Standard Allocation 2021,2021,2787,Project Closed,PRJ_PRJ_CLS,406526.52000,396223.00,PRJ
+20666,64,Yemen,Emergency education support to IDPs &amp; Most Affected Host Communities students in AlMukha District in Taiz Governorate - Yemen. (Priority 1),2021,2787,Project Closed,PRJ_PRJ_CLS,206198.96000,198552.11,PRJ
+22675,64,Yemen,Provision of Equal &amp; inclusive   education   to the most vulnerable school-aged girls and boys from IDPs &amp; host community  in Al Wazi'iyah district – Taiz Governorate . [Priority II],2022,2787,Project Closed,PRJ_PRJ_CLS,207645.94000,195239.03,PRJ
+22706,64,Yemen,"Emergency interventions in education for the IDPs and the most vulnerable students in the host communities in Khabb wa ash Sha'af District, Al-Jawf Governorate 2022 (Priority 2)",2022,2787,Project Closed,PRJ_PRJ_CLS,170973.11000,164709.71,PRJ
+22881,64,Yemen,"Education Life-saving intervention for the most vulnerable people in As Silw district, Taiz governorate (Priority 2)",2022,2789,Under Refund,PRJ_UND_REF,257559.86000,249998.00,PRJ
+23080,64,Yemen,Increase access to education in the desert district of Al Abr in Hadramout.,2022,2787,Project Closed,PRJ_PRJ_CLS,170973.11000,158114.57,PRJ
+25842,64,Yemen,Oil Spill Emergency Response for Safer Salvage Operation in Yemen,2023,2785,Project Closed,PRJ_PRJ_CLS,2056074.77000,2000000.00,PRJ
+25854,64,Yemen,"Integrated Protection, livelihood and WASH Intervention in Maqbana district, Taiz governorate, Pillar 1",2023,2786,Under Audit,PRJ_UND_AUD,1030038.24000,831290.28,PRJ
+25859,64,Yemen,"Integrated response of  Protection, CCCM and Shelter to address the urgent needs for IDPs and HC in Maqbana in Taiz pillars 1&amp;2, and Education project in Maqbana and Hays in Taiz and Hudaydah, pillar1",2023,2786,Under Audit,PRJ_UND_AUD,1053849.23000,847304.77,PRJ
+25861,64,Yemen,"Provision of integrated response of education and child protection services to the most volunerable children in Maqbanah district , Taiz under pillar 1",2023,2789,Under Refund,PRJ_UND_REF,705149.50000,681396.39,PRJ
+25885,64,Yemen,"Multi-Sectoral Response of Food Security (Pillar 1), Health (Pillar 3) , Nutrition (Pillar 1,2 and 3) , and Education (Pillar 1) for the affected population in Maqbanah District -Taizz Governorate.",2023,2786,Under Audit,PRJ_UND_AUD,1037273.38000,988150.09,PRJ
+25947,64,Yemen,"Support Education System for Students and Teachers in Hudaydah Governorate, Hays District, pillar 1",2023,2786,Under Audit,PRJ_UND_AUD,295712.08000,218834.21,PRJ
+27097,64,Yemen,"Strengthen access to comprehensive health and MHPSS services for most vulnerable women, men, children, the elderly affected by conflict in At Ta'iziyah district of Taiz Governorate - AA Areas.",2023,2788,Under Audit,PRJ_UND_AUD,808463.70000,580586.54,PRJ
+34179,64,Yemen,"WASH Support for Vulnerable Communities and IDPs in Khabb Wa Ash Sha'af District, Al Jawf Governorate.",2024,2786,Under Audit,PRJ_UND_AUD,218234.90000,209363.70,PRJ
+37721,64,Yemen,"Lifesaving Multi-Sector Assistance for Conflict-Affected Households in Al-Khukha and Hays, Al Hodeidah Governorate",2025,1674,Implementation & Reporting,PRJ_IMPL_RPT,1031077.86000,75377.90,PRJ
