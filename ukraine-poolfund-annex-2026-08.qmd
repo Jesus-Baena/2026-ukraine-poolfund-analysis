@@ -124,6 +124,15 @@ short_org <- function(x) {
     str_detect(x, "PERSPEKTYVA")                     ~ "Perspektyva",
     str_detect(x, "Pluriton")                        ~ "Pluriton",
     str_detect(x, "Global Emergency Relief")         ~ "GER3",
+    str_detect(x, "C\\.U\\.A\\.M\\.M")                 ~ "CUAMM",
+    str_detect(x, "MEDICAL TEAMS INTERNATIONAL")     ~ "Medical Teams International",
+    str_detect(x, "International Rescue Committee")  ~ "IRC",
+    str_detect(x, "United Nations Office for Project Services") ~ "UNOPS",
+    str_detect(x, "World Health Organization")       ~ "WHO",
+    str_detect(x, "Alliance for International Medical Action") ~ "ALIMA",
+    str_detect(x, "Medicos del Mundo")               ~ "Médicos del Mundo",
+    str_detect(x, "humedica")                        ~ "humedica",
+    str_detect(x, "Airlight")                        ~ "Airlight",
     str_detect(x, "Nonviolent Peaceforce")           ~ "Nonviolent Peaceforce",
     str_detect(x, "Stichting ZOA")                   ~ "ZOA",
     str_detect(x, "Caritas Czech")                   ~ "Caritas Czech Republic",
@@ -662,6 +671,73 @@ mpca26 <- clu %>% filter(Cluster == "Multi-purpose cash", AllocationYear == 2026
 Multi-purpose cash absorbed `r fmt_m(mpca26$usd)` in 2026, `r percent(mpca26$share, accuracy = 1)` of the cluster budget, after running at 3–5% in 2023–2025. That is the signature of the US-funded round: large, fast, six-month cash grants to partners with existing distribution capacity. Shelter, the dominant sector of 2023–2024, fell to `r percent(clu$share[clu$Cluster == "Shelter & NFI" & clu$AllocationYear == 2026], accuracy = 1)`.
 
 For the health sector, the focus of the main report, 2026 is the best year in absolute terms since 2022: `r fmt_m(h$usd[h$AllocationYear == 2026])` (`r percent(h$share[h$AllocationYear == 2026], accuracy = 1)` of the portfolio), against `r fmt_m(h$usd[h$AllocationYear == 2025])` in 2025 and `r fmt_m(h$usd[h$AllocationYear == 2024])` in 2024. The fund also launched a dedicated \$10M health reserve round for Khersonska oblast on 10 August (@sec-after), the first sector-specific UHF reserve allocation in the dataset.
+
+## Cash and the health specialists: what the allocation papers say {#sec-cash-health}
+
+Two features of the 2026 sector picture deserve a closer look, because the fund's own allocation strategies explain them.
+
+### The cash detour
+
+The return of multi-purpose cash runs against the direction the response had agreed on. The Cash Working Group replaced the blanket coverage of 2022 with a vulnerability-based targeting framework in July 2025, and the 2026 response plan reframes humanitarian cash as "Unified Cash Transfers" meant to complement the government's social-protection system, with the government taking over household winter cash in the 0–20 km frontline zone [@cwg_targeting_2025; @uhf_ra2_2026]. The UHF had followed that path: MPCA fell from 17% of its cluster budget in 2022 to 3–5% in 2023–2025 (@sec-sectors).
+
+The US-funded round reversed it by design. Its strategy paper opens by citing the December 2025 US contribution "with conditions for reform", funds "lifesaving projects of no longer than 6 months duration" in "joint severity 4 and 5 only", and states that "cash modalities will be prioritized where market functionality and access allow"; the accompanying US-award guidance defines fundable work as "direct" lifesaving activities reaching individuals and lists cash transfers first among them [@uhf_us_strategy_2026; @uhf_us_guidance_2026]. The result is `r fmt_m(mpca26$usd)` of cash in six-month grants, under the new UCT labels, in the year the sector was handing the modality over. The timing, duration, modality preference, minimum grant size and partner list of that round were all set by the terms of the contribution rather than by the needs analysis in the response plan.
+
+### The health specialists
+
+```{r health-partners}
+#| include: false
+
+health_by_proj <- cl %>%
+  filter(PooledFundName == "Ukraine") %>%
+  group_by(ChfProjectCode) %>%
+  summarise(health_usd = sum(ClusterBudget[Cluster == "Health"], na.rm = TRUE), .groups = "drop")
+
+hp <- ukr %>%
+  filter(AllocationYear >= 2022) %>%
+  left_join(health_by_proj, by = "ChfProjectCode") %>%
+  mutate(health_usd = coalesce(health_usd, 0)) %>%
+  group_by(AllocationYear, OrganizationName, OrgType) %>%
+  summarise(usd = sum(Budget), health = sum(health_usd), n = n(), .groups = "drop") %>%
+  mutate(health_share = health / usd)
+
+hp_year <- hp %>%
+  group_by(AllocationYear) %>%
+  summarise(`Partners with health budget` = sum(health > 0),
+            `Health-focused partners (≥50%)` = sum(health_share >= 0.5),
+            `Health budget` = fmt_m(sum(health)),
+            `Held by health-focused partners` = percent(sum(health[health_share >= 0.5]) / sum(health), accuracy = 1),
+            `Health-focused partners` = paste(short_org(OrganizationName[health_share >= 0.5]), collapse = ", "),
+            .groups = "drop") %>%
+  mutate(AllocationYear = if_else(AllocationYear == 2026, "2026 (Jan–Aug)", as.character(AllocationYear)))
+
+mdm <- ukr %>% filter(str_detect(OrganizationName, "Medicos del Mundo|Médecins du Monde")) %>%
+  summarise(n = n(), usd = sum(Budget), years = paste(sort(unique(AllocationYear)), collapse = ", "))
+
+specialists_2025 <- hp %>% filter(AllocationYear == 2025, health_share >= 0.5) %>% pull(OrganizationName)
+specialists_2026 <- hp %>% filter(AllocationYear == 2026, health_share >= 0.5) %>% pull(OrganizationName)
+dropped <- setdiff(specialists_2025, specialists_2026)
+multi_share26 <- hp %>% filter(AllocationYear == 2026) %>%
+  summarise(s = sum(health[health_share < 0.5]) / sum(health)) %>% pull(s)
+```
+
+```{r health-partners-table}
+#| echo: false
+
+hp_year %>%
+  kable(caption = "Health partners in the UHF by allocation year. A partner is health-focused when at least half of its UHF budget that year sits in the Health cluster.",
+        col.names = c("Year", "Partners with health budget", "Health-focused", "Health budget", "Held by health-focused", "Health-focused partners"),
+        align = c("l","c","c","r","r","l"))
+```
+
+The health envelope in 2026 is the largest since 2022, but it is held differently. In 2022–2025 between six and eight partners each year were health specialists in the sense above; in January–August 2026 there were `r c("one","two","three","four","five")[length(specialists_2026)]`. Medical Teams International, UK-Med, humedica and INTERSOS, each funded every year from 2023 or 2024 to 2025, received nothing in the first eight months of 2026, and `r percent(multi_share26, accuracy = 1)` of the year's health money sits as a component of multi-sector grants held by IOM, DRC, Team4UA and others. Médicos del Mundo, a mid-sized health specialist of exactly the kind the fund's management had said it wanted to keep, holds `r mdm$n` UHF grants worth `r fmt_m(mdm$usd)` in total, all between `r min(as.integer(strsplit(mdm$years, ", ")[[1]]))` and `r max(as.integer(strsplit(mdm$years, ", ")[[1]]))`, and nothing since.
+
+The allocation papers show why. The US-funded round was by invitation, and its eligibility criteria were a low or medium risk rating, previous reserve-grant delivery, having "managed UHF Reserve Grants of greater than \$4.5 million", consortium experience, delivery across the strategic priorities, and "income and absorption capacity"; each invited partner had to submit one multi-sectoral proposal of at least \$12.5 million. The invited list had ten names: ACTED, DRC, NRC, Angels of Salvation, Right to Protection, Team4UA, Proliska, UNICEF, WFP and UNHCR [@uhf_us_strategy_2026]. A reserve-grant threshold of \$4.5M combined with a multi-sector requirement excludes a mid-sized single-sector agency by construction.
+
+The Kherson health round launched on 10 August is the consequence. Its strategy records that the number of people reached with health assistance in Khersonska oblast fell from 95,112 in the last quarter of 2025 to 28,619 in the second quarter of 2026, that "five partners ceased operations and two partners partially ceased interventions" between April and July, and that "no confirmed replacement arrangements" existed. The response was \$10M through "a targeted invitation process rather than an open call", to five pre-identified partners selected on current presence in the oblast: IRC, INTERSOS, Alliance for Public Health, PUI and IMC [@uhf_ra3_2026]. It is a bridge for the organisations still there, not a mechanism for the specialists that had already left.
+
+::: callout-note
+The main report asked whether the health portfolio's reliance on a shifting mix of INGOs and NNGOs threatened technical continuity. On the 2026 evidence the answer is that the fund noticed the problem (the Kherson paper documents it in detail) but that the year's largest allocation was structured in a way that could not reach the partners who had carried the sector, and the corrective round could only invite the survivors.
+:::
 
 # Ukraine in the 2026 CBPF system {#sec-global}
 
