@@ -466,6 +466,127 @@ ggplot(un, aes(x = AllocationYear, y = usd / 1e6, colour = OrgType, group = OrgT
 
 The 2024 Annual Report's statement that the UN *"would no longer be funded unless absolutely necessary"* held through 2025, when UN agencies received nothing. In 2026 UNHCR, WFP and IOM received `r fmt_m(sum(ukr26$Budget[ukr26$OrgType == "UN Agency"]))` between them, all inside the US-funded round, where UN agencies were `r percent(sum(ukr26$Budget[ukr26$OrgType == "UN Agency"]) / us_round$usd, accuracy = 1)` of the money. National NGOs still received more than international NGOs in the standard allocation when counted per grant, but in dollar terms INGOs (`r fmt_m(sum(ukr26$Budget[ukr26$OrgType == "INGO"]))`) edged NNGOs (`r fmt_m(sum(ukr26$Budget[ukr26$OrgType == "NNGO"]))`) for the first time since 2024.
 
+## The four partner types, revisited {#sec-typology}
+
+The main report sorted every UHF partner into four risk profiles: **A** "born of the war" (founded 2022 or later), **B** small-base pre-war organisations, **C** the localisation cohort of Ukrainian NGOs with a pre-2022 record, and **D** hyperscalers (UN agencies and INGOs with global revenue above \$50M). The same rules are applied here to the 2022–2026 partner universe, with the report's hard-coded Core-20 classes matched on the partners' legal names.
+
+```{r typology-prep}
+#| include: false
+
+hard_type <- function(n) case_when(
+  str_detect(n, "United Nations High Commissioner|Agency for Technical Cooperation|Danish Refugee|Norwegian Refugee|International Rescue|Save the Children|CORE Community") ~ "D",
+  str_detect(n, "People in Need|Stichting ZOA|Dorcas Aid|Estonian Refugee") ~ "B",
+  str_detect(n, "Caritas Ukraine|^Proliska|Ukrainian Red Cross|Interagency Standing Committee") ~ "C",
+  str_detect(n, "NEW WAY|POSMISHKA|Unity\" for the Future|Unity” for the Future") ~ "A",
+  TRUE ~ NA_character_)
+
+type_labels <- c(A = "A — Born of the war", B = "B — Small-base pre-war", C = "C — Localisation cohort", D = "D — Hyperscalers")
+
+typology <- ukr %>%
+  group_by(OrganizationName, OrganizationType) %>%
+  summarise(first_year = min(AllocationYear), .groups = "drop") %>%
+  mutate(hc = hard_type(OrganizationName),
+         Type = case_when(
+           !is.na(hc) ~ hc,
+           OrganizationType == "UN Agency" ~ "D",
+           OrganizationType == "National NGO" & first_year < 2022 ~ "C",
+           OrganizationType == "International NGO" & first_year < 2022 ~ "B",
+           first_year >= 2022 ~ "B",
+           TRUE ~ "B"))
+
+ukr_t <- ukr %>% left_join(typology %>% select(OrganizationName, Type), by = "OrganizationName")
+
+type_tbl <- ukr_t %>%
+  filter(AllocationYear >= 2022) %>%
+  mutate(per = if_else(AllocationYear == 2026, "y26", "y2225")) %>%
+  group_by(Type, per) %>%
+  summarise(usd = sum(Budget), partners = n_distinct(OrganizationName), grants = n(), .groups = "drop") %>%
+  group_by(per) %>% mutate(share = usd / sum(usd)) %>% ungroup() %>%
+  pivot_wider(id_cols = Type, names_from = per, values_from = c(usd, share, partners, grants))
+
+share_by_year <- ukr_t %>%
+  filter(AllocationYear >= 2022) %>%
+  group_by(AllocationYear, Type) %>% summarise(usd = sum(Budget), .groups = "drop") %>%
+  group_by(AllocationYear) %>% mutate(share = usd / sum(usd)) %>% ungroup()
+sh <- function(t, y) percent(share_by_year$share[share_by_year$Type == t & share_by_year$AllocationYear == y], accuracy = 1)
+
+active26 <- ukr_t %>% filter(AllocationYear >= 2022) %>%
+  group_by(Type, OrganizationName) %>%
+  summarise(prior = any(AllocationYear <= 2025), in26 = any(AllocationYear == 2026), .groups = "drop") %>%
+  group_by(Type) %>% summarise(p2225 = sum(prior), cont = sum(prior & in26), new = sum(in26 & !prior), .groups = "drop")
+
+# Type A by year, plus the post-cut-off winter round from the daily pipeline vintages
+a_names <- typology %>% filter(Type == "A") %>% pull(OrganizationName)
+a_year <- ukr_t %>% filter(Type == "A", AllocationYear >= 2022) %>%
+  group_by(OrganizationName, AllocationYear) %>% summarise(usd = sum(Budget), .groups = "drop") %>%
+  pivot_wider(names_from = AllocationYear, values_from = usd)
+a_pipe <- pv %>%
+  filter(PooledFundName == "Ukraine", OrganizationName %in% a_names,
+         str_detect(AllocationType, "Second Reserve")) %>%
+  group_by(OrganizationName) %>%
+  summarise(winter = max(Budget), last_seen = max(snapshot_date), status = ProcessStatus[which.max(snapshot_date)], .groups = "drop") %>%
+  mutate(winter_txt = if_else(last_seen < max(pv$snapshot_date),
+                              paste0(fmt_m(winter, 0.01), ", approved by ", format(last_seen, "%e %b")),
+                              paste0(fmt_m(winter, 0.01), ", at ", tolower(status), " on ", format(last_seen, "%e %b"))))
+a_total <- share_by_year %>% filter(Type == "A")
+a_us_round <- ukr26 %>% filter(OrganizationName %in% a_names, str_detect(coalesce(AllocationType, ""), "lifesaving")) %>% summarise(s = sum(Budget)) %>% pull(s)
+
+# The two 2026 newcomers that meet the Type A definition
+nb <- ukr %>% filter(str_detect(OrganizationName, "Team4UA|NGELS OF SALVATION")) %>%
+  mutate(org = if_else(str_detect(OrganizationName, "Team4UA"), "Team4UA", "Angels of Salvation")) %>%
+  group_by(org, AllocationYear) %>% summarise(usd = sum(Budget), .groups = "drop")
+nb26 <- sum(nb$usd[nb$AllocationYear == 2026])
+a_reclass_share <- (nb26 + a_total$usd[a_total$AllocationYear == 2026]) / y26$usd
+new_way_pre <- sum(ukr$Budget[str_detect(ukr$OrganizationName, "NEW WAY") & ukr$AllocationYear < 2022])
+```
+
+```{r typology-table}
+#| echo: false
+
+type_tbl %>%
+  left_join(active26, by = "Type") %>%
+  arrange(Type) %>%
+  transmute(Type = type_labels[Type],
+            `2022–25 total` = fmt_m(usd_y2225, 1), `2022–25 share` = percent(share_y2225, accuracy = 1),
+            `2026 total` = fmt_m(usd_y26, 1), `2026 share` = percent(share_y26, accuracy = 1),
+            `Partners 2022–25 → 2026` = paste0(p2225, " → ", cont, if_else(new > 0, paste0(" (+", new, " new)"), "")),
+            `Mean grant 2022–25 → 2026` = paste0(fmt_m(usd_y2225 / grants_y2225, 0.1), " → ", fmt_m(usd_y26 / grants_y26, 0.1))) %>%
+  kable(caption = "The four partner types: 2022–2025 against January–August 2026. Rules as in the main report, applied to the 1 September 2026 vintage.",
+        align = c("l","r","r","r","r","c","c"))
+```
+
+The main report described a steady slide away from the hyperscalers: Type D fell from `r sh("D", 2022)` of the envelope in 2022 to `r sh("D", 2025)` in 2025 while Types B and C grew. Eight months of 2026 reversed it. Type D took `r sh("D", 2026)`, entirely through the US-funded round, where UNHCR, WFP and ACTED received \$20M each and NRC, DRC and IOM followed. Type B remains the largest group by headcount but only `r active26$cont[active26$Type == "B"]` of its `r active26$p2225[active26$Type == "B"]` partners from 2022–2025 were funded in 2026, the churning outer ring the main report described. Type C held its share, with Right to Protection taking most of it.
+
+### Type A: stable, funded, and sidelined
+
+```{r type-a-table}
+#| echo: false
+
+a_year %>%
+  left_join(a_pipe %>% select(OrganizationName, winter_txt), by = "OrganizationName") %>%
+  transmute(Organisation = short_org(OrganizationName),
+            `2022` = fmt_m(`2022`, 0.1), `2023` = fmt_m(`2023`, 0.1), `2024` = fmt_m(`2024`, 0.1),
+            `2025` = fmt_m(`2025`, 0.1), `2026 Jan–Aug` = fmt_m(`2026`, 0.1),
+            `Winter round (post cut-off)` = coalesce(winter_txt, "—")) %>%
+  kable(caption = "The three Type A partners named in the main report, UHF approved budget by year. The last column uses the daily pipeline vintages after the 31 August cut-off.",
+        align = c("l","r","r","r","r","r","l"))
+```
+
+Through 2025 the three named Type A partners were the clearest growth story in the fund: from `r fmt_m(a_total$usd[a_total$AllocationYear == 2022])` (`r sh("A", 2022)`) in 2022 to `r fmt_m(a_total$usd[a_total$AllocationYear == 2025])` (`r sh("A", 2025)`) in 2025, with Posmishka UA reaching cap-sized grants. In 2026 they are stable but sidelined: all three were funded again, but only in the standard allocation at roughly \$3M each, none of them received anything from the \$150.7M US-funded round`r if (a_us_round > 0) paste0(" (", fmt_m(a_us_round, 0.1), " between them)") else ""`, and their share fell to `r sh("A", 2026)`. The daily archive shows all three submitting to the Winter Response reserve round in August and being approved in September, again at \$2.8M–\$3.3M. The ceiling that lifted for the hyperscalers did not lift for them.
+
+### The born-of-the-war partners the report could not yet see
+
+The rules file every partner whose first UHF grant came in 2022 or later as Type B unless its 2022-or-later founding was confirmed, and the confirmed list was written before two organisations mattered in the data. Both meet the Type A definition:
+
+-   **Team4UA** started in 2022 as a civilian humanitarian initiative in Poland [@lepetitjournal_team4ua_2022]. Its first UHF grant came in 2024 (`r fmt_m(nb$usd[nb$org == "Team4UA" & nb$AllocationYear == 2024], 0.1)`), then `r fmt_m(nb$usd[nb$org == "Team4UA" & nb$AllocationYear == 2025], 0.1)` in 2025 and **`r fmt_m(nb$usd[nb$org == "Team4UA" & nb$AllocationYear == 2026], 0.1)` in 2026** as lead of the TERA consortium of eleven Ukrainian organisations (\$12M in the standard allocation, \$20M in the US-funded round). It is the largest UHF recipient of the year.
+-   **Angels of Salvation** began as a volunteer evacuation group in February 2022, formed by a founder who fled Sloviansk, and now has more than 600 staff [@un_ukraine_angels_2025]. It received `r fmt_m(nb$usd[nb$org == "Angels of Salvation" & nb$AllocationYear == 2024], 0.01)` in 2024, `r fmt_m(nb$usd[nb$org == "Angels of Salvation" & nb$AllocationYear == 2025], 0.1)` in 2025 and **`r fmt_m(nb$usd[nb$org == "Angels of Salvation" & nb$AllocationYear == 2026], 0.1)` in 2026** as lead of the LINK consortium (\$11M standard, \$14M US-funded).
+
+Reclassified, Type A would hold `r fmt_m(nb26 + a_total$usd[a_total$AllocationYear == 2026], 1)`, or `r percent(a_reclass_share, accuracy = 1)` of the 2026 envelope, more than Type C and several times the three original members combined, and both newcomers carry grants far above anything those three ever held. Both are consortium leads, so part of that money is sub-granted onward in ways the CBPF data cannot see. The main report's dependency-ratio concern (UHF volume measured against pre-war revenue) applies to them in its purest form: there is no pre-war revenue to measure against.
+
+::: callout-note
+**Two corrections to the main report's typology.** First, the hard-coded Core-20 names in the report ("NEW WAY", "POSMISHKA UA", "Unity for the Future") do not match the legal names the API returns, so the report's typology join silently fell through to the rule-based classification for those partners; this annex matches them by pattern. Second, New Way received UHF grants in 2019, 2020 and 2021 (`r fmt_m(new_way_pre, 1)` in total), so it was active before the invasion and belongs in Type C under the report's own rule. The "born of the war" label strictly fits Posmishka UA, Unity for the Future, Team4UA and Angels of Salvation.
+:::
+
 # Sectors: cash first {#sec-sectors}
 
 ```{r sectors}
